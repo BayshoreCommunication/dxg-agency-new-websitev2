@@ -24,38 +24,40 @@ const whyDXG = [
 
 const legal = ["Privacy Policy", "Terms Of Use"];
 
-const addressItems: {
+const contactItems: {
   label: string;
   Icon: LucideIcon;
   href?: string;
-  external?: boolean;
 }[] = [
   { label: "12824 Dupont Circle Tampa, FL 33626", Icon: MapPin },
   { label: "855.282.9394", Icon: Phone, href: "tel:+18552829394" },
   { label: "Info@dxg.agency", Icon: Mail, href: "mailto:info@dxg.agency" },
+];
+
+const socialItems: {
+  label: string;
+  Icon: LucideIcon;
+  href: string;
+}[] = [
   {
     label: "Instagram",
     Icon: Instagram,
     href: "https://www.instagram.com/dxg.agency",
-    external: true,
   },
   {
     label: "X",
     Icon: X,
     href: "https://x.com/dxgagency",
-    external: true,
   },
   {
     label: "LinkedIn",
     Icon: Linkedin,
     href: "https://www.linkedin.com/company/dxg-agency",
-    external: true,
   },
   {
     label: "Facebook",
     Icon: Facebook,
     href: "https://www.facebook.com/dxgagcy/",
-    external: true,
   },
 ];
 
@@ -184,13 +186,11 @@ export default function Footer() {
                   kind="list"
                   className="mt-7 space-y-4 text-sm text-white/75 sm:text-base"
                 >
-                  {addressItems.map(({ label, Icon, href, external }) => (
+                  {contactItems.map(({ label, Icon, href }) => (
                     <li key={label} className="flex items-start gap-3">
                       {href ? (
                         <a
                           href={href}
-                          target={external ? "_blank" : undefined}
-                          rel={external ? "noopener noreferrer" : undefined}
                           className="flex items-start gap-3 transition hover:text-primary"
                         >
                           <Icon
@@ -213,6 +213,26 @@ export default function Footer() {
                     </li>
                   ))}
                 </Reveal>
+
+                <div className="mt-6 flex items-center gap-3">
+                  {socialItems.map(({ label, Icon, href }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      title={label}
+                      className="group/social flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-primary bg-primary/10 text-primary shadow-[0_0_0_rgba(39,203,249,0)] transition duration-300 hover:-translate-y-1 hover:bg-primary hover:text-black hover:shadow-[0_0_24px_rgba(39,203,249,0.55)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                      <Icon
+                        size={20}
+                        strokeWidth={2.2}
+                        className="transition duration-300 group-hover/social:scale-110"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
