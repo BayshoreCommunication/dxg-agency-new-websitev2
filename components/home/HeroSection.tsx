@@ -175,7 +175,7 @@ export default function HeroSection() {
 
               </div>
 
-              <div className="flex items-center justify-center gap-3 lg:col-start-1 lg:row-start-2 lg:mt-16 lg:justify-end">
+              <div className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center gap-3 sm:bottom-12 lg:bottom-16">
                 {heroSlides.map((slide, index) => (
                   <button
                     key={slide.src}
