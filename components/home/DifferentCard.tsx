@@ -4,7 +4,7 @@ import CaseStudyCard from "./CaseStudyCard";
 export default function DifferentCard() {
   return (
     <>
-      {caseStudies.map((study) => (
+      {caseStudies.slice(-3).map((study) => (
         <CaseStudyCard key={study.id} data={study} />
       ))}
     </>
