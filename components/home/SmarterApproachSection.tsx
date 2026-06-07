@@ -69,7 +69,7 @@ export default function SmarterApproachSection() {
             {/* Right Image */}
             <Reveal
               kind="image"
-              className="relative min-h-[320px] lg:min-h-full"
+              className="relative min-h-[320px] overflow-hidden rounded-[28px] lg:min-h-full lg:rounded-none"
             >
               <Image
                 src="/images/home/smarter-approach/smarter-approach.png"

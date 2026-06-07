@@ -128,7 +128,7 @@ export default function HeroSection() {
               <span className="text-primary">the wrong AV partner.</span>
             </TypingTitle>
 
-            <div className="mt-12 grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="mt-12 grid items-start gap-12 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-0">
               {/* Left Content */}
               <div className="mx-auto grid w-full max-w-[360px] grid-cols-2 justify-center gap-4 sm:max-w-[480px] sm:gap-6 md:max-w-[560px]">
                 {stats.map((item) => (
@@ -173,21 +173,22 @@ export default function HeroSection() {
                   event the way you actually want it to run.
                 </Reveal>
 
-                <div className="mt-10 flex items-center gap-3">
-                  {heroSlides.map((slide, index) => (
-                    <button
-                      key={slide.src}
-                      type="button"
-                      aria-label={`Show background slide ${index + 1}`}
-                      onClick={() => setActiveSlide(index)}
-                      className={`h-2.5 rounded-full transition-all duration-300 ${
-                        index === activeSlide
-                          ? "w-10 bg-primary"
-                          : "w-2.5 bg-white/35 hover:bg-white/60"
-                      }`}
-                    />
-                  ))}
-                </div>
+              </div>
+
+              <div className="flex items-center justify-center gap-3 lg:col-start-1 lg:row-start-2 lg:mt-16 lg:justify-end">
+                {heroSlides.map((slide, index) => (
+                  <button
+                    key={slide.src}
+                    type="button"
+                    aria-label={`Show background slide ${index + 1}`}
+                    onClick={() => setActiveSlide(index)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${
+                      index === activeSlide
+                        ? "w-10 bg-primary"
+                        : "w-2.5 bg-white/35 hover:bg-white/60"
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>

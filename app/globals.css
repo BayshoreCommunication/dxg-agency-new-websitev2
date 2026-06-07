@@ -37,12 +37,13 @@ html {
   scroll-behavior: smooth;
   scrollbar-color: theme("colors.primary") #050505;
   scrollbar-width: thin;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 ::-webkit-scrollbar {
