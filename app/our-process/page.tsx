@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div>
       <PageBanner
-        title="How We Works"
+        title="How We Work"
         backgroundImage="/images/banners/our-process-banner.png"
       />
       <WhoWeAreSection />

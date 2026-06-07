@@ -16,7 +16,7 @@ import Reveal from "components/shared/Reveal";
 import { problemServices } from "data/problemServices";
 
 const whyDXG = [
-  { label: "How We Works", href: "/our-process" },
+  { label: "How We Work", href: "/our-process" },
   { label: "Our Services", href: "/" },
   { label: "Our Mission", href: "/" },
   { label: "Our Experience", href: "/" },

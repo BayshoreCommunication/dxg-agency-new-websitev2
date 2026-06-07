@@ -141,7 +141,7 @@ export const problemServices: ProblemService[] = [
     slug: "content-capture",
     icon: "/images/problems-we-solve/photography-videography.png",
     title: "Content Capture",
-    desc: "Photo and video capture planned around recap reels, speaker cuts, sponsor deliverables, and stakeholder proof points.",
+    desc: "The event ends and the content begins its second life. Recap videos, speaker reels, social cutdowns, sponsor deliverables - the footage you capture on-site determines what you can actually do with it later.",
     heroImage: `${serviceDetailsPath}/Content-Capture.png`,
     bannerImage: "/images/problems-we-solve/Content-Capture.png",
     details: [
