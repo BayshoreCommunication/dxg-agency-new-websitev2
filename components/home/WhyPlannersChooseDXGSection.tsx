@@ -1,5 +1,6 @@
-import Image from "next/image";
+import TypingTitle from "components/layout/TypingTitle";
 import Container from "components/shared/Container";
+import Reveal from "components/shared/Reveal";
 import {
   ClipboardList,
   Headphones,
@@ -7,8 +8,7 @@ import {
   UserRoundCheck,
   type LucideIcon,
 } from "lucide-react";
-import TypingTitle from "components/layout/TypingTitle";
-import Reveal from "components/shared/Reveal";
+import Image from "next/image";
 
 const highlights = [
   {
@@ -36,8 +36,8 @@ const highlights = [
 const cards = [
   {
     Icon: ClipboardList,
-    title: "How We Works",
-    desc: "From kickoff to closeout, How We Works keeps everyone aligned. You always know where things stand, what’s coming next, and who owns it.",
+    title: "How We Work",
+    desc: "From kickoff to closeout, How We Work keeps everyone aligned. You always know where things stand, what’s coming next, and who owns it.",
     image: "/images/home/why-dxg/process.png",
   },
   {

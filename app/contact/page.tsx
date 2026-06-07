@@ -13,7 +13,7 @@ const page = () => {
       />
       {/* <ContactFormSection /> */}
       <CalendlySection />
-      <GoogleMapSection />
+      {/* <GoogleMapSection /> */}
     </div>
   );
 };

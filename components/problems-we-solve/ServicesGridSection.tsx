@@ -1,12 +1,12 @@
 "use client";
 
+import TypingTitle from "components/layout/TypingTitle";
+import Container from "components/shared/Container";
+import Reveal from "components/shared/Reveal";
+import { problemServices } from "data/problemServices";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Container from "components/shared/Container";
-import { problemServices } from "data/problemServices";
-import TypingTitle from "components/layout/TypingTitle";
-import Reveal from "components/shared/Reveal";
 
 // const hoverBackground = "/images/problems-we-solve/services-hover-bg.png";
 
@@ -36,8 +36,8 @@ export default function ServicesGridSection() {
                     }`}
                   >
                     <Image
-                      src={"/images/problems-we-solve/General-Sessions.png"}
-                      alt=""
+                      src={service.bannerImage}
+                      alt={service.title}
                       fill
                       sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                       className="object-cover"

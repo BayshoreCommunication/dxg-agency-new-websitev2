@@ -100,9 +100,9 @@ export const problemServices: ProblemService[] = [
     slug: "general-session",
     icon: "/images/problems-we-solve/production-management.png",
     title: "General Session",
-    desc: "Main-stage production with clean audio, confident camera direction, presenter support, and a producer keeping the show moving.",
+    desc: "The general session is the moment everything you've planned becomes visible. When the room goes dark and your opening video rolls, there's no second take.",
     heroImage: `${serviceDetailsPath}/General-Session.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    bannerImage: "/images/problems-we-solve/General-Sessions.png",
     details: [
       "The general session is the moment everything you've planned becomes visible. When the room goes dark and your opening video rolls, there's no second take.",
 
@@ -113,9 +113,9 @@ export const problemServices: ProblemService[] = [
     slug: "breakouts",
     icon: "/images/problems-we-solve/audiovisual-technology.png",
     title: "Breakouts",
-    desc: "Parallel room support with the same technical standards, pre-show checks, and calm crew presence as your main stage.",
+    desc: "Experienced planners know breakouts often carry more weight than the general session. They're where attendees connect with content that's directly relevant to their work, and where the program either delivers on its promise or falls flat.",
     heroImage: `${serviceDetailsPath}/Breakouts.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    bannerImage: "/images/problems-we-solve/Breakout-Rooms.png",
     details: [
       "Experienced planners know breakouts often carry more weight than the general session. They're where attendees connect with content that's directly relevant to their work, and where the program either delivers on its promise or falls flat.",
 
@@ -128,9 +128,9 @@ export const problemServices: ProblemService[] = [
     slug: "hybrid-virtual",
     icon: "/images/problems-we-solve/event-platform-services.png",
     title: "Hybrid & Virtual",
-    desc: "Connected room-and-screen production that keeps remote and in-person audiences engaged in the same event.",
+    desc: "A hybrid event isn't an in-person event with a camera in the back of the room. The remote audience either feels included, or they drop off, and the in-room energy either translates to the stream or it doesn't.",
     heroImage: `${serviceDetailsPath}/Hybrid-&-Virtual.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    bannerImage: "/images/problems-we-solve/Hybrid-Virtual.png",
     details: [
       "A hybrid event isn't an in-person event with a camera in the back of the room. The remote audience either feels included, or they drop off, and the in-room energy either translates to the stream or it doesn't.",
 
@@ -143,7 +143,7 @@ export const problemServices: ProblemService[] = [
     title: "Content Capture",
     desc: "Photo and video capture planned around recap reels, speaker cuts, sponsor deliverables, and stakeholder proof points.",
     heroImage: `${serviceDetailsPath}/Content-Capture.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    bannerImage: "/images/problems-we-solve/Content-Capture.png",
     details: [
       "The event ends and the content begins its second life. Recap videos, speaker reels, social cutdowns, sponsor deliverables - the footage you capture on-site determines what you can actually do with it later.",
 
@@ -154,9 +154,9 @@ export const problemServices: ProblemService[] = [
     slug: "creative-design",
     icon: "/images/problems-we-solve/graphics-animation.png",
     title: "Creative Design",
-    desc: "Stage design, motion graphics, environmental branding, and templates that make the whole event feel intentional.",
+    desc: "Strong production needs a strong creative idea behind it, or it ends up looking like a stage with some lights on it.",
     heroImage: `${serviceDetailsPath}/Creative-Design.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    bannerImage: "/images/problems-we-solve/Creative-Design.png",
     details: [
       "Strong production needs a strong creative idea behind it, or it ends up looking like a stage with some lights on it.",
 
@@ -169,9 +169,9 @@ export const problemServices: ProblemService[] = [
     slug: "meeting-planning-support",
     icon: "/images/problems-we-solve/event-experience-design.png",
     title: "Meeting Planning Support",
-    desc: "Flexible planning help, technical advising, and production logistics support when your team needs extra bandwidth.",
+    desc: "Sometimes the gap between a great plan and a great event is bandwidth. Whether you need a second set of hands on production logistics, a technical advisor in your planning meetings, or a partner who can quietly take work off your plate in the final two weeks, we're built to flex with you.",
     heroImage: `${serviceDetailsPath}/Meeting-Planning-Support.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    bannerImage: "/images/problems-we-solve/Meeting-Planning-Support.png",
     details: [
       "Sometimes the gap between a great plan and a great event is bandwidth. Whether you need a second set of hands on production logistics, a technical advisor in your planning meetings, or a partner who can quietly take work off your plate in the final two weeks, we're built to flex with you.",
 

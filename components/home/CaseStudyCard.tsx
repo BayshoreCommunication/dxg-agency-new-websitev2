@@ -78,10 +78,16 @@ export default function CaseStudyCard({ data }: Props) {
 
         {/* Stats */}
         <div className="mt-10 rounded-2xl bg-[#0b0b0b] p-6 lg:p-8">
-          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div
+            className={`grid gap-6 sm:grid-cols-2 ${
+              data.stats.length === 3
+                ? "xl:grid-cols-[1fr_1fr_2fr]"
+                : "xl:grid-cols-4"
+            }`}
+          >
             {data.stats.map((item: any) => (
               <div key={item.label} className="flex items-center gap-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-primary/40 bg-[#071a2c]">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-primary/40 bg-[#071a2c]">
                   <Image
                     src={item.icon}
                     alt={item.label}
@@ -91,11 +97,13 @@ export default function CaseStudyCard({ data }: Props) {
                   />
                 </div>
 
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs font-bold uppercase tracking-wide text-primary">
                     {item.label}
                   </p>
-                  <p className="mt-1 text-sm text-white">{item.value}</p>
+                  <p className="mt-1 text-sm leading-6 text-white">
+                    {item.value}
+                  </p>
                 </div>
               </div>
             ))}
