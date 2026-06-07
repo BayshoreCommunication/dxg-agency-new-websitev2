@@ -8,7 +8,7 @@ import { problemServices } from "data/problemServices";
 import TypingTitle from "components/layout/TypingTitle";
 import Reveal from "components/shared/Reveal";
 
-const hoverBackground = "/images/problems-we-solve/services-hover-bg.png";
+// const hoverBackground = "/images/problems-we-solve/services-hover-bg.png";
 
 export default function ServicesGridSection() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -36,7 +36,7 @@ export default function ServicesGridSection() {
                     }`}
                   >
                     <Image
-                      src={hoverBackground}
+                      src={"/images/problems-we-solve/General-Sessions.png"}
                       alt=""
                       fill
                       sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
