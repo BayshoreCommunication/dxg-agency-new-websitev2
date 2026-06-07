@@ -3,7 +3,7 @@
 import TypingTitle from "components/layout/TypingTitle";
 import Container from "components/shared/Container";
 import Reveal from "components/shared/Reveal";
-import { Facebook, Instagram, Linkedin, LocationEditIcon, Mail, Phone, X } from "lucide-react";
+import { Facebook, Instagram, Linkedin, LocationEditIcon, LucideIcon, Mail, Phone, X } from "lucide-react";
 import { InlineWidget } from "react-calendly";
 
 const sessionNotes = [
