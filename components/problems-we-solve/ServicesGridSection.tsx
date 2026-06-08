@@ -23,7 +23,7 @@ export default function ServicesGridSection() {
             return (
               <Reveal key={service.title} className="h-full">
                 <Link
-                  href={`/problems-we-solve/${service.slug}`}
+                  href={`/services/${service.slug}`}
                   onMouseEnter={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
                   className="glowing-border group relative block h-full min-h-[360px] overflow-hidden rounded-lg border border-primary/20 bg-[#071a2c] p-10 shadow-[0_0_30px_rgba(0,188,242,0.08)] transition duration-500 hover:-translate-y-3 hover:scale-[1.02] hover:border-primary/70 hover:shadow-[0_22px_55px_rgba(0,188,242,0.18)]"

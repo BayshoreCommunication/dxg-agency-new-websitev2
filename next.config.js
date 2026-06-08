@@ -45,6 +45,20 @@ const nextConfig = {
     ],
   },
   skipTrailingSlashRedirect: true,
+  async redirects() {
+    return [
+      {
+        source: '/problems-we-solve/:slug',
+        destination: '/services/:slug',
+        permanent: true,
+      },
+      {
+        source: '/problems-we-solve',
+        destination: '/services',
+        permanent: true,
+      },
+    ];
+  },
   // Add headers for PDF files
   async headers() {
     return [

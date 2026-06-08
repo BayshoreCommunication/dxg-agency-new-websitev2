@@ -54,7 +54,7 @@ export default function ServiceDetailsPage({
           backgroundImage={service.bannerImage}
           breadcrumbParent={{
             label: "Problems We Solve",
-            path: "/problems-we-solve",
+            path: "/Problems We Solve",
           }}
         />
         <section className="relative w-full overflow-hidden bg-black">
