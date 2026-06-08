@@ -1,50 +1,37 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true, // Move this outside the remotePatterns array
+    unoptimized: true,
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
+        protocol: "https",
+        hostname: "picsum.photos",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'drive.google.com',
-        port: '',
+        protocol: "https",
+        hostname: "drive.google.com",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'lh3.googleusercontent.com',
-        port: '',
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'img.youtube.com',
-        port: '',
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'bayshore.nyc3.digitaloceanspaces.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'dashboard-sabbir-nasir.vercel.app',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'backend-sabbir-nasir.vercel.app',
-        port: '',
+        protocol: "https",
+        hostname: "bayshore.nyc3.digitaloceanspaces.com",
+        pathname: "/**",
       },
     ],
   },
   skipTrailingSlashRedirect: true,
+<<<<<<< HEAD
   async redirects() {
     return [
       {
@@ -81,6 +68,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+=======
+>>>>>>> b093613c274db3b2acef44beeb8c05070b7d814d
 };
 
 module.exports = nextConfig;
