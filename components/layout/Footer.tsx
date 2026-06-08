@@ -111,62 +111,7 @@ export default function Footer() {
             </div>
 
             {/* Right */}
-<<<<<<< HEAD
-            <div className="w-full max-w-xl">
-              {/* Form */}
-              <form className="flex flex-col gap-4 sm:flex-row">
-                <div className="relative flex-1">
-                  <input
-                    type="email"
-                    placeholder="Enter your email address..."
-                    className="h-14 w-full rounded-full border border-white/10 bg-white px-5 pr-14 text-sm text-black placeholder:text-black/50 focus:border-primary focus:outline-none"
-                  />
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="absolute right-5 top-1/2 h-5 w-5 -translate-y-1/2 text-black/50"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={1.8}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21.75 8.25v7.5A2.25 2.25 0 0119.5 18h-15A2.25 2.25 0 012.25 15.75v-7.5m19.5 0A2.25 2.25 0 0019.5 6h-15A2.25 2.25 0 002.25 8.25m19.5 0l-8.69 5.52a2.25 2.25 0 01-2.12 0L2.25 8.25"
-                    />
-                  </svg>
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn-slide-primary flex h-14 items-center justify-center rounded-full px-8 text-sm font-semibold"
-                >
-                  Send Us
-                </button>
-              </form>
-
-              {/* Checkbox */}
-              <label className="mt-5 flex items-start gap-3 text-sm text-white/70">
-                <input
-                  type="checkbox"
-                  className="mt-1 h-4 w-4 accent-primary"
-                />
-
-                <span>
-                  I&apos;m accept the{" "}
-                  <Link
-                    href="/terms-of-use"
-                    className="underline underline-offset-4"
-                  >
-                    Terms & Conditions
-                  </Link>
-                </span>
-              </label>
-            </div>
-=======
             <NewsletterForm />
->>>>>>> f44c481018562f94bb7344285382d53acb58c92f
           </div>
 
           {/* Footer Grid */}

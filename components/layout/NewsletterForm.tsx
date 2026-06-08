@@ -157,7 +157,10 @@ export default function NewsletterForm() {
             />
             <span>
               I&apos;m accept the{" "}
-              <Link href="/terms" className="underline underline-offset-4">
+              <Link
+                href="/terms-of-use"
+                className="underline underline-offset-4"
+              >
                 Terms & Conditions
               </Link>
             </span>
