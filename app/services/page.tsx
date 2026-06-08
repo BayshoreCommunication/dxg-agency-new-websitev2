@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Explore DXG Agency's problems we solve across SEO, web development, and digital marketing to grow traffic, leads, and revenue for your business growth.",
   alternates: {
-    canonical: "/problems-we-solve",
+    canonical: "/services",
   },
 };
 const page = () => {
