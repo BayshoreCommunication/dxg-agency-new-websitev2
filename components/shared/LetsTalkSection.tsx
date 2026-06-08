@@ -129,7 +129,7 @@ export default function LetsTalkSection() {
 
             <div className="flex flex-col items-start gap-3">
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="btn-slide-primary inline-flex items-center justify-center px-8 py-3 text-sm font-semibold"
               >
                 Schedule a Strategy Call

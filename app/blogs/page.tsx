@@ -4,6 +4,14 @@ import PageBanner from "components/shared/PageBanner";
 import BlogCard from "components/planner-insight-blog/BlogCard";
 import LetsTalkSection from "components/shared/LetsTalkSection";
 
+export const metadata = {
+  title: "Digital Xperience Group",
+  description:
+    "Digital Xperience Group (DXG), a pioneering division of WLJ Consulting, is a premier partner in transforming events into unforgettable experiences.",
+  alternates: {
+    canonical: "/blogs",
+  },
+};
 export default function BlogsPage() {
   const sortedBlogs = getSortedBlogs();
   const featuredBlog = sortedBlogs[0];

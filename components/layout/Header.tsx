@@ -126,7 +126,7 @@ export default function Header() {
           <div className="hidden xl:block">
             <button
               type="button"
-              onClick={() => handleNavClick("contact", "/contact")}
+              onClick={() => handleNavClick("contact", "/contact-us")}
               className="btn-slide-primary capsule-button inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold"
             >
               Request for Proposal
