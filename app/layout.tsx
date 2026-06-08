@@ -15,7 +15,7 @@ const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
 });
 
-const siteUrl = "https://dxg-agency-new.vercel.app";
+const siteUrl = "https://www.dxg.agency";
 
 /* ---------------- METADATA ---------------- */
 
