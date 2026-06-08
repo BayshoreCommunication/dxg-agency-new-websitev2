@@ -16,7 +16,7 @@ export const metadata = {
   description:
     "Digital Xperience Group (DXG), a pioneering division of WLJ Consulting, is a premier partner in transforming events into unforgettable experiences.",
   alternates: {
-    canonical: "/problems-we-solve",
+    canonical: "/",
   },
 };
 export default function Home() {
