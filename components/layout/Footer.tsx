@@ -13,13 +13,14 @@ import {
 import Container from "components/shared/Container";
 import TypingTitle from "components/layout/TypingTitle";
 import Reveal from "components/shared/Reveal";
+import NewsletterForm from "components/layout/NewsletterForm";
 import { problemServices } from "data/problemServices";
 
 const whyDXG = [
   { label: "How We Work", href: "/our-process" },
-  { label: "Our Services", href: "/" },
-  { label: "Our Mission", href: "/" },
-  { label: "Our Experience", href: "/" },
+  { label: "Our Services", href: "/our-process" },
+  { label: "Our Mission", href: "/why-dxg" },
+  { label: "Our Experience", href: "/experiences-created" },
 ];
 
 const legal = [
@@ -110,6 +111,7 @@ export default function Footer() {
             </div>
 
             {/* Right */}
+<<<<<<< HEAD
             <div className="w-full max-w-xl">
               {/* Form */}
               <form className="flex flex-col gap-4 sm:flex-row">
@@ -162,6 +164,9 @@ export default function Footer() {
                 </span>
               </label>
             </div>
+=======
+            <NewsletterForm />
+>>>>>>> f44c481018562f94bb7344285382d53acb58c92f
           </div>
 
           {/* Footer Grid */}
