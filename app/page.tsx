@@ -11,6 +11,14 @@ import SmarterApproachSection from "components/home/SmarterApproachSection";
 import TrustedBrandsSection from "components/shared/TrustedBrandsSection";
 import WhyPlannersChooseDXGSection from "components/home/WhyPlannersChooseDXGSection";
 
+export const metadata = {
+  title: "Digital Xperience Group",
+  description:
+    "Digital Xperience Group (DXG), a pioneering division of WLJ Consulting, is a premier partner in transforming events into unforgettable experiences.",
+  alternates: {
+    canonical: "/problems-we-solve",
+  },
+};
 export default function Home() {
   return (
     <div>
