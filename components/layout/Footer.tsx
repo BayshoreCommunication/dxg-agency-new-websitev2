@@ -18,12 +18,15 @@ import { problemServices } from "data/problemServices";
 
 const whyDXG = [
   { label: "How We Work", href: "/our-process" },
-  { label: "Our Services", href: "/our-process" },
+  { label: "Our Services", href: "/services" },
   { label: "Our Mission", href: "/why-dxg" },
   { label: "Our Experience", href: "/experiences-created" },
 ];
 
-const legal = ["Privacy Policy", "Terms Of Use"];
+const legal = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms Of Use", href: "/terms-of-use" },
+];
 
 const contactItems: {
   label: string;
@@ -206,7 +209,7 @@ export default function Footer() {
                   {problemServices.map((service) => (
                     <li key={service.slug}>
                       <Link
-                        href={`/problems-we-solve/${service.slug}`}
+                        href={`/services/${service.slug}`}
                         className="text-sm text-primary transition hover:text-white sm:text-base"
                       >
                         {service.title}
@@ -260,12 +263,12 @@ export default function Footer() {
 
                 <Reveal kind="list" className="mt-7 space-y-4">
                   {legal.map((item) => (
-                    <li key={item}>
+                    <li key={item.label}>
                       <Link
-                        href="/"
+                        href={item.href}
                         className="text-sm text-white/70 transition hover:text-primary sm:text-base"
                       >
-                        {item}
+                        {item.label}
                       </Link>
                     </li>
                   ))}

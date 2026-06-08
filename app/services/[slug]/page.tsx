@@ -101,7 +101,7 @@ export default function ServiceDetailsPage({
                 </div>
 
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="btn-slide-primary mt-6 inline-flex items-center justify-center px-6 py-3 text-xs font-semibold sm:mt-7 sm:px-7 sm:py-4 sm:text-sm lg:mt-8 lg:text-base"
                 >
                   Schedule a Strategy Call

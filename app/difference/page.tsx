@@ -1,8 +1,6 @@
 import BusinessNextLevelSection from "components/difference/BusinessNextLevelSection";
-import WhyPlannersChooseDXGSection from "components/home/WhyPlannersChooseDXGSection";
-import PageBanner from "components/shared/PageBanner";
+import LetsTalkSection from "components/shared/LetsTalkSection";
 import React from "react";
-
 export const metadata = {
   title: "The DXG Difference | Event Production That Stands Out",
   description:
@@ -14,12 +12,8 @@ export const metadata = {
 const page = () => {
   return (
     <div>
-      <PageBanner
-        title="The DXG Difference"
-        backgroundImage="/images/banners/our-difference-banner.png"
-      />
-      <WhyPlannersChooseDXGSection />
       <BusinessNextLevelSection />
+      <LetsTalkSection />
     </div>
   );
 };

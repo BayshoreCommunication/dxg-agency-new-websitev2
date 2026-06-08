@@ -8,9 +8,9 @@ import BlogGridSkeleton from "components/blogs/BlogGridSkeleton";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Digital Xperience Group",
+  title: "DXG Blogs | Event Production Insights & Creative Ideas",
   description:
-    "Digital Xperience Group (DXG), a pioneering division of WLJ Consulting, is a premier partner in transforming events into unforgettable experiences.",
+    "Explore DXG Agency blogs on event production, audiovisual design, and live experiences. Get insights, ideas, and trends to elevate your events.",
   alternates: {
     canonical: "/blogs",
   },
