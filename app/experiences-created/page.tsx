@@ -3,9 +3,9 @@ import PageBanner from "components/shared/PageBanner";
 import React from "react";
 
 export const metadata = {
-  title: "Digital Xperience Group",
+  title: "Experiences Created | DXG Agency Event & Digital Work",
   description:
-    "Digital Xperience Group (DXG), a pioneering division of WLJ Consulting, is a premier partner in transforming events into unforgettable experiences.",
+    "Explore DXG Agency’s experiences created through innovative event production, audiovisual design, and digital solutions that deliver impactful results.",
   alternates: {
     canonical: "/experiences-created",
   },

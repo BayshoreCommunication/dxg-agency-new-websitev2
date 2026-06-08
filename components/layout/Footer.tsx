@@ -22,7 +22,10 @@ const whyDXG = [
   { label: "Our Experience", href: "/" },
 ];
 
-const legal = ["Privacy Policy", "Terms Of Use"];
+const legal = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms Of Use", href: "/terms-of-use" },
+];
 
 const contactItems: {
   label: string;
@@ -150,7 +153,10 @@ export default function Footer() {
 
                 <span>
                   I&apos;m accept the{" "}
-                  <Link href="/terms" className="underline underline-offset-4">
+                  <Link
+                    href="/terms-of-use"
+                    className="underline underline-offset-4"
+                  >
                     Terms & Conditions
                   </Link>
                 </span>
@@ -307,12 +313,12 @@ export default function Footer() {
 
                 <Reveal kind="list" className="mt-7 space-y-4">
                   {legal.map((item) => (
-                    <li key={item}>
+                    <li key={item.label}>
                       <Link
-                        href="/"
+                        href={item.href}
                         className="text-sm text-white/70 transition hover:text-primary sm:text-base"
                       >
-                        {item}
+                        {item.label}
                       </Link>
                     </li>
                   ))}

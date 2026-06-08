@@ -6,9 +6,9 @@ import TrustedBrandsSection from "components/shared/TrustedBrandsSection";
 import React from "react";
 
 export const metadata = {
-  title: "Digital Xperience Group",
+  title: "Problems We Solve | DXG Agency SEO Web Solutions Services",
   description:
-    "Digital Xperience Group (DXG), a pioneering division of WLJ Consulting, is a premier partner in transforming events into unforgettable experiences.",
+    "Explore DXG Agency's problems we solve across SEO, web development, and digital marketing to grow traffic, leads, and revenue for your business growth.",
   alternates: {
     canonical: "/problems-we-solve",
   },

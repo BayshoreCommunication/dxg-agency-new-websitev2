@@ -19,7 +19,7 @@ const navItems = [
   {
     label: "Problems We Solve",
     target: "problems-we-solve",
-    path: "/problems-we-solve",
+    path: "/services",
   },
   {
     label: "Experiences We've Created",
