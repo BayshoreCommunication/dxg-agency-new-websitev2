@@ -31,7 +31,6 @@ const nextConfig = {
     ],
   },
   skipTrailingSlashRedirect: true,
-<<<<<<< HEAD
   async redirects() {
     return [
       {
@@ -68,8 +67,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-=======
->>>>>>> b093613c274db3b2acef44beeb8c05070b7d814d
 };
 
 module.exports = nextConfig;
