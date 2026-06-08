@@ -27,8 +27,8 @@ const navItems = [
     path: "/experiences-created",
   },
   { label: "The DXG Difference", target: "difference", path: "/difference" },
-  { label: "Planner Insight Blog", target: "blog", path: "/planner-insight-blog" },
-  { label: "Contact Us", target: "contact", path: "/contact" },
+  { label: "Planner Insight Blog", target: "blog", path: "/blogs" },
+  { label: "Contact Us", target: "contact", path: "/contact-us" },
 ];
 
 export default function Header() {
