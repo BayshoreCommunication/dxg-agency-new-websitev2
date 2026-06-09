@@ -40,19 +40,21 @@ export async function generateMetadata({ params }: Props) {
   const rawDescription = stripHtml(
     blog.metaDescription || blog.shortDesc || blog.content
   );
-
   const description = toWords(rawDescription, 50);
-  const pageTitle = `${blog.metaTitle || blog.title} | DXG Digital`;
 
   return {
-    title: pageTitle,
+    title: blog.metaTitle || blog.title,
     description,
+    alternates: {
+      canonical: `${SITE_URL}/blogs/${blog.slug}`,
+    },
     openGraph: {
       title: blog.metaTitle || blog.title,
       description,
+      images: blog.image || undefined,
       url: `${SITE_URL}/blogs/${blog.slug}`,
       type: "article",
-      siteName: "DXG Agency",
+      site_name: "DXG Agency",
     },
   };
 }
