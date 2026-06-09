@@ -50,12 +50,12 @@ export default function HowWeWorkSection() {
         <div className="mt-12 rounded-[28px] bg-[#151515] lg:mt-16">
           <div className="grid overflow-hidden lg:grid-cols-2">
             {/* Left Animation */}
-            <div className="overflow-visible">
+            <div className="h-full overflow-visible">
               <ProcessTimelineAnimation />
             </div>
 
             {/* Right Panel */}
-            <div className="bg-[#181818] p-6 sm:p-8 sm:ml-4 lg:ml-0 lg:p-12">
+            <div className="bg-[#181818] p-6 sm:ml-4 sm:p-8 lg:ml-0 lg:px-12 lg:pb-4 lg:pt-12">
               <Reveal
                 as="p"
                 className="text-xs font-bold uppercase tracking-wide text-white/70"
@@ -73,7 +73,7 @@ export default function HowWeWorkSection() {
                 </span>
               </TypingTitle>
 
-              <div className="mt-10 grid gap-8 sm:grid-cols-2">
+              <div className="mt-7 grid gap-x-8 gap-y-5 sm:grid-cols-2">
                 {methodology.map((item) => (
                   <div key={item.title}>
                     <TypingTitle as="h4" className="text-xl font-bold text-white">
@@ -81,7 +81,7 @@ export default function HowWeWorkSection() {
                     </TypingTitle>
                     <Reveal
                       as="p"
-                      className="mt-3 text-sm leading-7 text-white/75"
+                      className="mt-2 text-sm leading-6 text-white/75"
                     >
                       {item.desc}
                     </Reveal>

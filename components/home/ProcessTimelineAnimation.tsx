@@ -80,7 +80,7 @@ const toneClasses = {
 
 export default function ProcessTimelineAnimation() {
   return (
-    <div className="relative flex min-h-[420px] items-center justify-center bg-gradient-to-r from-white via-[#f3f3f3] to-[#c9c9c9] px-1 py-6 sm:px-2 sm:py-8 lg:min-h-[560px] lg:overflow-visible lg:px-4 lg:py-12">
+    <div className="relative flex h-full min-h-[420px] items-center justify-center bg-gradient-to-r from-white via-[#f3f3f3] to-[#c9c9c9] px-1 py-6 sm:px-2 sm:py-8 lg:min-h-full lg:overflow-visible lg:px-4 lg:py-8">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_45%,rgba(0,188,242,0.14),transparent_24%),radial-gradient(circle_at_63%_48%,rgba(0,93,168,0.10),transparent_24%)]" />
 
       <div className="relative flex w-full max-w-full items-center justify-center">
