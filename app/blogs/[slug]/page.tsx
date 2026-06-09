@@ -11,14 +11,21 @@ type Props = {
   params: { slug: string };
 };
 
+function stripHtml(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&[a-z]+;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function toWords(text: string, max: number): string {
   const words = text.split(/\s+/).filter(Boolean);
   if (words.length <= max) return words.join(" ");
   return words.slice(0, max).join(" ") + "…";
 }
 
-const SITE_URL = "https://dxg.agency";
-const DEFAULT_OG_IMAGE = `${SITE_URL}/images/og-default.jpg`;
+const SITE_URL = "https://www.dxg.agency";
 
 export async function generateMetadata({ params }: Props) {
   const blog = await GetBlogBySlug(params.slug);
@@ -30,14 +37,12 @@ export async function generateMetadata({ params }: Props) {
     };
   }
 
-  const rawDescription =
-    blog.metaDescription ||
-    blog.shortDesc ||
-    blog.content.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  const rawDescription = stripHtml(
+    blog.metaDescription || blog.shortDesc || blog.content
+  );
 
   const description = toWords(rawDescription, 50);
   const pageTitle = `${blog.metaTitle || blog.title} | DXG Digital`;
-  const ogImage = blog.image?.startsWith("http") ? blog.image : DEFAULT_OG_IMAGE;
 
   return {
     title: pageTitle,
@@ -45,7 +50,6 @@ export async function generateMetadata({ params }: Props) {
     openGraph: {
       title: blog.metaTitle || blog.title,
       description,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: blog.title }],
       url: `${SITE_URL}/blogs/${blog.slug}`,
       type: "article",
       siteName: "DXG Agency",
