@@ -40,7 +40,7 @@ export default function PageBanner({
       {/* Content */}
       <div className="relative z-10">
         <Container>
-          <div className="mx-auto flex max-w-4xl flex-col items-center justify-center text-center">
+          <div className="mx-auto flex max-w-4xl flex-col items-center justify-center text-center mt-8 md:mt-12">
             {/* Title */}
             <TypingTitle
               as="h1"

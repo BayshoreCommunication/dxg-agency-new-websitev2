@@ -18,9 +18,9 @@ import { problemServices } from "data/problemServices";
 
 const whyDXG = [
   { label: "How We Work", href: "/our-process" },
-  { label: "Our Services", href: "/services" },
-  { label: "Our Mission", href: "/why-dxg" },
-  { label: "Our Experience", href: "/experiences-created" },
+  { label: "Problems We Solve", href: "/services" },
+  { label: "The DXG Difference", href: "/why-dxg" },
+  { label: "Experiences We've Created", href: "/experiences-created" },
 ];
 
 const legal = [
