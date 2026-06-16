@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Container from "components/shared/Container";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { Sora } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Sora } from "next/font/google";
-import { Menu, X } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
-import Container from "components/shared/Container";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const headerFont = Sora({
   subsets: ["latin"],
@@ -204,7 +204,7 @@ export default function Header() {
               }}
               transition={{ duration: 0.24, ease: "easeOut" }}
               className="btn-slide-primary capsule-button mt-5 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold"
-              onClick={() => handleNavClick("contact", "/contact")}
+              onClick={() => handleNavClick("contact", "/contact-us")}
             >
               Request for Proposal
             </motion.button>
