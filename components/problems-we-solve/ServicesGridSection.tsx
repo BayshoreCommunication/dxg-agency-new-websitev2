@@ -54,7 +54,7 @@ export default function ServicesGridSection() {
                   <div className="relative z-10 flex h-full flex-col items-center justify-center text-center transition duration-500 group-hover:-translate-y-2">
                     <Reveal
                       kind="image"
-                      className="flex h-24 w-24 items-center justify-center rounded-lg shadow-[0_0_20px_rgba(0,188,242,0.12)] transition duration-500 group-hover:scale-110 group-hover:border-primary"
+                      className="flex h-24 w-24 items-center justify-center rounded-lg shadow-[0_0_20px_rgba(0,188,242,0.12)] transition duration-500 group-hover:scale-110 group-hover:border-primary border border-primary/50 bg-[#0b2237]"
                     >
                       <Image
                         src={service.icon}
@@ -67,7 +67,7 @@ export default function ServicesGridSection() {
 
                     <TypingTitle
                       as="h3"
-                      className="mt-6 text-3xl font-black uppercase leading-[0.95] text-white"
+                      className="mt-6 text-3xl font-black uppercase leading-[0.95] text-primary"
                     >
                       {service.title}
                     </TypingTitle>

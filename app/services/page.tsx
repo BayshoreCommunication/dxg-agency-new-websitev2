@@ -17,7 +17,7 @@ const page = () => {
   return (
     <div>
       <PageBanner
-        title="The Problem Most Planners Face"
+        title="The Areas We Support Planners"
         backgroundImage="/images/banners/problems-we-solve-banner.png"
       />
       <ServicesGridSection />
