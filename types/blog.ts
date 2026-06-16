@@ -3,6 +3,8 @@ export type ApiBlog = {
   slug: string;
   title: string;
   date: string;
+  author: string;
+  authorUrl: string;
   image: string;
   shortDesc: string;
   content: string;
@@ -37,6 +39,8 @@ export function normalizeApiBlog(raw: any): ApiBlog {
     slug: raw.slug ?? "",
     title: raw.title ?? "",
     date: formatDate(raw.date ?? raw.createdAt ?? raw.publishedAt ?? ""),
+    author: raw.author ?? raw.authorName ?? raw.author_name ?? "",
+    authorUrl: raw.authorUrl ?? raw.authorLink ?? raw.author_url ?? "",
     image: raw.featuredImage?.image?.url ?? raw.image ?? "",
     shortDesc: raw.shortDesc ?? raw.excerpt ?? raw.description ?? "",
     content: raw.body || raw.content || raw.html || "",

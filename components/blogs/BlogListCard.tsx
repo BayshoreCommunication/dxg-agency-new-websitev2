@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { ApiBlog } from "types/blog";
 import TypingTitle from "components/layout/TypingTitle";
 import Reveal from "components/shared/Reveal";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { ApiBlog } from "types/blog";
 
 type Props = {
   blog: ApiBlog;
@@ -14,7 +14,10 @@ export default function BlogListCard({ blog, revealDelay = 0 }: Props) {
   return (
     <Reveal className="h-full" delay={revealDelay} duration={0.85}>
       <Link href={`/blogs/${blog.slug}`} className="group block">
-        <Reveal kind="image" className="relative aspect-[1.52/1] overflow-hidden rounded-sm">
+        <Reveal
+          kind="image"
+          className="relative aspect-[1.52/1] overflow-hidden rounded-sm"
+        >
           <Image
             src={blog.image}
             alt={blog.title}
@@ -26,8 +29,20 @@ export default function BlogListCard({ blog, revealDelay = 0 }: Props) {
           <div className="absolute inset-0 bg-[#001826]/20" />
         </Reveal>
 
-        <Reveal as="p" className="mt-5 text-sm font-semibold text-white/65">
-          {blog.date}
+        <Reveal
+          as="div"
+          className="mt-5 flex items-center justify-between text-sm font-semibold text-white/65"
+        >
+          <span>{blog.date}</span>
+
+          <a
+            href={"https://www.linkedin.com/in/acedxg"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            {"Ace Johnson"}
+          </a>
         </Reveal>
 
         <TypingTitle
@@ -37,7 +52,10 @@ export default function BlogListCard({ blog, revealDelay = 0 }: Props) {
           {blog.title}
         </TypingTitle>
 
-        <Reveal as="p" className="mt-4 line-clamp-3 text-base leading-7 text-white/70">
+        <Reveal
+          as="p"
+          className="mt-4 line-clamp-3 text-base leading-7 text-white/70"
+        >
           {blog.shortDesc}
         </Reveal>
 

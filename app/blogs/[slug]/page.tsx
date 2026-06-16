@@ -78,3 +78,5 @@ export default function BlogDetailsPage({ params }: Props) {
     </div>
   );
 }
+
+
