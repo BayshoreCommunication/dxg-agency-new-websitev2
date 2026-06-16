@@ -13,22 +13,47 @@ import Image from "next/image";
 const highlights = [
   {
     icon: "/images/home/why-dxg/icon1.png",
-    title: "More Control Over How Your Event Is Planned and Executed",
+    title: (
+      <>
+        <span className="text-primary font-semibold">More Control</span> Over
+        How Your Event Is Planned and Executed
+      </>
+    ),
     desc: "We don’t just support your event — we help structure and manage it so nothing is left to chance.",
   },
   {
     icon: "/images/home/why-dxg/icon2.png",
-    title: "Transparent, Predictable Pricing — Without Surprises",
+    title: (
+      <>
+        <span className="text-primary font-semibold">
+          Transparent, Predictable
+        </span>{" "}
+        Pricing — Without Surprises
+      </>
+    ),
     desc: "From the first proposal to final invoice, you pay what was approved — no surprises, no exceptions.",
   },
   {
     icon: "/images/home/why-dxg/icon3.png",
-    title: "A Consistent Team That Knows Your Event From Start to Finish",
+    title: (
+      <>
+        A <span className="text-primary font-semibold">Consistent Team</span>{" "}
+        That Knows Your Event From Start to Finish
+      </>
+    ),
     desc: "The same people who plan your event are the ones executing it on-site. No handoffs, no gaps, no starting over.",
   },
   {
     icon: "/images/home/why-dxg/icon4.png",
-    title: "A Producer-Led Approach Focused on Real-World Execution",
+    title: (
+      <>
+        A{" "}
+        <span className="text-primary font-semibold">
+          Producer-Led Approach
+        </span>{" "}
+        Focused on Real-World Execution
+      </>
+    ),
     desc: "Every decision is made based on how your event will actually run — not just how it looks on paper.",
   },
 ];
@@ -132,15 +157,12 @@ export default function WhyPlannersChooseDXGSection() {
                 </div>
 
                 <div className="relative z-10 space-y-7">
-                  {highlights.map((item) => (
-                    <article
-                      key={item.title}
-                      className="flex items-start gap-4"
-                    >
+                  {highlights.map((item, index) => (
+                    <article key={index} className="flex items-start gap-4">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-primary/50 bg-[#0b2237]">
                         <Image
                           src={item.icon}
-                          alt={item.title}
+                          alt={`Highlight icon ${index + 1}`}
                           width={22}
                           height={22}
                           className="h-5 w-5 object-contain"
@@ -154,6 +176,7 @@ export default function WhyPlannersChooseDXGSection() {
                         >
                           {item.title}
                         </TypingTitle>
+
                         <Reveal
                           as="p"
                           className="mt-1 text-sm leading-7 text-white/70 sm:text-base"
@@ -189,25 +212,21 @@ export default function WhyPlannersChooseDXGSection() {
                   <div className="absolute inset-0 bg-gradient-to-b from-[#061b2d]/40 via-[#061b2d]/70 to-[#020914]/95" />
                   <div className="absolute inset-0 bg-primary/[0.04]" />
 
-                  <div className="relative z-10 flex h-full flex-col">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-lg border border-primary bg-[#08233a] text-white shadow-[0_0_20px_rgba(0,188,242,0.18)]">
+                  <div className="relative z-20 flex h-full flex-col">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-lg border border-primary bg-[#08233a] text-white">
                       <item.Icon size={32} strokeWidth={2.2} />
                     </div>
 
                     <TypingTitle
                       as="h3"
-                      className="mt-10 text-2xl font-black uppercase leading-none text-white sm:text-3xl"
+                      className="mt-10 text-2xl font-black uppercase leading-none text-primary sm:text-3xl"
                     >
-                      {item.title.split(" ")[0]} <br />
-                      {item.title.split(" ").slice(1).join(" ")}
+                      {item.title}
                     </TypingTitle>
 
-                    <Reveal
-                      as="p"
-                      className="mt-4 text-xs font-medium leading-6 text-white/90 sm:text-sm"
-                    >
+                    <p className="mt-4 text-sm leading-6 text-white/90">
                       {item.desc}
-                    </Reveal>
+                    </p>
                   </div>
                 </article>
               ))}

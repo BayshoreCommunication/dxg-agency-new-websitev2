@@ -74,7 +74,10 @@ export default function LetsTalkSection() {
               key={item.title}
               className="relative flex min-h-[230px] flex-col items-center justify-center rounded-xl bg-[#071826] px-8 py-9 text-center"
             >
-              <Reveal kind="image">
+              <Reveal
+                kind="image"
+                className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl border border-primary/50 bg-[#0b2237]"
+              >
                 <Image
                   src={item.icon}
                   alt={item.title}
@@ -86,7 +89,7 @@ export default function LetsTalkSection() {
 
               <TypingTitle
                 as="h3"
-                className="mt-6 text-lg font-bold text-white"
+                className="mt-6 text-lg font-bold text-primary"
               >
                 {item.title}
               </TypingTitle>
@@ -123,7 +126,11 @@ export default function LetsTalkSection() {
                 className="text-2xl font-bold leading-tight text-white sm:text-3xl"
               >
                 This isn’t a sales call — it’s a working session to help you
-                plan smarter.
+                <span className="text-primary font-semibold">
+                  {" "}
+                  plan smarter
+                </span>
+                .
               </TypingTitle>
             </div>
 

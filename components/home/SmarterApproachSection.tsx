@@ -37,17 +37,24 @@ export default function SmarterApproachSection() {
                 as="h3"
                 className="max-w-xl text-2xl font-bold uppercase leading-snug text-white sm:text-3xl"
               >
-                Designed For Planners Who Expect More From Event Production
+                Designed For Planners Who{" "}
+                <span className="text-primary font-semibold">
+                  {" "}
+                  Expect More{" "}
+                </span>
+                From Event Production
               </TypingTitle>
 
               <Reveal
                 as="p"
                 className="mt-6 text-sm leading-7 text-white/80 sm:text-base sm:leading-8"
               >
-                DXG is built for planners who want more control, more support,
-                and a better production experience — especially when the stakes
-                are high. If that sounds like your world, DXG was built for you.
-                We&apos;re the production partner who:
+                <span className="text-primary font-semibold">DXG</span> is built
+                for planners who want more control, more support, and a better
+                production experience — especially when the stakes are high. If
+                that sounds like your world,{" "}
+                <span className="text-primary font-semibold">DXG</span> was
+                built for you. We&apos;re the production partner who:
               </Reveal>
 
               <Reveal kind="list" className="mt-8 space-y-5">

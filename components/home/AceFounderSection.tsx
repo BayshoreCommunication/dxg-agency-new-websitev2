@@ -33,7 +33,7 @@ export default function AceFounderSection() {
                 as="h2"
                 className="max-w-[310px] text-5xl font-black uppercase leading-[0.95] text-white sm:text-6xl lg:text-7xl"
               >
-                Meet The Founder
+                Meet The <span className="text-primary">Founder</span>
               </TypingTitle>
             </div>
 
@@ -43,19 +43,23 @@ export default function AceFounderSection() {
                 <Reveal as="p">
                   When you&apos;re planning an event, you&apos;re not just
                   managing logistics — you&apos;re protecting your reputation.
-                  At DXG, we take that responsibility seriously. Every
-                  production we touch is backed by decades of expertise, a team
-                  that operates with flawless precision, and a standard of
-                  excellence that doesn&apos;t waver when things get
-                  complicated.
+                  At{" "}
+                  <span className="text-primary font-semibold">
+                    Digital Xperience Group
+                  </span>
+                  , we take that responsibility seriously. Every production we
+                  touch is backed by decades of expertise, a team that operates
+                  with flawless precision, and a standard of excellence that
+                  doesn&apos;t waver when things get complicated.
                 </Reveal>
 
                 <Reveal as="p" delay={0.06}>
                   Wallace &quot;Ace&quot; Johnson, CTS, founded Digital
                   Xperience Group on a simple belief: meeting planners deserve a
-                  production partner they never have to worry about. With 25+
-                  years in live-event AV production, Ace has built his expertise
-                  from both sides of the table. His background spans hotel AV
+                  production partner they never have to worry about. With{" "}
+                  <span className="text-primary font-semibold">30+ years</span>{" "}
+                  in live-event AV production, Ace has built his expertise from
+                  both sides of the table. His background spans hotel AV
                   operations and independent production — giving him a rare,
                   insider understanding of how venues think, how contracts work,
                   and exactly where planners can get caught off guard.
@@ -70,12 +74,15 @@ export default function AceFounderSection() {
                   industry. What his clients say most isn&apos;t about the
                   technology or the logistics. It&apos;s about how they feel on
                   event day. Confident. Covered. Calm. That&apos;s what Ace
-                  brings to every event — and that&apos;s what DXG promises
-                  every planner who trusts us with their stage.
+                  brings to every event — and that&apos;s what{" "}
+                  <span className="text-primary font-semibold">DXG</span>{" "}
+                  promises every planner who trusts us with their stage.
                 </Reveal>
 
                 <Reveal as="p" className="pt-2" delay={0.18}>
-                  Want to stay connected and follow what DXG is working on?
+                  Want to stay connected and follow what{" "}
+                  <span className="text-primary font-semibold">DXG</span> is
+                  working on?
                   <br />
                   Connect with Ace on LinkedIn
                 </Reveal>

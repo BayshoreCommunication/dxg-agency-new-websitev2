@@ -76,7 +76,10 @@ export default function HowWeWorkSection() {
               <div className="mt-7 grid gap-x-8 gap-y-5 sm:grid-cols-2">
                 {methodology.map((item) => (
                   <div key={item.title}>
-                    <TypingTitle as="h4" className="text-xl font-bold text-white">
+                    <TypingTitle
+                      as="h4"
+                      className="text-xl font-bold text-primary"
+                    >
                       {item.title}
                     </TypingTitle>
                     <Reveal

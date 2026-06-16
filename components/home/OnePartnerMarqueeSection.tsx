@@ -64,8 +64,9 @@ export default function OnePartnerMarqueeSection() {
           as="p"
           className="mt-5 max-w-3xl text-left text-sm leading-7 text-white/75 sm:mx-auto sm:text-center sm:text-base"
         >
-          From the first planning call through post-event wrap-up, DXG supports
-          every element of your event — so nothing falls through the cracks.
+          From the first planning call through post-event wrap-up,{" "}
+          <span className="text-primary font-semibold">DXG</span> supports every
+          element of your event — so nothing falls through the cracks.
         </Reveal>
       </Container>
 
