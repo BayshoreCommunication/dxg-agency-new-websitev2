@@ -15,7 +15,7 @@ const stats = [
     label: "Completed Projects",
   },
   {
-    number: 25,
+    number: 30,
     suffix: "+",
     label: "Years Experience",
   },
@@ -122,9 +122,7 @@ export default function HeroSection() {
               as="h1"
               className="max-w-[1120px] text-3xl font-black uppercase leading-tight text-white sm:text-5xl md:text-6xl xl:text-7xl"
             >
-              <span>
-                Your event is too important to hand off to
-              </span>{" "}
+              <span>Your event is too important to hand off to</span>{" "}
               <span className="text-primary">the wrong AV partner.</span>
             </TypingTitle>
 
@@ -160,8 +158,9 @@ export default function HeroSection() {
                 >
                   Whether you&apos;re navigating in-house AV restrictions,
                   managing complex production needs, or simply looking for a
-                  more proactive partner, DXG brings clarity, control, and
-                  confidence to your event.
+                  more proactive partner,{" "}
+                  <span className="text-primary">DXG</span> brings clarity,
+                  control, and confidence to your event.
                 </Reveal>
 
                 <Reveal
@@ -172,7 +171,6 @@ export default function HeroSection() {
                   We don&apos;t just provide equipment. We help you execute your
                   event the way you actually want it to run.
                 </Reveal>
-
               </div>
 
               <div className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center gap-3 sm:bottom-12 lg:bottom-16">

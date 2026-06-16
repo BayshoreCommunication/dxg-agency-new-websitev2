@@ -98,7 +98,7 @@ export default function Footer() {
                 as="h2"
                 className="text-4xl font-black text-white sm:text-5xl"
               >
-                Join Our Newsletter
+                Join Our <span className="text-primary">Newsletter</span>
               </TypingTitle>
 
               <Reveal
@@ -133,7 +133,7 @@ export default function Footer() {
 
                 <TypingTitle
                   as="h3"
-                  className="mt-8 text-3xl font-black uppercase text-white"
+                  className="mt-8 text-3xl font-black uppercase text-primary"
                 >
                   Address
                 </TypingTitle>
@@ -200,7 +200,7 @@ export default function Footer() {
               <div className="relative z-10 lg:pl-12">
                 <TypingTitle
                   as="h3"
-                  className="text-3xl font-black uppercase text-white"
+                  className="text-3xl font-black uppercase text-primary"
                 >
                   Services
                 </TypingTitle>
@@ -210,7 +210,7 @@ export default function Footer() {
                     <li key={service.slug}>
                       <Link
                         href={`/services/${service.slug}`}
-                        className="text-sm text-primary transition hover:text-white sm:text-base"
+                        className="text-sm text-white transition hover:text-primary sm:text-base"
                       >
                         {service.title}
                       </Link>
@@ -228,7 +228,7 @@ export default function Footer() {
               <div className="relative z-10 lg:pl-12">
                 <TypingTitle
                   as="h3"
-                  className="text-3xl font-black uppercase text-white"
+                  className="text-3xl font-black uppercase text-primary"
                 >
                   Why DXG
                 </TypingTitle>
@@ -256,7 +256,7 @@ export default function Footer() {
               <div className="relative z-10 lg:pl-12">
                 <TypingTitle
                   as="h3"
-                  className="text-3xl font-black uppercase text-white"
+                  className="text-3xl font-black uppercase text-primary"
                 >
                   Legal
                 </TypingTitle>

@@ -132,7 +132,7 @@ export const problemServices: ProblemService[] = [
     heroImage: `${serviceDetailsPath}/Hybrid-&-Virtual.png`,
     bannerImage: "/images/problems-we-solve/Hybrid-Virtual.png",
     details: [
-      "A hybrid event isn't an in-person event with a camera in the back of the room. The remote audience either feels included, or they drop off, and the in-room energy either translates to the stream or it doesn't.",
+      // "A hybrid event isn't an in-person event with a camera in the back of the room. The remote audience either feels included, or they drop off, and the in-room energy either translates to the stream or it doesn't.",
 
       "We build hybrid and virtual experiences as two connected productions: one for the room, one for the screen. With the technical infrastructure, on-camera direction, and platform expertise to support both audiences, your remote attendees get more than a livestream and your in-room attendees still get your full attention.",
     ],

@@ -57,9 +57,11 @@ export default function CompanyOverviewSection() {
               as="p"
               className="text-base leading-7 text-white/80 sm:text-lg"
             >
-              Digital Xperience Group (DXG) is an audiovisual production agency
-              for planners who want a better AV experience — more control, more
-              clarity, and more confidence.
+              <span className="text-primary">
+                Digital Xperience Group (DXG)
+              </span>{" "}
+              is an audiovisual production agency for planners who want a better
+              AV experience — more control, more clarity, and more confidence.
             </Reveal>
 
             <Reveal
@@ -85,27 +87,25 @@ export default function CompanyOverviewSection() {
               >
                 <Reveal
                   kind="image"
-                  className="icon-hover mx-auto flex h-14 w-14 items-center justify-center rounded-xl text-primary"
+                  className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl border border-primary/50 bg-[#0b2237]"
                 >
                   <Image
                     src={item.icon}
                     alt={item.title}
                     width={64}
                     height={64}
+                    className="p-2"
                   />
                 </Reveal>
 
                 <TypingTitle
                   as="h3"
-                  className="mt-5 text-sm font-semibold uppercase tracking-wide text-white"
+                  className="mt-5 text-sm font-semibold uppercase tracking-wide text-primary"
                 >
                   {item.title}
                 </TypingTitle>
 
-                <Reveal
-                  as="p"
-                  className="mt-3 text-sm leading-6 text-white/70"
-                >
+                <Reveal as="p" className="mt-3 text-sm leading-6 text-white/70">
                   {item.desc}
                 </Reveal>
               </div>
