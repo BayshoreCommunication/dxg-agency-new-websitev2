@@ -17,12 +17,14 @@ export default async function GetAllBlogPost(
 
   try {
     const res = await fetch(url.toString(), { cache: "no-store" });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status} from ${url.toString()}`);
 
     const data = await res.json();
+    console.log("[GetAllBlogPost] raw response keys:", Object.keys(data));
+
     const raw: unknown[] = Array.isArray(data)
       ? data
-      : (data.data ?? data.blogs ?? []);
+      : (data.data ?? data.blogs ?? data.posts ?? data.items ?? data.results ?? []);
 
     const pagination = data.pagination ?? {};
 
@@ -32,7 +34,8 @@ export default async function GetAllBlogPost(
       totalPages: pagination.totalPages ?? data.totalPages ?? 1,
       currentPage: pagination.currentPage ?? data.page ?? page,
     };
-  } catch {
+  } catch (err) {
+    console.error("[GetAllBlogPost] failed:", err);
     return { blogs: [], total: 0, totalPages: 0, currentPage: page };
   }
 }
