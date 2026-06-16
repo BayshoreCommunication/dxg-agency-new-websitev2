@@ -13,7 +13,7 @@ const stats = [
     label: "Completed Projects",
   },
   {
-    number: 25,
+    number: 30,
     suffix: "+",
     label: "Years Experience",
   },
@@ -100,15 +100,17 @@ export default function BusinessNextLevelSection() {
               <div className="mt-8 space-y-6 text-sm leading-8 text-white/80 sm:text-base">
                 <Reveal as="p">
                   We ensure an unparalleled fusion of experience, innovation,
-                  and dedication. With core teams boasting an average of 20+
+                  and dedication. With core teams boasting an average of 25+
                   years in live events, virtual and hybrid corporate events,
-                  broadcast, and entertainment, DXG brings a depth of knowledge
-                  that is unmatched.
+                  broadcast, and entertainment,{" "}
+                  <span className="text-primary font-semibold">DXG</span> brings
+                  a depth of knowledge that is unmatched.
                 </Reveal>
 
                 <Reveal as="p" delay={0.08}>
-                  DXG excels in Production Management, Audiovisual Technology,
-                  Event Platform Services, Event Experience Design, Graphics &
+                  <span className="text-primary font-semibold">DXG</span> excels
+                  in Production Management, Audiovisual Technology, Event
+                  Platform Services, Event Experience Design, Graphics &
                   Animation, and Video Production & Photography.
                 </Reveal>
               </div>
