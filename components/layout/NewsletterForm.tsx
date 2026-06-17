@@ -110,7 +110,10 @@ export default function NewsletterForm() {
 
       <div className="w-full max-w-xl">
         {/* Form */}
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:flex-row">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-4 sm:flex-row"
+        >
           <div className="relative flex-1">
             <input
               type="email"
@@ -148,20 +151,20 @@ export default function NewsletterForm() {
 
         {/* Checkbox */}
         <div className="mt-5">
-          <label className="flex cursor-pointer items-start gap-3 text-sm text-white/70">
+          <label className="flex cursor-pointer items-center gap-3 text-sm text-white/70">
             <input
               type="checkbox"
               checked={agreed}
               onChange={(e) => setAgreed(e.target.checked)}
-              className="mt-1 h-4 w-4 accent-primary"
+              className=" h-4 w-4 accent-primary"
             />
             <span>
-              I&apos;m accept the{" "}
+              I&apos;m accepting the{" "}
               <Link
                 href="/terms-of-use"
-                className="underline underline-offset-4"
+                className="underline underline-offset-4 "
               >
-                Terms & Conditions
+                Terms & Conditions.
               </Link>
             </span>
           </label>
