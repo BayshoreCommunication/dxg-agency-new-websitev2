@@ -43,8 +43,7 @@ export default function ChallengesHeroSection() {
               as="p"
               className="mt-8 max-w-2xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
             >
-              We partner with planners to deliver seamless, engaging events—so
-              you can focus on your attendees, not the technology.
+             We partner with planners to own the production side of live events — planned, led, and executed by one team from first call to final session.
             </Reveal>
           </div>
         </Container>

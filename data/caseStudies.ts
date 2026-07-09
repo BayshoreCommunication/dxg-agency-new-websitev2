@@ -97,7 +97,7 @@ export const caseStudies: CaseStudy[] = [
     highlight: "Event",
     subtitle: "Corporate Sales Conference | 850 Attendees | Orlando, FL",
     quote:
-      "DXG elevated the entire experience. Everything ran smoothly, and the final product exceeded expectations.",
+      "DXG Stage design that held the room's attention. Everything ran smoothly, and the final product exceeded expectations.",
     quoteAuthor: "-Sr Marketing Event Manager",
     image: "/images/home/case-study/case-study-2.png",
     background: "#151515",
@@ -131,7 +131,7 @@ export const caseStudies: CaseStudy[] = [
         title: "The",
         highlight: "Challenge",
         content:
-          "The client needed to deliver a high-impact general session experience while ensuring seamless execution.",
+          "The client needed to deliver a high-impact general session experience while ensuring general session stayed on schedule, start to finish.",
       },
       {
         icon: "/images/home/case-study/approach.png",
@@ -147,7 +147,7 @@ export const caseStudies: CaseStudy[] = [
         list: [
           "Elevated stage experience",
           "Seamless execution",
-          "High-quality captured content",
+          "Reusable video and photo assets delivered post-event",
         ],
       },
     ],
@@ -266,9 +266,9 @@ export const caseStudies: CaseStudy[] = [
         title: "The",
         highlight: "Result",
         list: [
-          "Seamless hybrid connectivity",
-          "Consistent AV across all rooms",
-          "Flawless production execution",
+          "Remote and in-room audiences stayed connected throughout",
+          "The same AV standard held across all 8 breakout rooms",
+          "One production plan, one team, across all 4 days",
         ],
       },
     ],

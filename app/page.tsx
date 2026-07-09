@@ -14,7 +14,7 @@ import WhyPlannersChooseDXGSection from "components/home/WhyPlannersChooseDXGSec
 export const metadata = {
   title: "Digital Xperience Group",
   description:
-    "Digital Xperience Group (DXG), a pioneering division of WLJ Consulting, is a premier partner in transforming events into unforgettable experiences.",
+    "Digital Xperience Group (DXG): audiovisual production agency for meeting planners who want more control, clarity, and confidence — across conferences, events, and hybrid experiences",
   alternates: {
     canonical: "/",
   },

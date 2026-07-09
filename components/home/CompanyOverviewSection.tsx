@@ -23,7 +23,7 @@ const features = [
   {
     icon: "/images/home/company-overview/img4.png",
     title: "The Experience to Execute Your Vision",
-    desc: "We anticipate needs, eliminate surprises, and deliver seamless execution every time.",
+    desc: "We think ahead, catch issues early, and keep your production on track from load-in to load-out.",
   },
 ];
 

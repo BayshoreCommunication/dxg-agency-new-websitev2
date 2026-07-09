@@ -13,7 +13,7 @@ const services = [
   {
     icon: "/images/home/one-partner/icon2.png",
     title: "General Sessions",
-    desc: "Every technical element of your general session — fully managed, flawlessly executed, and built around the experience you want your audience to have.",
+    desc: "Every technical element of your general session — fully managed, tightly run, and built around the experience you want your audience to have.",
   },
   {
     icon: "/images/home/one-partner/icon3.png",

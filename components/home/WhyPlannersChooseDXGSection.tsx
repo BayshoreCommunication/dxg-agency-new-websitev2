@@ -19,7 +19,7 @@ const highlights = [
         How Your Event Is Planned and Executed
       </>
     ),
-    desc: "We don’t just support your event — we help structure and manage it so nothing is left to chance.",
+    desc: "We don't just support your event, we help structure and manage it so the decisions that shape it get made deliberately, not in the moment.",
   },
   {
     icon: "/images/home/why-dxg/icon2.png",
@@ -74,7 +74,7 @@ const cards = [
   {
     Icon: Target,
     title: "Our Mission",
-    desc: "Success to us means your event runs flawlessly and your stakeholders are thrilled. Every decision we make — from first call to final walkout — is measured against that standard.",
+    desc: "Success to us means your event runs the way you planned it, and your stakeholders walk away confident in the call they made to bring us in. Every decision we make, from the first call to the final walkout, is measured against that standard.",
     image: "/images/home/why-dxg/target.png",
   },
   {

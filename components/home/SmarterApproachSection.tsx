@@ -7,7 +7,7 @@ import TypingTitle from "components/layout/TypingTitle";
 import Reveal from "components/shared/Reveal";
 
 const points = [
-  "Runs multi-day conferences where every detail works seamlessly — from general sessions to breakouts",
+  "Runs multi-day conferences with the same standard in every room — from general sessions to breakouts",
   "Knows the ins and outs of complex venues like hotels, convention centers and arena's",
   "Brings flexibility and proactive support — not just a crew that shows up and waits",
   "Leads your production from the front — as a true partner invested in every detail of your event's success",

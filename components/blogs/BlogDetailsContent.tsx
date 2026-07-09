@@ -16,7 +16,21 @@ export default async function BlogDetailsContent({ slug }: { slug: string }) {
 
   const sidebarBlogs = latestBlogs.filter((b) => b.slug !== slug).slice(0, 6);
 
-  const cleanContent = blog.content.replace(
+  // Strip out disclaimer sections (headings followed by paragraph, or standalone paragraphs) and trailing empty paragraphs
+  let strippedContent = blog.content;
+  
+  // Heading style: <h2>...Disclaimer...</h2> followed by a <p>...</p>
+  const headingRegex = /<h([1-6])\b[^>]*>(?:<[^>]+>)*\s*Disclaimer\s*(?:<[^>]+>)*<\/h\1>\s*<p\b[^>]*>.*?<\/p>/gi;
+  strippedContent = strippedContent.replace(headingRegex, "");
+
+  // Paragraph style: <p>...Disclaimer: ...</p>
+  const paragraphRegex = /<p\b[^>]*>(?:\s*<[^>]+>)*\s*Disclaimer:?.*?<\/p>/gi;
+  strippedContent = strippedContent.replace(paragraphRegex, "");
+  
+  // Clean trailing empty paragraphs
+  strippedContent = strippedContent.replace(/(?:<p\b[^>]*>(?:\s*|<br\s*\/?>|&nbsp;)*<\/p>\s*)+$/i, "");
+
+  const cleanContent = strippedContent.replace(
     /\bstyle="([^"]*)"/gi,
     (_, styleBlock: string) => {
       const cleaned = styleBlock
