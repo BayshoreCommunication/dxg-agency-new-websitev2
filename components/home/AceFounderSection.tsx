@@ -47,13 +47,17 @@ export default function AceFounderSection() {
                   <span className="text-primary font-semibold">
                     Digital Xperience Group
                   </span>
-                  , we take that responsibility seriously. Every production we touch is backed by decades of expertise, a team that stays composed when things get complicated, and a standard that holds whether the day goes to plan or takes a turn.
+                  , we take that responsibility seriously. Every production we
+                  touch is backed by decades of expertise, a team that stays
+                  composed when things get complicated, and a standard that
+                  holds whether the day goes to plan or takes a turn.
                 </Reveal>
 
                 <Reveal as="p" delay={0.06}>
                   Wallace &quot;Ace&quot; Johnson, CTS, founded Digital
-                  Xperience Group on a simple belief: meeting planners deserve a production partner they dont have to manage. With{" "}
-                  <span className="text-primary font-semibold">30+ years</span>{" "}
+                  Xperience Group on a simple belief: meeting planners deserve a
+                  production partner they don&apos;t have to manage. With{" "}
+                  <span className="text-primary font-semibold">25+ years</span>{" "}
                   in live-event AV production, Ace has built his expertise from
                   both sides of the table. His background spans hotel AV
                   operations and independent production — giving him a rare,
@@ -85,7 +89,7 @@ export default function AceFounderSection() {
 
                 <div className="pt-1">
                   <Link
-                    href="https://www.linkedin.com/company/dxg-agency/"
+                    href="https://www.linkedin.com/in/acedxg/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-slide-primary group inline-flex min-h-11 min-w-[178px] items-center justify-center gap-2.5 px-8 py-3 text-xs font-bold leading-none"

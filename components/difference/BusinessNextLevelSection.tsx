@@ -13,9 +13,9 @@ const stats = [
     label: "Completed Projects",
   },
   {
-    number: 30,
+    number: 300,
     suffix: "+",
-    label: "Years Experience",
+    label: "Combined Years Experience",
   },
 ];
 
