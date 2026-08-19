@@ -118,13 +118,19 @@ function StatusModal({
 }
 
 /* ── Validation ── */
-type FormFields = { name: string; number: string; email: string; message: string };
+type FormFields = {
+  name: string;
+  number: string;
+  email: string;
+  message: string;
+};
 type FormErrors = Partial<Record<keyof FormFields, string>>;
 
 function validate(form: FormFields, agreed: boolean): FormErrors {
   const errors: FormErrors = {};
   if (!form.name.trim()) errors.name = "Name is required.";
-  else if (form.name.trim().length < 2) errors.name = "Name must be at least 2 characters.";
+  else if (form.name.trim().length < 2)
+    errors.name = "Name must be at least 2 characters.";
 
   if (form.number && !/^[\d\s().+\-]{7,15}$/.test(form.number))
     errors.number = "Enter a valid phone number.";
@@ -151,7 +157,9 @@ export default function CalendlySection() {
     message: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
-  const [touched, setTouched] = useState<Partial<Record<keyof FormFields, boolean>>>({});
+  const [touched, setTouched] = useState<
+    Partial<Record<keyof FormFields, boolean>>
+  >({});
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -161,11 +169,16 @@ export default function CalendlySection() {
     setForm(updated);
     if (touched[name as keyof FormFields]) {
       const errs = validate(updated, agreed);
-      setErrors((prev) => ({ ...prev, [name]: errs[name as keyof FormFields] }));
+      setErrors((prev) => ({
+        ...prev,
+        [name]: errs[name as keyof FormFields],
+      }));
     }
   }
 
-  function handleBlur(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  function handleBlur(
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) {
     const { name } = e.target;
     setTouched((prev) => ({ ...prev, [name]: true }));
     const errs = validate(form, agreed);
@@ -204,7 +217,7 @@ export default function CalendlySection() {
 
   function closeModal() {
     setStatus("idle");
-}
+  }
 
   const fieldClass = (key: keyof FormFields) =>
     `${inputClass} ${touched[key] && errors[key] ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : ""}`;
@@ -256,7 +269,9 @@ export default function CalendlySection() {
                       className={fieldClass("name")}
                     />
                     {touched.name && errors.name && (
-                      <p className="mt-1 px-1 text-xs text-red-400">{errors.name}</p>
+                      <p className="mt-1 px-1 text-xs text-red-400">
+                        {errors.name}
+                      </p>
                     )}
                   </div>
 
@@ -272,7 +287,9 @@ export default function CalendlySection() {
                       className={fieldClass("number")}
                     />
                     {touched.number && errors.number && (
-                      <p className="mt-1 px-1 text-xs text-red-400">{errors.number}</p>
+                      <p className="mt-1 px-1 text-xs text-red-400">
+                        {errors.number}
+                      </p>
                     )}
                   </div>
 
@@ -288,7 +305,9 @@ export default function CalendlySection() {
                       className={fieldClass("email")}
                     />
                     {touched.email && errors.email && (
-                      <p className="mt-1 px-1 text-xs text-red-400">{errors.email}</p>
+                      <p className="mt-1 px-1 text-xs text-red-400">
+                        {errors.email}
+                      </p>
                     )}
                   </div>
 
@@ -304,7 +323,9 @@ export default function CalendlySection() {
                       className={`${fieldClass("message")} resize-none`}
                     />
                     {touched.message && errors.message && (
-                      <p className="mt-1 px-1 text-xs text-red-400">{errors.message}</p>
+                      <p className="mt-1 px-1 text-xs text-red-400">
+                        {errors.message}
+                      </p>
                     )}
                   </div>
 
@@ -318,8 +339,11 @@ export default function CalendlySection() {
                         className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-primary"
                       />
                       <span className="text-xs leading-5 text-white/60">
-                        I understand that the use of this form for communication
-                        with Digital Xperience Group (DXG).
+                        {/* I understand that the use of this form for communication
+                        with Digital Xperience Group (DXG). */}
+                        I understand that the information provided in this form
+                        will be used for communication with Digital Experience
+                        Group (DXG).
                       </span>
                     </label>
                     {!agreed && Object.keys(touched).length > 0 && (
