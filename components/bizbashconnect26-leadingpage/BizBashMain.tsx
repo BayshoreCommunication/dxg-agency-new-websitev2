@@ -17,6 +17,8 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
+import Image from "next/image";
+import BizBashAppPreview from "components/bizbashconnect26-leadingpage/BizBashAppPreview";
 import Container from "components/shared/Container";
 import Reveal from "components/shared/Reveal";
 import TypingTitle from "components/layout/TypingTitle";
@@ -288,7 +290,7 @@ export default function BizBashMain() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_55%_at_78%_18%,rgba(46,198,245,0.18),transparent_62%)]" />
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.9fr] lg:gap-16">
-            <div>
+            <div className="order-2 lg:order-1">
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.15em] text-primary">
                 <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                 Meet DXG in Tampa
@@ -299,7 +301,7 @@ export default function BizBashMain() {
 
               <TypingTitle
                 as="h1"
-                className="mt-5 max-w-2xl text-4xl font-black uppercase leading-[0.98] text-white sm:text-5xl lg:text-6xl"
+                className="mt-5 max-w-3xl text-4xl font-black uppercase leading-[0.98] text-white sm:text-5xl lg:text-6xl"
               >
                 A Smarter Approach to <span className="text-primary">Event AV.</span>
               </TypingTitle>
@@ -329,9 +331,22 @@ export default function BizBashMain() {
               </p>
             </div>
 
-            <Reveal kind="image" className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/[0.06] p-8 shadow-2xl shadow-black/30 backdrop-blur-[18px]">
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.04)_45%,rgba(255,255,255,0.02)_100%)]" />
-              <div className="relative z-10 space-y-6">
+            <Reveal
+              kind="image"
+              className="order-1 relative isolate flex aspect-[16/9] flex-col justify-end overflow-hidden rounded-3xl border border-white/15 shadow-2xl shadow-black/40 lg:order-2"
+            >
+              <Image
+                src="/images/bizbashconnect26/herorightsideimage.webp"
+                alt="DXG at BizBash Innovation Forum"
+                fill
+                priority
+                sizes="(min-width: 1024px) 40vw, 90vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10" />
+              <div className="absolute inset-0 bg-primary/[0.06]" />
+
+              <div className="relative z-10 space-y-5 p-8">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
                     Where to find us
@@ -339,15 +354,15 @@ export default function BizBashMain() {
                   <p className="mt-2 text-lg font-semibold text-white">
                     BizBash Innovation Forum
                   </p>
-                  <p className="text-sm text-white/60">+ Connect Marketplace, Tampa 2026</p>
+                  <p className="text-sm text-white/70">+ Connect Marketplace, Tampa 2026</p>
                 </div>
-                <div className="h-px w-full bg-white/10" />
+                <div className="h-px w-full bg-white/15" />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
                     Featuring
                   </p>
                   <p className="mt-2 text-lg font-semibold text-white">RFPilot</p>
-                  <p className="text-sm text-white/60">
+                  <p className="text-sm text-white/70">
                     A smarter way to build and review AV RFPs.
                   </p>
                 </div>
@@ -356,6 +371,8 @@ export default function BizBashMain() {
           </div>
         </Container>
       </section>
+
+      <BizBashAppPreview />
 
       {/* THE PROBLEM */}
       <section id="smarter" className="bg-[#0a0a0a] py-16 lg:py-20">

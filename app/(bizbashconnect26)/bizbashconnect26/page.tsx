@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import BizBashFooter from "components/bizbashconnect26-leadingpage/BizBashFooter";
 import BizBashHeader from "components/bizbashconnect26-leadingpage/BizBashHeader";
 import BizBashMain from "components/bizbashconnect26-leadingpage/BizBashMain";
-import BizBashFooter from "components/bizbashconnect26-leadingpage/BizBashFooter";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "A Smarter Approach to Event AV | Meet DXG and RFPilot",

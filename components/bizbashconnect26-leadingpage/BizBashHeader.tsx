@@ -20,7 +20,7 @@ export default function BizBashHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur-md">
       <Container>
-        <div className="flex h-[68px] items-center gap-6">
+        <div className="flex items-center gap-6 py-3">
           <Link href="/" className="shrink-0" aria-label="DXG home">
             <Image
               src="/images/logo.png"
@@ -71,7 +71,7 @@ export default function BizBashHeader() {
         <nav
           id="mobileNav"
           aria-label="Mobile navigation"
-          className="absolute inset-x-0 top-full max-h-[calc(100vh-68px)] overflow-y-auto border-b border-white/10 bg-black/95 px-4 pb-6 pt-2 shadow-2xl shadow-black/40 lg:hidden"
+          className="absolute inset-x-0 top-full max-h-[calc(100vh-88px)] overflow-y-auto border-b border-white/10 bg-black/95 px-4 pb-6 pt-2 shadow-2xl shadow-black/40 lg:hidden"
         >
           <div className="flex flex-col divide-y divide-white/10">
             {NAV_LINKS.map((link) => (
