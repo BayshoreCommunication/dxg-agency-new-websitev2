@@ -1,21 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
 import BizBashHeader from "components/bizbashconnect26-leadingpage/BizBashHeader";
 import BizBashMain from "components/bizbashconnect26-leadingpage/BizBashMain";
 import BizBashFooter from "components/bizbashconnect26-leadingpage/BizBashFooter";
-import "components/bizbashconnect26-leadingpage/bizbashconnect26.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-bizbash-body",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-bizbash-display",
-});
 
 export const metadata: Metadata = {
   title: "A Smarter Approach to Event AV | Meet DXG and RFPilot",
@@ -41,8 +27,11 @@ export const metadata: Metadata = {
 
 export default function BizBashConnect26Page() {
   return (
-    <div className={`bizbash-page ${inter.variable} ${spaceGrotesk.variable}`}>
-      <a className="skip-link" href="#main">
+    <div className="bg-black">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-0 focus:top-0 focus:z-[200] focus:rounded-br-lg focus:bg-primary focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-black"
+      >
         Skip to content
       </a>
       <BizBashHeader />
