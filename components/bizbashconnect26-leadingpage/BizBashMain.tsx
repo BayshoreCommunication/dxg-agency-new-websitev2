@@ -221,6 +221,9 @@ export default function BizBashMain() {
   function handleRfpilotPreselect() {
     setInterest("rfpilot", true);
     trackEvent("cta_rfpilot_earlyaccess");
+    document
+      .getElementById("connectForm")
+      ?.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });
   }
 
   function handleFormInput() {
@@ -600,6 +603,76 @@ export default function BizBashMain() {
               </span>
             </button>
           </div>
+        </Container>
+      </section>
+
+      {/* WHO YOU'LL MEET IN TAMPA */}
+      <section className="bg-[#0a0a0a] py-16 lg:py-20">
+        <Container className="max-w-[900px]">
+          <div className="text-left sm:text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+              Who You&apos;ll Meet in Tampa
+            </span>
+            <TypingTitle
+              as="h2"
+              className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
+            >
+              The people taking your meeting.
+            </TypingTitle>
+          </div>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            <Reveal as="div" className="rounded-xl border border-white/10 bg-[#111] p-6">
+              <div className="flex items-center gap-4">
+                <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
+                  <Image
+                    src="/images/home/ace-founder/founderavtar4.png"
+                    alt="Wallace &quot;Ace&quot; Johnson"
+                    fill
+                    className="object-cover"
+                  />
+                </span>
+                <div>
+                  <h3 className="text-base font-bold text-white">
+                    Wallace &quot;Ace&quot; Johnson, CTS
+                  </h3>
+                  <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-primary">
+                    Executive Technical Producer
+                  </p>
+                </div>
+              </div>
+              <p className="mt-4 text-sm leading-6 text-white/70">
+                Twenty-five years producing corporate and association events worldwide. Former
+                AVIXA Board of Directors member and longtime industry educator. Speaking at the
+                Innovation Forum on the upstream decisions that set AV budgets before
+                procurement begins.
+              </p>
+            </Reveal>
+            <Reveal as="div" className="rounded-xl border border-dashed border-white/15 bg-[#111] p-6" delay={0.06}>
+              <div className="flex items-center gap-4">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-dashed border-white/25 bg-white/5 text-lg font-bold text-white/40">
+                  S
+                </span>
+                <div>
+                  <h3 className="text-base font-bold text-white">
+                    [Suley — full name, title]
+                  </h3>
+                  <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-primary">
+                    DXG
+                  </p>
+                </div>
+              </div>
+              <p className="mt-4 text-sm leading-6 text-white/70">
+                [One line covering role at DXG, years in production, and what they own on show
+                site.]
+              </p>
+            </Reveal>
+          </div>
+
+          <Reveal as="p" className="mt-8 text-center text-sm leading-6 text-white/60">
+            Both are taking one-on-one meetings throughout Connect Marketplace. Request DXG
+            through the Connect appointment system, or use the form below to lock a time.
+          </Reveal>
         </Container>
       </section>
 
