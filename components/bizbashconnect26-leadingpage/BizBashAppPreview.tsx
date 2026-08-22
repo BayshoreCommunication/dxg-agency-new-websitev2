@@ -1,105 +1,92 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Container from "components/shared/Container";
 import Reveal from "components/shared/Reveal";
 import TypingTitle from "components/layout/TypingTitle";
 
-const SLIDE_NUMBERS = [1, 2, 3, 4, 5, 6, 7, 9, 10];
-
-const SLIDES = SLIDE_NUMBERS.map((n) => ({
-  src: `/images/bizbashconnect26/rfpilot-image${String(n).padStart(2, "0")}.png`,
-  alt: `RFPilot app preview ${n}`,
-}));
-
-const SLIDE_INTERVAL = 2000;
+const PREVIEW_CARDS = [
+  {
+    src: "/images/bizbashconnect26/rfpilot-image07.png",
+    alt: "Turns your event details into a structured RFP",
+    caption: "Turns your event details into a structured RFP.",
+  },
+  {
+    src: "/images/bizbashconnect26/rfpilot-image04.png",
+    alt: "Vendor responses land in one place, ready to review",
+    caption: "Vendor responses land in one place, ready to review.",
+  },
+  {
+    src: "/images/bizbashconnect26/rfpilot-image01.png",
+    alt: "Tracks every proposal from draft to submitted",
+    caption: "Tracks every proposal from draft to submitted.",
+  },
+];
 
 export default function BizBashAppPreview() {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActive((current) => (current + 1) % SLIDES.length);
-    }, SLIDE_INTERVAL);
-
-    return () => window.clearInterval(timer);
-  }, []);
-
   return (
-    <section className="bg-[#0a0a0a] py-4 lg:py-6">
+    <section className="bg-black py-12 sm:py-16 lg:py-24">
       <Container>
-        <div className="max-w-2xl text-left sm:mx-auto sm:text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
             A First Look
           </span>
           <TypingTitle
             as="h2"
-            className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
+            className="mt-3 text-2xl font-black uppercase leading-tight text-white sm:text-4xl lg:text-5xl"
           >
             See <span className="text-primary">RFPilot</span> In Action
           </TypingTitle>
-          <Reveal as="p" className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
+          <Reveal as="p" className="mt-4 text-sm leading-6 text-white/70 sm:text-lg sm:leading-7">
             A live look inside the platform DXG is building to make AV RFPs faster to create
             and easier to compare.
           </Reveal>
         </div>
 
-        <Reveal
-          kind="image"
-          className="relative mx-auto mt-12 max-w-5xl overflow-hidden rounded-2xl border border-primary/20 bg-[#0b0b0b] shadow-[0_28px_90px_rgba(0,0,0,0.5)]"
-        >
-          {/* Browser chrome */}
-          <div className="flex items-center gap-2 border-b border-white/10 bg-[#111] px-4 py-3">
-            <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-            <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-            <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-            <a
-              href="https://av-rfpilot.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-3 truncate rounded-full bg-white/5 px-3 py-1 text-[11px] text-white/40 transition hover:text-primary"
+        {/* 3 Browser Cards Grid */}
+        <div className="mt-8 grid gap-5 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
+          {PREVIEW_CARDS.map((card) => (
+            <Reveal
+              key={card.src}
+              kind="image"
+              className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#081624] transition duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl hover:shadow-black/50"
             >
-              av-rfpilot.com
-            </a>
-          </div>
+              {/* Browser chrome header */}
+              <div className="flex items-center gap-1.5 border-b border-white/10 bg-[#0c1e2e] px-3.5 py-2.5 sm:px-4 sm:py-3">
+                <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+              </div>
 
-          <div className="relative aspect-[1680/876] w-full">
-            {SLIDES.map((slide, index) => (
-              <motion.div
-                key={slide.src}
-                className="absolute inset-0"
-                initial={false}
-                animate={{ opacity: index === active ? 1 : 0 }}
-                transition={{ duration: 0.9, ease: "easeInOut" }}
-              >
+              {/* Image Preview Container with exact 1680/876 aspect ratio so no content is cropped */}
+              <div className="relative aspect-[1680/876] w-full overflow-hidden bg-white">
                 <Image
-                  src={slide.src}
-                  alt={slide.alt}
+                  src={card.src}
+                  alt={card.alt}
                   fill
-                  priority={index === 0}
-                  sizes="(min-width: 1024px) 960px, 100vw"
-                  className="object-cover object-top"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-contain object-top transition duration-500 hover:scale-102"
                 />
-              </motion.div>
-            ))}
-          </div>
-        </Reveal>
+              </div>
 
-        {/* Dots */}
-        <div className="mt-6 flex items-center justify-center gap-2">
-          {SLIDES.map((slide, index) => (
-            <button
-              key={slide.src}
-              type="button"
-              aria-label={`Show preview ${index + 1}`}
-              onClick={() => setActive(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                index === active ? "w-6 bg-primary" : "w-2 bg-white/25 hover:bg-white/50"
-              }`}
-            />
+              {/* Caption Bar */}
+              <div className="mt-auto border-t border-white/10 bg-[#06121d] p-3.5 text-left sm:p-4">
+                <p className="text-xs font-semibold leading-5 text-white/90">
+                  {card.caption}
+                </p>
+              </div>
+            </Reveal>
           ))}
+        </div>
+
+        {/* Bottom Link */}
+        <div className="mt-8 text-center sm:mt-10">
+          <a
+            href="#connect"
+            className="text-xs font-semibold text-primary underline underline-offset-4 transition hover:text-white sm:text-sm"
+          >
+            See it live in Tampa, or join the early-access list
+          </a>
         </div>
       </Container>
     </section>

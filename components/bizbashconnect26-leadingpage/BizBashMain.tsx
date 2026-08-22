@@ -1,21 +1,27 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
+  Award,
   Calendar,
   Camera,
   Check,
   ClipboardCheck,
   ClipboardList,
+  Clock,
   Compass,
   DoorOpen,
   Globe,
+  Lock,
+  MapPin,
   Palette,
   Presentation,
   Radio,
   Rocket,
   ShieldCheck,
   Users,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import BizBashAppPreview from "components/bizbashconnect26-leadingpage/BizBashAppPreview";
@@ -109,7 +115,7 @@ const PILLARS = [
   {
     Icon: ShieldCheck,
     title: "Control",
-    desc: "Greater visibility into the decisions that affect the production, budget, venue, schedule, and attendee experience.",
+    desc: "Visibility into the decisions that drive production cost and attendee experience: venue, calendar, format, and scope. Surfaced while they can still be changed, not explained after they can't.",
   },
   {
     Icon: Rocket,
@@ -119,17 +125,54 @@ const PILLARS = [
 ];
 
 const PROBLEM_POINTS = [
-  { lead: "Unclear proposals", rest: "formats and line items that are hard to compare." },
-  { lead: "Limited cost visibility", rest: "no reliable frame of reference before bids arrive." },
-  { lead: "Reactive support", rest: "problems addressed after they happen, not planned for." },
-  { lead: "Rigid, one-size-fits-all solutions", rest: "setups that don't fit the event's actual vision." },
+  {
+    lead: "Proposals are built for the vendor's convenience, not for comparison.",
+    rest: "Every vendor uses a different format, includes different items, and buries different assumptions in the line items.",
+  },
+  {
+    lead: "Upstream decisions surface as downstream costs.",
+    rest: "Venue infrastructure, calendar position, and session format show up in the bid as numbers nobody connects back to their cause.",
+  },
+  {
+    lead: "Production insight arrives after the contract.",
+    rest: "The people who could have flagged the expensive choices weren't in the room when those choices were made.",
+  },
 ];
 
 const RFP_VALUES = [
   { lead: "Guided RFP creation", rest: "turn event details into a structured AV RFP." },
   { lead: "Comparable vendor responses", rest: "see differences, exclusions, and missing items clearly." },
-  { lead: "Investment guidance", rest: "a grounded frame of reference before proposals arrive." },
+  {
+    lead: "Investment guidance",
+    rest: "a grounded frame of reference built from aggregate production data, so scope and budget are aligned before the first proposal arrives.",
+  },
   { lead: "Proposal intelligence", rest: "review responses against your event's actual requirements." },
+];
+
+const NEUTRALITY_POINTS = [
+  {
+    lead: "Your RFP data is yours.",
+    rest: "The RFPs you build, the responses you receive, and your evaluations belong to you. DXG's production team does not access or use them.",
+  },
+  {
+    lead: "DXG never sees competing proposals.",
+    rest: "Vendor responses submitted through RFPilot are visible only to the planner who issued the RFP.",
+  },
+  {
+    lead: "RFPilot doesn't steer work to DXG.",
+    rest: "The platform doesn't recommend vendors, rank DXG, or notify DXG when you issue an RFP. If you want DXG to bid, you invite us the way you'd invite anyone, and we respond on the same terms as every other vendor.",
+  },
+  {
+    lead: "Guidance comes from aggregate data, not your vendors' pricing.",
+    rest: "Budget references are built from industry-level production data, never from proposals submitted to you through the platform.",
+  },
+];
+
+const CREDIBILITY_POINTS = [
+  "300+ years of live event production leadership",
+  "AVIXA Board of Directors service with the AV industry's global trade association",
+  "2500+ general sessions produced for audiences of 50-7500 over the last 26+ years",
+  "1500+ breakout room programs managed under a single technical standard",
 ];
 
 const fieldClass =
@@ -160,6 +203,7 @@ export default function BizBashMain() {
   const [interestError, setInterestError] = useState(false);
   const [showErrorBanner, setShowErrorBanner] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStarted, setFormStarted] = useState(false);
   const [utm, setUtm] = useState({
     source: "",
@@ -233,7 +277,7 @@ export default function BizBashMain() {
     }
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = formRef.current;
     if (!form) return;
@@ -259,27 +303,43 @@ export default function BizBashMain() {
       });
     valid = Object.values(newErrors).every((bad) => !bad);
 
-    const anyInterest = INTEREST_KEYS.some((k) => interests[k]);
-    setInterestError(!anyInterest);
-    if (!anyInterest) valid = false;
+    let anyInterest = INTEREST_KEYS.some((k) => interests[k]);
+    if (!anyInterest) {
+      setInterests((prev) => ({ ...prev, followup: true }));
+      anyInterest = true;
+    }
+    setInterestError(false);
 
     setFieldErrors(newErrors);
     setShowErrorBanner(!valid);
 
     if (!valid) {
-      (firstBad ?? document.getElementById("interestChecks"))?.focus();
+      if (firstBad) (firstBad as HTMLElement).focus();
       return;
     }
 
     if (submitTimeRef.current) {
-      submitTimeRef.current.value = new Date().toISOString();
+      submitTimeRef.current.value = new Date().toLocaleString();
     }
 
-    // ZOHO SUBMIT — WEB TEAM: replace this block with the actual POST to the
-    // Zoho endpoint, e.g. fetch(zohoWebformURL, {method:"POST", body:new FormData(form)}),
-    // then show the confirmation on success and handle failures with the error banner.
-    trackEvent("form_submit_success", { ...interests });
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.sendForm(
+        "service_28aeyl4",
+        "template_y72vnp4",
+        form,
+        { publicKey: "JJbrXAjJx5I2RoK35" }
+      );
+      trackEvent("form_submit_success", { ...interests });
+      setSubmitted(true);
+      form.reset();
+    } catch (error) {
+      console.error("EmailJS Submission Error:", error);
+      setShowErrorBanner(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   const allSelected = INTEREST_KEYS.every((k) => interests[k]);
@@ -299,26 +359,26 @@ export default function BizBashMain() {
                 Meet DXG in Tampa
               </span>
               <p className="mt-3 text-sm font-medium text-white/60">
-                BizBash Innovation Forum + Connect Marketplace 2026
+                BizBash Connect Marketplace 2026
               </p>
 
               <TypingTitle
                 as="h1"
-                className="mt-5 max-w-3xl text-4xl font-black uppercase leading-[0.98] text-white sm:text-5xl lg:text-6xl"
+                className="mt-4 max-w-3xl text-3xl font-black uppercase leading-[1.02] text-white sm:text-5xl lg:text-6xl"
               >
                 A Smarter Approach to <span className="text-primary">Event AV.</span>
               </TypingTitle>
 
               <Reveal
                 as="p"
-                className="mt-6 max-w-xl text-base leading-8 text-white/75 sm:text-lg"
+                className="mt-4 max-w-xl text-sm leading-7 text-white/75 sm:mt-6 sm:text-lg sm:leading-8"
               >
-                DXG combines producer-led event production with RFPilot innovation to help
-                planners make smarter AV decisions, gain more control over the process, and
-                execute events with greater confidence.
+                DXG combines producer-led event production with RFPilot to give planners
+                visibility into the decisions that shape AV budgets, including the ones made
+                long before the RFP goes out.
               </Reveal>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
                 <a href="#connect" className={primaryBtn} onClick={() => trackEvent("cta_hero_connect")}>
                   Connect With DXG
                 </a>
@@ -327,7 +387,7 @@ export default function BizBashMain() {
                 </a>
               </div>
 
-              <p className="mt-6 flex items-center gap-2 text-sm text-white/60">
+              <p className="mt-6 flex items-center gap-2 text-xs text-white/60 sm:text-sm">
                 <span className="h-px w-5 bg-primary" />
                 Built for meeting planners and event marketers who expect more from their
                 production partner.
@@ -336,36 +396,35 @@ export default function BizBashMain() {
 
             <Reveal
               kind="image"
-              className="order-1 relative isolate flex aspect-[16/9] flex-col justify-end overflow-hidden rounded-3xl border border-white/15 shadow-2xl shadow-black/40 lg:order-2"
+              className="order-1 relative isolate flex min-h-[240px] flex-col justify-end overflow-hidden rounded-2xl border border-white/15 bg-[#071929] shadow-2xl shadow-black/40 sm:aspect-[16/9] sm:rounded-3xl lg:order-2"
             >
               <Image
                 src="/images/bizbashconnect26/herorightsideimage.webp"
-                alt="DXG at BizBash Innovation Forum"
+                alt="DXG at BizBash Connect Marketplace Tampa 2026 featuring RFPilot"
                 fill
                 priority
-                sizes="(min-width: 1024px) 40vw, 90vw"
-                className="object-cover"
+                sizes="(min-width: 1024px) 40vw, 95vw"
+                className="object-contain object-right-top sm:object-cover sm:object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10" />
-              <div className="absolute inset-0 bg-primary/[0.06]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/20" />
+              <div className="absolute inset-0 bg-primary/[0.04]" />
 
-              <div className="relative z-10 space-y-5 p-8">
+              <div className="relative z-10 space-y-3 p-4 sm:space-y-5 sm:p-6 lg:p-8">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary sm:text-xs">
                     Where to find us
                   </p>
-                  <p className="mt-2 text-lg font-semibold text-white">
-                    BizBash Innovation Forum
+                  <p className="mt-1 text-sm font-semibold text-white sm:mt-2 sm:text-lg">
+                    BizBash Connect Marketplace, Tampa 2026
                   </p>
-                  <p className="text-sm text-white/70">+ Connect Marketplace, Tampa 2026</p>
                 </div>
                 <div className="h-px w-full bg-white/15" />
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary sm:text-xs">
                     Featuring
                   </p>
-                  <p className="mt-2 text-lg font-semibold text-white">RFPilot</p>
-                  <p className="text-sm text-white/70">
+                  <p className="mt-1 text-sm font-semibold text-white sm:mt-2 sm:text-lg">RFPilot</p>
+                  <p className="text-xs text-white/70 sm:text-sm">
                     A smarter way to build and review AV RFPs.
                   </p>
                 </div>
@@ -375,163 +434,11 @@ export default function BizBashMain() {
         </Container>
       </section>
 
-      <BizBashAppPreview />
-
-      {/* THE PROBLEM */}
-      <section id="smarter" className="bg-[#0a0a0a] py-16 lg:py-20">
-        <Container>
-          <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              Why a Smarter Approach Is Needed
-            </span>
-            <TypingTitle
-              as="h2"
-              className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
-            >
-              The traditional AV process creates too many opportunities for uncertainty.
-            </TypingTitle>
-            <Reveal as="p" className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
-              The challenge is rarely just the equipment. It is gaining reliable information
-              early, understanding what is included, aligning the production plan with the
-              event&apos;s goals, and knowing that the team executing the event is thinking ahead.
-            </Reveal>
-          </div>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {PROBLEM_POINTS.map((item) => (
-              <Reveal
-                key={item.lead}
-                as="div"
-                className="rounded-xl border border-white/10 bg-[#111] p-5"
-              >
-                <p className="text-sm leading-6 text-white/70">
-                  <span className="font-semibold text-white">{item.lead}</span> — {item.rest}
-                </p>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* RFPILOT */}
-      <section id="rfpilot" className="bg-black py-16 lg:py-20">
-        <Container>
-          <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              Introducing RFPilot
-            </span>
-            <TypingTitle
-              as="h2"
-              className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
-            >
-              Build the RFP. Understand the responses. Make the decision with confidence.
-            </TypingTitle>
-            <Reveal as="p" className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
-              RFPilot is being developed to simplify the AV RFP process for meeting planners —
-              from organizing event requirements to reviewing the proposals vendors submit.
-            </Reveal>
-          </div>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {RFP_VALUES.map((item) => (
-              <Reveal
-                key={item.lead}
-                as="div"
-                className="rounded-xl border border-primary/20 bg-[#081624] p-5"
-              >
-                <p className="text-sm leading-6 text-white/70">
-                  <span className="font-semibold text-white">{item.lead}</span> — {item.rest}
-                </p>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal
-            as="p"
-            className="mt-8 max-w-2xl border-l-2 border-primary/40 pl-4 text-sm italic leading-6 text-white/60"
-          >
-            RFPilot is currently being developed by Digital Xperience Group. Features and
-            availability may evolve as the platform moves through testing and early access.
-          </Reveal>
-
-          <button type="button" className={`${primaryBtn} mt-8`} onClick={handleRfpilotPreselect}>
-            Join the RFPilot Early-Access List
-          </button>
-        </Container>
-      </section>
-
-      {/* CAPABILITIES */}
-      <section id="capabilities" className="bg-[#0a0a0a] py-16 lg:py-20">
-        <Container>
-          <div className="max-w-2xl text-left sm:text-center sm:mx-auto">
-            <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              Producer-Led Event Production
-            </span>
-            <TypingTitle
-              as="h2"
-              className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
-            >
-              One production partner. Every part of the event experience.
-            </TypingTitle>
-          </div>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {CAPABILITIES.map((cap) => (
-              <article
-                key={cap.title}
-                className="overview-box group rounded-2xl bg-[#081624] p-6 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/40"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-primary/50 bg-[#0b2237]">
-                  <cap.Icon size={22} className="text-primary" strokeWidth={2} />
-                </div>
-                <h3 className="mt-5 text-base font-bold text-white">{cap.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">{cap.desc}</p>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* PRODUCER-LED DIFFERENCE */}
-      <section className="bg-black py-16 lg:py-20">
-        <Container>
-          <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              The DXG Difference
-            </span>
-            <TypingTitle
-              as="h2"
-              className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
-            >
-              A producer-led approach focused on real-world execution.
-            </TypingTitle>
-            <Reveal as="p" className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
-              DXG approaches event AV from a producer&apos;s perspective. Technology supports the
-              experience, but planning, communication, accountability, and on-site leadership are
-              what keep the event on track.
-            </Reveal>
-          </div>
-
-          <div className="mt-10 grid gap-5 sm:grid-cols-3">
-            {PILLARS.map((pillar) => (
-              <Reveal
-                key={pillar.title}
-                as="div"
-                className="rounded-xl border-t-2 border-primary bg-[#111] p-6"
-              >
-                <pillar.Icon size={26} className="text-primary" strokeWidth={2} />
-                <h3 className="mt-4 text-lg font-bold text-white">{pillar.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">{pillar.desc}</p>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       {/* EVENT CONNECTION OFFER */}
       <section id="connect" className="bg-[#0a0a0a] py-16 lg:py-20">
         <Container>
-          <div className="max-w-2xl">
+          <div className="mx-auto max-w-3xl text-center">
             <TypingTitle
               as="h2"
               className="text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
@@ -606,6 +513,613 @@ export default function BizBashMain() {
         </Container>
       </section>
 
+      {/* FORM */}
+      <section className="bg-black py-16 lg:py-20">
+        <Container className="max-w-[900px]">
+          <div className="overflow-hidden rounded-[22px] border border-primary/15 bg-[#071827] p-5 shadow-[0_28px_90px_rgba(0,0,0,0.42)] sm:p-10">
+            <form
+              id="connectForm"
+              ref={formRef}
+              noValidate
+              onInput={handleFormInput}
+              onSubmit={handleSubmit}
+            >
+              <TypingTitle
+                as="h2"
+                id="formHeadline"
+                className="text-2xl font-black uppercase leading-tight text-white sm:text-3xl"
+              >
+                How would you like DXG to follow up?
+              </TypingTitle>
+
+              {showErrorBanner && (
+                <div
+                  className="mt-6 rounded-[10px] border border-red-400/40 bg-red-500/10 px-4 py-3 text-sm text-red-300"
+                  role="alert"
+                >
+                  Please complete the highlighted fields so we can follow up correctly.
+                </div>
+              )}
+
+              <div className="mt-8 grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label className={labelClass} htmlFor="firstName">
+                    First Name <span className="text-primary">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="First_Name"
+                    autoComplete="given-name"
+                    required
+                    className={`${fieldClass} ${fieldErrors.firstName ? "border-red-400" : ""}`}
+                  />
+                  {fieldErrors.firstName && (
+                    <p className="mt-1 text-xs text-red-300">Enter your first name.</p>
+                  )}
+                </div>
+                <div>
+                  <label className={labelClass} htmlFor="lastName">
+                    Last Name <span className="text-primary">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="Last_Name"
+                    autoComplete="family-name"
+                    required
+                    className={`${fieldClass} ${fieldErrors.lastName ? "border-red-400" : ""}`}
+                  />
+                  {fieldErrors.lastName && (
+                    <p className="mt-1 text-xs text-red-300">Enter your last name.</p>
+                  )}
+                </div>
+                <div>
+                  <label className={labelClass} htmlFor="email">
+                    Work Email <span className="text-primary">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    autoComplete="email"
+                    inputMode="email"
+                    required
+                    className={`${fieldClass} ${fieldErrors.email ? "border-red-400" : ""}`}
+                  />
+                  {fieldErrors.email && (
+                    <p className="mt-1 text-xs text-red-300">Enter a valid work email address.</p>
+                  )}
+                </div>
+                <div>
+                  <label className={labelClass} htmlFor="company">
+                    Company <span className="text-primary">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="Company"
+                    autoComplete="organization"
+                    required
+                    className={`${fieldClass} ${fieldErrors.company ? "border-red-400" : ""}`}
+                  />
+                  {fieldErrors.company && (
+                    <p className="mt-1 text-xs text-red-300">Enter your company name.</p>
+                  )}
+                </div>
+                <div>
+                  <label className={labelClass} htmlFor="jobTitle">
+                    Job Title <span className="text-primary">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="jobTitle"
+                    name="Job_Title"
+                    autoComplete="organization-title"
+                    required
+                    className={`${fieldClass} ${fieldErrors.jobTitle ? "border-red-400" : ""}`}
+                  />
+                  {fieldErrors.jobTitle && (
+                    <p className="mt-1 text-xs text-red-300">Enter your job title.</p>
+                  )}
+                </div>
+              </div>
+
+              {disclosureOpen && (
+                <div className="mt-8 grid gap-5 border-t border-white/10 pt-8 sm:grid-cols-2">
+                  <p className="text-xs italic leading-6 text-white/60 sm:col-span-2">
+                    A few optional details help us come prepared. Skip anything you&apos;re not
+                    ready to share.
+                  </p>
+                  <div>
+                    <label className={labelClass} htmlFor="eventName">Event or Project Name</label>
+                    <input type="text" id="eventName" name="Event_Name" className={fieldClass} />
+                  </div>
+                  <div>
+                    <label className={labelClass} htmlFor="eventDate">Estimated Event Date</label>
+                    <input type="month" id="eventDate" name="Event_Date" className={fieldClass} />
+                  </div>
+                  <div>
+                    <label className={labelClass} htmlFor="eventLocation">Event Location</label>
+                    <input
+                      type="text"
+                      id="eventLocation"
+                      name="Event_Location"
+                      placeholder="City, venue, or TBD"
+                      className={fieldClass}
+                    />
+                  </div>
+                  <div>
+                    <label className={labelClass} htmlFor="attendance">Expected Attendance</label>
+                    <select id="attendance" name="Attendance" defaultValue="" className={fieldClass}>
+                      <option value="">Select a range</option>
+                      <option>Under 250</option>
+                      <option>250 – 1,000</option>
+                      <option>1,000 – 3,000</option>
+                      <option>3,000 – 6,000</option>
+                      <option>6,000+</option>
+                    </select>
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className={labelClass} htmlFor="scope">General Session &amp; Breakout Scope</label>
+                    <input
+                      type="text"
+                      id="scope"
+                      name="Session_Scope"
+                      placeholder="e.g., 1 general session, 12 breakouts, hybrid stream"
+                      className={fieldClass}
+                    />
+                  </div>
+                  <div>
+                    <label className={labelClass} htmlFor="stage">Current Stage</label>
+                    <select id="stage" name="Event_Stage" defaultValue="" className={fieldClass}>
+                      <option value="">Select a stage</option>
+                      <option>Early Planning</option>
+                      <option>Building the RFP</option>
+                      <option>Reviewing Proposals</option>
+                      <option>Vendor Selected</option>
+                      <option>Exploring Future Options</option>
+                    </select>
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className={labelClass} htmlFor="helpful">What would be most helpful right now?</label>
+                    <textarea
+                      id="helpful"
+                      name="Most_Helpful"
+                      rows={3}
+                      className={`${fieldClass} h-auto resize-none py-3`}
+                    ></textarea>
+                  </div>
+                </div>
+              )}
+
+              <input type="hidden" name="Selected_Interests" value={selectedLabels.join(", ")} readOnly />
+              <input type="hidden" name="Lead_Source" value="BizBash / Connect Marketplace" readOnly />
+              <input type="hidden" name="Campaign" value="BizBash Tampa 2026" readOnly />
+              <input type="hidden" name="Landing_Page" value="DXG Smarter Approach Campaign" readOnly />
+              <input type="hidden" name="UTM_Source" value={utm.source} readOnly />
+              <input type="hidden" name="UTM_Medium" value={utm.medium} readOnly />
+              <input type="hidden" name="UTM_Campaign" value={utm.campaign} readOnly />
+              <input type="hidden" name="UTM_Content" value={utm.content} readOnly />
+              <input type="hidden" name="QR_Code_Source" value={utm.qr} readOnly />
+              <input type="hidden" name="Original_Source" value={utm.originalSource} readOnly />
+              <input type="hidden" name="Submission_DateTime" ref={submitTimeRef} defaultValue="" />
+              <input
+                type="text"
+                name="dxg_website"
+                id="hpField"
+                tabIndex={-1}
+                autoComplete="off"
+                style={{ position: "absolute", left: "-9999px" }}
+                aria-hidden="true"
+              />
+
+              <div className="mt-8 space-y-3 border-t border-white/10 pt-8">
+                <label className="flex items-start gap-3 text-xs leading-5 text-white/70">
+                  <input
+                    type="checkbox"
+                    id="consentRespond"
+                    name="Consent_Respond"
+                    value="Yes"
+                    required
+                    className="mt-0.5 h-3.5 w-3.5 shrink-0 accent-primary"
+                  />
+                  <span>
+                    I agree that DXG may contact me about this request. See the{" "}
+                    <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+                      DXG Privacy Policy
+                    </a>
+                    . <span className="text-primary">*</span>
+                  </span>
+                </label>
+                {/* <label className="flex items-start gap-3 text-xs leading-5 text-white/70">
+                  <input
+                    type="checkbox"
+                    name="Consent_Marketing"
+                    value="Yes"
+                    className="mt-0.5 h-3.5 w-3.5 shrink-0 accent-primary"
+                  />
+                  <span>Send me occasional planner insights and DXG updates by email. (Optional)</span>
+                </label> */}
+              </div>
+
+              <div className="mt-8">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`${primaryBtn} w-full sm:w-auto disabled:opacity-60`}
+                >
+                  {isSubmitting ? "Sending..." : "Connect With DXG"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </Container>
+
+        {/* SUCCESS MODAL */}
+        {submitted && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4 backdrop-blur-md"
+            onClick={() => setSubmitted(false)}
+          >
+            <div
+              ref={confirmRef}
+              tabIndex={-1}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-h-[90vh] overflow-y-auto w-full max-w-lg rounded-2xl border border-primary/30 bg-[#071827] p-5 shadow-[0_28px_90px_rgba(0,0,0,0.8)] text-left sm:p-8"
+            >
+              <button
+                onClick={() => setSubmitted(false)}
+                className="absolute right-4 top-4 text-white/40 transition hover:text-white"
+                aria-label="Close"
+              >
+                <X size={20} />
+              </button>
+
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                <Check size={26} className="text-primary" strokeWidth={2.4} />
+              </div>
+
+              <TypingTitle
+                as="h2"
+                className="mt-5 text-2xl font-black uppercase leading-tight text-white sm:text-3xl"
+              >
+                Thank you — we&apos;ll take it from here.
+              </TypingTitle>
+
+              <p className="mt-3 text-sm leading-6 text-white/70">
+                Your request is on its way to the DXG team. Here&apos;s what you selected:
+              </p>
+
+              <ul className="mt-5 space-y-2">
+                {selectedLabels.map((label) => (
+                  <li key={label} className="flex items-start gap-2 text-sm text-white/85">
+                    <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                    {label}
+                  </li>
+                ))}
+              </ul>
+
+              {interests.consult && (
+                <div className="mt-6 rounded-xl border border-primary/30 bg-primary/[0.08] p-5">
+                  <p className="text-sm leading-6 text-white/85">
+                    <strong className="text-white">Want to lock in a time now?</strong> Grab a
+                    spot on the DXG calendar — no pressure, no pitch deck. Just a conversation
+                    about your event.
+                  </p>
+                  <a
+                    href="/contact-us"
+                    className={`${primaryBtn} mt-4 text-xs`}
+                    onClick={() => trackEvent("cta_confirm_schedule")}
+                  >
+                    Schedule a Strategy Call
+                  </a>
+                </div>
+              )}
+
+              {interests.rfpilot && (
+                <p className="mt-4 text-sm text-white/70">
+                  RFPilot early-access details will be sent to your email as the platform moves
+                  toward release.
+                </p>
+              )}
+
+              <p className="mt-4 text-sm text-white/70">
+                In the meantime, feel free to{" "}
+                <a
+                  href="/experiences-created"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline"
+                >
+                  see what DXG produces
+                </a>
+                .
+              </p>
+
+              <button
+                onClick={() => setSubmitted(false)}
+                className="mt-6 w-full rounded-lg bg-primary py-3 text-sm font-bold uppercase tracking-widest text-black transition hover:brightness-110"
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        )}
+      </section>
+
+
+
+      {/* FIND DXG IN TAMPA */}
+      <section className="border-y border-white/10 bg-black py-10 lg:py-14">
+        <Container>
+          <div className="mt-2 rounded-xl border border-white/10 bg-[#111] p-6 text-center sm:p-8">
+            <div className="mx-auto flex items-center justify-center gap-2">
+              {/* <MapPin size={18} className="text-primary" />
+              <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+                Find DXG in Tampa
+              </span> */}
+            </div>
+            <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-primary">
+              Connect Marketplace One-on-Ones
+            </p>
+            <h3 className="mt-2 text-lg font-bold text-white sm:text-xl">Meet with Ace and Suley</h3>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/70 sm:text-base sm:leading-7">
+              Ace and Suley are taking meetings throughout the Marketplace. Request DXG
+              through the Connect appointment system, or use the form below and we&apos;ll
+              confirm a time before the show.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* CREDIBILITY STRIP */}
+      <section className="bg-[#0a0a0a] py-10 lg:py-14">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:gap-16">
+            <div>
+              <div className="flex items-center gap-2">
+                <Award size={18} className="text-primary" />
+                <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+                  Production Leadership You Can Verify
+                </span>
+              </div>
+              <TypingTitle
+                as="h2"
+                className="mt-3 text-2xl font-black uppercase leading-tight text-white sm:text-3xl"
+              >
+                DXG is led by producers, not project coordinators.
+              </TypingTitle>
+              <Reveal as="p" className="mt-4 text-base leading-7 text-white/70">
+                The team behind your event has been producing conferences, general sessions,
+                and multi-room programs together since 2006.
+              </Reveal>
+              <a
+                href="/experiences-created"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary underline"
+              >
+                See the work: Experiences We&apos;ve Created
+              </a>
+            </div>
+            <Reveal kind="list" className="grid gap-3">
+              {CREDIBILITY_POINTS.map((point) => (
+                <li
+                  key={point}
+                  className="flex items-start gap-3 rounded-xl border border-primary/20 bg-[#081624] p-4 text-sm leading-6 text-white/80"
+                >
+                  <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                  {point}
+                </li>
+              ))}
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      
+
+      <BizBashAppPreview />
+
+      {/* THE PROBLEM */}
+      <section id="smarter" className="bg-[#0a0a0a] py-16 lg:py-20">
+        <Container>
+          <div className="max-w-2xl">
+            <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+              You Know the Process
+            </span>
+            <TypingTitle
+              as="h2"
+              className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
+            >
+              You know the process. The leverage is earlier than the RFP.
+            </TypingTitle>
+            <Reveal as="p" className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
+              You&apos;ve run enough procurements to know the mechanics cold. Here is what
+              rarely gets said out loud: by the time your AV RFP goes out, most of the budget
+              has already been decided. The venue you contracted, the dates you locked, and the
+              format your stakeholders chose set the structure months earlier. The RFP
+              negotiates the margins.
+            </Reveal>
+            <Reveal as="p" className="mt-4 text-base font-semibold leading-7 text-white sm:text-lg" delay={0.06}>
+              That&apos;s not a knowledge gap on your side. It&apos;s a visibility gap in how
+              the industry works.
+            </Reveal>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {PROBLEM_POINTS.map((item) => (
+              <Reveal
+                key={item.lead}
+                as="div"
+                className="rounded-xl border border-white/10 bg-[#111] p-5"
+              >
+                <p className="text-sm leading-6 text-white/70">
+                  <span className="font-semibold text-white">{item.lead}</span> {item.rest}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal
+            as="p"
+            className="mt-8 max-w-2xl border-l-2 border-primary/40 pl-4 text-sm leading-6 text-white/70"
+          >
+            DXG works with planners at the point where those decisions are still open, and
+            brings production-side visibility into the ones that aren&apos;t.
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* RFPILOT */}
+      <section id="rfpilot" className="bg-black py-16 lg:py-20">
+        <Container>
+          <div className="max-w-2xl">
+            <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+              Introducing RFPilot
+            </span>
+            <TypingTitle
+              as="h2"
+              className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
+            >
+              Build the RFP. Understand the responses. Make the decision with confidence.
+            </TypingTitle>
+            <Reveal as="p" className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
+              RFPilot is being developed to simplify the AV RFP process for meeting planners —
+              from organizing event requirements to reviewing the proposals vendors submit.
+            </Reveal>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {RFP_VALUES.map((item) => (
+              <Reveal
+                key={item.lead}
+                as="div"
+                className="rounded-xl border border-primary/20 bg-[#081624] p-5"
+              >
+                <p className="text-sm leading-6 text-white/70">
+                  <span className="font-semibold text-white">{item.lead}</span> — {item.rest}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal
+            as="p"
+            className="mt-8 max-w-2xl border-l-2 border-primary/40 pl-4 text-sm italic leading-6 text-white/60"
+          >
+            RFPilot is currently being developed by Digital Xperience Group. Features and
+            availability may evolve as the platform moves through testing and early access.
+          </Reveal>
+
+          {/* NEUTRALITY STATEMENT */}
+          <Reveal
+            as="div"
+            className="mx-auto mt-10 max-w-3xl rounded-2xl border border-primary/20 bg-[#081624] p-6 sm:p-8"
+          >
+            <div className="flex items-center gap-2">
+              <Lock size={16} className="text-primary" />
+              <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+                How RFPilot Handles Your Data, and Where DXG Stands
+              </span>
+            </div>
+            <p className="mt-4 text-sm leading-6 text-white/70">
+              RFPilot is built by DXG, an AV production company. We&apos;re direct about what
+              that means, because your procurement team will ask. They should.
+            </p>
+            <ul className="mt-5 space-y-4">
+              {NEUTRALITY_POINTS.map((point) => (
+                <li key={point.lead} className="flex items-start gap-3 text-sm leading-6 text-white/70">
+                  <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                  <span>
+                    <span className="font-semibold text-white">{point.lead}</span> {point.rest}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 text-sm leading-6 text-white/70">
+              If your sourcing or compliance team wants these commitments in writing for their
+              file, ask. We&apos;ll provide them.
+            </p>
+          </Reveal>
+
+          <div className="mt-8 text-center">
+            <button type="button" className={primaryBtn} onClick={handleRfpilotPreselect}>
+              Join the RFPilot Early-Access List
+            </button>
+          </div>
+        </Container>
+      </section>
+
+      {/* CAPABILITIES */}
+      <section id="capabilities" className="bg-[#0a0a0a] py-16 lg:py-20">
+        <Container>
+          <div className="max-w-2xl text-left sm:text-center sm:mx-auto">
+            <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+              Producer-Led Event Production
+            </span>
+            <TypingTitle
+              as="h2"
+              className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
+            >
+              One production partner. Every part of the event experience.
+            </TypingTitle>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {CAPABILITIES.map((cap) => (
+              <article
+                key={cap.title}
+                className="overview-box group rounded-2xl bg-[#081624] p-6 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/40"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-primary/50 bg-[#0b2237]">
+                  <cap.Icon size={22} className="text-primary" strokeWidth={2} />
+                </div>
+                <h3 className="mt-5 text-base font-bold text-white">{cap.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-white/70">{cap.desc}</p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* PRODUCER-LED DIFFERENCE */}
+      <section className="bg-black py-16 lg:py-20">
+        <Container>
+          <div className="max-w-2xl">
+            <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+              The DXG Difference
+            </span>
+            <TypingTitle
+              as="h2"
+              className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
+            >
+              A producer-led approach focused on real-world execution.
+            </TypingTitle>
+            <Reveal as="p" className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
+              DXG approaches event AV from a producer&apos;s perspective. Technology supports the
+              experience, but planning, communication, accountability, and on-site leadership are
+              what keep the event on track.
+            </Reveal>
+          </div>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-3">
+            {PILLARS.map((pillar) => (
+              <Reveal
+                key={pillar.title}
+                as="div"
+                className="rounded-xl border-t-2 border-primary bg-[#111] p-6"
+              >
+                <pillar.Icon size={26} className="text-primary" strokeWidth={2} />
+                <h3 className="mt-4 text-lg font-bold text-white">{pillar.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-white/70">{pillar.desc}</p>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* WHO YOU'LL MEET IN TAMPA */}
       <section className="bg-[#0a0a0a] py-16 lg:py-20">
         <Container className="max-w-[900px]">
@@ -648,23 +1162,27 @@ export default function BizBashMain() {
                 procurement begins.
               </p>
             </Reveal>
-            <Reveal as="div" className="rounded-xl border border-dashed border-white/15 bg-[#111] p-6" delay={0.06}>
+            <Reveal as="div" className="rounded-xl border border-white/10 bg-[#111] p-6" delay={0.06}>
               <div className="flex items-center gap-4">
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-dashed border-white/25 bg-white/5 text-lg font-bold text-white/40">
-                  S
+                <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
+                  <Image
+                    src="/images/home/ace-founder/suley.png"
+                    alt="Suley Usman"
+                    fill
+                    className="object-cover"
+                  />
                 </span>
                 <div>
                   <h3 className="text-base font-bold text-white">
-                    [Suley — full name, title]
+                    Suley Usman
                   </h3>
                   <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-primary">
-                    DXG
+                    Vice President, Audience Engagement
                   </p>
                 </div>
               </div>
               <p className="mt-4 text-sm leading-6 text-white/70">
-                [One line covering role at DXG, years in production, and what they own on show
-                site.]
+                Focused on creating engaging experiences that connect technology, people, and business outcomes.
               </p>
             </Reveal>
           </div>
@@ -673,371 +1191,6 @@ export default function BizBashMain() {
             Both are taking one-on-one meetings throughout Connect Marketplace. Request DXG
             through the Connect appointment system, or use the form below to lock a time.
           </Reveal>
-        </Container>
-      </section>
-
-      {/* FORM */}
-      <section className="bg-black py-16 lg:py-20">
-        <Container className="max-w-[900px]">
-          <div className="overflow-hidden rounded-[22px] border border-primary/15 bg-[#071827] p-8 shadow-[0_28px_90px_rgba(0,0,0,0.42)] sm:p-10">
-            {!submitted && (
-              <form
-                id="connectForm"
-                ref={formRef}
-                noValidate
-                onInput={handleFormInput}
-                onSubmit={handleSubmit}
-              >
-                <TypingTitle
-                  as="h2"
-                  id="formHeadline"
-                  className="text-2xl font-black uppercase leading-tight text-white sm:text-3xl"
-                >
-                  How would you like DXG to follow up?
-                </TypingTitle>
-
-                {showErrorBanner && (
-                  <div
-                    className="mt-6 rounded-[10px] border border-red-400/40 bg-red-500/10 px-4 py-3 text-sm text-red-300"
-                    role="alert"
-                  >
-                    Please complete the highlighted fields so we can follow up correctly.
-                  </div>
-                )}
-
-                <div className="mt-8 grid gap-5 sm:grid-cols-2">
-                  <div>
-                    <label className={labelClass} htmlFor="firstName">
-                      First Name <span className="text-primary">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="First_Name"
-                      autoComplete="given-name"
-                      required
-                      className={`${fieldClass} ${fieldErrors.firstName ? "border-red-400" : ""}`}
-                    />
-                    {fieldErrors.firstName && (
-                      <p className="mt-1 text-xs text-red-300">Enter your first name.</p>
-                    )}
-                  </div>
-                  <div>
-                    <label className={labelClass} htmlFor="lastName">
-                      Last Name <span className="text-primary">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="Last_Name"
-                      autoComplete="family-name"
-                      required
-                      className={`${fieldClass} ${fieldErrors.lastName ? "border-red-400" : ""}`}
-                    />
-                    {fieldErrors.lastName && (
-                      <p className="mt-1 text-xs text-red-300">Enter your last name.</p>
-                    )}
-                  </div>
-                  <div>
-                    <label className={labelClass} htmlFor="email">
-                      Work Email <span className="text-primary">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="Email"
-                      autoComplete="email"
-                      inputMode="email"
-                      required
-                      className={`${fieldClass} ${fieldErrors.email ? "border-red-400" : ""}`}
-                    />
-                    {fieldErrors.email && (
-                      <p className="mt-1 text-xs text-red-300">Enter a valid work email address.</p>
-                    )}
-                  </div>
-                  <div>
-                    <label className={labelClass} htmlFor="company">
-                      Company <span className="text-primary">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="Company"
-                      autoComplete="organization"
-                      required
-                      className={`${fieldClass} ${fieldErrors.company ? "border-red-400" : ""}`}
-                    />
-                    {fieldErrors.company && (
-                      <p className="mt-1 text-xs text-red-300">Enter your company name.</p>
-                    )}
-                  </div>
-                  <div>
-                    <label className={labelClass} htmlFor="jobTitle">
-                      Job Title <span className="text-primary">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="jobTitle"
-                      name="Job_Title"
-                      autoComplete="organization-title"
-                      required
-                      className={`${fieldClass} ${fieldErrors.jobTitle ? "border-red-400" : ""}`}
-                    />
-                    {fieldErrors.jobTitle && (
-                      <p className="mt-1 text-xs text-red-300">Enter your job title.</p>
-                    )}
-                  </div>
-                  <div>
-                    <label className={labelClass} htmlFor="role">
-                      Primary Professional Role <span className="text-primary">*</span>
-                    </label>
-                    <select
-                      id="role"
-                      name="Primary_Role"
-                      required
-                      defaultValue=""
-                      className={`${fieldClass} ${fieldErrors.role ? "border-red-400" : ""}`}
-                    >
-                      <option value="">Select your role</option>
-                      <option>Meeting or Event Planner</option>
-                      <option>Event Marketer</option>
-                      <option>Association Professional</option>
-                      <option>Corporate Events</option>
-                      <option>Experiential or Creative Agency</option>
-                      <option>Procurement or Sourcing</option>
-                      <option>Venue or Hospitality</option>
-                      <option>Other</option>
-                    </select>
-                    {fieldErrors.role && (
-                      <p className="mt-1 text-xs text-red-300">Select your primary role.</p>
-                    )}
-                  </div>
-                </div>
-
-                <fieldset className="mt-8">
-                  <legend className="mb-3 text-sm font-bold text-white">
-                    How can DXG be most useful? <span className="text-primary">*</span>{" "}
-                    <span className="font-normal text-white/50">(select all that apply)</span>
-                  </legend>
-                  <div className="grid gap-3 sm:grid-cols-2" id="interestChecks" tabIndex={-1}>
-                    {[
-                      { key: "consult" as const, name: "Consultation_Interest", label: "Schedule a DXG consultation" },
-                      { key: "review" as const, name: "Proposal_Review_Interest", label: "Request an AV proposal or production-plan review" },
-                      { key: "rfpilot" as const, name: "RFPilot_Interest", label: "Join the RFPilot early-access list" },
-                      { key: "followup" as const, name: "Followup_Interest", label: "Receive post-event follow-up" },
-                    ].map((item) => (
-                      <label
-                        key={item.key}
-                        className={`flex cursor-pointer items-start gap-3 rounded-[10px] border p-3 text-sm transition ${
-                          interests[item.key]
-                            ? "border-primary bg-primary/[0.08] text-white"
-                            : "border-white/10 bg-[#111] text-white/75 hover:border-white/25"
-                        }`}
-                      >
-                        <input
-                          type="checkbox"
-                          name={item.name}
-                          value="Yes"
-                          checked={interests[item.key]}
-                          onChange={() => setInterest(item.key, !interests[item.key])}
-                          className="mt-0.5 h-4 w-4 shrink-0 accent-primary"
-                        />
-                        {item.label}
-                      </label>
-                    ))}
-                  </div>
-                  {interestError && (
-                    <p className="mt-2 text-xs text-red-300">Select at least one option.</p>
-                  )}
-                </fieldset>
-
-                {disclosureOpen && (
-                  <div className="mt-8 grid gap-5 border-t border-white/10 pt-8 sm:grid-cols-2">
-                    <p className="text-xs italic leading-6 text-white/60 sm:col-span-2">
-                      A few optional details help us come prepared. Skip anything you&apos;re not
-                      ready to share.
-                    </p>
-                    <div>
-                      <label className={labelClass} htmlFor="eventName">Event or Project Name</label>
-                      <input type="text" id="eventName" name="Event_Name" className={fieldClass} />
-                    </div>
-                    <div>
-                      <label className={labelClass} htmlFor="eventDate">Estimated Event Date</label>
-                      <input type="month" id="eventDate" name="Event_Date" className={fieldClass} />
-                    </div>
-                    <div>
-                      <label className={labelClass} htmlFor="eventLocation">Event Location</label>
-                      <input
-                        type="text"
-                        id="eventLocation"
-                        name="Event_Location"
-                        placeholder="City, venue, or TBD"
-                        className={fieldClass}
-                      />
-                    </div>
-                    <div>
-                      <label className={labelClass} htmlFor="attendance">Expected Attendance</label>
-                      <select id="attendance" name="Attendance" defaultValue="" className={fieldClass}>
-                        <option value="">Select a range</option>
-                        <option>Under 250</option>
-                        <option>250 – 1,000</option>
-                        <option>1,000 – 3,000</option>
-                        <option>3,000 – 6,000</option>
-                        <option>6,000+</option>
-                      </select>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <label className={labelClass} htmlFor="scope">General Session &amp; Breakout Scope</label>
-                      <input
-                        type="text"
-                        id="scope"
-                        name="Session_Scope"
-                        placeholder="e.g., 1 general session, 12 breakouts, hybrid stream"
-                        className={fieldClass}
-                      />
-                    </div>
-                    <div>
-                      <label className={labelClass} htmlFor="stage">Current Stage</label>
-                      <select id="stage" name="Event_Stage" defaultValue="" className={fieldClass}>
-                        <option value="">Select a stage</option>
-                        <option>Early Planning</option>
-                        <option>Building the RFP</option>
-                        <option>Reviewing Proposals</option>
-                        <option>Vendor Selected</option>
-                        <option>Exploring Future Options</option>
-                      </select>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <label className={labelClass} htmlFor="helpful">What would be most helpful right now?</label>
-                      <textarea
-                        id="helpful"
-                        name="Most_Helpful"
-                        rows={3}
-                        className={`${fieldClass} h-auto resize-none py-3`}
-                      ></textarea>
-                    </div>
-                  </div>
-                )}
-
-                <input type="hidden" name="Lead_Source" value="BizBash / Connect Marketplace" readOnly />
-                <input type="hidden" name="Campaign" value="BizBash Tampa 2026" readOnly />
-                <input type="hidden" name="Landing_Page" value="DXG Smarter Approach Campaign" readOnly />
-                <input type="hidden" name="UTM_Source" value={utm.source} readOnly />
-                <input type="hidden" name="UTM_Medium" value={utm.medium} readOnly />
-                <input type="hidden" name="UTM_Campaign" value={utm.campaign} readOnly />
-                <input type="hidden" name="UTM_Content" value={utm.content} readOnly />
-                <input type="hidden" name="QR_Code_Source" value={utm.qr} readOnly />
-                <input type="hidden" name="Original_Source" value={utm.originalSource} readOnly />
-                <input type="hidden" name="Submission_DateTime" ref={submitTimeRef} defaultValue="" />
-                <input
-                  type="text"
-                  name="dxg_website"
-                  id="hpField"
-                  tabIndex={-1}
-                  autoComplete="off"
-                  style={{ position: "absolute", left: "-9999px" }}
-                  aria-hidden="true"
-                />
-
-                <div className="mt-8 space-y-3 border-t border-white/10 pt-8">
-                  <label className="flex items-start gap-3 text-xs leading-5 text-white/70">
-                    <input
-                      type="checkbox"
-                      id="consentRespond"
-                      name="Consent_Respond"
-                      value="Yes"
-                      required
-                      className="mt-0.5 h-3.5 w-3.5 shrink-0 accent-primary"
-                    />
-                    <span>
-                      I agree that DXG may contact me about this request. See the{" "}
-                      <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline">
-                        DXG Privacy Policy
-                      </a>
-                      . <span className="text-primary">*</span>
-                    </span>
-                  </label>
-                  <label className="flex items-start gap-3 text-xs leading-5 text-white/70">
-                    <input
-                      type="checkbox"
-                      name="Consent_Marketing"
-                      value="Yes"
-                      className="mt-0.5 h-3.5 w-3.5 shrink-0 accent-primary"
-                    />
-                    <span>Send me occasional planner insights and DXG updates by email. (Optional)</span>
-                  </label>
-                </div>
-
-                <div className="mt-8">
-                  <button type="submit" className={`${primaryBtn} w-full sm:w-auto`}>
-                    Connect With DXG
-                  </button>
-                </div>
-              </form>
-            )}
-
-            {submitted && (
-              <div ref={confirmRef} tabIndex={-1}>
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                  <Check size={26} className="text-primary" strokeWidth={2.4} />
-                </div>
-                <TypingTitle
-                  as="h2"
-                  className="mt-5 text-2xl font-black uppercase leading-tight text-white sm:text-3xl"
-                >
-                  Thank you — we&apos;ll take it from here.
-                </TypingTitle>
-                <p className="mt-3 text-sm leading-6 text-white/70">
-                  Your request is on its way to the DXG team. Here&apos;s what you selected:
-                </p>
-                <ul className="mt-5 space-y-2">
-                  {selectedLabels.map((label) => (
-                    <li key={label} className="flex items-start gap-2 text-sm text-white/85">
-                      <Check size={16} className="mt-0.5 shrink-0 text-primary" />
-                      {label}
-                    </li>
-                  ))}
-                </ul>
-
-                {interests.consult && (
-                  <div className="mt-6 rounded-xl border border-primary/30 bg-primary/[0.08] p-5">
-                    <p className="text-sm leading-6 text-white/85">
-                      <strong className="text-white">Want to lock in a time now?</strong> Grab a
-                      spot on the DXG calendar — no pressure, no pitch deck. Just a conversation
-                      about your event.
-                    </p>
-                    <a
-                      href="/contact-us"
-                      className={`${primaryBtn} mt-4`}
-                      onClick={() => trackEvent("cta_confirm_schedule")}
-                    >
-                      Schedule a Strategy Call
-                    </a>
-                  </div>
-                )}
-
-                {interests.rfpilot && (
-                  <p className="mt-4 text-sm text-white/70">
-                    RFPilot early-access details will be sent to your email as the platform moves
-                    toward release.
-                  </p>
-                )}
-
-                <p className="mt-4 text-sm text-white/70">
-                  In the meantime, feel free to{" "}
-                  <a
-                    href="/experiences-created"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary underline"
-                  >
-                    see what DXG produces
-                  </a>
-                  .
-                </p>
-              </div>
-            )}
-          </div>
         </Container>
       </section>
     </main>

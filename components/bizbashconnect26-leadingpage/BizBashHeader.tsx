@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { href: "#smarter", label: "The Smarter Approach" },
   { href: "#rfpilot", label: "RFPilot" },
   { href: "#capabilities", label: "DXG Capabilities" },
-  { href: "#connect", label: "Connect" },
+  // { href: "#connect", label: "Connect" },
 ];
 
 export default function BizBashHeader() {
