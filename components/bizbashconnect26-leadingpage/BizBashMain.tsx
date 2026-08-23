@@ -851,14 +851,14 @@ export default function BizBashMain() {
 
 
       {/* FIND DXG IN TAMPA */}
-      <section className="border-y border-white/10 bg-black py-5 lg:py-7">
+      {/* <section className="border-y border-white/10 bg-black py-5 lg:py-7">
         <Container>
           <div className="mt-2 rounded-xl border border-white/10 bg-[#111] p-6 text-center sm:p-8">
             <div className="mx-auto flex items-center justify-center gap-2">
-              {/* <MapPin size={18} className="text-primary" />
+              <MapPin size={18} className="text-primary" />
               <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
                 Find DXG in Tampa
-              </span> */}
+              </span>
             </div>
             <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-primary">
               Connect Marketplace One-on-Ones
@@ -871,7 +871,7 @@ export default function BizBashMain() {
             </p>
           </div>
         </Container>
-      </section>
+      </section> */}
 
       {/* CREDIBILITY STRIP */}
       <section className="bg-[#0a0a0a] py-5 lg:py-7">
@@ -923,7 +923,7 @@ export default function BizBashMain() {
       <BizBashAppPreview />
 
       {/* THE PROBLEM */}
-      <section id="smarter" className="bg-[#0a0a0a] py-8 lg:py-10">
+      {/* <section id="smarter" className="bg-[#0a0a0a] py-8 lg:py-10">
         <Container>
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
@@ -970,7 +970,7 @@ export default function BizBashMain() {
             brings production-side visibility into the ones that aren&apos;t.
           </Reveal>
         </Container>
-      </section>
+      </section> */}
 
       {/* RFPILOT */}
       <section id="rfpilot" className="bg-black py-8 lg:py-10">
@@ -1122,7 +1122,7 @@ export default function BizBashMain() {
 
       {/* WHO YOU'LL MEET IN TAMPA */}
       <section className="bg-[#0a0a0a] py-8 lg:py-10">
-        <Container className="max-w-[900px]">
+        <Container className="max-w-7xl">
           <div className="text-left sm:text-center">
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
               Who You&apos;ll Meet in Tampa
@@ -1135,60 +1135,120 @@ export default function BizBashMain() {
             </TypingTitle>
           </div>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
-            <Reveal as="div" className="rounded-xl border border-white/10 bg-[#111] p-6">
-              <div className="flex items-center gap-4">
-                <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
-                  <Image
-                    src="/images/home/ace-founder/founderavtar4.png"
-                    alt="Wallace &quot;Ace&quot; Johnson"
-                    fill
-                    className="object-cover"
-                  />
-                </span>
-                <div>
-                  <h3 className="text-base font-bold text-white">
-                    Wallace &quot;Ace&quot; Johnson, CTS
-                  </h3>
-                  <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-primary">
-                    Executive Technical Producer
-                  </p>
+          <div className="mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            <Reveal as="div" className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40">
+              <div>
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
+                    <Image
+                      src="/images/home/ace-founder/founderavtar4.png"
+                      alt="Wallace &quot;Ace&quot; Johnson"
+                      fill
+                      className="object-cover"
+                    />
+                  </span>
+                  <div>
+                    <h3 className="text-sm sm:text-base font-bold text-white leading-tight">
+                      Wallace &quot;Ace&quot; Johnson, CTS
+                    </h3>
+                    <p className="mt-0.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-primary">
+                      Executive Technical Producer
+                    </p>
+                  </div>
                 </div>
+                <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
+                  Twenty-five years producing corporate and association events worldwide. Former
+                  AVIXA Board of Directors member and longtime industry educator. Speaking at the
+                  Innovation Forum on the upstream decisions that set AV budgets before
+                  procurement begins.
+                </p>
               </div>
-              <p className="mt-4 text-sm leading-6 text-white/70">
-                Twenty-five years producing corporate and association events worldwide. Former
-                AVIXA Board of Directors member and longtime industry educator. Speaking at the
-                Innovation Forum on the upstream decisions that set AV budgets before
-                procurement begins.
-              </p>
             </Reveal>
-            <Reveal as="div" className="rounded-xl border border-white/10 bg-[#111] p-6" delay={0.06}>
-              <div className="flex items-center gap-4">
-                <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
-                  <Image
-                    src="/images/home/ace-founder/suley.png"
-                    alt="Suley Usman"
-                    fill
-                    className="object-cover"
-                  />
-                </span>
-                <div>
-                  <h3 className="text-base font-bold text-white">
-                    Suley Usman
-                  </h3>
-                  <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-primary">
-                    Vice President, Audience Engagement
-                  </p>
+            <Reveal as="div" className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40" delay={0.06}>
+              <div>
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
+                    <Image
+                      src="/images/home/ace-founder/suley.png"
+                      alt="Suley Usman"
+                      fill
+                      className="object-cover"
+                    />
+                  </span>
+                  <div>
+                    <h3 className="text-sm sm:text-base font-bold text-white leading-tight">
+                      Suley Usman
+                    </h3>
+                    <p className="mt-0.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-primary">
+                      Vice President, Audience Engagement
+                    </p>
+                  </div>
                 </div>
+                <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
+                  Focused on creating engaging experiences that connect technology, people, and business outcomes.
+                </p>
               </div>
-              <p className="mt-4 text-sm leading-6 text-white/70">
-                Focused on creating engaging experiences that connect technology, people, and business outcomes.
-              </p>
             </Reveal>
+
+            <Reveal as="div" className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40" delay={0.12}>
+              <div>
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
+                    <Image
+                      src="/images/home/ace-founder/Adam Zavodny.png"
+                      alt="Adam Zavodny"
+                      fill
+                      className="object-cover"
+                    />
+                  </span>
+                  <div>
+                    <h3 className="text-sm sm:text-base font-bold text-white leading-tight">
+                      Adam Zavodny
+                    </h3>
+                    <p className="mt-0.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-primary">
+                      VP of Technology
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
+                  With a quarter century in live events, Adam Zavodny is a Technical Director whose work spans content creation, experience design, and technical direction for clients including Microsoft, Bank of America, M&T Bank, and White House Communications. He operates across the full arc of an event, shaping the creative concept and visual story, then engineering the technical design that makes it land cleanly in the room. That blend of creative instinct and technical command is the through-line on every stage he&apos;s touched.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal as="div" className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40" delay={0.18}>
+              <div>
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
+                    <Image
+                      src="/images/home/ace-founder/Eric Branch.png"
+                      alt="Eric Branch"
+                      fill
+                      className="object-cover"
+                    />
+                  </span>
+                  <div>
+                    <h3 className="text-sm sm:text-base font-bold text-white leading-tight">
+                      Eric Branch
+                    </h3>
+                    <p className="mt-0.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-primary">
+                      Creative Director
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
+                  With more than two decades in event production, Eric Branch works at the intersection of creative vision and technical execution - designing and delivering experiences for some of the world&apos;s most recognized names and iconic stages, including production for four U.S. Presidents. His command spans the full production spectrum, from filmmaking, audio engineering, and lighting to animation, 3D modeling, and staging.
+                </p>
+              </div>
+            </Reveal>
+
+
+
+
+
           </div>
 
           <Reveal as="p" className="mt-8 text-center text-sm leading-6 text-white/60">
-            Both are taking one-on-one meetings throughout Connect Marketplace. Request DXG
+            Our team is taking one-on-one meetings throughout Connect Marketplace. Request DXG
             through the Connect appointment system, or use the form below to lock a time.
           </Reveal>
         </Container>
