@@ -87,7 +87,7 @@ export default function BizBashFooter() {
   return (
     <footer className="bg-black text-white">
       {/* Top */}
-      <div className="border-b border-white/10 py-8 sm:py-12 lg:py-20">
+      <div className="border-b border-white/10 py-4 sm:py-6 lg:py-10">
         <Container>
           {/* Footer Grid */}
           <div className="grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_0.8fr] lg:gap-0">

@@ -349,7 +349,7 @@ export default function BizBashMain() {
   return (
     <main id="main">
       {/* HERO */}
-      <section id="top" className="relative overflow-hidden bg-black pb-16 pt-14 lg:pb-24 lg:pt-20">
+      <section id="top" className="relative overflow-hidden bg-black pb-8 pt-7 lg:pb-12 lg:pt-10">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_55%_at_78%_18%,rgba(46,198,245,0.18),transparent_62%)]" />
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.9fr] lg:gap-16">
@@ -436,7 +436,7 @@ export default function BizBashMain() {
 
 
       {/* EVENT CONNECTION OFFER */}
-      <section id="connect" className="bg-[#0a0a0a] py-16 lg:py-20">
+      <section id="connect" className="bg-[#0a0a0a] py-8 lg:py-10">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <TypingTitle
@@ -514,7 +514,7 @@ export default function BizBashMain() {
       </section>
 
       {/* FORM */}
-      <section className="bg-black py-16 lg:py-20">
+      <section className="bg-black py-8 lg:py-10">
         <Container className="max-w-[900px]">
           <div className="overflow-hidden rounded-[22px] border border-primary/15 bg-[#071827] p-5 shadow-[0_28px_90px_rgba(0,0,0,0.42)] sm:p-10">
             <form
@@ -851,7 +851,7 @@ export default function BizBashMain() {
 
 
       {/* FIND DXG IN TAMPA */}
-      <section className="border-y border-white/10 bg-black py-10 lg:py-14">
+      <section className="border-y border-white/10 bg-black py-5 lg:py-7">
         <Container>
           <div className="mt-2 rounded-xl border border-white/10 bg-[#111] p-6 text-center sm:p-8">
             <div className="mx-auto flex items-center justify-center gap-2">
@@ -874,7 +874,7 @@ export default function BizBashMain() {
       </section>
 
       {/* CREDIBILITY STRIP */}
-      <section className="bg-[#0a0a0a] py-10 lg:py-14">
+      <section className="bg-[#0a0a0a] py-5 lg:py-7">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:gap-16">
             <div>
@@ -923,7 +923,7 @@ export default function BizBashMain() {
       <BizBashAppPreview />
 
       {/* THE PROBLEM */}
-      <section id="smarter" className="bg-[#0a0a0a] py-16 lg:py-20">
+      <section id="smarter" className="bg-[#0a0a0a] py-8 lg:py-10">
         <Container>
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
@@ -973,7 +973,7 @@ export default function BizBashMain() {
       </section>
 
       {/* RFPILOT */}
-      <section id="rfpilot" className="bg-black py-16 lg:py-20">
+      <section id="rfpilot" className="bg-black py-8 lg:py-10">
         <Container>
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
@@ -1053,7 +1053,7 @@ export default function BizBashMain() {
       </section>
 
       {/* CAPABILITIES */}
-      <section id="capabilities" className="bg-[#0a0a0a] py-16 lg:py-20">
+      <section id="capabilities" className="bg-[#0a0a0a] py-8 lg:py-10">
         <Container>
           <div className="max-w-2xl text-left sm:text-center sm:mx-auto">
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
@@ -1085,7 +1085,7 @@ export default function BizBashMain() {
       </section>
 
       {/* PRODUCER-LED DIFFERENCE */}
-      <section className="bg-black py-16 lg:py-20">
+      <section className="bg-black py-8 lg:py-10">
         <Container>
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
@@ -1121,7 +1121,7 @@ export default function BizBashMain() {
       </section>
 
       {/* WHO YOU'LL MEET IN TAMPA */}
-      <section className="bg-[#0a0a0a] py-16 lg:py-20">
+      <section className="bg-[#0a0a0a] py-8 lg:py-10">
         <Container className="max-w-[900px]">
           <div className="text-left sm:text-center">
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">

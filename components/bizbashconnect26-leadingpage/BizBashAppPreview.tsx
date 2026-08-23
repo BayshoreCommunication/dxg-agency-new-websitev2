@@ -25,7 +25,7 @@ const PREVIEW_CARDS = [
 
 export default function BizBashAppPreview() {
   return (
-    <section className="bg-black py-12 sm:py-16 lg:py-24">
+    <section className="bg-black py-6 sm:py-8 lg:py-12">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
