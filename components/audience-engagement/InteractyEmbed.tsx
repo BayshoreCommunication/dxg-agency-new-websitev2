@@ -1,8 +1,14 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { preconnect, preload } from "react-dom";
 
 export default function InteractyEmbed() {
+  preconnect("https://p.interacty.me");
+  preconnect("https://interacty.me");
+  preload("https://p.interacty.me/l.js", { as: "script" });
+
+  const [isLoaded, setIsLoaded] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -11,7 +17,16 @@ export default function InteractyEmbed() {
     const container = containerRef.current;
     if (!wrapper || !container) return;
 
+    let trackedIframe: HTMLIFrameElement | null = null;
+    const handleIframeLoad = () => setIsLoaded(true);
+
     const syncHeight = () => {
+      const iframe = wrapper.querySelector<HTMLIFrameElement>("#remix-iframe");
+      if (iframe && iframe !== trackedIframe) {
+        trackedIframe = iframe;
+        iframe.addEventListener("load", handleIframeLoad, { once: true });
+      }
+
       const activityHeight = Number.parseFloat(container.style.height);
       if (!activityHeight) return;
 
@@ -45,6 +60,7 @@ export default function InteractyEmbed() {
     return () => {
       observer.disconnect();
       window.removeEventListener("resize", syncHeight);
+      trackedIframe?.removeEventListener("load", handleIframeLoad);
       script.remove();
     };
   }, []);
@@ -53,13 +69,27 @@ export default function InteractyEmbed() {
     <div
       ref={wrapperRef}
       data-interacty-wrapper
-      className="min-h-[300px] w-full bg-black transition-[margin] duration-300"
+      className="relative min-h-[300px] w-full bg-black transition-[margin] duration-300"
     >
       <div
         ref={containerRef}
         className="remix-app w-full bg-black"
         data-hash="357a8513327a007e"
       />
+      <div
+        aria-live="polite"
+        aria-hidden={isLoaded}
+        className={`pointer-events-none absolute inset-0 z-10 flex min-h-[300px] items-center justify-center bg-black transition-opacity duration-500 ${
+          isLoaded ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        <div className="flex flex-col items-center gap-4 text-primary">
+          <span className="h-9 w-9 animate-spin rounded-full border-2 border-primary/25 border-t-primary" />
+          <span className="text-xs font-bold uppercase tracking-[0.22em]">
+            Loading activity
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
