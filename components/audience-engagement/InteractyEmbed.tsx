@@ -3,7 +3,19 @@
 import { useEffect, useRef, useState } from "react";
 import { preconnect, preload } from "react-dom";
 
-export default function InteractyEmbed() {
+type InteractyEmbedProps = {
+  compactOpeningSlide?: boolean;
+  projectHash?: string;
+  scrollOffset?: string;
+};
+
+const DEFAULT_PROJECT_HASH = "357a8513327a007e";
+
+export default function InteractyEmbed({
+  compactOpeningSlide = true,
+  projectHash = DEFAULT_PROJECT_HASH,
+  scrollOffset,
+}: InteractyEmbedProps) {
   preconnect("https://p.interacty.me");
   preconnect("https://interacty.me");
   preload("https://p.interacty.me/l.js", { as: "script" });
@@ -21,19 +33,35 @@ export default function InteractyEmbed() {
     const handleIframeLoad = () => setIsLoaded(true);
 
     const syncHeight = () => {
-      const iframe = wrapper.querySelector<HTMLIFrameElement>("#remix-iframe");
+      const iframe = wrapper.querySelector<HTMLIFrameElement>(
+        "#remix-iframe, iframe",
+      );
       if (iframe && iframe !== trackedIframe) {
         trackedIframe = iframe;
+        if (scrollOffset) iframe.style.scrollMarginTop = scrollOffset;
         iframe.addEventListener("load", handleIframeLoad, { once: true });
       }
 
-      const activityHeight = Number.parseFloat(container.style.height);
+      const activityHeight = Math.ceil(
+        Number.parseFloat(container.style.height) ||
+          container.getBoundingClientRect().height,
+      );
       if (!activityHeight) return;
+
+      // Interacty updates the container height as users move between screens.
+      // Mirror it on the wrapper so shorter and taller questions both occupy
+      // exactly the space reported by the embed without clipping content.
+      const nextHeight = `${activityHeight}px`;
+      if (wrapper.style.minHeight !== nextHeight) {
+        wrapper.style.minHeight = nextHeight;
+      }
 
       // The opening slide includes a large decorative footer. Compact only
       // that short screen; longer activity screens retain their full height.
       const openingCrop =
-        activityHeight < 1400 ? Math.min(110, activityHeight * 0.12) : 0;
+        compactOpeningSlide && activityHeight < 1400
+          ? Math.min(110, activityHeight * 0.12)
+          : 0;
       const nextMargin = `${Math.round(-openingCrop)}px`;
       if (wrapper.style.marginBottom !== nextMargin) {
         wrapper.style.marginBottom = nextMargin;
@@ -51,6 +79,11 @@ export default function InteractyEmbed() {
       subtree: true,
     });
 
+    const resizeObserver = new ResizeObserver(() => {
+      window.requestAnimationFrame(syncHeight);
+    });
+    resizeObserver.observe(container);
+
     const script = document.createElement("script");
     script.src = "https://p.interacty.me/l.js";
     script.async = true;
@@ -59,22 +92,25 @@ export default function InteractyEmbed() {
 
     return () => {
       observer.disconnect();
+      resizeObserver.disconnect();
       window.removeEventListener("resize", syncHeight);
       trackedIframe?.removeEventListener("load", handleIframeLoad);
       script.remove();
     };
-  }, []);
+  }, [compactOpeningSlide, projectHash, scrollOffset]);
 
   return (
     <div
       ref={wrapperRef}
       data-interacty-wrapper
       className="relative min-h-[300px] w-full bg-black transition-[margin] duration-300"
+      style={{ scrollMarginTop: scrollOffset }}
     >
       <div
         ref={containerRef}
         className="remix-app w-full bg-black"
-        data-hash="357a8513327a007e"
+        data-hash={projectHash}
+        style={{ scrollMarginTop: scrollOffset }}
       />
       <div
         aria-live="polite"
