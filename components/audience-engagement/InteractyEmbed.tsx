@@ -9,6 +9,16 @@ type InteractyEmbedProps = {
   scrollOffset?: string;
 };
 
+type InteractyEventPayload = {
+  top?: unknown;
+};
+
+type InteractyEventHandler = (
+  eventName: string,
+  payload?: InteractyEventPayload,
+  context?: unknown,
+) => void;
+
 const DEFAULT_PROJECT_HASH = "357a8513327a007e";
 
 export default function InteractyEmbed({
@@ -30,7 +40,48 @@ export default function InteractyEmbed({
     if (!wrapper || !container) return;
 
     let trackedIframe: HTMLIFrameElement | null = null;
+    let scrollCorrectionTimer: number | undefined;
     const handleIframeLoad = () => setIsLoaded(true);
+
+    const interactyWindow = window as typeof window & {
+      onInteractyEvent?: InteractyEventHandler;
+    };
+    const previousInteractyEventHandler = interactyWindow.onInteractyEvent;
+    const handleInteractyEvent: InteractyEventHandler = (
+      eventName,
+      payload,
+      context,
+    ) => {
+      if (
+        eventName === "SCROLL_PARENT" &&
+        typeof payload?.top === "number" &&
+        scrollOffset
+      ) {
+        const requestedTop = payload.top;
+        window.clearTimeout(scrollCorrectionTimer);
+
+        // Interacty schedules its own smooth parent scroll 50ms after this
+        // event. Run immediately after it and include the fixed-header offset.
+        scrollCorrectionTimer = window.setTimeout(() => {
+          const offset = Number.parseFloat(
+            window.getComputedStyle(wrapper).scrollMarginTop,
+          );
+
+          window.scrollTo({
+            top: Math.max(
+              0,
+              requestedTop - (Number.isFinite(offset) ? offset : 0),
+            ),
+            left: window.scrollX,
+            behavior: "instant",
+          });
+        }, 50);
+      }
+
+      previousInteractyEventHandler?.(eventName, payload, context);
+    };
+
+    interactyWindow.onInteractyEvent = handleInteractyEvent;
 
     const syncHeight = () => {
       const iframe = wrapper.querySelector<HTMLIFrameElement>(
@@ -94,6 +145,10 @@ export default function InteractyEmbed({
       observer.disconnect();
       resizeObserver.disconnect();
       window.removeEventListener("resize", syncHeight);
+      window.clearTimeout(scrollCorrectionTimer);
+      if (interactyWindow.onInteractyEvent === handleInteractyEvent) {
+        interactyWindow.onInteractyEvent = previousInteractyEventHandler;
+      }
       trackedIframe?.removeEventListener("load", handleIframeLoad);
       script.remove();
     };

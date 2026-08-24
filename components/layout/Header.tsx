@@ -47,25 +47,12 @@ export default function Header() {
     setActiveTarget(target);
     setMobileMenuOpen(false);
 
-    if (target === "home") {
-      router.push("/");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    if (pathname === path) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       return;
     }
 
-    const section = document.getElementById(target);
-
-    if (!section) {
-      router.push(path);
-      return;
-    }
-
-    window.history.pushState(null, "", path);
-
-    section.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    router.push(path, { scroll: true });
   };
 
   const currentDesktopUnderline = hoveredTarget || activeTarget;

@@ -35,6 +35,7 @@ h3 {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
   scrollbar-color: theme("colors.primary") #050505;
   scrollbar-width: thin;
   overflow-x: clip;
