@@ -8,24 +8,22 @@ import Reveal from "components/shared/Reveal";
 import {
   Award,
   Calendar,
-  Camera,
   Check,
   ClipboardCheck,
-  ClipboardList,
   Compass,
-  Globe,
   Lock,
-  Palette,
-  Presentation,
   Radio,
   Rocket,
   ShieldCheck,
   Users,
   X,
 } from "lucide-react";
+import { Bebas_Neue } from "next/font/google";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { trackEvent } from "./analytics";
+
+const displayFont = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
 type InterestKey = "consult" | "review" | "rfpilot" | "followup";
 
@@ -77,39 +75,34 @@ const INTEREST_LABELS: Record<InterestKey, string> = {
 
 const CAPABILITIES = [
   {
-    Icon: ClipboardList,
     title: "Production Management (Flat)",
-    desc: "End-to-end production planning, coordination, show flow, and on-site leadership managed by one accountable team.",
+    background: "/images/rfp-event/Group 31.png",
+    icon: "/images/rfp-event/meeting 1 (3).png",
   },
   {
-    Icon: Presentation,
     title: "AV Technology",
-    desc: "Audio, video, lighting, staging, and technical systems designed around the needs of your event.",
+    background: "/images/rfp-event/Group 30.png",
+    icon: "/images/rfp-event/meeting 1 (2).png",
   },
   {
-    Icon: Globe,
     title: "Virtual & Hybrid Events",
-    desc: "Streaming and platform support that keeps remote and in-room audiences connected to the same experience.",
+    background: "/images/rfp-event/Group 28.png",
+    icon: "/images/rfp-event/meeting 1 (1).png",
   },
   {
-    Icon: Palette,
     title: "Creative Services",
-    desc: "Creative direction, visual design, motion graphics, and branded environments that bring your event story to life.",
+    background: "/images/rfp-event/Group 32.png",
+    icon: "/images/rfp-event/meeting 1 (4).png",
   },
   {
-    Icon: Camera,
     title: "Photography & Video Production",
-    desc: "Professional photography and video content that captures the event and extends its value beyond the room.",
+    background: "/images/rfp-event/Group 29 (1).png",
+    icon: "/images/rfp-event/meeting 1 (5).png",
   },
   {
-    Icon: Users,
     title: "Audience Engagement",
-    desc: "Interactive experiences and thoughtful touchpoints that turn passive attendees into active participants.",
-  },
-  {
-    Icon: Calendar,
-    title: "Meeting Planning Support",
-    desc: "Flexible planning, logistics, and coordination support that gives your team more capacity at every stage.",
+    background: "/images/rfp-event/Frame 224.png",
+    icon: "/images/rfp-event/meeting 1 (6).png",
   },
 ];
 
@@ -1121,7 +1114,7 @@ export default function BizBashMain() {
 
       {/* CAPABILITIES */}
       <section id="capabilities" className="bg-[#0a0a0a] py-8 lg:py-10">
-        <Container>
+        <Container className="max-w-7xl">
           <div className="max-w-2xl text-left sm:text-center sm:mx-auto">
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
               Producer-Led Event Production
@@ -1134,27 +1127,59 @@ export default function BizBashMain() {
             </TypingTitle>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {CAPABILITIES.map((cap) => (
+          <div className="mt-12 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {CAPABILITIES.map(({ title, background, icon }) => (
               <article
-                key={cap.title}
-                className="overview-box group rounded-2xl bg-[#081624] p-6 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/40"
+                key={title}
+                className="group relative isolate aspect-[530/495] overflow-hidden rounded-xl"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-primary/50 bg-[#0b2237]">
-                  <cap.Icon
-                    size={22}
-                    className="text-primary"
-                    strokeWidth={2}
+                <Image
+                  src={background}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1280px) 420px, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="-z-20 object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+
+                <div className="flex h-full flex-col items-center justify-end px-5 pb-7 text-center sm:pb-6 lg:pb-8">
+                  <Image
+                    src={icon}
+                    alt=""
+                    width={62}
+                    height={62}
+                    className="h-14 w-14 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] lg:h-16 lg:w-16"
                   />
+                  <h3 className="mt-3 max-w-[280px] text-sm font-bold uppercase leading-tight tracking-wide text-white sm:text-base lg:text-lg">
+                    {title}
+                  </h3>
                 </div>
-                <h3 className="mt-5 text-base font-bold text-white">
-                  {cap.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">
-                  {cap.desc}
-                </p>
               </article>
             ))}
+
+            <article className="group relative isolate min-h-[260px] overflow-hidden rounded-xl sm:col-span-2 sm:min-h-[300px] lg:col-span-3 lg:min-h-[390px]">
+              <Image
+                src="/images/rfp-event/Frame 226.png"
+                alt=""
+                fill
+                sizes="(min-width: 1280px) 1280px, 100vw"
+                className="-z-20 object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+
+              <div className="flex h-full min-h-[260px] flex-col items-center justify-end px-5 pb-7 text-center sm:min-h-[300px] lg:min-h-[390px] lg:pb-9">
+                <Image
+                  src="/images/rfp-event/meeting 1.png"
+                  alt=""
+                  width={62}
+                  height={62}
+                  className="h-14 w-14 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] lg:h-16 lg:w-16"
+                />
+                <h3 className="mt-3 text-sm font-bold uppercase leading-tight tracking-wide text-white sm:text-base lg:text-lg">
+                  Meeting Planning Support
+                </h3>
+              </div>
+            </article>
           </div>
         </Container>
       </section>
@@ -1207,169 +1232,36 @@ export default function BizBashMain() {
         </Container>
       </section>
 
-      {/* WHO YOU'LL MEET IN TAMPA */}
-      <section className="bg-[#0a0a0a] py-8 lg:py-10">
-        <Container className="max-w-7xl">
-          <div className="text-left sm:text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              Who You&apos;ll Meet in Tampa
-            </span>
-            <TypingTitle
-              as="h2"
-              className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
+      {/* THANK YOU FOR MEETING US */}
+      <section className="bg-black px-4 py-10 text-white sm:px-6 sm:py-16 lg:py-20">
+        <div className="relative isolate mx-auto min-h-[620px] max-w-7xl overflow-hidden rounded-[28px] sm:aspect-[1634/691] sm:min-h-0">
+          <Image
+            src="/images/rfp-event/Group 29.png"
+            alt="DXG exhibition booth"
+            fill
+            sizes="(min-width: 1280px) 1280px, 100vw"
+            className="-z-20 object-cover object-[68%_center] sm:object-center"
+          />
+
+          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/95 via-black/60 to-black/15 sm:bg-gradient-to-r sm:from-black sm:via-black/45 sm:to-transparent" />
+
+          <div className="flex h-full min-h-[620px] flex-col justify-start px-7 py-10 sm:min-h-0 sm:w-[38%] sm:justify-center sm:px-10 sm:py-8 lg:px-14">
+            <h2
+              className={`${displayFont.className} text-5xl uppercase leading-[0.9] sm:text-[clamp(2.6rem,4vw,4.6rem)]`}
             >
-              The people taking your meeting.
-            </TypingTitle>
+              <span className="block text-primary">Thank you</span>
+              <span className="block">for meeting us</span>
+              <span className="block">at the booth!</span>
+            </h2>
+
+            <span className="mt-7 h-px w-20 bg-primary sm:mt-6" />
+
+            <p className="mt-7 max-w-xs text-sm leading-6 text-white/85 sm:mt-6 sm:text-[clamp(0.7rem,1vw,1rem)] sm:leading-relaxed">
+              It was great connecting with you. We look forward to helping you
+              elevate your next event.
+            </p>
           </div>
-
-          <div className="mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            <Reveal
-              as="div"
-              className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40"
-            >
-              <div>
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
-                    <Image
-                      src="/images/home/ace-founder/founderavtar4.png"
-                      alt='Wallace "Ace" Johnson'
-                      fill
-                      className="object-cover"
-                    />
-                  </span>
-                  <div>
-                    <h3 className="text-sm sm:text-base font-bold text-white leading-tight">
-                      Wallace &quot;Ace&quot; Johnson, CTS
-                    </h3>
-                    <p className="mt-0.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-primary">
-                      Executive Technical Producer
-                    </p>
-                  </div>
-                </div>
-                <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
-                  Twenty-five years producing corporate and association events
-                  worldwide. Former AVIXA Board of Directors member and longtime
-                  industry educator. Speaking at the Innovation Forum on the
-                  upstream decisions that set AV budgets before procurement
-                  begins.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal
-              as="div"
-              className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40"
-              delay={0.06}
-            >
-              <div>
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
-                    <Image
-                      src="/images/home/ace-founder/suley.png"
-                      alt="Suley Usman"
-                      fill
-                      className="object-cover"
-                    />
-                  </span>
-                  <div>
-                    <h3 className="text-sm sm:text-base font-bold text-white leading-tight">
-                      Suley Usman
-                    </h3>
-                    <p className="mt-0.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-primary">
-                      Vice President, Audience Engagement
-                    </p>
-                  </div>
-                </div>
-                <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
-                  Focused on creating engaging experiences that connect
-                  technology, people, and business outcomes.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal
-              as="div"
-              className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40"
-              delay={0.12}
-            >
-              <div>
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
-                    <Image
-                      src="/images/home/ace-founder/Adam Zavodny.png"
-                      alt="Adam Zavodny"
-                      fill
-                      className="object-cover"
-                    />
-                  </span>
-                  <div>
-                    <h3 className="text-sm sm:text-base font-bold text-white leading-tight">
-                      Adam Zavodny
-                    </h3>
-                    <p className="mt-0.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-primary">
-                      VP of Technology
-                    </p>
-                  </div>
-                </div>
-                <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
-                  With a quarter century in live events, Adam Zavodny is a
-                  Technical Director whose work spans content creation,
-                  experience design, and technical direction for clients
-                  including Microsoft, Bank of America, M&T Bank, and White
-                  House Communications. He operates across the full arc of an
-                  event, shaping the creative concept and visual story, then
-                  engineering the technical design that makes it land cleanly in
-                  the room. That blend of creative instinct and technical
-                  command is the through-line on every stage he&apos;s touched.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal
-              as="div"
-              className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40"
-              delay={0.18}
-            >
-              <div>
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
-                    <Image
-                      src="/images/home/ace-founder/Eric Branch.png"
-                      alt="Eric Branch"
-                      fill
-                      className="object-cover"
-                    />
-                  </span>
-                  <div>
-                    <h3 className="text-sm sm:text-base font-bold text-white leading-tight">
-                      Eric Branch
-                    </h3>
-                    <p className="mt-0.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-primary">
-                      Creative Director
-                    </p>
-                  </div>
-                </div>
-                <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
-                  With more than two decades in event production, Eric Branch
-                  works at the intersection of creative vision and technical
-                  execution - designing and delivering experiences for some of
-                  the world&apos;s most recognized names and iconic stages,
-                  including production for four U.S. Presidents. His command
-                  spans the full production spectrum, from filmmaking, audio
-                  engineering, and lighting to animation, 3D modeling, and
-                  staging.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-
-          <Reveal
-            as="p"
-            className="mt-8 text-center text-sm leading-6 text-white/60"
-          >
-            Our team is taking one-on-one meetings throughout Connect
-            Marketplace. Request DXG through the Connect appointment system, or
-            use the form below to lock a time.
-          </Reveal>
-        </Container>
+        </div>
       </section>
     </main>
   );
