@@ -1,7 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import BizBashAppPreview from "components/bizbashconnect26-leadingpage/BizBashAppPreview";
+import TypingTitle from "components/layout/TypingTitle";
+import Container from "components/shared/Container";
+import Reveal from "components/shared/Reveal";
 import {
   Award,
   Calendar,
@@ -9,12 +12,9 @@ import {
   Check,
   ClipboardCheck,
   ClipboardList,
-  Clock,
   Compass,
-  DoorOpen,
   Globe,
   Lock,
-  MapPin,
   Palette,
   Presentation,
   Radio,
@@ -24,15 +24,17 @@ import {
   X,
 } from "lucide-react";
 import Image from "next/image";
-import BizBashAppPreview from "components/bizbashconnect26-leadingpage/BizBashAppPreview";
-import Container from "components/shared/Container";
-import Reveal from "components/shared/Reveal";
-import TypingTitle from "components/layout/TypingTitle";
+import { useEffect, useRef, useState } from "react";
 import { trackEvent } from "./analytics";
 
 type InterestKey = "consult" | "review" | "rfpilot" | "followup";
 
-const INTEREST_KEYS: InterestKey[] = ["consult", "review", "rfpilot", "followup"];
+const INTEREST_KEYS: InterestKey[] = [
+  "consult",
+  "review",
+  "rfpilot",
+  "followup",
+];
 
 const INTEREST_CARDS: {
   key: InterestKey;
@@ -75,34 +77,39 @@ const INTEREST_LABELS: Record<InterestKey, string> = {
 
 const CAPABILITIES = [
   {
-    Icon: Presentation,
-    title: "General Sessions",
-    desc: "Strategy, staging, video, audio, lighting, show flow, and on-site leadership managed as one connected production.",
+    Icon: ClipboardList,
+    title: "Production Management (Flat)",
+    desc: "End-to-end production planning, coordination, show flow, and on-site leadership managed by one accountable team.",
   },
   {
-    Icon: DoorOpen,
-    title: "Breakout Rooms",
-    desc: "Consistent technical standards and support across every room — not only the main stage.",
+    Icon: Presentation,
+    title: "AV Technology",
+    desc: "Audio, video, lighting, staging, and technical systems designed around the needs of your event.",
   },
   {
     Icon: Globe,
-    title: "Hybrid & Virtual Events",
-    desc: "Streaming and platform support that keeps the remote audience genuinely part of the experience — not just connected.",
+    title: "Virtual & Hybrid Events",
+    desc: "Streaming and platform support that keeps remote and in-room audiences connected to the same experience.",
   },
   {
     Icon: Palette,
-    title: "Creative & Environmental Design",
-    desc: "Stage and environmental design that makes the event feel intentional from the moment attendees walk in.",
+    title: "Creative Services",
+    desc: "Creative direction, visual design, motion graphics, and branded environments that bring your event story to life.",
   },
   {
     Icon: Camera,
-    title: "Content Capture",
-    desc: "Professional photo and video assets that extend the value of the event after the final session.",
+    title: "Photography & Video Production",
+    desc: "Professional photography and video content that captures the event and extends its value beyond the room.",
   },
   {
-    Icon: ClipboardList,
-    title: "Meeting Planning & Production Support",
-    desc: "From run-of-show development to on-site coordination and post-event recaps — support through every phase.",
+    Icon: Users,
+    title: "Audience Engagement",
+    desc: "Interactive experiences and thoughtful touchpoints that turn passive attendees into active participants.",
+  },
+  {
+    Icon: Calendar,
+    title: "Meeting Planning Support",
+    desc: "Flexible planning, logistics, and coordination support that gives your team more capacity at every stage.",
   },
 ];
 
@@ -140,13 +147,22 @@ const PROBLEM_POINTS = [
 ];
 
 const RFP_VALUES = [
-  { lead: "Guided RFP creation", rest: "turn event details into a structured AV RFP." },
-  { lead: "Comparable vendor responses", rest: "see differences, exclusions, and missing items clearly." },
+  {
+    lead: "Guided RFP creation",
+    rest: "turn event details into a structured AV RFP.",
+  },
+  {
+    lead: "Comparable vendor responses",
+    rest: "see differences, exclusions, and missing items clearly.",
+  },
   {
     lead: "Investment guidance",
     rest: "a grounded frame of reference built from aggregate production data, so scope and budget are aligned before the first proposal arrives.",
   },
-  { lead: "Proposal intelligence", rest: "review responses against your event's actual requirements." },
+  {
+    lead: "Proposal intelligence",
+    rest: "review responses against your event's actual requirements.",
+  },
 ];
 
 const NEUTRALITY_POINTS = [
@@ -177,7 +193,8 @@ const CREDIBILITY_POINTS = [
 
 const fieldClass =
   "h-11 w-full rounded-[10px] border border-transparent bg-[#223140] px-4 text-sm text-white placeholder:text-white/50 transition focus:border-primary focus:outline-none";
-const labelClass = "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-white/70";
+const labelClass =
+  "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-white/70";
 const primaryBtn =
   "btn-slide-primary inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-sm font-semibold";
 const ghostBtn =
@@ -257,17 +274,19 @@ export default function BizBashMain() {
     } else {
       setInterest(key, !interests[key]);
     }
-    document
-      .getElementById("connectForm")
-      ?.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });
+    document.getElementById("connectForm")?.scrollIntoView({
+      behavior: prefersReducedMotion() ? "auto" : "smooth",
+      block: "start",
+    });
   }
 
   function handleRfpilotPreselect() {
     setInterest("rfpilot", true);
     trackEvent("cta_rfpilot_earlyaccess");
-    document
-      .getElementById("connectForm")
-      ?.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });
+    document.getElementById("connectForm")?.scrollIntoView({
+      behavior: prefersReducedMotion() ? "auto" : "smooth",
+      block: "start",
+    });
   }
 
   function handleFormInput() {
@@ -282,7 +301,9 @@ export default function BizBashMain() {
     const form = formRef.current;
     if (!form) return;
 
-    const honeypot = form.elements.namedItem("dxg_website") as HTMLInputElement | null;
+    const honeypot = form.elements.namedItem(
+      "dxg_website",
+    ) as HTMLInputElement | null;
     if (honeypot?.value) return;
 
     let valid = true;
@@ -290,7 +311,9 @@ export default function BizBashMain() {
     const newErrors: Record<string, boolean> = {};
 
     form
-      .querySelectorAll<HTMLInputElement | HTMLSelectElement>("input[required], select[required]")
+      .querySelectorAll<
+        HTMLInputElement | HTMLSelectElement
+      >("input[required], select[required]")
       .forEach((input) => {
         const bad =
           input.type === "checkbox"
@@ -325,12 +348,9 @@ export default function BizBashMain() {
     setIsSubmitting(true);
 
     try {
-      await emailjs.sendForm(
-        "service_28aeyl4",
-        "template_y72vnp4",
-        form,
-        { publicKey: "JJbrXAjJx5I2RoK35" }
-      );
+      await emailjs.sendForm("service_28aeyl4", "template_y72vnp4", form, {
+        publicKey: "JJbrXAjJx5I2RoK35",
+      });
       trackEvent("form_submit_success", { ...interests });
       setSubmitted(true);
       form.reset();
@@ -343,58 +363,71 @@ export default function BizBashMain() {
   }
 
   const allSelected = INTEREST_KEYS.every((k) => interests[k]);
-  const disclosureOpen = interests.consult || interests.review;
-  const selectedLabels = INTEREST_KEYS.filter((k) => interests[k]).map((k) => INTEREST_LABELS[k]);
+  const selectedLabels = INTEREST_KEYS.filter((k) => interests[k]).map(
+    (k) => INTEREST_LABELS[k],
+  );
 
   return (
     <main id="main">
       {/* HERO */}
-      <section id="top" className="relative overflow-hidden bg-black pb-8 pt-7 lg:pb-12 lg:pt-10">
+      <section
+        id="top"
+        className="relative overflow-hidden bg-black pb-8 pt-7 lg:pb-12 lg:pt-10"
+      >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_55%_at_78%_18%,rgba(46,198,245,0.18),transparent_62%)]" />
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.9fr] lg:gap-16">
-            <div className="order-2 lg:order-1">
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+            <div className="order-2 text-center lg:order-1 lg:col-span-2">
+              {/* <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.15em] text-primary">
                 <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                 Meet DXG in Tampa
-              </span>
+              </span> */}
               <p className="mt-3 text-sm font-medium text-white/60">
                 BizBash Connect Marketplace 2026
               </p>
 
               <TypingTitle
                 as="h1"
-                className="mt-4 max-w-3xl text-3xl font-black uppercase leading-[1.02] text-white sm:text-5xl lg:text-6xl"
+                className="mx-auto mt-4 max-w-3xl text-3xl font-black uppercase leading-[1.02] text-white sm:text-5xl lg:text-6xl"
               >
-                A Smarter Approach to <span className="text-primary">Event AV.</span>
+                A Smarter Approach to{" "}
+                <span className="text-primary">Event AV.</span>
               </TypingTitle>
 
               <Reveal
                 as="p"
-                className="mt-4 max-w-xl text-sm leading-7 text-white/75 sm:mt-6 sm:text-lg sm:leading-8"
+                className="mx-auto mt-4 max-w-xl text-sm leading-7 text-white/75 sm:mt-6 sm:text-lg sm:leading-8"
               >
-                DXG combines producer-led event production with RFPilot to give planners
-                visibility into the decisions that shape AV budgets, including the ones made
-                long before the RFP goes out.
+                DXG combines producer-led event production with RFPilot to give
+                planners visibility into the decisions that shape AV budgets,
+                including the ones made long before the RFP goes out.
               </Reveal>
 
-              <div className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
-                <a href="#connect" className={primaryBtn} onClick={() => trackEvent("cta_hero_connect")}>
+              <div className="mt-6 flex flex-wrap justify-center gap-3 sm:mt-8 sm:gap-4">
+                <a
+                  href="#connect"
+                  className={primaryBtn}
+                  onClick={() => trackEvent("cta_hero_connect")}
+                >
                   Connect With DXG
                 </a>
-                <a href="#rfpilot" className={ghostBtn} onClick={() => trackEvent("cta_hero_rfpilot")}>
+                <a
+                  href="#rfpilot"
+                  className={ghostBtn}
+                  onClick={() => trackEvent("cta_hero_rfpilot")}
+                >
                   Explore RFPilot
                 </a>
               </div>
 
-              <p className="mt-6 flex items-center gap-2 text-xs text-white/60 sm:text-sm">
+              <p className="mt-6 flex items-center justify-center gap-2 text-xs text-white/60 sm:text-sm">
                 <span className="h-px w-5 bg-primary" />
-                Built for meeting planners and event marketers who expect more from their
-                production partner.
+                Built for meeting planners and event marketers who expect more
+                from their production partner.
               </p>
             </div>
 
-            <Reveal
+            {/* <Reveal
               kind="image"
               className="order-1 relative isolate flex min-h-[240px] flex-col justify-end overflow-hidden rounded-2xl border border-white/15 bg-[#071929] shadow-2xl shadow-black/40 sm:aspect-[16/9] sm:rounded-3xl lg:order-2"
             >
@@ -423,17 +456,18 @@ export default function BizBashMain() {
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary sm:text-xs">
                     Featuring
                   </p>
-                  <p className="mt-1 text-sm font-semibold text-white sm:mt-2 sm:text-lg">RFPilot</p>
+                  <p className="mt-1 text-sm font-semibold text-white sm:mt-2 sm:text-lg">
+                    RFPilot
+                  </p>
                   <p className="text-xs text-white/70 sm:text-sm">
                     A smarter way to build and review AV RFPs.
                   </p>
                 </div>
               </div>
-            </Reveal>
+            </Reveal> */}
           </div>
         </Container>
       </section>
-
 
       {/* EVENT CONNECTION OFFER */}
       <section id="connect" className="bg-[#0a0a0a] py-8 lg:py-10">
@@ -443,13 +477,17 @@ export default function BizBashMain() {
               as="h2"
               className="text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
             >
-              Let&apos;s continue the conversation <span className="text-primary">after Tampa.</span>
+              Let&apos;s continue the conversation{" "}
+              <span className="text-primary">after Tampa.</span>
             </TypingTitle>
-            <Reveal as="p" className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
-              Whether you are planning an upcoming conference, evaluating an AV proposal,
-              exploring RFPilot, or simply looking for a better production approach, tell us
-              where we can be most useful. Select as many as apply — one submission covers
-              everything.
+            <Reveal
+              as="p"
+              className="mt-4 text-base leading-7 text-white/70 sm:text-lg"
+            >
+              Whether you are planning an upcoming conference, evaluating an AV
+              proposal, exploring RFPilot, or simply looking for a better
+              production approach, tell us where we can be most useful. Select
+              as many as apply — one submission covers everything.
             </Reveal>
           </div>
 
@@ -474,7 +512,9 @@ export default function BizBashMain() {
                 >
                   <span
                     className={`flex h-9 w-9 items-center justify-center rounded-full border-2 transition ${
-                      selected ? "border-primary bg-primary text-black" : "border-white/25 text-transparent"
+                      selected
+                        ? "border-primary bg-primary text-black"
+                        : "border-white/25 text-transparent"
                     }`}
                   >
                     <Check size={16} strokeWidth={3} />
@@ -497,13 +537,17 @@ export default function BizBashMain() {
             >
               <span
                 className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 transition ${
-                  allSelected ? "border-primary bg-primary text-black" : "border-white/25 text-transparent"
+                  allSelected
+                    ? "border-primary bg-primary text-black"
+                    : "border-white/25 text-transparent"
                 }`}
               >
                 <Check size={16} strokeWidth={3} />
               </span>
               <span>
-                <h3 className="text-sm font-bold text-white">All of the Above</h3>
+                <h3 className="text-sm font-bold text-white">
+                  All of the Above
+                </h3>
                 <p className="text-xs leading-5 text-white/60">
                   Select every option — one conversation covers it all.
                 </p>
@@ -537,7 +581,8 @@ export default function BizBashMain() {
                   className="mt-6 rounded-[10px] border border-red-400/40 bg-red-500/10 px-4 py-3 text-sm text-red-300"
                   role="alert"
                 >
-                  Please complete the highlighted fields so we can follow up correctly.
+                  Please complete the highlighted fields so we can follow up
+                  correctly.
                 </div>
               )}
 
@@ -555,7 +600,9 @@ export default function BizBashMain() {
                     className={`${fieldClass} ${fieldErrors.firstName ? "border-red-400" : ""}`}
                   />
                   {fieldErrors.firstName && (
-                    <p className="mt-1 text-xs text-red-300">Enter your first name.</p>
+                    <p className="mt-1 text-xs text-red-300">
+                      Enter your first name.
+                    </p>
                   )}
                 </div>
                 <div>
@@ -571,7 +618,9 @@ export default function BizBashMain() {
                     className={`${fieldClass} ${fieldErrors.lastName ? "border-red-400" : ""}`}
                   />
                   {fieldErrors.lastName && (
-                    <p className="mt-1 text-xs text-red-300">Enter your last name.</p>
+                    <p className="mt-1 text-xs text-red-300">
+                      Enter your last name.
+                    </p>
                   )}
                 </div>
                 <div>
@@ -588,7 +637,9 @@ export default function BizBashMain() {
                     className={`${fieldClass} ${fieldErrors.email ? "border-red-400" : ""}`}
                   />
                   {fieldErrors.email && (
-                    <p className="mt-1 text-xs text-red-300">Enter a valid work email address.</p>
+                    <p className="mt-1 text-xs text-red-300">
+                      Enter a valid work email address.
+                    </p>
                   )}
                 </div>
                 <div>
@@ -604,7 +655,9 @@ export default function BizBashMain() {
                     className={`${fieldClass} ${fieldErrors.company ? "border-red-400" : ""}`}
                   />
                   {fieldErrors.company && (
-                    <p className="mt-1 text-xs text-red-300">Enter your company name.</p>
+                    <p className="mt-1 text-xs text-red-300">
+                      Enter your company name.
+                    </p>
                   )}
                 </div>
                 <div>
@@ -620,90 +673,79 @@ export default function BizBashMain() {
                     className={`${fieldClass} ${fieldErrors.jobTitle ? "border-red-400" : ""}`}
                   />
                   {fieldErrors.jobTitle && (
-                    <p className="mt-1 text-xs text-red-300">Enter your job title.</p>
+                    <p className="mt-1 text-xs text-red-300">
+                      Enter your job title.
+                    </p>
                   )}
                 </div>
               </div>
 
-              {disclosureOpen && (
-                <div className="mt-8 grid gap-5 border-t border-white/10 pt-8 sm:grid-cols-2">
-                  <p className="text-xs italic leading-6 text-white/60 sm:col-span-2">
-                    A few optional details help us come prepared. Skip anything you&apos;re not
-                    ready to share.
-                  </p>
-                  <div>
-                    <label className={labelClass} htmlFor="eventName">Event or Project Name</label>
-                    <input type="text" id="eventName" name="Event_Name" className={fieldClass} />
-                  </div>
-                  <div>
-                    <label className={labelClass} htmlFor="eventDate">Estimated Event Date</label>
-                    <input type="month" id="eventDate" name="Event_Date" className={fieldClass} />
-                  </div>
-                  <div>
-                    <label className={labelClass} htmlFor="eventLocation">Event Location</label>
-                    <input
-                      type="text"
-                      id="eventLocation"
-                      name="Event_Location"
-                      placeholder="City, venue, or TBD"
-                      className={fieldClass}
-                    />
-                  </div>
-                  <div>
-                    <label className={labelClass} htmlFor="attendance">Expected Attendance</label>
-                    <select id="attendance" name="Attendance" defaultValue="" className={fieldClass}>
-                      <option value="">Select a range</option>
-                      <option>Under 250</option>
-                      <option>250 – 1,000</option>
-                      <option>1,000 – 3,000</option>
-                      <option>3,000 – 6,000</option>
-                      <option>6,000+</option>
-                    </select>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label className={labelClass} htmlFor="scope">General Session &amp; Breakout Scope</label>
-                    <input
-                      type="text"
-                      id="scope"
-                      name="Session_Scope"
-                      placeholder="e.g., 1 general session, 12 breakouts, hybrid stream"
-                      className={fieldClass}
-                    />
-                  </div>
-                  <div>
-                    <label className={labelClass} htmlFor="stage">Current Stage</label>
-                    <select id="stage" name="Event_Stage" defaultValue="" className={fieldClass}>
-                      <option value="">Select a stage</option>
-                      <option>Early Planning</option>
-                      <option>Building the RFP</option>
-                      <option>Reviewing Proposals</option>
-                      <option>Vendor Selected</option>
-                      <option>Exploring Future Options</option>
-                    </select>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label className={labelClass} htmlFor="helpful">What would be most helpful right now?</label>
-                    <textarea
-                      id="helpful"
-                      name="Most_Helpful"
-                      rows={3}
-                      className={`${fieldClass} h-auto resize-none py-3`}
-                    ></textarea>
-                  </div>
-                </div>
-              )}
-
-              <input type="hidden" name="Selected_Interests" value={selectedLabels.join(", ")} readOnly />
-              <input type="hidden" name="Lead_Source" value="BizBash / Connect Marketplace" readOnly />
-              <input type="hidden" name="Campaign" value="BizBash Tampa 2026" readOnly />
-              <input type="hidden" name="Landing_Page" value="DXG Smarter Approach Campaign" readOnly />
-              <input type="hidden" name="UTM_Source" value={utm.source} readOnly />
-              <input type="hidden" name="UTM_Medium" value={utm.medium} readOnly />
-              <input type="hidden" name="UTM_Campaign" value={utm.campaign} readOnly />
-              <input type="hidden" name="UTM_Content" value={utm.content} readOnly />
-              <input type="hidden" name="QR_Code_Source" value={utm.qr} readOnly />
-              <input type="hidden" name="Original_Source" value={utm.originalSource} readOnly />
-              <input type="hidden" name="Submission_DateTime" ref={submitTimeRef} defaultValue="" />
+              <input
+                type="hidden"
+                name="Selected_Interests"
+                value={selectedLabels.join(", ")}
+                readOnly
+              />
+              <input
+                type="hidden"
+                name="Lead_Source"
+                value="BizBash / Connect Marketplace"
+                readOnly
+              />
+              <input
+                type="hidden"
+                name="Campaign"
+                value="BizBash Tampa 2026"
+                readOnly
+              />
+              <input
+                type="hidden"
+                name="Landing_Page"
+                value="DXG Smarter Approach Campaign"
+                readOnly
+              />
+              <input
+                type="hidden"
+                name="UTM_Source"
+                value={utm.source}
+                readOnly
+              />
+              <input
+                type="hidden"
+                name="UTM_Medium"
+                value={utm.medium}
+                readOnly
+              />
+              <input
+                type="hidden"
+                name="UTM_Campaign"
+                value={utm.campaign}
+                readOnly
+              />
+              <input
+                type="hidden"
+                name="UTM_Content"
+                value={utm.content}
+                readOnly
+              />
+              <input
+                type="hidden"
+                name="QR_Code_Source"
+                value={utm.qr}
+                readOnly
+              />
+              <input
+                type="hidden"
+                name="Original_Source"
+                value={utm.originalSource}
+                readOnly
+              />
+              <input
+                type="hidden"
+                name="Submission_DateTime"
+                ref={submitTimeRef}
+                defaultValue=""
+              />
               <input
                 type="text"
                 name="dxg_website"
@@ -726,7 +768,12 @@ export default function BizBashMain() {
                   />
                   <span>
                     I agree that DXG may contact me about this request. See the{" "}
-                    <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+                    <a
+                      href="/privacy-policy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary underline"
+                    >
                       DXG Privacy Policy
                     </a>
                     . <span className="text-primary">*</span>
@@ -788,12 +835,16 @@ export default function BizBashMain() {
               </TypingTitle>
 
               <p className="mt-3 text-sm leading-6 text-white/70">
-                Your request is on its way to the DXG team. Here&apos;s what you selected:
+                Your request is on its way to the DXG team. Here&apos;s what you
+                selected:
               </p>
 
               <ul className="mt-5 space-y-2">
                 {selectedLabels.map((label) => (
-                  <li key={label} className="flex items-start gap-2 text-sm text-white/85">
+                  <li
+                    key={label}
+                    className="flex items-start gap-2 text-sm text-white/85"
+                  >
                     <Check size={16} className="mt-0.5 shrink-0 text-primary" />
                     {label}
                   </li>
@@ -803,9 +854,11 @@ export default function BizBashMain() {
               {interests.consult && (
                 <div className="mt-6 rounded-xl border border-primary/30 bg-primary/[0.08] p-5">
                   <p className="text-sm leading-6 text-white/85">
-                    <strong className="text-white">Want to lock in a time now?</strong> Grab a
-                    spot on the DXG calendar — no pressure, no pitch deck. Just a conversation
-                    about your event.
+                    <strong className="text-white">
+                      Want to lock in a time now?
+                    </strong>{" "}
+                    Grab a spot on the DXG calendar — no pressure, no pitch
+                    deck. Just a conversation about your event.
                   </p>
                   <a
                     href="/contact-us"
@@ -819,8 +872,8 @@ export default function BizBashMain() {
 
               {interests.rfpilot && (
                 <p className="mt-4 text-sm text-white/70">
-                  RFPilot early-access details will be sent to your email as the platform moves
-                  toward release.
+                  RFPilot early-access details will be sent to your email as the
+                  platform moves toward release.
                 </p>
               )}
 
@@ -847,8 +900,6 @@ export default function BizBashMain() {
           </div>
         )}
       </section>
-
-
 
       {/* FIND DXG IN TAMPA */}
       {/* <section className="border-y border-white/10 bg-black py-5 lg:py-7">
@@ -888,11 +939,11 @@ export default function BizBashMain() {
                 as="h2"
                 className="mt-3 text-2xl font-black uppercase leading-tight text-white sm:text-3xl"
               >
-                DXG is led by producers, not project coordinators.
+                DXG is LED By Producers, Built For Planners
               </TypingTitle>
               <Reveal as="p" className="mt-4 text-base leading-7 text-white/70">
-                The team behind your event has been producing conferences, general sessions,
-                and multi-room programs together since 2006.
+                The team behind your event has been producing conferences,
+                general sessions, and multi-room programs together since 2006.
               </Reveal>
               <a
                 href="/experiences-created"
@@ -917,8 +968,6 @@ export default function BizBashMain() {
           </div>
         </Container>
       </section>
-
-      
 
       <BizBashAppPreview />
 
@@ -983,11 +1032,16 @@ export default function BizBashMain() {
               as="h2"
               className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl"
             >
-              Build the RFP. Understand the responses. Make the decision with confidence.
+              Build the RFP. Understand the responses. Make the decision with
+              confidence.
             </TypingTitle>
-            <Reveal as="p" className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
-              RFPilot is being developed to simplify the AV RFP process for meeting planners —
-              from organizing event requirements to reviewing the proposals vendors submit.
+            <Reveal
+              as="p"
+              className="mt-4 text-base leading-7 text-white/70 sm:text-lg"
+            >
+              RFPilot is being developed to simplify the AV RFP process for
+              meeting planners — from organizing event requirements to reviewing
+              the proposals vendors submit.
             </Reveal>
           </div>
 
@@ -999,7 +1053,8 @@ export default function BizBashMain() {
                 className="rounded-xl border border-primary/20 bg-[#081624] p-5"
               >
                 <p className="text-sm leading-6 text-white/70">
-                  <span className="font-semibold text-white">{item.lead}</span> — {item.rest}
+                  <span className="font-semibold text-white">{item.lead}</span>{" "}
+                  — {item.rest}
                 </p>
               </Reveal>
             ))}
@@ -1009,8 +1064,9 @@ export default function BizBashMain() {
             as="p"
             className="mt-8 max-w-2xl border-l-2 border-primary/40 pl-4 text-sm italic leading-6 text-white/60"
           >
-            RFPilot is currently being developed by Digital Xperience Group. Features and
-            availability may evolve as the platform moves through testing and early access.
+            RFPilot is currently being developed by Digital Xperience Group.
+            Features and availability may evolve as the platform moves through
+            testing and early access.
           </Reveal>
 
           {/* NEUTRALITY STATEMENT */}
@@ -1025,27 +1081,38 @@ export default function BizBashMain() {
               </span>
             </div>
             <p className="mt-4 text-sm leading-6 text-white/70">
-              RFPilot is built by DXG, an AV production company. We&apos;re direct about what
-              that means, because your procurement team will ask. They should.
+              RFPilot is built by DXG, an AV production company. We&apos;re
+              direct about what that means, because your procurement team will
+              ask. They should.
             </p>
             <ul className="mt-5 space-y-4">
               {NEUTRALITY_POINTS.map((point) => (
-                <li key={point.lead} className="flex items-start gap-3 text-sm leading-6 text-white/70">
+                <li
+                  key={point.lead}
+                  className="flex items-start gap-3 text-sm leading-6 text-white/70"
+                >
                   <Check size={16} className="mt-0.5 shrink-0 text-primary" />
                   <span>
-                    <span className="font-semibold text-white">{point.lead}</span> {point.rest}
+                    <span className="font-semibold text-white">
+                      {point.lead}
+                    </span>{" "}
+                    {point.rest}
                   </span>
                 </li>
               ))}
             </ul>
             <p className="mt-5 text-sm leading-6 text-white/70">
-              If your sourcing or compliance team wants these commitments in writing for their
-              file, ask. We&apos;ll provide them.
+              If your sourcing or compliance team wants these commitments in
+              writing for their file, ask. We&apos;ll provide them.
             </p>
           </Reveal>
 
           <div className="mt-8 text-center">
-            <button type="button" className={primaryBtn} onClick={handleRfpilotPreselect}>
+            <button
+              type="button"
+              className={primaryBtn}
+              onClick={handleRfpilotPreselect}
+            >
               Join the RFPilot Early-Access List
             </button>
           </div>
@@ -1074,10 +1141,18 @@ export default function BizBashMain() {
                 className="overview-box group rounded-2xl bg-[#081624] p-6 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/40"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-primary/50 bg-[#0b2237]">
-                  <cap.Icon size={22} className="text-primary" strokeWidth={2} />
+                  <cap.Icon
+                    size={22}
+                    className="text-primary"
+                    strokeWidth={2}
+                  />
                 </div>
-                <h3 className="mt-5 text-base font-bold text-white">{cap.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">{cap.desc}</p>
+                <h3 className="mt-5 text-base font-bold text-white">
+                  {cap.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-white/70">
+                  {cap.desc}
+                </p>
               </article>
             ))}
           </div>
@@ -1097,10 +1172,14 @@ export default function BizBashMain() {
             >
               A producer-led approach focused on real-world execution.
             </TypingTitle>
-            <Reveal as="p" className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
-              DXG approaches event AV from a producer&apos;s perspective. Technology supports the
-              experience, but planning, communication, accountability, and on-site leadership are
-              what keep the event on track.
+            <Reveal
+              as="p"
+              className="mt-4 text-base leading-7 text-white/70 sm:text-lg"
+            >
+              DXG approaches event AV from a producer&apos;s perspective.
+              Technology supports the experience, but planning, communication,
+              accountability, and on-site leadership are what keep the event on
+              track.
             </Reveal>
           </div>
 
@@ -1111,9 +1190,17 @@ export default function BizBashMain() {
                 as="div"
                 className="rounded-xl border-t-2 border-primary bg-[#111] p-6"
               >
-                <pillar.Icon size={26} className="text-primary" strokeWidth={2} />
-                <h3 className="mt-4 text-lg font-bold text-white">{pillar.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">{pillar.desc}</p>
+                <pillar.Icon
+                  size={26}
+                  className="text-primary"
+                  strokeWidth={2}
+                />
+                <h3 className="mt-4 text-lg font-bold text-white">
+                  {pillar.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-white/70">
+                  {pillar.desc}
+                </p>
               </Reveal>
             ))}
           </div>
@@ -1136,13 +1223,16 @@ export default function BizBashMain() {
           </div>
 
           <div className="mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            <Reveal as="div" className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40">
+            <Reveal
+              as="div"
+              className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40"
+            >
               <div>
                 <div className="flex items-center gap-3 sm:gap-4">
                   <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
                     <Image
                       src="/images/home/ace-founder/founderavtar4.png"
-                      alt="Wallace &quot;Ace&quot; Johnson"
+                      alt='Wallace "Ace" Johnson'
                       fill
                       className="object-cover"
                     />
@@ -1157,14 +1247,19 @@ export default function BizBashMain() {
                   </div>
                 </div>
                 <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
-                  Twenty-five years producing corporate and association events worldwide. Former
-                  AVIXA Board of Directors member and longtime industry educator. Speaking at the
-                  Innovation Forum on the upstream decisions that set AV budgets before
-                  procurement begins.
+                  Twenty-five years producing corporate and association events
+                  worldwide. Former AVIXA Board of Directors member and longtime
+                  industry educator. Speaking at the Innovation Forum on the
+                  upstream decisions that set AV budgets before procurement
+                  begins.
                 </p>
               </div>
             </Reveal>
-            <Reveal as="div" className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40" delay={0.06}>
+            <Reveal
+              as="div"
+              className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40"
+              delay={0.06}
+            >
               <div>
                 <div className="flex items-center gap-3 sm:gap-4">
                   <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
@@ -1185,12 +1280,17 @@ export default function BizBashMain() {
                   </div>
                 </div>
                 <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
-                  Focused on creating engaging experiences that connect technology, people, and business outcomes.
+                  Focused on creating engaging experiences that connect
+                  technology, people, and business outcomes.
                 </p>
               </div>
             </Reveal>
 
-            <Reveal as="div" className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40" delay={0.12}>
+            <Reveal
+              as="div"
+              className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40"
+              delay={0.12}
+            >
               <div>
                 <div className="flex items-center gap-3 sm:gap-4">
                   <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
@@ -1211,11 +1311,23 @@ export default function BizBashMain() {
                   </div>
                 </div>
                 <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
-                  With a quarter century in live events, Adam Zavodny is a Technical Director whose work spans content creation, experience design, and technical direction for clients including Microsoft, Bank of America, M&T Bank, and White House Communications. He operates across the full arc of an event, shaping the creative concept and visual story, then engineering the technical design that makes it land cleanly in the room. That blend of creative instinct and technical command is the through-line on every stage he&apos;s touched.
+                  With a quarter century in live events, Adam Zavodny is a
+                  Technical Director whose work spans content creation,
+                  experience design, and technical direction for clients
+                  including Microsoft, Bank of America, M&T Bank, and White
+                  House Communications. He operates across the full arc of an
+                  event, shaping the creative concept and visual story, then
+                  engineering the technical design that makes it land cleanly in
+                  the room. That blend of creative instinct and technical
+                  command is the through-line on every stage he&apos;s touched.
                 </p>
               </div>
             </Reveal>
-            <Reveal as="div" className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40" delay={0.18}>
+            <Reveal
+              as="div"
+              className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#111] p-5 sm:p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/40"
+              delay={0.18}
+            >
               <div>
                 <div className="flex items-center gap-3 sm:gap-4">
                   <span className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary">
@@ -1236,20 +1348,26 @@ export default function BizBashMain() {
                   </div>
                 </div>
                 <p className="mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-white/70">
-                  With more than two decades in event production, Eric Branch works at the intersection of creative vision and technical execution - designing and delivering experiences for some of the world&apos;s most recognized names and iconic stages, including production for four U.S. Presidents. His command spans the full production spectrum, from filmmaking, audio engineering, and lighting to animation, 3D modeling, and staging.
+                  With more than two decades in event production, Eric Branch
+                  works at the intersection of creative vision and technical
+                  execution - designing and delivering experiences for some of
+                  the world&apos;s most recognized names and iconic stages,
+                  including production for four U.S. Presidents. His command
+                  spans the full production spectrum, from filmmaking, audio
+                  engineering, and lighting to animation, 3D modeling, and
+                  staging.
                 </p>
               </div>
             </Reveal>
-
-
-
-
-
           </div>
 
-          <Reveal as="p" className="mt-8 text-center text-sm leading-6 text-white/60">
-            Our team is taking one-on-one meetings throughout Connect Marketplace. Request DXG
-            through the Connect appointment system, or use the form below to lock a time.
+          <Reveal
+            as="p"
+            className="mt-8 text-center text-sm leading-6 text-white/60"
+          >
+            Our team is taking one-on-one meetings throughout Connect
+            Marketplace. Request DXG through the Connect appointment system, or
+            use the form below to lock a time.
           </Reveal>
         </Container>
       </section>
