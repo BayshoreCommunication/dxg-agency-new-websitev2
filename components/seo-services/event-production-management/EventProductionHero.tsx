@@ -73,7 +73,7 @@ export default function EventProductionHero() {
                   href="tel:+18552829394"
                   className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-3.5 text-sm sm:text-base font-bold text-white transition-all duration-300 hover:border-primary hover:bg-primary/10 hover:text-primary backdrop-blur-md"
                 >
-                  Contact Us
+                  Call Us
                 </a>
               </Reveal>
             </div>

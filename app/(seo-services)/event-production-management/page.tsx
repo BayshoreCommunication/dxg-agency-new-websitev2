@@ -28,16 +28,18 @@ export default function EventProductionManagementPage() {
       {/* 1. Hero Section */}
       <EventProductionHero />
 
+      
+
+      {/* 2. Industries Section */}
+      <IndustriesSection />
+
       {/* CTA Placement 1: Immediately After Hero Section */}
       <MiddleCTABanner
         title="Ready to execute your event without stress?"
         highlightText="Talk to our team"
         buttonText="Schedule a Strategy Call"
       />
-
-      {/* 2. Industries Section */}
-      <IndustriesSection />
-
+      
       {/* 3. Breakdown Section */}
       <BreakdownSection />
 
