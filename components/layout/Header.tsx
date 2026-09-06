@@ -40,7 +40,7 @@ export default function Header() {
 
   useEffect(() => {
     const currentItem = navItems.find((item) => item.path === pathname);
-    setActiveTarget(currentItem?.target ?? "home");
+    setActiveTarget(currentItem ? currentItem.target : "");
   }, [pathname]);
 
   const handleNavClick = (target: string, path: string) => {
