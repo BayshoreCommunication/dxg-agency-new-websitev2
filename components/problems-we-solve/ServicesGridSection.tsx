@@ -16,7 +16,7 @@ export default function ServicesGridSection() {
   return (
     <section className="bg-black py-8 lg:py-16">
       <Container>
-        <div className="grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-4">
           {problemServices.map((service, index) => {
             const isHovered = hoveredCard === index;
 
@@ -39,10 +39,10 @@ export default function ServicesGridSection() {
                       src={service.bannerImage}
                       alt={service.title}
                       fill
-                      sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                      className="object-cover"
+                      sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+                      className="scale-105 object-cover blur-[1.5px]"
                     />
-                    <div className="absolute inset-0 bg-[#081624]/30" />
+                    <div className="absolute inset-0 bg-[#020912]/65 backdrop-blur-[1px]" />
                   </div>
 
                   <div
@@ -54,14 +54,14 @@ export default function ServicesGridSection() {
                   <div className="relative z-10 flex h-full flex-col items-center justify-center text-center transition duration-500 group-hover:-translate-y-2">
                     <Reveal
                       kind="image"
-                      className="flex h-24 w-24 items-center justify-center rounded-lg shadow-[0_0_20px_rgba(0,188,242,0.12)] transition duration-500 group-hover:scale-110 group-hover:border-primary border border-primary/50 bg-[#0b2237]"
+                      className="flex h-28 w-28 items-center justify-center rounded-lg border border-primary/50 transition duration-500 group-hover:scale-110 group-hover:border-primary"
                     >
                       <Image
                         src={service.icon}
                         alt={service.title}
-                        width={70}
-                        height={70}
-                        className="h-[70px] w-[70px] object-contain"
+                        width={88}
+                        height={88}
+                        className="h-[88px] w-[88px] object-contain"
                       />
                     </Reveal>
 
@@ -72,12 +72,8 @@ export default function ServicesGridSection() {
                       {service.title}
                     </TypingTitle>
 
-                    <Reveal
-                      as="p"
-                      className="mt-6 max-w-sm text-sm leading-7 text-white/80 sm:text-base"
-                    >
-                      {service.desc}
-                    </Reveal>
+                    {/* Service descriptions remain in problemServices.ts for SEO
+                        metadata and can be displayed here again if needed. */}
 
                     <span className="mt-8 inline-flex items-center justify-center bg-primary px-5 py-3 text-sm font-semibold text-black opacity-0 transition duration-500 group-hover:opacity-100">
                       View Details

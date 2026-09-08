@@ -8,174 +8,103 @@ export type ProblemService = {
   details: string[];
 };
 
-const serviceDetailsPath = "/images/problems-we-solve/service-details";
-
-/*
-Previous problemServices content kept for reference:
+const serviceImagePath = "/images/problems-we-solve/new-service-image";
 
 export const problemServices: ProblemService[] = [
   {
-    slug: "production-management",
-    icon: "/images/problems-we-solve/production-management.png",
-    title: "Production Management",
-    desc: "At DXG, we specialize in turning your vision into a seamless audiovisual spectacle.",
-    heroImage: `${serviceDetailsPath}/production-management.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    slug: "event-production-management",
+    icon: `${serviceImagePath}/event-production-management-card.png`,
+    title: "Event Production Management",
+    desc: "From the first production meeting to the final cue, we coordinate every moving part so your event runs smoothly, confidently, and on schedule.",
+    heroImage: `${serviceImagePath}/event-production-management-hero.png`,
+    bannerImage: `${serviceImagePath}/event-production-management-hero.png`,
     details: [
-      "At DXG, we specialize in turning your vision into a seamless audiovisual spectacle. Our production management service is the cornerstone of your event's success. We handle every aspect of production, from initial concept to final execution, with meticulous attention to detail. Our team of experienced professionals is equipped with the latest technology and industry insights to manage logistics, coordinate with vendors, and oversee technical requirements.",
-
-      " We understand the complexities of audiovisual production and are dedicated to ensuring that everything runs smoothly. We aim to bring your event to life while providing you complete peace of mind. Trust us to handle the intricacies of production management so you can focus on what truly matters - your message and your audience.",
+      "Great events feel effortless because the hard work happens behind the scenes. Our event production management team turns your vision into a practical plan, aligning schedules, crews, venues, vendors, equipment, and content around one clear production strategy.",
+      "On-site, we lead every cue and manage every detail with calm precision. From load-in and rehearsals through showtime and strike, we anticipate challenges before they affect your audience, giving you the freedom to focus on your guests, speakers, and message.",
     ],
   },
   {
-    slug: "audiovisual-technology",
-    icon: "/images/problems-we-solve/audiovisual-technology.png",
-    title: "Audiovisual Technology",
-    desc: "In event production, the power of cutting-edge audiovisual technology cannot be overstated.",
-    heroImage: `${serviceDetailsPath}/audiovisual-technology.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    slug: "audiovisual-production",
+    icon: `${serviceImagePath}/audiovisual-production-card.png`,
+    title: "Audiovisual Production",
+    desc: "Expert sound, lighting, video, staging, and show control combine to make every message clear and every moment feel intentional.",
+    heroImage: `${serviceImagePath}/audiovisual-production-hero.png`,
+    bannerImage: `${serviceImagePath}/audiovisual-production-hero.png`,
     details: [
-      "In event production, the power of cutting-edge audiovisual technology cannot be overstated. At DXG, we pride ourselves on providing state-of-the-art AV solutions tailored to each event's unique needs. Our inventory includes the latest in sound, lighting, video, and LED equipment, ensuring your event is not just seen and heard but remembered. Our skilled technicians work closely with you to design and implement custom AV setups that enhance your message and captivate your audience. ",
-
-      "From crystal-clear audio systems to visually stunning displays, we ensure every technical detail aligns perfectly with your vision. With our advanced audiovisual technology and expert support, your event will leave a lasting impression, engaging attendees and elevating your message beyond mere words.",
+      "Audiovisual production shapes how your audience sees, hears, and experiences your event. We design integrated sound, lighting, video, projection, LED, staging, and show-control systems around your venue, program, and creative goals.",
+      "Our experienced technicians prepare, test, and operate every element with exacting attention to detail. Whether you are producing an intimate leadership meeting or a large general session, we deliver reliable technology, polished execution, and a consistent experience from every seat.",
     ],
   },
   {
-    slug: "event-platform-services",
-    icon: "/images/problems-we-solve/event-platform-services.png",
-    title: "Event Platform Services",
-    desc: "In today's digital-first world, an event's success often hinges on the robustness of its digital platform.",
-    heroImage: `${serviceDetailsPath}/event-platform-services.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    slug: "hybrid-virtual-event-production",
+    icon: `${serviceImagePath}/hybrid-virtual-event-production-card.png`,
+    title: "Hybrid & Virtual Event Production",
+    desc: "We connect in-room and remote audiences through reliable platforms, broadcast-quality production, and experiences designed for active participation.",
+    heroImage: `${serviceImagePath}/hybrid-virtual-event-production-hero.png`,
+    bannerImage: `${serviceImagePath}/hybrid-virtual-event-production-hero.png`,
     details: [
-      "In today's digital-first world, an event's success often hinges on the robustness and intuitiveness of its digital platform. At DXG, our Event Platform Services are designed to bridge the gap between physical and digital event experiences. We offer a range of digital solutions, from live streaming to session records and virtual event platforms for live and on-demand viewing, ensuring your event easily reaches a global audience. Our platforms are user-friendly, highly interactive, and customizable to suit the specific needs of your event.",
-
-      " Whether it's a hybrid conference, a virtual seminar, or an online product launch, our platforms facilitate seamless engagement, allowing attendees to connect, interact, and participate anywhere in the world. We integrate the latest digital technology to provide stable, secure, and scalable solutions, ensuring that your event is not just a broadcast but a fully immersive digital experience.",
+      "A successful hybrid or virtual event is more than a camera pointed at a stage. We plan the experience for both the room and the screen, combining broadcast workflows, streaming platforms, remote speaker support, graphics, and audience interaction into one connected production.",
+      "From pre-event testing to live technical direction, our team keeps presenters confident and viewers engaged. The result is a stable, professional experience that gives every attendee clear access to the content, wherever they choose to join.",
     ],
   },
   {
-    slug: "event-experience-design",
-    icon: "/images/problems-we-solve/event-experience-design.png",
-    title: "Event Experience Design",
-    desc: "At DXG, we believe that the heart of every memorable event lies in its experience design.",
-    heroImage: `${serviceDetailsPath}/event-experience-design.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    slug: "attendee-engagement",
+    icon: `${serviceImagePath}/attendee-engagement-card.png`,
+    title: "Attendee Engagement",
+    desc: "Thoughtful interaction turns passive viewers into active participants and creates memorable moments that continue beyond the event.",
+    heroImage: `${serviceImagePath}/attendee-engagement-hero.png`,
+    bannerImage: `${serviceImagePath}/attendee-engagement-hero.png`,
     details: [
-      "At DXG, we believe that the heart of every memorable event lies in its experience design. Our Event Experience Design service is dedicated to creating immersive and impactful environments that resonate with your audience. We blend creativity with strategic planning to craft experiences that are not only visually stunning but also emotionally engaging and in line with your brand's message.",
-
-      " Our team of experienced designers and planners work closely with you to understand your vision and audience, ensuring every aspect of the event, from the decor to the lighting and sound, is meticulously tailored to create the desired atmosphere and mood. Whether it's a corporate gala, a product launch, or a thematic exhibition, we bring your story to life in a way that captivates, inspires, and leaves a lasting impression on every attendee.",
+      "Attention is earned, not assumed. We design attendee journeys that invite people to participate through live polling, Q&A, social experiences, interactive technology, networking moments, and content formats built around your audience.",
+      "Every engagement choice supports a purpose, whether that is increasing learning, strengthening community, generating conversation, or creating useful feedback. By connecting strategy, creative, and technology, we help attendees feel included and give them a reason to stay involved.",
     ],
   },
   {
-    slug: "graphics-animation",
-    icon: "/images/problems-we-solve/graphics-animation.png",
-    title: "Graphics & Animation",
-    desc: "In the dynamic world of events, captivating visuals can make a profound impact.",
-    heroImage: `${serviceDetailsPath}/graphics-animation.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    slug: "event-content-production",
+    icon: `${serviceImagePath}/event-content-production-card.png`,
+    title: "Event Content Production",
+    desc: "We transform ideas and information into focused event content that supports your speakers, strengthens your story, and holds attention.",
+    heroImage: `${serviceImagePath}/event-content-production-hero.png`,
+    bannerImage: `${serviceImagePath}/event-content-production-hero.png`,
     details: [
-      "In the dynamic world of events, captivating visuals can make a profound impact. At DXG, our Graphics and Animation services are designed to bring your event's narrative to life. Our skilled graphic designers and animators specialize in creating custom, high-quality visual content that resonates with your audience and leaves a lasting impression.",
-
-      " Whether sophisticated 3D animations, engaging motion graphics, impactful stage backdrops, or stunning visual effects, our creations are tailored to complement your event's theme and amplify its message. We understand that each element of graphic design plays a crucial role in storytelling, and we're committed to ensuring that your visuals look spectacular and communicate your message effectively.",
+      "Strong content gives an event direction. We work with your team to shape themes, session flow, scripts, presentations, motion graphics, videos, and show moments into a clear narrative that supports your business goals.",
+      "Our content producers balance creativity with the realities of live production. We prepare every asset for the screen, coordinate reviews and playback requirements, and make sure speakers have what they need to deliver confidently, so the story feels cohesive from opening to close.",
     ],
   },
   {
-    slug: "photography-videography",
-    icon: "/images/problems-we-solve/photography-videography.png",
-    title: "Photography & Videography",
-    desc: "Capturing the essence and energy of your event is an art, and at DXG our services excel in it.",
-    heroImage: `${serviceDetailsPath}/photography-videography.png`,
-    bannerImage: "/images/banners/problems-we-solve-banner.png",
+    slug: "event-creative-experience-design",
+    icon: `${serviceImagePath}/event-experience-design-card.png`,
+    title: "Event Creative & Experience Design",
+    desc: "Strategy, storytelling, and spatial design come together to create a distinctive event experience that feels unmistakably yours.",
+    heroImage: `${serviceImagePath}/event-experience-design-hero.png`,
+    bannerImage: `${serviceImagePath}/event-experience-design-hero.png`,
     details: [
-      "Capturing the essence and energy of your event is an art, and at DXG, our Photography and Videography services excel in this art. We understand that each event is a unique story waiting to be told, and our professional photographers and videographers are masters at narrating these stories through stunning visuals. With a keen eye for detail and a passion for perfection, we document your event as it happens and the emotions and moments that define it.",
-
-      " From candid shots that capture the spirit of the occasion to high-definition videos that bring the event's narrative to life, our visual storytelling ensures that the memories of your event endure long after the final curtain. Our approach is unobtrusive yet comprehensive, ensuring that we capture the essence of your event from every angle without disrupting the experience. With our photography and videography, your event is not just an occasion but a timeless story beautifully preserved.",
-    ],
-  },
-];
-*/
-
-export const problemServices: ProblemService[] = [
-  {
-    slug: "general-session",
-    icon: "/images/problems-we-solve/production-management.png",
-    title: "General Session",
-    desc: "The general session is the moment everything you've planned becomes visible. When the room goes dark and your opening video rolls, there's no second take.",
-    heroImage: `${serviceDetailsPath}/General-Session.png`,
-    bannerImage: "/images/problems-we-solve/General-Sessions.png",
-    details: [
-      "The general session is the moment everything you've planned becomes visible. When the room goes dark and your opening video rolls, there's no second take.",
-
-      "Our team produces general sessions with the calm precision that comes from having done this thousands of times: clean audio, confident camera direction, presenters who feel supported the moment they step on stage, and a producer in your ear who anticipates what's next before you have to ask. You'll feel the difference in the room.",
+      "Memorable events begin with a strong creative idea. We translate your objectives and brand into an experience system that can guide the stage, screens, lighting, environmental graphics, scenic elements, transitions, and attendee touchpoints.",
+      "Our designers consider how the experience looks, feels, and moves from one moment to the next. Whether we are developing a complete creative direction or extending an established campaign, every choice works together to make your message more engaging and your event more recognizable.",
     ],
   },
   {
-    slug: "breakouts",
-    icon: "/images/problems-we-solve/audiovisual-technology.png",
-    title: "Breakouts",
-    desc: "Experienced planners know breakouts often carry more weight than the general session. They're where attendees connect with content that's directly relevant to their work, and where the program either delivers on its promise or falls flat.",
-    heroImage: `${serviceDetailsPath}/Breakouts.png`,
-    bannerImage: "/images/problems-we-solve/Breakout-Rooms.png",
+    slug: "event-videography-photography",
+    icon: `${serviceImagePath}/event-photography-videography-card.png`,
+    title: "Event Videography & Photography",
+    desc: "Purposeful photography and video preserve the energy of your event while creating valuable content for campaigns, stakeholders, and future audiences.",
+    heroImage: `${serviceImagePath}/event-photography-videography-hero.png`,
+    bannerImage: `${serviceImagePath}/event-photography-videography-hero.png`,
     details: [
-      "Experienced planners know breakouts often carry more weight than the general session. They're where attendees connect with content that's directly relevant to their work, and where the program either delivers on its promise or falls flat.",
-
-      "Ten rooms running in parallel means ten chances for a dead mic, a missing HDMI, or a presenter who walks in five minutes before go-time with a deck that won't load.",
-
-      "We bring the same attention to detail to every breakout that we bring to the main stage: same technical standards, same pre-show checks, same calm presence in the room. You shouldn't have to be in ten places at once, and with us, you don't.",
-    ],
-  },
-  {
-    slug: "hybrid-virtual",
-    icon: "/images/problems-we-solve/event-platform-services.png",
-    title: "Hybrid & Virtual",
-    desc: "A hybrid event isn't an in-person event with a camera in the back of the room. The remote audience either feels included, or they drop off, and the in-room energy either translates to the stream or it doesn't.",
-    heroImage: `${serviceDetailsPath}/Hybrid-&-Virtual.png`,
-    bannerImage: "/images/problems-we-solve/Hybrid-Virtual.png",
-    details: [
-      // "A hybrid event isn't an in-person event with a camera in the back of the room. The remote audience either feels included, or they drop off, and the in-room energy either translates to the stream or it doesn't.",
-
-      "We build hybrid and virtual experiences as two connected productions: one for the room, one for the screen. With the technical infrastructure, on-camera direction, and platform expertise to support both audiences, your remote attendees get more than a livestream and your in-room attendees still get your full attention.",
-    ],
-  },
-  {
-    slug: "content-capture",
-    icon: "/images/problems-we-solve/photography-videography.png",
-    title: "Content Capture",
-    desc: "The event ends and the content begins its second life. Recap videos, speaker reels, social cutdowns, sponsor deliverables - the footage you capture on-site determines what you can actually do with it later.",
-    heroImage: `${serviceDetailsPath}/Content-Capture.png`,
-    bannerImage: "/images/problems-we-solve/Content-Capture.png",
-    details: [
-      "The event ends and the content begins its second life. Recap videos, speaker reels, social cutdowns, sponsor deliverables - the footage you capture on-site determines what you can actually do with it later.",
-
-      "Our photo and video team shoots with the edit in mind from the first frame, working from a shot list built around how you'll use the content, not just what happened that day. You leave the event with assets your marketing team can actually use and the proof points your stakeholders want to see.",
-    ],
-  },
-  {
-    slug: "creative-design",
-    icon: "/images/problems-we-solve/graphics-animation.png",
-    title: "Creative Design",
-    desc: "Strong production needs a strong creative idea behind it, or it ends up looking like a stage with some lights on it.",
-    heroImage: `${serviceDetailsPath}/Creative-Design.png`,
-    bannerImage: "/images/problems-we-solve/Creative-Design.png",
-    details: [
-      "Strong production needs a strong creative idea behind it, or it ends up looking like a stage with some lights on it.",
-
-      "We help shape the visual language of your event: stage design, motion graphics, environmental branding, and content templates, so every screen, surface, and transition feels like it belongs to the same story.",
-
-      "Whether you're bringing a fully built creative brief or starting from a theme on a napkin, we meet you where you are and build from there. Your event should look like it was designed, not assembled.",
+      "Your event creates moments worth using long after the room clears. Our photographers and videographers capture speakers, attendees, environments, details, and behind-the-scenes energy with a plan shaped around your communication and marketing needs.",
+      "We shoot with the final deliverables in mind, from highlight films and session recordings to executive interviews, social edits, sponsor assets, and image libraries. You receive polished, versatile content that documents the experience and extends its value well beyond event day.",
     ],
   },
   {
     slug: "meeting-planning-support",
-    icon: "/images/problems-we-solve/event-experience-design.png",
+    icon: `${serviceImagePath}/meeting-planning-support-card.png`,
     title: "Meeting Planning Support",
-    desc: "Sometimes the gap between a great plan and a great event is bandwidth. Whether you need a second set of hands on production logistics, a technical advisor in your planning meetings, or a partner who can quietly take work off your plate in the final two weeks, we're built to flex with you.",
-    heroImage: `${serviceDetailsPath}/Meeting-Planning-Support.png`,
-    bannerImage: "/images/problems-we-solve/Meeting-Planning-Support.png",
+    desc: "Flexible planning expertise adds capacity where you need it, helping your team manage details, decisions, and deadlines without losing momentum.",
+    heroImage: `${serviceImagePath}/meeting-planning-support-hero.png`,
+    bannerImage: `${serviceImagePath}/meeting-planning-support-hero.png`,
     details: [
-      "Sometimes the gap between a great plan and a great event is bandwidth. Whether you need a second set of hands on production logistics, a technical advisor in your planning meetings, or a partner who can quietly take work off your plate in the final two weeks, we're built to flex with you.",
-
-      "We've sat in your seat enough times to know which decisions matter, which ones can wait, and which ones need a backup plan. You don't have to carry it all yourself.",
+      "Sometimes a successful meeting needs more planning capacity, specialized production knowledge, or simply another experienced partner at the table. We adapt to your team and support the areas that need attention, from venue and vendor coordination to schedules, speaker logistics, and technical planning.",
+      "Our role can be focused or comprehensive, depending on your needs. We bring structure to the process, identify risks early, and keep decisions moving, helping you protect your time while maintaining control of the experience and confidence in every detail.",
     ],
   },
 ];
