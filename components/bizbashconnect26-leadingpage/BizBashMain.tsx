@@ -1116,7 +1116,7 @@ export default function BizBashMain() {
                     alt=""
                     width={80}
                     height={80}
-                    className="h-20 w-20 shrink-0 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+                    className={`h-20 w-20 shrink-0 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] ${slug === "audiovisual-production" ? "scale-125" : ""}`}
                   />
                   <h3 className="mt-3 h-[3.75em] max-w-[280px] shrink-0 text-sm font-bold uppercase leading-tight tracking-wide text-white sm:text-base lg:text-lg">
                     {title}

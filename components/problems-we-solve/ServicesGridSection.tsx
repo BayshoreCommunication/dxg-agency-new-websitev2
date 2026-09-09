@@ -61,7 +61,7 @@ export default function ServicesGridSection() {
                         alt={service.title}
                         width={88}
                         height={88}
-                        className="h-[88px] w-[88px] object-contain"
+                        className={`h-[88px] w-[88px] object-contain ${service.slug === "audiovisual-production" ? "scale-125" : ""}`}
                       />
                     </Reveal>
 

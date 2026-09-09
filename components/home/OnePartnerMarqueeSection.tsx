@@ -64,7 +64,7 @@ export default function OnePartnerMarqueeSection() {
                     alt={item.title}
                     width={64}
                     height={64}
-                    className="h-16 w-16 object-contain"
+                    className={`h-16 w-16 object-contain ${item.slug === "audiovisual-production" ? "scale-125" : ""}`}
                   />
                 </div>
 
