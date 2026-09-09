@@ -1,10 +1,10 @@
 "use client";
 
+import TypingTitle from "components/layout/TypingTitle";
+import Container from "components/shared/Container";
+import Reveal from "components/shared/Reveal";
 import Image from "next/image";
 import Link from "next/link";
-import Container from "components/shared/Container";
-import TypingTitle from "components/layout/TypingTitle";
-import Reveal from "components/shared/Reveal";
 
 export default function EventProductionHero() {
   return (
@@ -57,11 +57,22 @@ export default function EventProductionHero() {
                 className="mt-6 text-base leading-8 text-white/85 sm:text-lg sm:leading-8 font-normal"
                 delay={0.1}
               >
-                A successful conference can involve hundreds of production decisions. Budget, venue, schedule, content, vendors, technology, labor, rehearsals and show flow all need to line up at the right time. DXG brings those decisions into one execution plan. Our event production management team works with your planners from early planning through show day. We connect the production details across rooms, vendors, schedules and technical teams. You keep ownership of your event strategy. We manage the production work needed to bring the program to life.
+                A successful conference can involve hundreds of production
+                decisions. Budget, venue, schedule, content, vendors,
+                technology, labor, rehearsals and show flow all need to line up
+                at the right time. DXG brings those decisions into one execution
+                plan. Our event production management team works with your
+                planners from early planning through show day. We connect the
+                production details across rooms, vendors, schedules and
+                technical teams. You keep ownership of your event strategy. We
+                manage the production work needed to bring the program to life.
               </Reveal>
 
               {/* 2 CTA Buttons */}
-              <Reveal className="mt-8 flex flex-wrap items-center gap-4 sm:gap-5" delay={0.15}>
+              <Reveal
+                className="mt-8 flex flex-wrap items-center gap-4 sm:gap-5"
+                delay={0.15}
+              >
                 <Link
                   href="/contact-us"
                   className="btn-slide-primary capsule-button inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm sm:text-base font-bold shadow-[0_0_25px_rgba(46,198,245,0.35)]"
@@ -87,7 +98,7 @@ export default function EventProductionHero() {
 
                   <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
                     <Image
-                      src="/images/problems-we-solve/General-Sessions.png"
+                      src="/images/seo-service-image/dxg-event-production-management-stage-and-setup.webp"
                       alt="DXG Event Production Management Stage & Setup"
                       fill
                       sizes="(max-width: 1024px) 100vw, 45vw"
