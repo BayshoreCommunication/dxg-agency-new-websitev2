@@ -3,42 +3,10 @@ import Container from "components/shared/Container";
 import { ChevronRight } from "lucide-react";
 import TypingTitle from "components/layout/TypingTitle";
 import Reveal from "components/shared/Reveal";
-
-const services = [
-  {
-    icon: "/images/home/one-partner/icon1.png",
-    title: "Meeting Planning Support",
-    desc: "From pre-event logistics and run-of-show development to on-site coordination and post-event recaps, DXG works alongside you through every phase of the planning process — so you're never navigating it alone.",
-  },
-  {
-    icon: "/images/home/one-partner/icon2.png",
-    title: "General Sessions",
-    desc: "Every technical element of your general session — fully managed, tightly run, and built around the experience you want your audience to have.",
-  },
-  {
-    icon: "/images/home/one-partner/icon3.png",
-    title: "Breakouts",
-    desc: "Consistent AV quality in every room, so every attendee gets the same high-quality experience — not just the ones in the main hall.",
-  },
-  {
-    icon: "/images/home/one-partner/icon4.png",
-    title: "Hybrid & Virtual",
-    desc: "Streaming and platform support that keeps your remote audience as engaged as the room — not just connected, but genuinely part of the experience.",
-  },
-  {
-    icon: "/images/home/one-partner/icon5.png",
-    title: "Content Capture",
-    desc: "Professional video and photography that turns your event into assets you can use long after the last session ends — for marketing, internal communications, and proof of impact.",
-  },
-  {
-    icon: "/images/home/one-partner/icon5.png",
-    title: "Creative & Design",
-    desc: "Environmental and visual design that makes your event feel intentional from the moment attendees walk in — branded, cohesive, and built around your program.",
-  },
-];
+import { problemServices } from "data/problemServices";
 
 export default function OnePartnerMarqueeSection() {
-  const looped = [...services, ...services];
+  const looped = [...problemServices, ...problemServices];
 
   return (
     <section
@@ -76,7 +44,7 @@ export default function OnePartnerMarqueeSection() {
           <div className="marquee-track flex w-max gap-6">
             {looped.map((item, index) => (
               <article
-                key={`${item.title}-${index}`}
+                key={`${item.slug}-${index}`}
                 className="relative w-[280px] shrink-0 px-6 text-center sm:w-[320px] lg:w-[360px]"
               >
                 <div
@@ -94,9 +62,9 @@ export default function OnePartnerMarqueeSection() {
                   <Image
                     src={item.icon}
                     alt={item.title}
-                    width={40}
-                    height={40}
-                    className="h-10 w-10 object-contain"
+                    width={64}
+                    height={64}
+                    className="h-16 w-16 object-contain"
                   />
                 </div>
 
