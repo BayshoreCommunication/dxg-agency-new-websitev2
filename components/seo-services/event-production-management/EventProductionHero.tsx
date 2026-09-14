@@ -89,7 +89,7 @@ export default function EventProductionHero() {
 
                   <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
                     <Image
-                      src="/images/problems-we-solve/General-Sessions.png"
+                      src="/images/seo-service-image/dxg-event-production-management-stage-and-setup.webp"
                       alt="DXG Event Production Management Stage & Setup"
                       fill
                       sizes="(max-width: 1024px) 100vw, 45vw"
