@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -71,30 +72,33 @@ export default function ProposalReviewV2Section() {
 
           {/* Right Column */}
           <div>
-            {/* Photo 06 Placeholder */}
-            <div
-              className="group relative min-h-[300px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-5 rounded mb-4 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
-              style={{
-                background:
-                  "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-              }}
-            >
-              <span className="absolute top-3.5 left-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2 py-0.5 rounded-[2px] uppercase group-hover:scale-105 transition-transform duration-200">
+            {/* Photo 06 Image Block */}
+            <div className="group relative min-h-[300px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden mb-4 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
+              <Image
+                src="/images/seo-services/event-production-management/6.webp"
+                alt="The second set of eyes - AV Proposal Audit"
+                fill
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+              <span className="absolute top-3.5 left-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2 py-0.5 rounded-[2px] uppercase group-hover:scale-105 transition-transform duration-200 z-[2]">
                 PHOTO 06
               </span>
-              <span className="absolute top-3.5 right-4 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED]">
+              <span className="absolute top-3.5 right-4 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED] z-[2]">
                 16:9
               </span>
-              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-                The second set of eyes
-              </b>
-              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Close, overhead: a printed AV proposal with cyan highlighter
-                marks and margin notes, a pen, a laptop edge showing a room
-                diagram. No faces. Tight crop, shallow depth of field. Reads as
-                &quot;someone who knows what to look for has already been through
-                this.&quot;
-              </p>
+              <div className="relative z-10">
+                <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                  The second set of eyes
+                </b>
+                <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                  Close, overhead: a printed AV proposal with cyan highlighter
+                  marks and margin notes, a pen, a laptop edge showing a room
+                  diagram. No faces. Tight crop, shallow depth of field. Reads as
+                  &quot;someone who knows what to look for has already been through
+                  this.&quot;
+                </p>
+              </div>
             </div>
 
             {/* Checklist */}

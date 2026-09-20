@@ -1,38 +1,31 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function FinalCTAV2Section() {
   return (
     <section className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white">
-      {/* Background Photo 07 Brief */}
-      <div
-        className="absolute inset-0 border-y border-dashed border-[rgba(44,188,237,0.4)] pointer-events-none"
-        style={{
-          background:
-            "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-        }}
-      >
-        <span className="absolute bottom-3.5 right-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2.5 py-1 rounded-[2px] uppercase">
-          PHOTO 07
-        </span>
-        <div className="absolute bottom-3.5 left-4 max-w-[52ch] text-[12.5px] text-[#5B6B7A] font-['IBM_Plex_Sans',sans-serif]">
-          <b className="font-['Josefin_Sans',sans-serif] text-xs text-[#C9D3DC] block mb-0.5">
-            Before load-in
-          </b>
-          Empty ballroom the night before, one work light on, cases lined up in
-          the doorway. Wide, dark, cinematic. Sits under a navy gradient so text
-          stays readable; detail should live on the right third of the frame.
-        </div>
-      </div>
+      {/* Background Photo 07 WebP Image */}
+      <Image
+        src="/images/seo-services/event-production-management/7.webp"
+        alt="Empty ballroom before load-in"
+        fill
+        className="object-cover object-center pointer-events-none opacity-40"
+      />
 
-      {/* Navy gradient overlay */}
+      {/* Dark Navy gradient overlay */}
       <div
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
           background:
-            "linear-gradient(90deg, rgba(10, 15, 22, 0.92), rgba(10, 15, 22, 0.6))",
+            "linear-gradient(90deg, rgba(10, 15, 22, 0.95) 0%, rgba(10, 15, 22, 0.8) 50%, rgba(10, 15, 22, 0.6) 100%)",
         }}
       />
+
+      {/* Tag Brief Badge */}
+      <span className="absolute bottom-3.5 right-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2.5 py-1 rounded-[2px] uppercase z-[2]">
+        PHOTO 07
+      </span>
 
       <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12 relative z-[2]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
