@@ -12,9 +12,6 @@ export default function DXGDifferenceCTASection() {
             "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
         }}
       >
-        <span className="absolute bottom-3.5 right-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2.5 py-1 rounded-[2px] uppercase">
-          PHOTO 07
-        </span>
         <div className="absolute bottom-3.5 left-4 max-w-[52ch] text-[12.5px] text-[#5B6B7A] font-['IBM_Plex_Sans',sans-serif]">
           <b className="font-['Josefin_Sans',sans-serif] text-xs text-[#C9D3DC] block mb-0.5">
             Before load-in

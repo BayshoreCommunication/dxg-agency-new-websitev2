@@ -23,11 +23,6 @@ export default function FinalCTAV2Section() {
         }}
       />
 
-      {/* Tag Brief Badge */}
-      <span className="absolute bottom-3.5 right-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2.5 py-1 rounded-[2px] uppercase z-[2]">
-        PHOTO 07
-      </span>
-
       <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12 relative z-[2]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}

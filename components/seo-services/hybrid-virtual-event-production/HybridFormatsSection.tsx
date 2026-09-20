@@ -80,7 +80,7 @@ export default function HybridFormatsSection() {
           </p>
         </div>
 
-        {/* 3 Photo Placeholders (Photo 03, Photo 04, Photo 05) */}
+        {/* 3 Photo Placeholders */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 mb-12">
           {/* Photo 03 */}
           <div
@@ -90,12 +90,6 @@ export default function HybridFormatsSection() {
                 "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
             }}
           >
-            <span className="absolute top-3.5 left-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2 py-0.5 rounded-[2px] uppercase group-hover:scale-105 transition-transform duration-200">
-              PHOTO 03
-            </span>
-            <span className="absolute top-3.5 right-4 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED]">
-              3:2
-            </span>
             <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
               Executive Livestream Broadcast
             </b>
@@ -112,12 +106,6 @@ export default function HybridFormatsSection() {
                 "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
             }}
           >
-            <span className="absolute top-3.5 left-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2 py-0.5 rounded-[2px] uppercase group-hover:scale-105 transition-transform duration-200">
-              PHOTO 04
-            </span>
-            <span className="absolute top-3.5 right-4 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED]">
-              3:2
-            </span>
             <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
               Remote Speaker Greenroom
             </b>
@@ -134,12 +122,6 @@ export default function HybridFormatsSection() {
                 "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
             }}
           >
-            <span className="absolute top-3.5 left-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2 py-0.5 rounded-[2px] uppercase group-hover:scale-105 transition-transform duration-200">
-              PHOTO 05
-            </span>
-            <span className="absolute top-3.5 right-4 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED]">
-              3:2
-            </span>
             <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
               Multi-Room Stream Operations
             </b>

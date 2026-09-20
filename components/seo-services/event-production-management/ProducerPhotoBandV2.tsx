@@ -17,15 +17,6 @@ export default function ProducerPhotoBandV2() {
       {/* Dark Gradient Overlay for Readability */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
 
-      {/* Tag Badge */}
-      <div className="absolute top-3.5 left-4 sm:top-5 sm:left-6 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2.5 py-1 rounded-[2px] uppercase tracking-wider z-[2]">
-        PHOTO 01
-      </div>
-
-      <div className="absolute top-3.5 right-4 sm:top-5 sm:right-6 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED] z-[2]">
-        21:9 · full bleed
-      </div>
-
       <div className="relative z-10 max-w-[72ch]">
         <b className="font-['Josefin_Sans',sans-serif] text-lg sm:text-2xl font-semibold mb-2 text-white block">
           Producer at front of house

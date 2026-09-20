@@ -32,12 +32,6 @@ export default function EngagementAppReviewSection() {
                 "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
             }}
           >
-            <span className="absolute top-3.5 left-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2.5 py-1 rounded-[2px] uppercase tracking-wide group-hover:scale-105 transition-transform duration-200">
-              PHOTO 06
-            </span>
-            <span className="absolute top-3.5 right-4 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED]">
-              16:9
-            </span>
             <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
               Event Tech Integration Audit
             </b>
