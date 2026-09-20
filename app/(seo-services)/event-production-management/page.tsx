@@ -1,97 +1,49 @@
 import type { Metadata } from "next";
-import EventProductionHero from "components/seo-services/event-production-management/EventProductionHero";
-import IndustriesSection from "components/seo-services/event-production-management/IndustriesSection";
-import BreakdownSection from "components/seo-services/event-production-management/BreakdownSection";
-import ProductionWorkSection from "components/seo-services/event-production-management/ProductionWorkSection";
-import ProcessSection from "components/seo-services/event-production-management/ProcessSection";
-import DifferentiatorsSection from "components/seo-services/event-production-management/DifferentiatorsSection";
-import ComparisonTableSection from "components/seo-services/event-production-management/ComparisonTableSection";
-import ProductionScopeSection from "components/seo-services/event-production-management/ProductionScopeSection";
-import BudgetProtectionSection from "components/seo-services/event-production-management/BudgetProtectionSection";
-import ProposalReviewSection from "components/seo-services/event-production-management/ProposalReviewSection";
-import RelatedServicesSection from "components/seo-services/event-production-management/RelatedServicesSection";
-import FAQSection from "components/seo-services/event-production-management/FAQSection";
-import GettingStartedSection from "components/seo-services/event-production-management/GettingStartedSection";
-import FinalCTASection from "components/seo-services/event-production-management/FinalCTASection";
-import MiddleCTABanner from "components/seo-services/event-production-management/MiddleCTABanner";
-import LetsTalkSection from "components/shared/LetsTalkSection";
+import EventProductionHeroV2 from "components/seo-services/event-production-management/EventProductionHeroV2";
+import ProducerPhotoBandV2 from "components/seo-services/event-production-management/ProducerPhotoBandV2";
+import IndustriesV2Section from "components/seo-services/event-production-management/IndustriesV2Section";
+import InHouseAVV2Section from "components/seo-services/event-production-management/InHouseAVV2Section";
+import ProcessTimelineV2Section from "components/seo-services/event-production-management/ProcessTimelineV2Section";
+import EngagementScopeV2Section from "components/seo-services/event-production-management/EngagementScopeV2Section";
+import ProposalReviewV2Section from "components/seo-services/event-production-management/ProposalReviewV2Section";
+import GettingStartedFAQV2Section from "components/seo-services/event-production-management/GettingStartedFAQV2Section";
+import FinalCTAV2Section from "components/seo-services/event-production-management/FinalCTAV2Section";
 
 export const metadata: Metadata = {
   title: "Event Production Management | DXG",
   description:
-    "DXG provides event production management for corporate, association, medical, nonprofit, education events and brings budgets, vendors, show flow in one plan.",
+    "DXG provides event production management for corporate, association, medical, nonprofit and education events, bringing budget, vendors, schedule and show flow into one plan.",
 };
 
-export default function EventProductionManagementPage() {
+export default function EventProductionManagementV2Page() {
   return (
-    <>
-      {/* 1. Hero Section */}
-      <EventProductionHero />
+    <main className="min-h-screen bg-[#0A0F16] text-[#0A0F16]">
+      {/* 1. Hero Section & Run of Show Board */}
+      <EventProductionHeroV2 />
 
-      
+      {/* 2. Full Bleed Producer Photo Band (Photo 01) */}
+      <ProducerPhotoBandV2 />
 
-      {/* 2. Industries Section */}
-      <IndustriesSection />
+      {/* 3. Industry Verticals Section */}
+      <IndustriesV2Section />
 
-      {/* CTA Placement 1: Immediately After Hero Section */}
-      <MiddleCTABanner
-        title="Ready to execute your event without stress?"
-        highlightText="Talk to our team"
-        buttonText="Schedule a Strategy Call"
-      />
-      
-      {/* 3. Breakdown Section */}
-      <BreakdownSection />
+      {/* 4. In-House AV Section & 3 Model Cards */}
+      <InHouseAVV2Section />
 
-      {/* 4. Production Work Section */}
-      <ProductionWorkSection />
+      {/* 5. Process Section (6 Stages & Photos 03-05) */}
+      <ProcessTimelineV2Section />
 
-      {/* 5. Process Section */}
-      <ProcessSection />
+      {/* 6. Phased Engagement Scope Grid */}
+      <EngagementScopeV2Section />
 
-      {/* 6. Differentiators Section */}
-      <DifferentiatorsSection />
+      {/* 7. Proposal Review Section & Checklist (#review) */}
+      <ProposalReviewV2Section />
 
-      {/* 7. Comparison Table Section */}
-      <ComparisonTableSection />
+      {/* 8. Getting Started Steps & Interactive FAQ Accordion */}
+      <GettingStartedFAQV2Section />
 
-      {/* CTA Placement 2: After Comparison Table Section */}
-      <MiddleCTABanner
-        title="This isn’t a sales call — it’s a working session to help you"
-        highlightText="plan smarter"
-        buttonText="Schedule a Strategy Call"
-      />
-
-      {/* 8. Production Scope & Case Study Section */}
-      <ProductionScopeSection />
-
-      {/* 9. Budget Protection Section */}
-      <BudgetProtectionSection />
-
-      {/* 10. Proposal Review Section */}
-      <ProposalReviewSection />
-
-      {/* CTA Placement 3: After Proposal Review Section */}
-      <MiddleCTABanner
-        title="Before you commit — let’s make sure your plan is set up for"
-        highlightText="success"
-        buttonText="Get a Second Opinion"
-      />
-
-      {/* 11. Related Services Section */}
-      <RelatedServicesSection />
-
-      {/* 12. FAQ Section */}
-      <FAQSection />
-
-      {/* 13. Getting Started Section */}
-      <GettingStartedSection />
-
-      {/* CTA Placement 4: Full Main Project LetsTalk Section */}
-      <LetsTalkSection />
-
-      {/* 14. Final CTA Section */}
-      <FinalCTASection />
-    </>
+      {/* 9. Final CTA Section (Photo 07 & Booking Card) */}
+      <FinalCTAV2Section />
+    </main>
   );
 }
