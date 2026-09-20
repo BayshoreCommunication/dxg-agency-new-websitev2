@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function WhyInsideProductionSection() {
@@ -45,54 +46,66 @@ export default function WhyInsideProductionSection() {
           </p>
         </div>
 
-        {/* 3 Photo Placeholders */}
+        {/* 3 WebP Photo Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 mb-12">
           {/* Photo 03 */}
-          <div
-            className="group relative min-h-[240px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-5 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-            }}
-          >
-            <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              On-Screen QR & Polling Prompt
-            </b>
-            <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Keynote speaker pointing to large QR code on stage screen encouraging instant audience participation.
-            </p>
+          <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
+            <Image
+              src="/images/seo-services/attendee-engagement-and-event-technology/onscreen-qr-polling-prompt.webp"
+              alt="Keynote speaker pointing to large QR code on stage screen encouraging instant audience participation."
+              title="On-Screen QR & Polling Prompt"
+              fill
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+            <div className="relative z-10">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                On-Screen QR & Polling Prompt
+              </b>
+              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                Keynote speaker pointing to large QR code on stage screen encouraging instant audience participation.
+              </p>
+            </div>
           </div>
 
           {/* Photo 04 */}
-          <div
-            className="group relative min-h-[240px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-5 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-            }}
-          >
-            <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              Speaker Confidence Monitor
-            </b>
-            <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Moderator viewing real-time top voted audience questions on stage confidence monitor screen.
-            </p>
+          <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
+            <Image
+              src="/images/seo-services/attendee-engagement-and-event-technology/speaker-confidence-monitor-questions.webp"
+              alt="Moderator viewing real-time top voted audience questions on stage confidence monitor screen."
+              title="Speaker Confidence Monitor"
+              fill
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+            <div className="relative z-10">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                Speaker Confidence Monitor
+              </b>
+              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                Moderator viewing real-time top voted audience questions on stage confidence monitor screen.
+              </p>
+            </div>
           </div>
 
           {/* Photo 05 */}
-          <div
-            className="group relative min-h-[240px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-5 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-            }}
-          >
-            <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              Tech Table Polling Operator
-            </b>
-            <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              DXG engagement tech operator triggering poll closing cue right on schedule in run of show.
-            </p>
+          <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
+            <Image
+              src="/images/seo-services/attendee-engagement-and-event-technology/tech-table-polling-operator.webp"
+              alt="DXG engagement tech operator triggering poll closing cue right on schedule in run of show."
+              title="Tech Table Polling Operator"
+              fill
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+            <div className="relative z-10">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                Tech Table Polling Operator
+              </b>
+              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                DXG engagement tech operator triggering poll closing cue right on schedule in run of show.
+              </p>
+            </div>
           </div>
         </div>
 

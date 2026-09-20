@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -24,20 +25,24 @@ export default function EngagementAppReviewSection() {
             </Link>
           </div>
 
-          {/* Photo 06 Placeholder */}
-          <div
-            className="group relative min-h-[300px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-6 rounded-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-            }}
-          >
-            <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              Event Tech Integration Audit
-            </b>
-            <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Planner reviewing event mobile app agenda sync, Wi-Fi bandwidth requirements, and live polling cue sheets alongside DXG producer.
-            </p>
+          {/* Photo 06 WebP Image Card */}
+          <div className="group relative min-h-[320px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
+            <Image
+              src="/images/seo-services/attendee-engagement-and-event-technology/event-tech-integration-audit.webp"
+              alt="Planner reviewing event mobile app agenda sync, Wi-Fi bandwidth requirements, and live polling cue sheets alongside DXG producer."
+              title="Event Tech Integration Audit"
+              fill
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+            <div className="relative z-10">
+              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                Event Tech Integration Audit
+              </b>
+              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                Planner reviewing event mobile app agenda sync, Wi-Fi bandwidth requirements, and live polling cue sheets alongside DXG producer.
+              </p>
+            </div>
           </div>
         </div>
       </div>

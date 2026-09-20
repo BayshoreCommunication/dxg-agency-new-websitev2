@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function EngagementProgramSection() {
@@ -104,20 +105,24 @@ export default function EngagementProgramSection() {
             </p>
           </div>
 
-          {/* Photo 02 Placeholder */}
-          <div
-            className="group relative min-h-[340px] bg-repeating-linear-gradient border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-6 rounded-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-            }}
-          >
-            <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              Event Mobile App & Digital Signage Integration
-            </b>
-            <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Attendee scanning badge QR code at interactive digital kiosk while holding customized event app with live agenda and session room directions.
-            </p>
+          {/* Photo 02 Image Block */}
+          <div className="group relative min-h-[340px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
+            <Image
+              src="/images/seo-services/attendee-engagement-and-event-technology/event-mobile-app-digital-signage-integration.webp"
+              alt="Attendee scanning badge QR code at interactive digital kiosk while holding customized event app with live agenda and session room directions."
+              title="Event Mobile App & Digital Signage Integration"
+              fill
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+            <div className="relative z-10">
+              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                Event Mobile App & Digital Signage Integration
+              </b>
+              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                Attendee scanning badge QR code at interactive digital kiosk while holding customized event app with live agenda and session room directions.
+              </p>
+            </div>
           </div>
         </div>
 

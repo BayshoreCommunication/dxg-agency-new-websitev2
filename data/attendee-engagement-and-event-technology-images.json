@@ -1,0 +1,76 @@
+{
+  "service": "Attendee Engagement and Event Technology",
+  "slug": "attendee-engagement-and-event-technology",
+  "metadata": {
+    "pageTitle": "Attendee Engagement & Event Technology Services | DXG Digital",
+    "metaDescription": "DXG provides attendee engagement and event technology services including audience response systems, live polling, custom event apps, and digital signage integration.",
+    "baseImagePath": "/images/seo-services/attendee-engagement-and-event-technology/",
+    "author": "Digital Xperience Group (DXG)",
+    "lastUpdated": "2026-09-20"
+  },
+  "images": [
+    {
+      "id": "photo_01_attendees_live_polling",
+      "tag": "PHOTO 01",
+      "title": "Attendees Interacting with Live Audience Polling on Stage LED Wall",
+      "alt": "Audience members in a brightly lit keynote hall holding phones displaying live QR code poll interfaces while real-time survey results build dynamically across the main stage LED video wall.",
+      "src": "/images/seo-services/attendee-engagement-and-event-technology/attendees-interacting-with-live-polling.webp",
+      "aspectRatio": "21:9",
+      "format": "webp"
+    },
+    {
+      "id": "photo_02_app_signage_integration",
+      "tag": "PHOTO 02",
+      "title": "Event Mobile App & Digital Signage Integration",
+      "alt": "Attendee scanning badge QR code at interactive digital kiosk while holding customized event app with live agenda and session room directions.",
+      "src": "/images/seo-services/attendee-engagement-and-event-technology/event-mobile-app-digital-signage-integration.webp",
+      "aspectRatio": "4:3",
+      "format": "webp"
+    },
+    {
+      "id": "photo_03_onscreen_qr_prompt",
+      "tag": "PHOTO 03",
+      "title": "On-Screen QR & Polling Prompt",
+      "alt": "Keynote speaker pointing to large QR code on stage screen encouraging instant audience participation.",
+      "src": "/images/seo-services/attendee-engagement-and-event-technology/onscreen-qr-polling-prompt.webp",
+      "aspectRatio": "3:2",
+      "format": "webp"
+    },
+    {
+      "id": "photo_04_speaker_confidence_monitor",
+      "tag": "PHOTO 04",
+      "title": "Speaker Confidence Monitor",
+      "alt": "Moderator viewing real-time top voted audience questions on stage confidence monitor screen.",
+      "src": "/images/seo-services/attendee-engagement-and-event-technology/speaker-confidence-monitor-questions.webp",
+      "aspectRatio": "3:2",
+      "format": "webp"
+    },
+    {
+      "id": "photo_05_tech_operator_polling",
+      "tag": "PHOTO 05",
+      "title": "Tech Table Polling Operator",
+      "alt": "DXG engagement tech operator triggering poll closing cue right on schedule in run of show.",
+      "src": "/images/seo-services/attendee-engagement-and-event-technology/tech-table-polling-operator.webp",
+      "aspectRatio": "3:2",
+      "format": "webp"
+    },
+    {
+      "id": "photo_06_event_tech_audit",
+      "tag": "PHOTO 06",
+      "title": "Event Tech Integration Audit",
+      "alt": "Planner reviewing event mobile app agenda sync, Wi-Fi bandwidth requirements, and live polling cue sheets alongside DXG producer.",
+      "src": "/images/seo-services/attendee-engagement-and-event-technology/event-tech-integration-audit.webp",
+      "aspectRatio": "16:9",
+      "format": "webp"
+    },
+    {
+      "id": "photo_07_ballroom_preparation",
+      "tag": "PHOTO 07",
+      "title": "Ballroom Preparation for Event Tech",
+      "alt": "Empty ballroom prepped with staging, digital kiosks, and FOH engagement control center before attendees arrive.",
+      "src": "/images/seo-services/attendee-engagement-and-event-technology/ballroom-preparation-event-tech.webp",
+      "aspectRatio": "16:9",
+      "format": "webp"
+    }
+  ]
+}
