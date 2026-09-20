@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function AVStandardsSection() {
@@ -35,54 +36,66 @@ export default function AVStandardsSection() {
           </p>
         </div>
 
-        {/* 3 Photo Placeholders */}
+        {/* 3 WebP Photo Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 mb-12">
           {/* Photo 03 */}
-          <div
-            className="group relative min-h-[240px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-5 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-            }}
-          >
-            <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              System Redundancy
-            </b>
-            <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Backup audio switcher and secondary presentation laptop running in sync behind FOH table.
-            </p>
+          <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
+            <Image
+              src="/images/seo-services/audiovisual-production-for-events/system-redundancy-backup-audio-laptop.webp"
+              alt="Backup audio switcher and secondary presentation laptop running in sync behind FOH table for full system redundancy."
+              title="System Redundancy & Audio Switcher"
+              fill
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+            <div className="relative z-10">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                System Redundancy
+              </b>
+              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                Backup audio switcher and secondary presentation laptop running in sync behind FOH table.
+              </p>
+            </div>
           </div>
 
           {/* Photo 04 */}
-          <div
-            className="group relative min-h-[240px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-5 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-            }}
-          >
-            <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              Venue Contract Audit
-            </b>
-            <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Technical line-item review of venue power and rigging specs before signing contract.
-            </p>
+          <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
+            <Image
+              src="/images/seo-services/audiovisual-production-for-events/venue-contract-audit-power-rigging.webp"
+              alt="Technical line-item review of venue power and rigging specs before signing contract to avoid hidden fees."
+              title="Venue Contract Audit & Technical Specs"
+              fill
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+            <div className="relative z-10">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                Venue Contract Audit
+              </b>
+              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                Technical line-item review of venue power and rigging specs before signing contract.
+              </p>
+            </div>
           </div>
 
           {/* Photo 05 */}
-          <div
-            className="group relative min-h-[240px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-5 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-            }}
-          >
-            <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              Technical Rehearsals
-            </b>
-            <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Presenter practicing on stage under show lighting with confidence monitors active.
-            </p>
+          <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
+            <Image
+              src="/images/seo-services/audiovisual-production-for-events/technical-rehearsal-stage-confidence-monitor.webp"
+              alt="Presenter practicing on stage under show lighting with confidence monitors active during pre-event technical rehearsals."
+              title="Technical Rehearsals on Stage"
+              fill
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+            <div className="relative z-10">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                Technical Rehearsals
+              </b>
+              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                Presenter practicing on stage under show lighting with confidence monitors active.
+              </p>
+            </div>
           </div>
         </div>
 

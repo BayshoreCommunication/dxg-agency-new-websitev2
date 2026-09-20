@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function GeneralSessionSection() {
@@ -56,21 +57,25 @@ export default function GeneralSessionSection() {
             </div>
           </div>
 
-          {/* Right Column with Photo 06 Placeholder */}
+          {/* Right Column with Photo 06 WebP Image Card */}
           <div>
-            <div
-              className="group relative min-h-[340px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-6 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
-              style={{
-                background:
-                  "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-              }}
-            >
-              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-                General Session Stage & Tech Table
-              </b>
-              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Full view of main keynote stage with wide LED wall displaying session graphics, camera crane in position, and show callers coordinating live audio-video cues from FOH.
-              </p>
+            <div className="group relative min-h-[340px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
+              <Image
+                src="/images/seo-services/audiovisual-production-for-events/general-session-stage-tech-table.webp"
+                alt="Full view of main keynote stage with wide LED wall displaying session graphics, camera crane in position, and show callers coordinating live audio-video cues from FOH."
+                title="General Session Stage & Tech Table"
+                fill
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+              <div className="relative z-10">
+                <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                  General Session Stage & Tech Table
+                </b>
+                <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                  Full view of main keynote stage with wide LED wall displaying session graphics, camera crane in position, and show callers coordinating live audio-video cues from FOH.
+                </p>
+              </div>
             </div>
           </div>
         </div>

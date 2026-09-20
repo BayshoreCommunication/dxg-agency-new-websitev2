@@ -1,0 +1,76 @@
+{
+  "service": "Audiovisual Production for Events",
+  "slug": "audiovisual-production-for-events",
+  "metadata": {
+    "pageTitle": "Audiovisual Production for Events | Digital Xperience Group",
+    "metaDescription": "Audiovisual production for events with professional sound, lighting, video, and staging. Keep your program clear, engaging, and on schedule.",
+    "baseImagePath": "/images/seo-services/audiovisual-production-for-events/",
+    "author": "Digital Xperience Group (DXG)",
+    "lastUpdated": "2026-09-20"
+  },
+  "images": [
+    {
+      "id": "photo_01_av_engineers_tech_table",
+      "tag": "PHOTO 01",
+      "title": "Audiovisual Engineers at Tech Table",
+      "alt": "Over-the-shoulder view from behind DXG audio and video engineers at the main control console with headset on, digital audio mixing desk illuminated, and multi-view camera monitors displaying live stage feeds.",
+      "src": "/images/seo-services/audiovisual-production-for-events/audiovisual-engineers-at-tech-table.webp",
+      "aspectRatio": "21:9",
+      "format": "webp"
+    },
+    {
+      "id": "photo_02_av_planning_setup",
+      "tag": "PHOTO 02",
+      "title": "AV Planning and Technical Setup",
+      "alt": "Meeting planners and DXG AV director evaluating stage sightlines and screen positions inside an empty ballroom prior to equipment load-in.",
+      "src": "/images/seo-services/audiovisual-production-for-events/av-planning-and-technical-setup.webp",
+      "aspectRatio": "4:3",
+      "format": "webp"
+    },
+    {
+      "id": "photo_03_system_redundancy",
+      "tag": "PHOTO 03",
+      "title": "System Redundancy & Audio Switcher",
+      "alt": "Backup audio switcher and secondary presentation laptop running in sync behind FOH table for full system redundancy.",
+      "src": "/images/seo-services/audiovisual-production-for-events/system-redundancy-backup-audio-laptop.webp",
+      "aspectRatio": "3:2",
+      "format": "webp"
+    },
+    {
+      "id": "photo_04_venue_contract_audit",
+      "tag": "PHOTO 04",
+      "title": "Venue Contract Audit & Technical Specs",
+      "alt": "Technical line-item review of venue power and rigging specs before signing contract to avoid hidden fees.",
+      "src": "/images/seo-services/audiovisual-production-for-events/venue-contract-audit-power-rigging.webp",
+      "aspectRatio": "3:2",
+      "format": "webp"
+    },
+    {
+      "id": "photo_05_technical_rehearsals",
+      "tag": "PHOTO 05",
+      "title": "Technical Rehearsals on Stage",
+      "alt": "Presenter practicing on stage under show lighting with confidence monitors active during pre-event technical rehearsals.",
+      "src": "/images/seo-services/audiovisual-production-for-events/technical-rehearsal-stage-confidence-monitor.webp",
+      "aspectRatio": "3:2",
+      "format": "webp"
+    },
+    {
+      "id": "photo_06_general_session_stage",
+      "tag": "PHOTO 06",
+      "title": "General Session Stage & Tech Table",
+      "alt": "Full view of main keynote stage with wide LED wall displaying session graphics, camera crane in position, and show callers coordinating live audio-video cues from FOH.",
+      "src": "/images/seo-services/audiovisual-production-for-events/general-session-stage-tech-table.webp",
+      "aspectRatio": "16:9",
+      "format": "webp"
+    },
+    {
+      "id": "photo_07_empty_ballroom_prep",
+      "tag": "PHOTO 07",
+      "title": "Empty Ballroom Preparation for AV Production",
+      "alt": "Empty ballroom prepped with staging, trussing, lighting rigs, and equipment cases lined up before load-in.",
+      "src": "/images/seo-services/audiovisual-production-for-events/empty-ballroom-stage-prep-loadin.webp",
+      "aspectRatio": "21:9",
+      "format": "webp"
+    }
+  ]
+}
