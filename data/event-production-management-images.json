@@ -1,0 +1,212 @@
+{
+  "service": "Event Production Management",
+  "version": "v2 Redesign",
+  "slug": "event-production-management-v2",
+  "metadata": {
+    "pageTitle": "Event Production Management | DXG Digital",
+    "metaDescription": "DXG provides event production management for corporate, association, medical, nonprofit and education events, bringing budget, vendors, schedule and show flow into one plan.",
+    "baseImagePath": "/images/seo-service-image/",
+    "author": "Digital Xperience Group (DXG)",
+    "lastUpdated": "2026-09-20"
+  },
+  "images": [
+    {
+      "id": "hero_stage_setup",
+      "tag": "HERO SHOWCASE",
+      "title": "Event Production Stage & Setup",
+      "alt": "DXG Event Production Management Stage & Setup with HD LED walls and lighting",
+      "caption": "Professional event stage setup featuring LED video walls, dynamic lighting, and FOH production table.",
+      "src": "/images/seo-service-image/dxg-event-production-management-stage-and-setup.webp",
+      "aspectRatio": "4:3",
+      "recommendedWidth": 1600,
+      "recommendedHeight": 1200,
+      "format": "webp",
+      "section": "Hero Section",
+      "seo": {
+        "keywords": [
+          "event production management",
+          "stage setup",
+          "LED video wall",
+          "corporate event AV",
+          "DXG production"
+        ],
+        "imageTitle": "DXG Corporate Event Stage & Production Setup",
+        "description": "High-impact visual of general session stage setup with full LED video display and FOH production command center."
+      },
+      "creativeBrief": "Wide corporate general session stage, high-definition LED video wall displaying custom event graphics, stage lighting in white and cyan, front-of-house tech table."
+    },
+    {
+      "id": "photo_01_producer_foh",
+      "tag": "PHOTO 01",
+      "title": "Producer at front of house",
+      "alt": "DXG event producer directing live conference show flow at front of house tech table",
+      "caption": "Over-the-shoulder perspective from behind the DXG producer managing run-of-show cues live during a major conference.",
+      "src": "/images/seo-service-image/producer-at-front-of-house.webp",
+      "aspectRatio": "21:9",
+      "layoutType": "full bleed",
+      "recommendedWidth": 1920,
+      "recommendedHeight": 822,
+      "format": "webp",
+      "section": "Producer Showcase Band",
+      "seo": {
+        "keywords": [
+          "event producer",
+          "front of house tech table",
+          "run of show tablet",
+          "live show flow management",
+          "headset producer"
+        ],
+        "imageTitle": "DXG Producer Directing Live Event Front of House",
+        "description": "Over-the-shoulder view of DXG producer at the tech table with headset on, run of show tablet active, directing general session."
+      },
+      "creativeBrief": "Over-the-shoulder from behind the DXG producer at the tech table: headset on, run of show on a tablet, hand raised mid-cue. Beyond them, a wide general session stage lit in white and cool blue, audience heads in soft focus. Low key, one dominant light source."
+    },
+    {
+      "id": "photo_02_planner_producer",
+      "tag": "PHOTO 02",
+      "title": "Planner and producer, venue crew behind",
+      "alt": "Event planner and DXG production manager reviewing floor plan during venue setup",
+      "caption": "DXG producer and meeting planner collaborating calmly over room floor plans while in-house venue crew operates in the background.",
+      "src": "/images/seo-service-image/planner-producer-venue-coordination.webp",
+      "aspectRatio": "4:3",
+      "recommendedWidth": 1200,
+      "recommendedHeight": 900,
+      "format": "webp",
+      "section": "In-House AV Management",
+      "seo": {
+        "keywords": [
+          "in-house AV coordination",
+          "meeting planner collaboration",
+          "event production leadership",
+          "ballroom load-in",
+          "venue crew management"
+        ],
+        "imageTitle": "Planner & DXG Producer Collaborating During Ballroom Load-in",
+        "description": "Meeting planner and DXG producer reviewing floor plans in ballroom foreground while venue AV crew sets stage."
+      },
+      "creativeBrief": "Ballroom during load-in. A meeting planner and the DXG producer stand together over a floor plan or tablet in the foreground, engaged and calm. Behind them, a venue in-house crew in their own uniforms flies a screen or sets a stage."
+    },
+    {
+      "id": "photo_03_site_visit",
+      "tag": "PHOTO 03",
+      "title": "Technical site visit",
+      "alt": "Technical site visit measuring ballroom ceiling rigging points and sightlines",
+      "caption": "DXG technical producer assessing ballroom ceiling rigging points, power access, and sightlines ahead of load-in.",
+      "src": "/images/seo-service-image/technical-site-visit-ballroom.webp",
+      "aspectRatio": "3:2",
+      "recommendedWidth": 1200,
+      "recommendedHeight": 800,
+      "format": "webp",
+      "section": "Process Timeline - Stage 01/03",
+      "seo": {
+        "keywords": [
+          "technical site visit",
+          "ballroom rigging assessment",
+          "laser measurement event planning",
+          "venue sightlines check"
+        ],
+        "imageTitle": "DXG Technical Site Visit & Ballroom Inspection",
+        "description": "Empty ballroom inspection by DXG technical producer evaluating ceiling rigging points and space dimensions."
+      },
+      "creativeBrief": "Empty ballroom, chairs stacked, the producer with a laser measure or pointing at a rigging point on the ceiling. Wide, slightly low angle, lots of ceiling."
+    },
+    {
+      "id": "photo_04_rehearsal",
+      "tag": "PHOTO 04",
+      "title": "Technical speaker rehearsal",
+      "alt": "Speaker rehearsal on stage with confidence monitors and production crew",
+      "caption": "Keynote speaker conducting technical rehearsal on stage with confidence monitors and FOH crew testing timing.",
+      "src": "/images/seo-service-image/technical-speaker-rehearsal.webp",
+      "aspectRatio": "3:2",
+      "recommendedWidth": 1200,
+      "recommendedHeight": 800,
+      "format": "webp",
+      "section": "Process Timeline - Stage 04",
+      "seo": {
+        "keywords": [
+          "speaker rehearsal",
+          "confidence monitor setup",
+          "stage lighting rehearsal",
+          "technical run-through"
+        ],
+        "imageTitle": "Controlled Stage Rehearsal & Speaker Preparation",
+        "description": "Presenter testing stage movement and timing during pre-show controlled rehearsal with DXG tech team."
+      },
+      "creativeBrief": "A presenter on stage under half house lights, confidence monitor visible, crew at the tech table in the foreground with the run of show open. Quiet, focused."
+    },
+    {
+      "id": "photo_05_show_day",
+      "tag": "PHOTO 05",
+      "title": "Live show day keynote session",
+      "alt": "Live event general session keynote with bright LED display wall and engaged audience",
+      "caption": "High-energy show day moment as the general session keynote begins with a vibrant LED backdrop and full audience.",
+      "src": "/images/seo-service-image/live-show-day-keynote-session.webp",
+      "aspectRatio": "3:2",
+      "recommendedWidth": 1200,
+      "recommendedHeight": 800,
+      "format": "webp",
+      "section": "Process Timeline - Stage 05 (Live)",
+      "seo": {
+        "keywords": [
+          "show day execution",
+          "keynote session live",
+          "LED background wall",
+          "general session audience"
+        ],
+        "imageTitle": "Live Show Day Execution & General Session Keynote",
+        "description": "Full general session viewed from back of house as keynote commences with high-impact LED visuals."
+      },
+      "creativeBrief": "Full general session from the back of house at the moment a keynote begins: LED wall bright, audience seated, producer's silhouette at FOH in the bottom corner. High energy."
+    },
+    {
+      "id": "photo_06_proposal_review",
+      "tag": "PHOTO 06",
+      "title": "The second set of eyes (AV Proposal Audit)",
+      "alt": "Detailed AV proposal audit review with highlighted notes and room diagram",
+      "caption": "Line-by-line review of an AV proposal flagging scope gaps, crew hours, and pricing assumptions before contract signing.",
+      "src": "/images/seo-service-image/av-proposal-audit-review.webp",
+      "aspectRatio": "16:9",
+      "recommendedWidth": 1280,
+      "recommendedHeight": 720,
+      "format": "webp",
+      "section": "Proposal Review Section (#review)",
+      "seo": {
+        "keywords": [
+          "AV proposal review",
+          "RFP audit",
+          "event budget check",
+          "labor call evaluation",
+          "contract risk review"
+        ],
+        "imageTitle": "AV Proposal Line-by-line Technical Audit",
+        "description": "Overhead close-up of printed AV contract proposal with cyan margin notes, pen, and room diagram on laptop."
+      },
+      "creativeBrief": "Close, overhead: a printed AV proposal with cyan highlighter marks and margin notes, a pen, a laptop edge showing a room diagram. No faces. Tight crop, shallow depth of field."
+    },
+    {
+      "id": "photo_07_before_load_in",
+      "tag": "PHOTO 07",
+      "title": "Empty ballroom before load-in",
+      "alt": "Quiet empty ballroom with equipment flight cases lined up before event load-in",
+      "caption": "Cinematic shot of an empty ballroom the night before setup with equipment cases prepared for morning load-in.",
+      "src": "/images/seo-service-image/empty-ballroom-before-load-in.webp",
+      "aspectRatio": "16:9",
+      "layoutType": "background overlay",
+      "recommendedWidth": 1920,
+      "recommendedHeight": 1080,
+      "format": "webp",
+      "section": "Final Call-To-Action Banner",
+      "seo": {
+        "keywords": [
+          "ballroom load-in preparation",
+          "AV equipment cases",
+          "pre-event stage setup",
+          "event production plan"
+        ],
+        "imageTitle": "Empty Ballroom Prepared for Production Load-In",
+        "description": "Cinematic low-light ballroom shot showing equipment cases staged in doorway prior to show day setup."
+      },
+      "creativeBrief": "Empty ballroom the night before, one work light on, cases lined up in the doorway. Wide, dark, cinematic. Sits under a navy gradient so text stays readable."
+    }
+  ]
+}
