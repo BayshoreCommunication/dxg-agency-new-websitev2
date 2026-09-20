@@ -1,33 +1,25 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function HybridFinalCTAV2Section() {
   return (
-    <section className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white">
-      {/* Background Photo 07 Brief */}
-      <div
-        className="absolute inset-0 border-y border-dashed border-[rgba(44,188,237,0.4)] pointer-events-none"
-        style={{
-          background:
-            "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-        }}
-      >
-        <div className="absolute bottom-3.5 left-4 max-w-[52ch] text-[12.5px] text-[#5B6B7A] font-['IBM_Plex_Sans',sans-serif]">
-          <b className="font-['Josefin_Sans',sans-serif] text-xs text-[#C9D3DC] block mb-0.5">
-            Before load-in
-          </b>
-          Empty ballroom the night before, one work light on, cases lined up in
-          the doorway. Wide, dark, cinematic. Sits under a navy gradient so text
-          stays readable; detail should live on the right third of the frame.
-        </div>
-      </div>
+    <section className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-[#FFFFFF] min-h-[420px]">
+      {/* Background Photo 07 WebP Image */}
+      <Image
+        src="/images/seo-services/hybrid-and-virtual-event-production/ballroom-prep-hybrid-broadcast-loadin.webp"
+        alt="Empty ballroom prepped with hybrid streaming control center, camera setups, and broadcast encoders before load-in."
+        title="Ballroom Preparation for Hybrid Broadcast"
+        fill
+        className="object-cover object-center pointer-events-none"
+      />
 
-      {/* Navy gradient overlay */}
+      {/* Navy gradient overlay for readability */}
       <div
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
           background:
-            "linear-gradient(90deg, rgba(10, 15, 22, 0.95), rgba(10, 15, 22, 0.7))",
+            "linear-gradient(90deg, rgba(10, 15, 22, 0.96) 0%, rgba(10, 15, 22, 0.88) 50%, rgba(10, 15, 22, 0.65) 100%)",
         }}
       />
 

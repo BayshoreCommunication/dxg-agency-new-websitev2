@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -93,7 +94,7 @@ export default function HybridScopeSection() {
           </div>
         </div>
 
-        {/* Proposal Review Section with Photo 06 Placeholder */}
+        {/* Proposal Review Section with Photo 06 WebP Card */}
         <div id="proposal-review" className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white border border-[#C9D3DC] p-8 sm:p-12 rounded-lg">
           <div>
             <h2 className="text-2xl sm:text-3xl font-semibold mb-4 font-['Josefin_Sans',sans-serif] text-[#0A0F16]">
@@ -116,20 +117,24 @@ export default function HybridScopeSection() {
             </Link>
           </div>
 
-          {/* Photo 06 Placeholder */}
-          <div
-            className="group relative min-h-[300px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-6 rounded-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-            }}
-          >
-            <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              Streaming & AV Proposal Audit
-            </b>
-            <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Printed hybrid streaming proposal with highlighted camera position notes, bandwidth allocations, and line-item audit notes.
-            </p>
+          {/* Photo 06 WebP Image Card */}
+          <div className="group relative min-h-[320px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
+            <Image
+              src="/images/seo-services/hybrid-and-virtual-event-production/streaming-av-proposal-audit-review.webp"
+              alt="Printed hybrid streaming proposal with highlighted camera position notes, bandwidth allocations, and line-item audit notes."
+              title="Streaming & AV Proposal Audit"
+              fill
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+            <div className="relative z-10">
+              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                Streaming & AV Proposal Audit
+              </b>
+              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                Printed hybrid streaming proposal with highlighted camera position notes, bandwidth allocations, and line-item audit notes.
+              </p>
+            </div>
           </div>
         </div>
       </div>

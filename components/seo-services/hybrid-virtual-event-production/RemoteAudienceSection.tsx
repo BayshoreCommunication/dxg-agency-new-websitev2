@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function RemoteAudienceSection() {
@@ -34,20 +35,24 @@ export default function RemoteAudienceSection() {
             </p>
           </div>
 
-          {/* Photo 02 Placeholder */}
-          <div
-            className="group relative min-h-[340px] bg-repeating-linear-gradient border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-6 rounded-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
-            }}
-          >
-            <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              Remote Attendee Stream View
-            </b>
-            <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Side-by-side comparison: live keynote speaker on stage in the ballroom alongside a remote presenter connected via broadcast video stream with branded lower thirds.
-            </p>
+          {/* Photo 02 WebP Image Block */}
+          <div className="group relative min-h-[340px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
+            <Image
+              src="/images/seo-services/hybrid-and-virtual-event-production/remote-attendee-stream-view-broadcast.webp"
+              alt="Side-by-side comparison of live keynote speaker on stage in the ballroom alongside a remote presenter connected via broadcast video stream with branded lower thirds."
+              title="Remote Attendee Stream View & Lower Thirds"
+              fill
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16] via-[#0A0F16]/75 to-transparent z-[1]" />
+            <div className="relative z-10">
+              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                Remote Attendee Stream View
+              </b>
+              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                Side-by-side comparison: live keynote speaker on stage in the ballroom alongside a remote presenter connected via broadcast video stream with branded lower thirds.
+              </p>
+            </div>
           </div>
         </div>
 

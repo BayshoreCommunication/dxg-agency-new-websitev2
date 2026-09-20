@@ -1,0 +1,76 @@
+{
+  "service": "Hybrid and Virtual Event Production",
+  "slug": "hybrid-and-virtual-event-production",
+  "metadata": {
+    "pageTitle": "Hybrid & Virtual Event Production | Digital Xperience Group",
+    "metaDescription": "Hybrid & virtual event production for live and remote audiences. Keep every speaker, stream and session connected with one production team.",
+    "baseImagePath": "/images/seo-services/hybrid-and-virtual-event-production/",
+    "author": "Digital Xperience Group (DXG)",
+    "lastUpdated": "2026-09-20"
+  },
+  "images": [
+    {
+      "id": "photo_01_hybrid_stream_producer",
+      "tag": "PHOTO 01",
+      "title": "Hybrid Event Stream Producer at Control Console",
+      "alt": "Producer monitoring dual screens: ballroom stage live feed on the left, virtual streaming broadcast output with lower thirds and remote speaker tiles on the right.",
+      "src": "/images/seo-services/hybrid-and-virtual-event-production/hybrid-event-stream-producer-control-console.webp",
+      "aspectRatio": "21:9",
+      "format": "webp"
+    },
+    {
+      "id": "photo_02_remote_attendee_stream",
+      "tag": "PHOTO 02",
+      "title": "Remote Attendee Stream View & Lower Thirds",
+      "alt": "Side-by-side comparison of live keynote speaker on stage in the ballroom alongside a remote presenter connected via broadcast video stream with branded lower thirds.",
+      "src": "/images/seo-services/hybrid-and-virtual-event-production/remote-attendee-stream-view-broadcast.webp",
+      "aspectRatio": "4:3",
+      "format": "webp"
+    },
+    {
+      "id": "photo_03_executive_livestream",
+      "tag": "PHOTO 03",
+      "title": "Executive Livestream Broadcast",
+      "alt": "Corporate executive delivering keynote to virtual audience with teleprompter and multi-camera studio switching.",
+      "src": "/images/seo-services/hybrid-and-virtual-event-production/executive-livestream-broadcast-keynote.webp",
+      "aspectRatio": "3:2",
+      "format": "webp"
+    },
+    {
+      "id": "photo_04_remote_speaker_greenroom",
+      "tag": "PHOTO 04",
+      "title": "Remote Speaker Virtual Greenroom Check",
+      "alt": "DXG technician conducting audio-video check with remote panelist joining via virtual greenroom before going live.",
+      "src": "/images/seo-services/hybrid-and-virtual-event-production/remote-speaker-virtual-greenroom-check.webp",
+      "aspectRatio": "3:2",
+      "format": "webp"
+    },
+    {
+      "id": "photo_05_multi_room_streaming",
+      "tag": "PHOTO 05",
+      "title": "Multi-Room Stream Operations",
+      "alt": "Simultaneous breakout streaming management console overseeing 8 concurrent track feeds for virtual attendees.",
+      "src": "/images/seo-services/hybrid-and-virtual-event-production/multi-room-breakout-streaming-operations.webp",
+      "aspectRatio": "3:2",
+      "format": "webp"
+    },
+    {
+      "id": "photo_06_streaming_av_proposal_audit",
+      "tag": "PHOTO 06",
+      "title": "Streaming & AV Proposal Audit",
+      "alt": "Printed hybrid streaming proposal with highlighted camera position notes, bandwidth allocations, and line-item audit notes.",
+      "src": "/images/seo-services/hybrid-and-virtual-event-production/streaming-av-proposal-audit-review.webp",
+      "aspectRatio": "16:9",
+      "format": "webp"
+    },
+    {
+      "id": "photo_07_ballroom_prep_hybrid",
+      "tag": "PHOTO 07",
+      "title": "Ballroom Preparation for Hybrid Broadcast",
+      "alt": "Empty ballroom prepped with hybrid streaming control center, camera setups, and broadcast encoders before load-in.",
+      "src": "/images/seo-services/hybrid-and-virtual-event-production/ballroom-prep-hybrid-broadcast-loadin.webp",
+      "aspectRatio": "16:9",
+      "format": "webp"
+    }
+  ]
+}
