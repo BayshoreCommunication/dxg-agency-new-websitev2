@@ -16,7 +16,18 @@
       "alt": "Audience members in a brightly lit keynote hall holding phones displaying live QR code poll interfaces while real-time survey results build dynamically across the main stage LED video wall.",
       "src": "/images/seo-services/attendee-engagement-and-event-technology/attendees-interacting-with-live-polling.webp",
       "aspectRatio": "21:9",
-      "format": "webp"
+      "format": "webp",
+      "caption": "Audience members in a brightly lit keynote hall holding phones displaying live QR code poll interfaces while real-time survey results build dynamically across the main stage LED video wall.",
+      "description": "Audience members in a brightly lit keynote hall holding phones displaying live QR code poll interfaces while real-time survey results build dynamically across the main stage LED video wall.",
+      "seo": {
+        "keywords": [
+          "attendee engagement and event technology",
+          "attendees interacting with live audience polling on stage led wall",
+          "dxg digital"
+        ],
+        "imageTitle": "Attendees Interacting with Live Audience Polling on Stage LED Wall",
+        "description": "Audience members in a brightly lit keynote hall holding phones displaying live QR code poll interfaces while real-time survey results build dynamically across the main stage LED video wall."
+      }
     },
     {
       "id": "photo_02_app_signage_integration",
@@ -25,7 +36,18 @@
       "alt": "Attendee scanning badge QR code at interactive digital kiosk while holding customized event app with live agenda and session room directions.",
       "src": "/images/seo-services/attendee-engagement-and-event-technology/event-mobile-app-digital-signage-integration.webp",
       "aspectRatio": "4:3",
-      "format": "webp"
+      "format": "webp",
+      "caption": "Attendee scanning badge QR code at interactive digital kiosk while holding customized event app with live agenda and session room directions.",
+      "description": "Attendee scanning badge QR code at interactive digital kiosk while holding customized event app with live agenda and session room directions.",
+      "seo": {
+        "keywords": [
+          "attendee engagement and event technology",
+          "event mobile app & digital signage integration",
+          "dxg digital"
+        ],
+        "imageTitle": "Event Mobile App & Digital Signage Integration",
+        "description": "Attendee scanning badge QR code at interactive digital kiosk while holding customized event app with live agenda and session room directions."
+      }
     },
     {
       "id": "photo_03_onscreen_qr_prompt",
@@ -34,7 +56,18 @@
       "alt": "Keynote speaker pointing to large QR code on stage screen encouraging instant audience participation.",
       "src": "/images/seo-services/attendee-engagement-and-event-technology/onscreen-qr-polling-prompt.webp",
       "aspectRatio": "3:2",
-      "format": "webp"
+      "format": "webp",
+      "caption": "Keynote speaker pointing to large QR code on stage screen encouraging instant audience participation.",
+      "description": "Keynote speaker pointing to large QR code on stage screen encouraging instant audience participation.",
+      "seo": {
+        "keywords": [
+          "attendee engagement and event technology",
+          "on-screen qr & polling prompt",
+          "dxg digital"
+        ],
+        "imageTitle": "On-Screen QR & Polling Prompt",
+        "description": "Keynote speaker pointing to large QR code on stage screen encouraging instant audience participation."
+      }
     },
     {
       "id": "photo_04_speaker_confidence_monitor",
@@ -43,7 +76,18 @@
       "alt": "Moderator viewing real-time top voted audience questions on stage confidence monitor screen.",
       "src": "/images/seo-services/attendee-engagement-and-event-technology/speaker-confidence-monitor-questions.webp",
       "aspectRatio": "3:2",
-      "format": "webp"
+      "format": "webp",
+      "caption": "Moderator viewing real-time top voted audience questions on stage confidence monitor screen.",
+      "description": "Moderator viewing real-time top voted audience questions on stage confidence monitor screen.",
+      "seo": {
+        "keywords": [
+          "attendee engagement and event technology",
+          "speaker confidence monitor",
+          "dxg digital"
+        ],
+        "imageTitle": "Speaker Confidence Monitor",
+        "description": "Moderator viewing real-time top voted audience questions on stage confidence monitor screen."
+      }
     },
     {
       "id": "photo_05_tech_operator_polling",
@@ -52,7 +96,18 @@
       "alt": "DXG engagement tech operator triggering poll closing cue right on schedule in run of show.",
       "src": "/images/seo-services/attendee-engagement-and-event-technology/tech-table-polling-operator.webp",
       "aspectRatio": "3:2",
-      "format": "webp"
+      "format": "webp",
+      "caption": "DXG engagement tech operator triggering poll closing cue right on schedule in run of show.",
+      "description": "DXG engagement tech operator triggering poll closing cue right on schedule in run of show.",
+      "seo": {
+        "keywords": [
+          "attendee engagement and event technology",
+          "tech table polling operator",
+          "dxg digital"
+        ],
+        "imageTitle": "Tech Table Polling Operator",
+        "description": "DXG engagement tech operator triggering poll closing cue right on schedule in run of show."
+      }
     },
     {
       "id": "photo_06_event_tech_audit",
@@ -61,7 +116,18 @@
       "alt": "Planner reviewing event mobile app agenda sync, Wi-Fi bandwidth requirements, and live polling cue sheets alongside DXG producer.",
       "src": "/images/seo-services/attendee-engagement-and-event-technology/event-tech-integration-audit.webp",
       "aspectRatio": "16:9",
-      "format": "webp"
+      "format": "webp",
+      "caption": "Planner reviewing event mobile app agenda sync, Wi-Fi bandwidth requirements, and live polling cue sheets alongside DXG producer.",
+      "description": "Planner reviewing event mobile app agenda sync, Wi-Fi bandwidth requirements, and live polling cue sheets alongside DXG producer.",
+      "seo": {
+        "keywords": [
+          "attendee engagement and event technology",
+          "event tech integration audit",
+          "dxg digital"
+        ],
+        "imageTitle": "Event Tech Integration Audit",
+        "description": "Planner reviewing event mobile app agenda sync, Wi-Fi bandwidth requirements, and live polling cue sheets alongside DXG producer."
+      }
     },
     {
       "id": "photo_07_ballroom_preparation",
@@ -70,7 +136,18 @@
       "alt": "Empty ballroom prepped with staging, digital kiosks, and FOH engagement control center before attendees arrive.",
       "src": "/images/seo-services/attendee-engagement-and-event-technology/ballroom-preparation-event-tech.webp",
       "aspectRatio": "16:9",
-      "format": "webp"
+      "format": "webp",
+      "caption": "Empty ballroom prepped with staging, digital kiosks, and FOH engagement control center before attendees arrive.",
+      "description": "Empty ballroom prepped with staging, digital kiosks, and FOH engagement control center before attendees arrive.",
+      "seo": {
+        "keywords": [
+          "attendee engagement and event technology",
+          "ballroom preparation for event tech",
+          "dxg digital"
+        ],
+        "imageTitle": "Ballroom Preparation for Event Tech",
+        "description": "Empty ballroom prepped with staging, digital kiosks, and FOH engagement control center before attendees arrive."
+      }
     }
   ]
 }
