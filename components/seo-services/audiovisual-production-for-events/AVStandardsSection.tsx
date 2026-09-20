@@ -25,6 +25,7 @@ export default function AVStandardsSection() {
   return (
     <section className="py-[clamp(64px,8vw,112px)] bg-[#E9EEF2] text-[#0A0F16]">
       <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12">
+        {/* Head */}
         <div className="max-w-[760px] mb-11">
           <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
             Built to Higher Operational Standards
@@ -32,6 +33,75 @@ export default function AVStandardsSection() {
           <p className="text-[clamp(18px,1.5vw,21px)] text-[#5B6B7A] max-w-[60ch] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
             Corporate and conference audiovisual production requires absolute reliability, transparent contract management, and rigorous rehearsals.
           </p>
+        </div>
+
+        {/* 3 Photo Placeholders (Photo 03, Photo 04, Photo 05) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 mb-12">
+          {/* Photo 03 */}
+          <div
+            className="group relative min-h-[240px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-5 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
+            style={{
+              background:
+                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
+            }}
+          >
+            <span className="absolute top-3.5 left-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2 py-0.5 rounded-[2px] uppercase group-hover:scale-105 transition-transform duration-200">
+              PHOTO 03
+            </span>
+            <span className="absolute top-3.5 right-4 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED]">
+              3:2
+            </span>
+            <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
+              System Redundancy
+            </b>
+            <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+              Backup audio switcher and secondary presentation laptop running in sync behind FOH table.
+            </p>
+          </div>
+
+          {/* Photo 04 */}
+          <div
+            className="group relative min-h-[240px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-5 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
+            style={{
+              background:
+                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
+            }}
+          >
+            <span className="absolute top-3.5 left-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2 py-0.5 rounded-[2px] uppercase group-hover:scale-105 transition-transform duration-200">
+              PHOTO 04
+            </span>
+            <span className="absolute top-3.5 right-4 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED]">
+              3:2
+            </span>
+            <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
+              Venue Contract Audit
+            </b>
+            <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+              Technical line-item review of venue power and rigging specs before signing contract.
+            </p>
+          </div>
+
+          {/* Photo 05 */}
+          <div
+            className="group relative min-h-[240px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-5 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
+            style={{
+              background:
+                "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
+            }}
+          >
+            <span className="absolute top-3.5 left-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2 py-0.5 rounded-[2px] uppercase group-hover:scale-105 transition-transform duration-200">
+              PHOTO 05
+            </span>
+            <span className="absolute top-3.5 right-4 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED]">
+              3:2
+            </span>
+            <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
+              Technical Rehearsals
+            </b>
+            <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+              Presenter practicing on stage under show lighting with confidence monitors active.
+            </p>
+          </div>
         </div>
 
         {/* 3 Cards */}

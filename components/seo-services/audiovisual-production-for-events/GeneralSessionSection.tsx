@@ -18,38 +18,65 @@ export default function GeneralSessionSection() {
       </svg>
 
       <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
-        <div className="max-w-[840px]">
-          <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-6 font-['Josefin_Sans',sans-serif] text-white before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
-            General Session Production
-          </h2>
-          <p className="text-[clamp(18px,1.5vw,21px)] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif] mb-8">
-            The main stage sets the standard for your entire conference. It is where you welcome your guests, share your biggest announcements and feature your highest profile speakers. General session production requires a delicate balance of technical precision and creative pacing. Our show callers and producers sit at the tech table, managing every single cue. They call the lighting changes, the video rolls, and the audio cues with perfect timing. We keep every technical discipline under one unified command, so the live show runs with a natural, coordinated flow. Your presenters can walk on stage with total confidence knowing the technology will follow their lead seamlessly.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(32px,5vw,72px)] items-start">
+          {/* Left Text Column */}
+          <div>
+            <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-6 font-['Josefin_Sans',sans-serif] text-white before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
+              General Session Production
+            </h2>
+            <p className="text-[clamp(18px,1.5vw,21px)] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif] mb-8">
+              The main stage sets the standard for your entire conference. It is where you welcome your guests, share your biggest announcements and feature your highest profile speakers. General session production requires a delicate balance of technical precision and creative pacing. Our show callers and producers sit at the tech table, managing every single cue. They call the lighting changes, the video rolls, and the audio cues with perfect timing. We keep every technical discipline under one unified command, so the live show runs with a natural, coordinated flow. Your presenters can walk on stage with total confidence knowing the technology will follow their lead seamlessly.
+            </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-[#1E2A36] pt-8">
-            <div className="bg-[#111A24] border border-[#1E2A36] p-5 rounded">
-              <span className="text-[#2CBCED] font-['Josefin_Sans',sans-serif] text-sm font-semibold block mb-1">
-                Show Callers
-              </span>
-              <span className="text-white text-base font-medium font-['Josefin_Sans',sans-serif]">
-                Unified Cue Calling
-              </span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-[#1E2A36] pt-8">
+              <div className="bg-[#111A24] border border-[#1E2A36] p-5 rounded">
+                <span className="text-[#2CBCED] font-['Josefin_Sans',sans-serif] text-sm font-semibold block mb-1">
+                  Show Callers
+                </span>
+                <span className="text-white text-base font-medium font-['Josefin_Sans',sans-serif]">
+                  Unified Cue Calling
+                </span>
+              </div>
+              <div className="bg-[#111A24] border border-[#1E2A36] p-5 rounded">
+                <span className="text-[#2CBCED] font-['Josefin_Sans',sans-serif] text-sm font-semibold block mb-1">
+                  Main Stage
+                </span>
+                <span className="text-white text-base font-medium font-['Josefin_Sans',sans-serif]">
+                  Pristine Audio & Video
+                </span>
+              </div>
+              <div className="bg-[#111A24] border border-[#1E2A36] p-5 rounded">
+                <span className="text-[#2CBCED] font-['Josefin_Sans',sans-serif] text-sm font-semibold block mb-1">
+                  Execution
+                </span>
+                <span className="text-white text-base font-medium font-['Josefin_Sans',sans-serif]">
+                  Seamless Coordinated Flow
+                </span>
+              </div>
             </div>
-            <div className="bg-[#111A24] border border-[#1E2A36] p-5 rounded">
-              <span className="text-[#2CBCED] font-['Josefin_Sans',sans-serif] text-sm font-semibold block mb-1">
-                Main Stage
+          </div>
+
+          {/* Right Column with Photo 06 Placeholder */}
+          <div>
+            <div
+              className="group relative min-h-[340px] border-1.5 border-dashed border-[rgba(44,188,237,0.55)] text-white flex flex-col justify-end p-6 rounded transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]"
+              style={{
+                background:
+                  "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
+              }}
+            >
+              <span className="absolute top-3.5 left-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2.5 py-1 rounded-[2px] uppercase group-hover:scale-105 transition-transform duration-200">
+                PHOTO 06
               </span>
-              <span className="text-white text-base font-medium font-['Josefin_Sans',sans-serif]">
-                Pristine Audio & Video
+              <span className="absolute top-3.5 right-4 font-['Josefin_Sans',sans-serif] text-xs text-[#2CBCED]">
+                16:9
               </span>
-            </div>
-            <div className="bg-[#111A24] border border-[#1E2A36] p-5 rounded">
-              <span className="text-[#2CBCED] font-['Josefin_Sans',sans-serif] text-sm font-semibold block mb-1">
-                Execution
-              </span>
-              <span className="text-white text-base font-medium font-['Josefin_Sans',sans-serif]">
-                Seamless Coordinated Flow
-              </span>
+              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
+                General Session Stage & Tech Table
+              </b>
+              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                Full view of main keynote stage with wide LED wall displaying session graphics, camera crane in position, and show callers coordinating live audio-video cues from FOH.
+              </p>
             </div>
           </div>
         </div>

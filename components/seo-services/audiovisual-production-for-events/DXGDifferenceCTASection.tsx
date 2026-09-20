@@ -3,7 +3,28 @@ import React from "react";
 
 export default function DXGDifferenceCTASection() {
   return (
-    <section className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white border-t border-[#1E2A36]">
+    <section className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white">
+      {/* Background Photo 07 Brief */}
+      <div
+        className="absolute inset-0 border-y border-dashed border-[rgba(44,188,237,0.4)] pointer-events-none"
+        style={{
+          background:
+            "repeating-linear-gradient(135deg, #0F1822 0 14px, #121C27 14px 28px)",
+        }}
+      >
+        <span className="absolute bottom-3.5 right-4 font-['Josefin_Sans',sans-serif] font-bold text-xs text-[#0A0F16] bg-[#2CBCED] px-2.5 py-1 rounded-[2px] uppercase">
+          PHOTO 07
+        </span>
+        <div className="absolute bottom-3.5 left-4 max-w-[52ch] text-[12.5px] text-[#5B6B7A] font-['IBM_Plex_Sans',sans-serif]">
+          <b className="font-['Josefin_Sans',sans-serif] text-xs text-[#C9D3DC] block mb-0.5">
+            Before load-in
+          </b>
+          Empty ballroom the night before, one work light on, cases lined up in
+          the doorway. Wide, dark, cinematic. Sits under a navy gradient so text
+          stays readable; detail should live on the right third of the frame.
+        </div>
+      </div>
+
       {/* Navy gradient overlay */}
       <div
         className="absolute inset-0 z-[1] pointer-events-none"

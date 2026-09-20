@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AVHeroV2 from "components/seo-services/audiovisual-production-for-events/AVHeroV2";
+import AVPhotoBandV2 from "components/seo-services/audiovisual-production-for-events/AVPhotoBandV2";
 import AVApproachSection from "components/seo-services/audiovisual-production-for-events/AVApproachSection";
 import AVStandardsSection from "components/seo-services/audiovisual-production-for-events/AVStandardsSection";
 import AVCapabilitiesSection from "components/seo-services/audiovisual-production-for-events/AVCapabilitiesSection";
@@ -18,19 +19,22 @@ export default function AudiovisualProductionForEventsPage() {
       {/* 1. Hero Section & Tech Control Panel */}
       <AVHeroV2 />
 
-      {/* 2. Our Approach Starts with the Program */}
+      {/* 2. Full Bleed Producer/AV Photo Band (Photo 01) */}
+      <AVPhotoBandV2 />
+
+      {/* 3. Our Approach Starts with the Program (Photo 02) */}
       <AVApproachSection />
 
-      {/* 3. Operational Standards, Contracts & Rehearsals */}
+      {/* 4. Operational Standards, Contracts & Rehearsals (Photo 03, Photo 04, Photo 05) */}
       <AVStandardsSection />
 
-      {/* 4. Audiovisual Production Capabilities */}
+      {/* 5. Audiovisual Production Capabilities */}
       <AVCapabilitiesSection />
 
-      {/* 5. General Session Production */}
+      {/* 6. General Session Production (Photo 06) */}
       <GeneralSessionSection />
 
-      {/* 6. The DXG Difference & Strategy Call CTA */}
+      {/* 7. The DXG Difference & Strategy Call CTA (Photo 07) */}
       <DXGDifferenceCTASection />
     </main>
   );
