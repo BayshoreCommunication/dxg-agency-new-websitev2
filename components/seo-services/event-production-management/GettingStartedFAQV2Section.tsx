@@ -5,21 +5,21 @@ import React, { useState } from "react";
 export default function GettingStartedFAQV2Section() {
   const steps = [
     {
-      step: "Step 1",
-      title: "Tell us about your event",
-      desc: "Dates, venue, agenda, room count, production goals and any AV proposals or documents already in hand.",
+      step: "Step 1.",
+      title: "Tell Us About Your Event",
+      desc: "Dates, venue, agenda, room count, production goals, and any AV proposals or documents already in hand.",
       isCyanBorder: false,
     },
     {
-      step: "Step 2",
-      title: "Discovery call",
-      desc: "We review the event in detail and identify where production support adds the most value: budget, vendors, content, rehearsals, show day.",
+      step: "Step 2.",
+      title: "Discovery Call",
+      desc: "We review the event in detail and identify where production support adds the most value across budget, vendors, content, rehearsals, and show day.",
       isCyanBorder: false,
     },
     {
-      step: "Step 3",
-      title: "Scope and proposal",
-      desc: "A production proposal built around your event, with services, timeline and investment spelled out.",
+      step: "Step 3.",
+      title: "Scope and Proposal",
+      desc: "A production proposal built around your event, with services, timeline, and investment spelled out clearly.",
       isCyanBorder: true,
     },
   ];
@@ -28,27 +28,27 @@ export default function GettingStartedFAQV2Section() {
     {
       question: "Do you provide the AV equipment?",
       answer:
-        "Yes, when the event calls for it. DXG owns audio, video, lighting, staging and LED inventory and provides full-service production. Event production management is the option for planners whose equipment and labor are coming from in-house AV or another vendor and who still want DXG planning and leading the production.",
+        "Yes, when the event calls for it. DXG owns audio, video, lighting, staging, and LED inventory and provides full service production. Event production management is the option for planners whose equipment and labor are coming from in house AV or another vendor and who still want DXG planning and leading the production.",
     },
     {
       question: "Do you replace our AV company?",
       answer:
-        "No. We work alongside the AV team you have, in-house or independent, and manage the production scope around them. If you want DXG to supply equipment and crew on a future program, that is a separate conversation and the same producer carries over.",
+        "No. We work alongside the AV team you have, in house or independent, and manage the production scope around them. If you want DXG to supply equipment and crew on a future program, that is a separate conversation and the same producer carries over.",
     },
     {
       question: "What size events can you support?",
       answer:
-        "Programs from 50 people to more than 10,000, with one main room or dozens of concurrent breakout sessions. The production approach scales with the event; the level of planning does not change.",
+        "Programs from 50 people to more than 10,000, with one main room or dozens of concurrent breakout sessions. The production approach scales with the event. The level of planning does not change.",
     },
     {
       question: "When should production management start?",
       answer:
-        "Before the AV proposal is signed, if possible. Room count, staging, rehearsal hours and labor calls set the cost conditions early, and a review at that stage has the most effect on budget. We can also join later for run of show, rehearsals and show-day leadership.",
+        "Before the AV proposal is signed, if possible. Room count, staging, rehearsal hours, and labor calls set the cost conditions early, and a review at that stage has the most effect on budget. We can also join later for runs of shows, rehearsals, and show day leadership.",
     },
     {
       question: "Can you work with vendors we already selected?",
       answer:
-        "Yes. We coordinate the vendors already under contract, including venue in-house AV, and bring their requirements and timelines into one production schedule.",
+        "Yes. We coordinate the vendors already under contract, including venue in house AV, and bring their requirements and timelines into one production schedule.",
     },
   ];
 
@@ -64,7 +64,7 @@ export default function GettingStartedFAQV2Section() {
         {/* Head */}
         <div className="max-w-[760px] mb-8 sm:mb-12">
           <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
-            Getting started takes three steps
+            Get Started with These 3 Steps
           </h2>
         </div>
 

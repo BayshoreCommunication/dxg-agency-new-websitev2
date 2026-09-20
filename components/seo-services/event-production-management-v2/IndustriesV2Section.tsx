@@ -3,8 +3,8 @@ import React from "react";
 export default function IndustriesV2Section() {
   const verticals = [
     {
-      title: "Corporate",
-      desc: "Sales kickoffs, user conferences, executive programs. Senior speakers, brand standards, tight timing.",
+      title: "Corporate Events",
+      desc: "Our corporate event production management covers sales kickoffs, user conferences, and executive summits. We focus on executive stage presence, strict brand standards, presentation playback, and down to the second timing.",
       icon: (
         <svg
           className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px] group-hover:scale-110 group-hover:stroke-[#4CC9F0] transition-transform duration-300"
@@ -16,8 +16,8 @@ export default function IndustriesV2Section() {
       ),
     },
     {
-      title: "Association",
-      desc: "General sessions plus concurrent breakouts, committees, volunteers and many vendors on one schedule.",
+      title: "Association Conferences",
+      desc: "We deliver association conference production built for scale. Our team manages main stage general sessions alongside concurrent breakout rooms, committee meetings, volunteer schedules, and multi vendor timelines.",
       icon: (
         <svg
           className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px] group-hover:scale-110 group-hover:stroke-[#4CC9F0] transition-transform duration-300"
@@ -28,8 +28,8 @@ export default function IndustriesV2Section() {
       ),
     },
     {
-      title: "Medical",
-      desc: "CME requirements, disclosures, approved content and precise session timing built into production milestones.",
+      title: "Medical Meetings",
+      desc: "Our production workflow accounts for CME (Continuing Medical Education) compliance requirements, mandatory presenter disclosures, approved medical content formats, and precise session timings built directly into production milestones.",
       icon: (
         <svg
           className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px] group-hover:scale-110 group-hover:stroke-[#4CC9F0] transition-transform duration-300"
@@ -41,8 +41,8 @@ export default function IndustriesV2Section() {
       ),
     },
     {
-      title: "Nonprofit",
-      desc: "Galas and live appeals where lighting, sound, video and transitions carry the pace of the evening.",
+      title: "Fundraising Events",
+      desc: "We produce fundraising events and live appeals where thoughtful lighting, crisp audio, smooth video transitions, and precise staging keep the evening moving and create the right setting for giving.",
       icon: (
         <svg
           className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px] group-hover:scale-110 group-hover:stroke-[#4CC9F0] transition-transform duration-300"
@@ -53,8 +53,8 @@ export default function IndustriesV2Section() {
       ),
     },
     {
-      title: "Education",
-      desc: "Commencements and symposiums on fixed dates with large audiences and long schedules.",
+      title: "Education Programs",
+      desc: "We manage commencements, academic convocations, and educational symposiums operating on fixed dates, serving large audiences across wide physical footprints.",
       icon: (
         <svg
           className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px] group-hover:scale-110 group-hover:stroke-[#4CC9F0] transition-transform duration-300"
@@ -73,15 +73,10 @@ export default function IndustriesV2Section() {
         {/* Head */}
         <div className="max-w-[760px] mb-[clamp(36px,4vw,56px)]">
           <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
-            Built around your program, not a package
+            Programs Designed Around What You Need
           </h2>
           <p className="text-[clamp(18px,1.5vw,21px)] text-[#5B6B7A] max-w-[60ch] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-            DXG provides event production management for{" "}
-            <strong className="text-[#0A0F16]">
-              corporate, association, medical, nonprofit and education
-            </strong>{" "}
-            events. Each has its own format, audience and production pressure
-            points.
+            DXG provides event production services customized to the specific format, audience expectations, and technical demands of your organization.
           </p>
         </div>
 

@@ -10,9 +10,9 @@ import GettingStartedFAQV2Section from "components/seo-services/event-production
 import FinalCTAV2Section from "components/seo-services/event-production-management/FinalCTAV2Section";
 
 export const metadata: Metadata = {
-  title: "Event Production Management | DXG",
+  title: "Event Production Management | Professional Event Services",
   description:
-    "DXG provides event production management for corporate, association, medical, nonprofit and education events, bringing budget, vendors, schedule and show flow into one plan.",
+    "Event Production Management for well executed events, covering staging, technical production, and on-site coordination. Explore our services.",
 };
 
 export default function EventProductionManagementV2Page() {

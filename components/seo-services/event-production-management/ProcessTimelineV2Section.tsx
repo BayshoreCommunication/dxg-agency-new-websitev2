@@ -5,43 +5,43 @@ export default function ProcessTimelineV2Section() {
     {
       num: 1,
       ghost: "01",
-      title: "Discovery and scoping",
-      desc: "Format, audience, venue, budget, agenda, room count and production goals. A defined scope before equipment or vendor decisions.",
+      title: "Discovery and Scoping",
+      desc: "Format, audience, venue, budget, agenda, room count, and production goals. We establish a defined scope before equipment or vendor decisions are made.",
       live: false,
     },
     {
       num: 2,
       ghost: "02",
-      title: "Planning and vendor coordination",
-      desc: "Working budget, technical scope, room plans, staffing and one production timeline that updates as the program changes.",
+      title: "Planning and Vendor Coordination",
+      desc: "Working budget, technical scope, room plans, staffing, and one master production timeline that updates as the program changes.",
       live: false,
     },
     {
       num: 3,
       ghost: "03",
-      title: "Technical preparation",
-      desc: "Room specs, run of show, speaker materials, cue sheets, crew schedules and a site review to confirm venue conditions.",
+      title: "Technical Preparation",
+      desc: "Room specs, run of show, speaker materials, cue sheets, crew schedules, and a technical site visit to confirm venue conditions.",
       live: false,
     },
     {
       num: 4,
       ghost: "04",
       title: "Rehearsal",
-      desc: "Presentations, video, audio, lighting, stage movement and timing tested in the real room before attendees arrive.",
+      desc: "Presentations, video, audio, lighting, stage movement, and timing tested in the real room before attendees arrive.",
       live: false,
     },
     {
       num: 5,
       ghost: "05",
-      title: "Show day",
-      desc: "Our producer directs setup, checks, crew, vendors and live show flow. Your planners stay with attendees and stakeholders.",
+      title: "Show Day Execution",
+      desc: "Our producer directs setup, checks, crew, vendors, and live show flow from the front of the house. Your planners stay with attendees and stakeholders.",
       live: true,
     },
     {
       num: 6,
       ghost: "06",
-      title: "Closeout",
-      desc: "Strike, equipment return, vendor reconciliation, documentation and a debrief that feeds the next planning cycle.",
+      title: "Closeout and Debrief",
+      desc: "Strike, equipment return, vendor reconciliation, documentation, and a debrief that feeds directly into your next planning cycle.",
       live: false,
     },
   ];
@@ -66,10 +66,10 @@ export default function ProcessTimelineV2Section() {
         {/* Head */}
         <div className="max-w-[760px] mb-[clamp(36px,4vw,56px)]">
           <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] text-white before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
-            How we manage your production
+            How We Manage Your Production
           </h2>
           <p className="text-[clamp(18px,1.5vw,21px)] text-[#C9D3DC] max-w-[60ch] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-            Six stages. Each one produces the information the next one needs.
+            6 stages. Each one produces the exact technical information the next stage needs.
           </p>
         </div>
 

@@ -4,24 +4,24 @@ import React from "react";
 export default function ProposalReviewV2Section() {
   const checklist = [
     {
-      title: "Scope alignment",
-      desc: "Proposal checked against program design, room count, agenda and requirements.",
+      title: "Scope Alignment",
+      desc: "Proposal checked against program design, room count, agenda, and technical requirements.",
     },
     {
-      title: "Pricing review",
-      desc: "Quoted costs weighed against scope, labor assumptions and timeline.",
+      title: "Pricing Review",
+      desc: "Quoted costs weighed against scope, labor assumptions, and timeline.",
     },
     {
-      title: "Labor call review",
-      desc: "Crew hours matched to the real setup, rehearsal, show and strike schedule.",
+      title: "Labor Call Review",
+      desc: "Crew hours matched to the real setup, rehearsal, show, and strike schedule.",
     },
     {
-      title: "Technical risk review",
-      desc: "Single points of failure, missing backups and dependencies flagged.",
+      title: "Technical Risk Review",
+      desc: "Single points of failure, missing backups, and technical dependencies flagged.",
     },
     {
-      title: "Contract and change order review",
-      desc: "Overtime, cancellation, substitution and change order terms worth a second look.",
+      title: "Contract and Change Order Review",
+      desc: "Overtime, cancellation, substitution, and change order terms worth a second look.",
     },
   ];
 
@@ -50,12 +50,10 @@ export default function ProposalReviewV2Section() {
           <div>
             <div className="max-w-[760px] mb-8">
               <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] text-white before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
-                Already have an AV proposal?
+                Get an Independent AV Proposal Review
               </h2>
               <p className="text-[clamp(18px,1.5vw,21px)] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Another set of production eyes before the contract creates
-                budget and technical commitments. A proposal can look complete
-                and still leave gaps in labor, setup time or backup coverage.
+                A proposal can look complete on paper while still leaving gaps in labor, setup time, or backup coverage. Get a second opinion with no pressure and just a useful conversation about your event. An audit evaluates 5 core areas.
               </p>
             </div>
 

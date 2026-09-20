@@ -3,65 +3,65 @@ import React from "react";
 export default function EngagementScopeV2Section() {
   const phases = [
     {
-      phaseTitle: "Before vendors commit",
+      phaseTitle: "Before Vendors Commit",
       items: [
         {
           title: "Production budgeting",
-          desc: "Budget allowances by category before commitments, updated as scope changes.",
+          desc: "Production budgeting and scope development to establish category allowances before commitments, updated as scope changes.",
         },
         {
           title: "AV proposal and RFP review",
-          desc: "Line-by-line check of scope, pricing, crew assumptions and overtime exposure.",
+          desc: "AV proposal and RFP (Request for Proposal) review for a line by line check of scope, pricing, crew assumptions, and overtime exposure.",
         },
         {
-          title: "Venue and in-house AV coordination",
-          desc: "Access, power, rigging, exclusives and labor rules folded into one plan.",
+          title: "Venue and in house AV coordination",
+          desc: "Venue and in house AV coordination to fold access, power, rigging, exclusives, and labor rules into one plan.",
         },
         {
           title: "Technical site visits",
-          desc: "Dimensions, rigging points, sightlines and loading verified before load-in.",
+          desc: "Technical site visits to verify dimensions, rigging points, sightlines, and loading access before load in.",
         },
       ],
     },
     {
-      phaseTitle: "Building the plan",
+      phaseTitle: "Building the Plan",
       items: [
         {
           title: "Production schedules",
-          desc: "One timeline from advance work through strike, with call times per department.",
+          desc: "Production schedules to establish one timeline from advance work through strike, with call times per department.",
         },
         {
-          title: "Room-by-room technical planning",
-          desc: "Keynote stage and breakout room each get the setup their purpose needs.",
+          title: "Room by room technical planning",
+          desc: "Room by room technical planning to ensure keynote stages and breakout rooms each get the setup their purpose needs.",
         },
         {
           title: "Vendor coordination",
-          desc: "One production contact across AV, staging, lighting, décor and technical vendors.",
+          desc: "Vendor coordination to maintain one production contact across AV, staging, lighting, decor, and technical vendors.",
         },
         {
           title: "Labor and crew planning",
-          desc: "Crew calls checked against the real schedule and workload.",
+          desc: "Labor and crew planning to check crew calls against the real schedule and workload.",
         },
       ],
     },
     {
-      phaseTitle: "Show week",
+      phaseTitle: "Show Week Operations",
       items: [
         {
           title: "Run of show development",
-          desc: "Cues, playback, transitions, timing and owners in one working document.",
+          desc: "Run of show development to unify cues, playback, transitions, timing, and owners in one working document.",
         },
         {
           title: "Speaker and content coordination",
-          desc: "Files collected, tested and rehearsed with clear deadlines for presenters.",
+          desc: "Speaker and content coordination to collect, test, and rehearse files with clear deadlines for presenters.",
         },
         {
           title: "Technical rehearsals",
-          desc: "A controlled window to test the live sequence in the actual room.",
+          desc: "Technical rehearsals to secure a controlled window to test the live sequence in the actual room.",
         },
         {
-          title: "On-site production management",
-          desc: "Producer-led setup, general sessions, breakouts and closeout.",
+          title: "On site production management",
+          desc: "On site production management for producer led setup, general sessions, breakouts, and closeouts.",
         },
       ],
     },
@@ -73,13 +73,10 @@ export default function EngagementScopeV2Section() {
         {/* Head */}
         <div className="max-w-[760px] mb-[clamp(36px,4vw,56px)]">
           <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
-            What an engagement can include
+            What Production Management Can Include
           </h2>
           <p className="text-[clamp(18px,1.5vw,21px)] text-[#5B6B7A] max-w-[60ch] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-            These are the production services a planner can engage on their
-            own, with equipment and labor coming from in-house AV, another
-            vendor or DXG. Scope follows your format, venue, schedule and room
-            count.
+            These are the event production services a meeting planner can engage on their own, with equipment and labor coming from in house AV, another vendor or DXG directly. Scope follows your format, venue, schedule, and room count.
           </p>
         </div>
 

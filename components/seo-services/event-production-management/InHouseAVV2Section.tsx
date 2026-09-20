@@ -9,13 +9,10 @@ export default function InHouseAVV2Section() {
           {/* Head */}
           <div>
             <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
-              Using the venue&apos;s in-house AV? Keep your producer.
+              Keep Your Dedicated Producer for In House AV
             </h2>
             <p className="text-[clamp(18px,1.5vw,21px)] text-[#5B6B7A] max-w-[60ch] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Some contracts favor in-house AV. Some venues require it. That
-              decision covers equipment and labor. It does not have to cover the
-              planning, budgeting, run of show and show-day leadership your
-              program still needs.
+              Some contracts require you to use the venue’s in house AV team for equipment and room labor. That covers the gear and crew in the room. It does not replace the planning, budgeting, show flow development, and show day leadership your event still requires.
             </p>
           </div>
 
@@ -34,7 +31,7 @@ export default function InHouseAVV2Section() {
               4:3
             </span>
             <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              Planner and producer, venue crew behind
+              The DXG Continuity Model
             </b>
             <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
               Ballroom during load-in. A meeting planner and the DXG producer
@@ -55,60 +52,36 @@ export default function InHouseAVV2Section() {
               This year
             </small>
             <h3 className="text-xl font-semibold mb-3 font-['Josefin_Sans',sans-serif] text-[#0A0F16] group-hover:text-[#0A0F16]">
-              In-house AV supplies the gear. DXG manages the production.
+              In house AV supplies the equipment. DXG manages the production.
             </h3>
-            <ul className="space-y-2.5 mt-3.5 text-[14.5px] text-[#5B6B7A] font-['IBM_Plex_Sans',sans-serif]">
-              <li className="relative pl-[18px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[8px] before:h-[2px] before:bg-[#2CBCED] group-hover:before:w-[12px] before:transition-all before:duration-200">
-                Review the in-house proposal before you sign it
-              </li>
-              <li className="relative pl-[18px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[8px] before:h-[2px] before:bg-[#2CBCED] group-hover:before:w-[12px] before:transition-all before:duration-200">
-                Build the production budget and schedule around venue rules
-              </li>
-              <li className="relative pl-[18px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[8px] before:h-[2px] before:bg-[#2CBCED] group-hover:before:w-[12px] before:transition-all before:duration-200">
-                Coordinate the in-house team, your speakers and your content
-              </li>
-              <li className="relative pl-[18px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[8px] before:h-[2px] before:bg-[#2CBCED] group-hover:before:w-[12px] before:transition-all before:duration-200">
-                Run rehearsals and lead show day with a dedicated producer
-              </li>
-            </ul>
+            <p className="text-[14.5px] text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+              We review the in-house proposal before you sign it, build the production budget and schedule around venue rules, coordinate the in-house team, your speakers, and your content, run technical rehearsals, and lead show day with a dedicated producer.
+            </p>
           </div>
 
           {/* Card 2: Bridge */}
           <div className="group bg-[#0A0F16] text-white border border-[#1E2A36] rounded-md p-7 sm:p-8 flex flex-col justify-center transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:border-[#2CBCED]">
             <small className="font-['Josefin_Sans',sans-serif] text-[#2CBCED] text-[13.5px] font-semibold block mb-2.5 uppercase tracking-wide group-hover:tracking-wider transition-all duration-200">
-              Between events
+              Between Events
             </small>
             <h3 className="text-xl font-semibold mb-3 font-['Josefin_Sans',sans-serif] text-white group-hover:text-[#2CBCED] transition-colors duration-200">
-              The plan travels with you
+              The production plan travels with you.
             </h3>
             <p className="text-[#C9D3DC] text-[15px] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              Budget history, room plans, run of show, speaker workflow and the
-              producer who knows your program stay with DXG. Nothing restarts
-              from zero when the venue changes.
+              Budget history, room plans, run of show templates, speaker workflows, and the producer who knows your program stays with DXG. Nothing restarts from zero when the venue changes.
             </p>
           </div>
 
           {/* Card 3: Next Year */}
           <div className="group bg-white border border-[#C9D3DC] rounded-md p-7 sm:p-8 relative border-t-4 border-t-[#0A0F16] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(10,15,22,0.15)] hover:border-t-[#2CBCED]">
             <small className="font-['Josefin_Sans',sans-serif] text-[#5B6B7A] text-[13.5px] font-semibold block mb-2.5 uppercase tracking-wide group-hover:text-[#0A0F16] transition-colors duration-200">
-              Next year
+              Next Year
             </small>
             <h3 className="text-xl font-semibold mb-3 font-['Josefin_Sans',sans-serif] text-[#0A0F16]">
-              Same producer. Your choice of model.
+              You work with the same producer under your choice of operational model.
             </h3>
-            <ul className="space-y-2.5 mt-3.5 text-[14.5px] text-[#5B6B7A] font-['IBM_Plex_Sans',sans-serif]">
-              <li className="relative pl-[18px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[8px] before:h-[2px] before:bg-[#2CBCED] group-hover:before:w-[12px] before:transition-all before:duration-200">
-                Full-service DXG: equipment, crew and production in one team
-              </li>
-              <li className="relative pl-[18px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[8px] before:h-[2px] before:bg-[#2CBCED] group-hover:before:w-[12px] before:transition-all before:duration-200">
-                In-house AV again, with DXG managing production
-              </li>
-              <li className="relative pl-[18px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[8px] before:h-[2px] before:bg-[#2CBCED] group-hover:before:w-[12px] before:transition-all before:duration-200">
-                Any mix the venue and the budget call for
-              </li>
-            </ul>
-            <p className="mt-3.5 text-[15px] text-[#5B6B7A] font-['IBM_Plex_Sans',sans-serif]">
-              The production relationship continues either way.
+            <p className="text-[14.5px] text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+              You can choose full service DXG execution with our equipment, crew, and production in one team, use in house AV again with DXG managing production, or select any mix the venue and budget call for.
             </p>
           </div>
         </div>
