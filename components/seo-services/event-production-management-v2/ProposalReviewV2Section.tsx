@@ -75,8 +75,9 @@ export default function ProposalReviewV2Section() {
             {/* Photo 06 Image Block */}
             <div className="group relative min-h-[300px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden mb-4 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
               <Image
-                src="/images/seo-services/event-production-management/6.webp"
-                alt="The second set of eyes - AV Proposal Audit"
+                src="/images/seo-services/event-production-management/av-proposal-audit-review.webp"
+                alt="Detailed AV proposal audit review with highlighted notes and room diagram"
+                title="AV Proposal Line-by-line Technical Audit"
                 fill
                 className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
               />

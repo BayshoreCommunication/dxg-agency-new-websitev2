@@ -20,8 +20,9 @@ export default function InHouseAVV2Section() {
           {/* Photo 02 Image Block */}
           <div className="group relative min-h-[340px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
             <Image
-              src="/images/seo-services/event-production-management/2.webp"
-              alt="The DXG Continuity Model - Planner and Producer"
+              src="/images/seo-services/event-production-management/planner-producer-venue-coordination.webp"
+              alt="Event planner and DXG production manager reviewing floor plan during venue setup"
+              title="Planner & DXG Producer Collaborating During Ballroom Load-in"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />

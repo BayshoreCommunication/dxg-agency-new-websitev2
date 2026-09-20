@@ -4,10 +4,11 @@ import React from "react";
 export default function ProducerPhotoBandV2() {
   return (
     <div className="relative min-h-[clamp(300px,42vw,540px)] border-y border-[#1E2A36] text-white flex flex-col justify-end p-[22px_24px] sm:p-8 md:p-12 overflow-hidden">
-      {/* Background WebP Image */}
+      {/* Background WebP Image with SEO Metadata */}
       <Image
-        src="/images/seo-services/event-production-management/1.webp"
-        alt="Producer at front of house"
+        src="/images/seo-services/event-production-management/producer-at-front-of-house.webp"
+        alt="DXG event producer directing live conference show flow at front of house tech table"
+        title="DXG Producer Directing Live Event Front of House"
         fill
         className="object-cover object-center"
         priority

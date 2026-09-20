@@ -5,10 +5,11 @@ import React from "react";
 export default function FinalCTAV2Section() {
   return (
     <section className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white">
-      {/* Background Photo 07 WebP Image */}
+      {/* Background Photo 07 WebP Image with SEO Metadata */}
       <Image
-        src="/images/seo-services/event-production-management/7.webp"
-        alt="Empty ballroom before load-in"
+        src="/images/seo-services/event-production-management/empty-ballroom-before-load-in.webp"
+        alt="Quiet empty ballroom with equipment flight cases lined up before event load-in"
+        title="Empty Ballroom Prepared for Production Load-In"
         fill
         className="object-cover object-center pointer-events-none opacity-40"
       />

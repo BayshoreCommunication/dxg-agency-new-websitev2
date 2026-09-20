@@ -79,8 +79,9 @@ export default function ProcessTimelineV2Section() {
           {/* Photo 03 */}
           <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
             <Image
-              src="/images/seo-services/event-production-management/3.webp"
-              alt="Site visit"
+              src="/images/seo-services/event-production-management/technical-site-visit-ballroom.webp"
+              alt="Technical site visit measuring ballroom ceiling rigging points and sightlines"
+              title="DXG Technical Site Visit & Ballroom Inspection"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
@@ -106,8 +107,9 @@ export default function ProcessTimelineV2Section() {
           {/* Photo 04 */}
           <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
             <Image
-              src="/images/seo-services/event-production-management/4.webp"
-              alt="Rehearsal"
+              src="/images/seo-services/event-production-management/technical-speaker-rehearsal.webp"
+              alt="Speaker rehearsal on stage with confidence monitors and production crew"
+              title="Controlled Stage Rehearsal & Speaker Preparation"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
@@ -133,8 +135,9 @@ export default function ProcessTimelineV2Section() {
           {/* Photo 05 */}
           <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
             <Image
-              src="/images/seo-services/event-production-management/5.webp"
-              alt="Show day"
+              src="/images/seo-services/event-production-management/live-show-day-keynote-session.webp"
+              alt="Live event general session keynote with bright LED display wall and engaged audience"
+              title="Live Show Day Execution & General Session Keynote"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
