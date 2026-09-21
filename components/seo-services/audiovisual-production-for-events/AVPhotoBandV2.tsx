@@ -3,7 +3,7 @@ import React from "react";
 
 export default function AVPhotoBandV2() {
   return (
-    <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] lg:aspect-[21/9] max-h-[700px] min-h-[380px] border-y border-[#1E2A36] text-white flex flex-col justify-end p-[22px_24px] sm:p-8 md:p-12 overflow-hidden">
+    <div className="relative w-full aspect-[21/9] min-h-[300px] border-y border-[#1E2A36] text-white flex flex-col justify-end p-[22px_24px] sm:p-8 md:p-12 overflow-hidden">
       {/* Background WebP Image with SEO Metadata */}
       <Image
         src="/images/seo-services/audiovisual-production-for-events/audiovisual-engineers-at-tech-table.webp"
