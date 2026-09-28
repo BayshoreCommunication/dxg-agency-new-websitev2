@@ -2,33 +2,37 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function ProposalReviewV2Section() {
+export default function PreShowNeedsV2Section() {
   const checklist = [
     {
-      title: "Scope Alignment",
-      desc: "Proposal checked against program design, room count, agenda, and technical requirements.",
+      title: "A Complete Content List",
+      desc: "Start with every expected asset. Include opening videos, presentations, speaker slides, walk in graphics, transitions, sponsor media, awards content, countdowns and closing visuals. A complete list gives the team one source for planning and tracking.",
     },
     {
-      title: "Pricing Review",
-      desc: "Quoted costs weighed against scope, labor assumptions, and timeline.",
+      title: "Actual Screen Specifications",
+      desc: "Content should follow the real screen environment. Confirm LED dimensions, projection format, aspect ratio, resolution, pixel dimensions and content zones before production starts. Early technical details help the creative team design for the final display.",
     },
     {
-      title: "Labor Call Review",
-      desc: "Crew hours matched to the real setup, rehearsal, show, and strike schedule.",
+      title: "Clear Review Deadlines",
+      desc: "Every asset needs a review date, approval date and final delivery date. Set deadlines for speaker presentations, videos, sponsor graphics, awards names and other time sensitive materials.",
     },
     {
-      title: "Technical Risk Review",
-      desc: "Single points of failure, missing backups, and technical dependencies flagged.",
+      title: "Organized File Versions",
+      desc: "Use clear file names and controlled versions for every approved asset. Keep final files separate from working files so the playback team can find the correct version quickly.",
     },
     {
-      title: "Contract and Change Order Review",
-      desc: "Overtime, cancellation, substitution, and change order terms worth a second look.",
+      title: "Speaker Ready Presentations",
+      desc: "Speaker decks need more than good design. Check fonts, embedded videos, animations, layouts, branding and presentation flow before rehearsal.",
+    },
+    {
+      title: "Playback Ready Delivery",
+      desc: "Final content should arrive grouped by session, sequence and cue. A clear delivery structure helps producers, playback operators, speakers and AV teams work from the same content plan.",
     },
   ];
 
   return (
     <section
-      id="review"
+      id="requirements"
       className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white scroll-mt-20"
     >
       {/* Background X Motif */}
@@ -51,10 +55,10 @@ export default function ProposalReviewV2Section() {
           <div>
             <div className="max-w-[760px] mb-8">
               <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] text-white before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
-                Get an Independent AV Proposal Review
+                What Your Event Content Needs Before Show Day
               </h2>
               <p className="text-[clamp(18px,1.5vw,21px)] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                A proposal can look complete on paper while still leaving gaps in labor, setup time, or backup coverage. Get a second opinion with no pressure and just a useful conversation about your event. An audit evaluates 5 core areas.
+                Good event content starts with a clear production system. Each asset needs a purpose, an owner, a format and a place in the show. DXG helps planners organize these details before content reaches the screen.
               </p>
             </div>
 
@@ -62,36 +66,32 @@ export default function ProposalReviewV2Section() {
               href="https://www.dxg.agency/contact-us"
               className="inline-flex items-center gap-2.5 bg-[#2CBCED] hover:bg-[#4CC9F0] text-[#0A0F16] font-semibold text-base px-6 py-3.5 rounded transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(44,188,237,0.4)] font-['Josefin_Sans',sans-serif]"
             >
-              Get a Second Opinion
+              Start Content Readiness Audit
             </Link>
 
             <p className="mt-4 text-sm text-[#5B6B7A] font-['IBM_Plex_Sans',sans-serif]">
-              No pressure. No pitch deck. Just a conversation about your event.
+              Organized file structures, verified pixel specs, and show-ready playback.
             </p>
           </div>
 
           {/* Right Column */}
           <div>
-            {/* Photo 06 Image Block */}
-            <div className="group relative min-h-[300px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden mb-4 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
+            {/* Photo Image Block */}
+            <div className="group relative min-h-[300px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden mb-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
               <Image
-                src="/images/seo-services/event-production-management/av-proposal-audit-review.webp"
-                alt="Detailed AV proposal audit review with highlighted notes and room diagram"
-                title="AV Proposal Line-by-line Technical Audit"
+                src="/images/seo-services/event-content-production/av-proposal-audit-review.webp"
+                alt="Detailed event content specification audit review with screen aspect ratio and resolution notes"
+                title="Event Content & Display Spec Technical Audit"
                 fill
                 className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
               <div className="relative z-10">
                 <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
-                  The second set of eyes
+                  Pre-Show Technical Audit
                 </b>
                 <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                  Close, overhead: a printed AV proposal with cyan highlighter
-                  marks and margin notes, a pen, a laptop edge showing a room
-                  diagram. No faces. Tight crop, shallow depth of field. Reads as
-                  &quot;someone who knows what to look for has already been through
-                  this.&quot;
+                  Checking file codecs, screen aspect ratios, font embedding, lower third safe zones, and run-of-show cues before loading media onto playback servers.
                 </p>
               </div>
             </div>

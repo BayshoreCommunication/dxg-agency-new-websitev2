@@ -7,48 +7,48 @@ export default function GettingStartedFAQV2Section() {
     {
       step: "Step 1.",
       title: "Tell Us About Your Event",
-      desc: "Dates, venue, agenda, room count, production goals, and any AV proposals or documents already in hand.",
+      desc: "Share the event type, dates, venue, agenda, screen setup, audience, existing content and production deadlines.",
       isCyanBorder: false,
     },
     {
       step: "Step 2.",
-      title: "Discovery Call",
-      desc: "We review the event in detail and identify where production support adds the most value across budget, vendors, content, rehearsals, and show day.",
+      title: "Content Discovery",
+      desc: "We review your program, identify the required content and define the creative and technical scope for the event.",
       isCyanBorder: false,
     },
     {
       step: "Step 3.",
-      title: "Scope and Proposal",
-      desc: "A production proposal built around your event, with services, timeline, and investment spelled out clearly.",
+      title: "Content Scope and Proposal",
+      desc: "You receive a content plan with deliverables, timeline, production responsibilities and investment.",
       isCyanBorder: true,
     },
   ];
 
   const faqs = [
     {
-      question: "Do you provide the AV equipment?",
+      question: "Can you create content for LED walls and projection screens?",
       answer:
-        "Yes, when the event calls for it. DXG owns audio, video, lighting, staging, and LED inventory and provides full service production. Event production management is the option for planners whose equipment and labor are coming from in house AV or another vendor and who still want DXG planning and leading the production.",
+        "Yes. DXG prepares content around the display environment, including screen dimensions, aspect ratio, resolution and playback requirements.",
     },
     {
-      question: "Do you replace our AV company?",
+      question: "Can you work with presentations and videos created by our speakers or agency?",
       answer:
-        "No. We work alongside the AV team you have, in house or independent, and manage the production scope around them. If you want DXG to supply equipment and crew on a future program, that is a separate conversation and the same producer carries over.",
+        "Yes. We can review, edit, format organize and prepare supplied materials for the live production workflow.",
     },
     {
-      question: "What size events can you support?",
+      question: "Can you produce opening videos and motion graphics for a general session?",
       answer:
-        "Programs from 50 people to more than 10,000, with one main room or dozens of concurrent breakout sessions. The production approach scales with the event. The level of planning does not change.",
+        "Yes. DXG can create event opening videos, motion graphics for events, session graphics, transitions, countdowns and other general session content.",
     },
     {
-      question: "When should production management start?",
+      question: "Can you prepare content for awards programs?",
       answer:
-        "Before the AV proposal is signed, if possible. Room count, staging, rehearsal hours, and labor calls set the cost conditions early, and a review at that stage has the most effect on budget. We can also join later for runs of shows, rehearsals, and show day leadership.",
+        "Yes. We can produce awards show content for introductions, honoree names, categories, recognition moments, sponsor segments and transitions.",
     },
     {
-      question: "Can you work with vendors we already selected?",
+      question: "Do you coordinate event content with the AV team?",
       answer:
-        "Yes. We coordinate the vendors already under contract, including venue in house AV, and bring their requirements and timelines into one production schedule.",
+        "Yes. DXG works with the audiovisual team, playback operators, producers, presenters and show callers so content reaches the right person in the right format at the right cue.",
     },
   ];
 
@@ -59,12 +59,12 @@ export default function GettingStartedFAQV2Section() {
   };
 
   return (
-    <section className="py-[clamp(64px,8vw,112px)] bg-[#F3F6F8] text-[#0A0F16]">
+    <section id="content-plan" className="py-[clamp(64px,8vw,112px)] bg-[#F3F6F8] text-[#0A0F16] scroll-mt-20">
       <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12">
         {/* Head */}
         <div className="max-w-[760px] mb-8 sm:mb-12">
           <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
-            Get Started with These 3 Steps
+            Start Your Event Content Plan
           </h2>
         </div>
 
@@ -93,7 +93,7 @@ export default function GettingStartedFAQV2Section() {
         {/* FAQ Section */}
         <div className="max-w-[820px] mt-[72px]">
           <h2 className="text-2xl sm:text-[28px] font-semibold mb-5 font-['Josefin_Sans',sans-serif] text-[#0A0F16]">
-            Questions planners ask us
+            Questions Planners Ask Us
           </h2>
 
           <div className="divide-y divide-[#C9D3DC] border-y border-[#C9D3DC]">

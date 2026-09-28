@@ -5,11 +5,11 @@ import React from "react";
 export default function FinalCTAV2Section() {
   return (
     <section className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white">
-      {/* Background Photo 07 WebP Image with SEO Metadata */}
+      {/* Background WebP Image with SEO Metadata */}
       <Image
-        src="/images/seo-services/event-production-management/empty-ballroom-before-load-in.webp"
-        alt="Quiet empty ballroom with equipment flight cases lined up before event load-in"
-        title="Empty Ballroom Prepared for Production Load-In"
+        src="/images/seo-services/event-content-production/empty-ballroom-before-load-in.webp"
+        alt="General session ballroom screen setup prepared for live event content production playback"
+        title="Event Content Production & Display Environment Setup"
         fill
         className="object-cover object-center pointer-events-none opacity-40"
       />
@@ -28,25 +28,25 @@ export default function FinalCTAV2Section() {
           {/* Left Text */}
           <div className="lg:col-span-7">
             <h2 className="text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] text-white">
-              Build the Production Plan Before Show Day
+              Build the Content Before the Screens Go Live
             </h2>
             <p className="text-[#C9D3DC] max-w-[56ch] leading-relaxed font-['IBM_Plex_Sans',sans-serif] text-base sm:text-lg">
-              The right production structure gives meeting planners better control over decisions, spending, and execution. Tell us about your event and start the conversation with a production team focused on the full program.
+              Your event content should arrive ready for the room, the screen and the show flow. Tell DXG about your program, content needs and display environment, then build a production plan around the experience you want your audience to see.
             </p>
           </div>
 
           {/* Right Box */}
           <div className="lg:col-span-5">
-            <div className="group bg-[#111A24] border border-[#1E2A36] p-7 sm:p-8 rounded-md transition-all duration-300 hover:-translate-y-2 hover:border-[#2CBCED] hover:shadow-[0_20px_50px_rgba(44,188,237,0.2)]">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-2.5 font-['Josefin_Sans',sans-serif] text-white group-hover:text-[#2CBCED] transition-colors duration-200">
+            <div className="bg-[#111A24] border border-[#1E2A36] p-7 sm:p-8 rounded-md">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-2.5 font-['Josefin_Sans',sans-serif] text-white">
                 Schedule a Strategy Call
               </h3>
               <p className="text-[#C9D3DC] text-sm sm:text-base mb-5 font-['IBM_Plex_Sans',sans-serif]">
-                A 30 minute working session on your event. Not a sales call.
+                A 30 minute working session on your event content. Not a sales call.
               </p>
               <Link
                 href="https://www.dxg.agency/contact-us"
-                className="inline-flex items-center gap-2.5 bg-[#2CBCED] hover:bg-[#4CC9F0] text-[#0A0F16] font-semibold text-base px-6 py-3.5 rounded transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(44,188,237,0.4)] font-['Josefin_Sans',sans-serif]"
+                className="inline-flex items-center gap-2.5 bg-[#2CBCED] hover:bg-[#4CC9F0] text-[#0A0F16] font-semibold text-base px-6 py-3.5 rounded transition-all duration-200 hover:-translate-y-0.5 font-['Josefin_Sans',sans-serif]"
               >
                 Schedule a Strategy Call
               </Link>
