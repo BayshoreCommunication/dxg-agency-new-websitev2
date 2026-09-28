@@ -6,9 +6,9 @@ export default function PlanningPhotoBandV2() {
     <div className="relative w-full aspect-[21/9] min-h-[300px] border-y border-[#1E2A36] text-white flex flex-col justify-end p-[22px_24px] sm:p-8 md:p-12 overflow-hidden">
       {/* Background WebP Image with SEO Metadata */}
       <Image
-        src="/images/seo-services/meeting-planning-support/planner-producer-venue-coordination.webp"
-        alt="DXG meeting planning support team managing conference registration desk and floor operations"
-        title="DXG Meeting Planning & Onsite Floor Logistics Support"
+        src="/images/seo-services/meeting-planning-support/meeting-planning-support-banner.webp"
+        alt="Professional meeting planning and support team coordinating onsite corporate event operations"
+        title="Corporate Meeting Planning and Support Services"
         fill
         className="object-cover object-center"
         priority

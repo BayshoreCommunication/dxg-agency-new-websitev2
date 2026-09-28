@@ -20,9 +20,9 @@ export default function TechnicalPlanningV2Section() {
           {/* Photo Block */}
           <div className="group relative min-h-[340px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
             <Image
-              src="/images/seo-services/event-creative-and-experience-design/planner-producer-venue-coordination.webp"
-              alt="DXG spatial designer and technical producer reviewing ballroom rigging and stage floor plan"
-              title="Creative Design & Technical Production Alignment"
+              src="/images/seo-services/event-creative-and-experience-design/technical-creative-planning.webp"
+              alt="DXG spatial designers and technical producers connecting creative concept with ballroom technical planning"
+              title="Technical Planning & Spatial Creative Direction Alignment"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />

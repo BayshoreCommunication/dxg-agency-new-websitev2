@@ -38,9 +38,9 @@ export default function DualOpticsV2Section() {
           {/* Photo Block */}
           <div className="group relative min-h-[340px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
             <Image
-              src="/images/seo-services/event-creative-and-experience-design/live-show-day-keynote-session.webp"
-              alt="General session stage designed with dual optics for both live ballroom audience and broadcast cameras"
-              title="Dual Optics Stage Architecture & Lens Optimization"
+              src="/images/seo-services/event-creative-and-experience-design/dual-optics-stage-design.webp"
+              alt="General session stage environment designed with dual optics for ballroom attendees and broadcast cameras"
+              title="Dual Optics Stage Design & Camera Lens Optimization"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />

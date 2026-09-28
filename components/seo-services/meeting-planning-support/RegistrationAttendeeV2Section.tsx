@@ -32,9 +32,9 @@ export default function RegistrationAttendeeV2Section() {
           {/* Photo Block */}
           <div className="group relative min-h-[300px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
             <Image
-              src="/images/seo-services/meeting-planning-support/av-proposal-audit-review.webp"
-              alt="DXG registration staff managing high volume attendee check in and badge printing"
-              title="Conference Registration & Entrance Management"
+              src="/images/seo-services/meeting-planning-support/registration-attendee-management.webp"
+              alt="DXG registration staff managing high volume conference attendee check-in and badge printing"
+              title="Conference Registration and Attendee Management Support"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />

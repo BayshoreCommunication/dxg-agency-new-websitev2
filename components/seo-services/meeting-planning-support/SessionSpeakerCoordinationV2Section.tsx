@@ -33,9 +33,9 @@ export default function SessionSpeakerCoordinationV2Section() {
           {/* Photo Block */}
           <div className="group relative min-h-[300px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
             <Image
-              src="/images/seo-services/meeting-planning-support/technical-speaker-rehearsal.webp"
-              alt="DXG speaker ready room coordinator testing presentation slides and confidence monitors"
-              title="Speaker Ready Room Operations & Presentation QC"
+              src="/images/seo-services/meeting-planning-support/session-speaker-coordination.webp"
+              alt="DXG speaker ready room coordinator testing slides and briefing conference presenters"
+              title="Session and Speaker Coordination Services"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />

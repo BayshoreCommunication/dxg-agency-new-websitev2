@@ -6,9 +6,9 @@ export default function CreativePhotoBandV2() {
     <div className="relative w-full aspect-[21/9] min-h-[300px] border-y border-[#1E2A36] text-white flex flex-col justify-end p-[22px_24px] sm:p-8 md:p-12 overflow-hidden">
       {/* Background WebP Image with SEO Metadata */}
       <Image
-        src="/images/seo-services/event-creative-and-experience-design/producer-at-front-of-house.webp"
-        alt="DXG spatial creative team reviewing 3D event stage design and environmental rendering"
-        title="DXG Spatial Creative & Stage Experience Design"
+        src="/images/seo-services/event-creative-and-experience-design/event-creative-experience-design-banner.webp"
+        alt="DXG Event Experience Design team managing spatial stage architecture and 3D pre-visualization"
+        title="DXG Event Creative & Experience Design Banner"
         fill
         className="object-cover object-center"
         priority

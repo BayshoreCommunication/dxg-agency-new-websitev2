@@ -59,9 +59,9 @@ export default function PreVisualizationV2Section() {
             {/* Photo Block */}
             <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden mb-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
               <Image
-                src="/images/seo-services/event-creative-and-experience-design/technical-site-visit-ballroom.webp"
-                alt="Detailed 3D event pre-visualization rendering showing ballroom LED stage layout and camera angles"
-                title="3D Event Renderings & Spatial Pre-Visualization"
+                src="/images/seo-services/event-creative-and-experience-design/pre-visualization-3d-rendering.webp"
+                alt="3D event pre-visualization rendering showing ballroom LED stage layout, sightlines, and lighting"
+                title="3D Event Pre-Visualization & Spatial Stage Renderings"
                 fill
                 className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
               />

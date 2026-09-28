@@ -6,9 +6,9 @@ export default function ContentPhotoBandV2() {
     <div className="relative w-full aspect-[21/9] min-h-[300px] border-y border-[#1E2A36] text-white flex flex-col justify-end p-[22px_24px] sm:p-8 md:p-12 overflow-hidden">
       {/* Background WebP Image with SEO Metadata */}
       <Image
-        src="/images/seo-services/event-content-production/producer-at-front-of-house.webp"
-        alt="DXG event content production team directing screen media and playback at front of house"
-        title="DXG Event Content Production & Screen Media Directing"
+        src="/images/seo-services/event-content-production/event-content-production-banner.webp"
+        alt="DXG Event Content Production team directing screen graphics and media playback at front of house"
+        title="DXG Event Content Production Banner & Screen Directing"
         fill
         className="object-cover object-center"
         priority

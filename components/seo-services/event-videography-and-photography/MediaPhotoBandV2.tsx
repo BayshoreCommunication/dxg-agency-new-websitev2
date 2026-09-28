@@ -6,9 +6,9 @@ export default function MediaPhotoBandV2() {
     <div className="relative w-full aspect-[21/9] min-h-[300px] border-y border-[#1E2A36] text-white flex flex-col justify-end p-[22px_24px] sm:p-8 md:p-12 overflow-hidden">
       {/* Background WebP Image with SEO Metadata */}
       <Image
-        src="/images/seo-services/event-videography-and-photography/producer-at-front-of-house.webp"
-        alt="DXG photo and video capture crew operating camera systems at live conference session"
-        title="DXG Professional Event Videography & Photography Team"
+        src="/images/seo-services/event-videography-and-photography/event-videography-photography-banner.webp"
+        alt="DXG Event Videography & Photography team capturing keynote presentations and conference moments"
+        title="DXG Event Videography & Photography Banner"
         fill
         className="object-cover object-center"
         priority

@@ -47,9 +47,9 @@ export default function PreCapturePlanningV2Section() {
           {/* Photo Block */}
           <div className="group relative min-h-[300px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
             <Image
-              src="/images/seo-services/event-videography-and-photography/planner-producer-venue-coordination.webp"
-              alt="DXG photo and video director reviewing shot list and agenda with event planner"
-              title="Pre-Event Photo & Video Shot List Strategy"
+              src="/images/seo-services/event-videography-and-photography/event-pre-capture-planning.webp"
+              alt="DXG videography team planning pre-capture strategy and camera positions for corporate event"
+              title="Pre-Capture Event Videography and Photography Planning"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />

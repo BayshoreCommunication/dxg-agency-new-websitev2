@@ -76,12 +76,12 @@ export default function ProcessTimelineV2Section() {
 
         {/* 3 Photo Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 mb-14">
-          {/* Photo 03 */}
+          {/* Photo 01 */}
           <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
             <Image
-              src="/images/seo-services/event-content-production/technical-site-visit-ballroom.webp"
-              alt="Technical screen specification check and venue display environment evaluation"
-              title="DXG Content Discovery & Technical Spec Evaluation"
+              src="/images/seo-services/event-content-production/event-content-discovery-planning.webp"
+              alt="Technical screen specification review and event content inventory planning"
+              title="Event Content Discovery & Technical Inventory Planning"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
@@ -96,12 +96,12 @@ export default function ProcessTimelineV2Section() {
             </div>
           </div>
 
-          {/* Photo 04 */}
+          {/* Photo 02 */}
           <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
             <Image
-              src="/images/seo-services/event-content-production/technical-speaker-rehearsal.webp"
-              alt="Screen playback testing and motion graphics review during technical rehearsal"
-              title="Creative Direction & Motion Graphics Review"
+              src="/images/seo-services/event-content-production/event-content-creative-production.webp"
+              alt="Creating motion graphics packages, walk in graphics, and speaker presentation decks"
+              title="Creative Direction & Event Motion Graphics Production"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
@@ -116,12 +116,12 @@ export default function ProcessTimelineV2Section() {
             </div>
           </div>
 
-          {/* Photo 05 */}
+          {/* Photo 03 */}
           <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
             <Image
-              src="/images/seo-services/event-content-production/live-show-day-keynote-session.webp"
-              alt="Live show ready content playback on LED stage screen during general session"
-              title="Show-Ready Screen Playback Delivery"
+              src="/images/seo-services/event-content-production/event-content-show-delivery.webp"
+              alt="Show ready video content playback execution on LED display wall during general session"
+              title="Show Ready Event Content Delivery & Screen Playback"
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />

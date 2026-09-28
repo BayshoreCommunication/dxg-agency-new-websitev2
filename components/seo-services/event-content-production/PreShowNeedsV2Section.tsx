@@ -79,9 +79,9 @@ export default function PreShowNeedsV2Section() {
             {/* Photo Image Block */}
             <div className="group relative min-h-[300px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded-md overflow-hidden mb-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
               <Image
-                src="/images/seo-services/event-content-production/av-proposal-audit-review.webp"
-                alt="Detailed event content specification audit review with screen aspect ratio and resolution notes"
-                title="Event Content & Display Spec Technical Audit"
+                src="/images/seo-services/event-content-production/event-content-preshow-audit-requirements.webp"
+                alt="Pre show event content audit evaluating screen aspect ratios, font embedding, and file codecs"
+                title="Pre-Show Event Content Technical Audit & Quality Check"
                 fill
                 className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
               />
