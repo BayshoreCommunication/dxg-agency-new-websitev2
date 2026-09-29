@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
+import MasterPlaybackSchedule from "components/seo-services/event-content-production/MasterPlaybackSchedule";
 
 export default function MediaHeroV2() {
   return (
@@ -16,36 +17,12 @@ export default function MediaHeroV2() {
           }
         }
 
-        @keyframes sweep-line {
-          from {
-            left: calc(22px + 96px + 6px);
-          }
-          to {
-            left: calc(100% - 22px);
-          }
-        }
-
-        @keyframes cell-in {
-          to {
-            opacity: 1;
-          }
-        }
-
-        .animate-cue-sweep {
-          animation: sweep-line 9s linear infinite;
-        }
-
-        .animate-cell-in {
-          opacity: 0;
-          animation: cell-in 0.5s ease forwards;
-        }
-
         .animate-pulse-dot {
           animation: pulse-dot 2s infinite;
         }
       `}</style>
 
-      <header className="relative overflow-hidden bg-[#0A0F16] text-white pt-28 pb-14 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-24">
+      <header className="relative overflow-hidden bg-[#0A0F16] text-white pt-28 pb-14 sm:pt-36 sm:pb-20 lg:pt-36 lg:pb-24">
         {/* Radial ambient glow */}
         <div
           className="absolute -right-[10%] -top-[20%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] rounded-full pointer-events-none"
@@ -55,10 +32,10 @@ export default function MediaHeroV2() {
           }}
         />
 
-        <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+        <div className="max-w-[1440px] 2xl:max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
             {/* Left Content Column */}
-            <div className="lg:col-span-6 xl:col-span-7">
+            <div className="lg:col-span-5 xl:col-span-5">
               {/* Kicker */}
               <div className="flex items-center gap-3 text-[#2CBCED] font-semibold text-sm sm:text-base mb-5 font-['Josefin_Sans',sans-serif]">
                 <span className="w-8 h-[2px] bg-[#2CBCED] inline-block" />
@@ -96,195 +73,9 @@ export default function MediaHeroV2() {
               </div>
             </div>
 
-            {/* Right Media Production Capture Board Column */}
-            <div className="lg:col-span-6 xl:col-span-5">
-              <div
-                className="bg-[#111A24] border border-[#1E2A36] rounded-lg p-5 sm:p-6 shadow-[0_30px_80px_rgba(0,0,0,0.45)] relative overflow-hidden"
-                aria-label="Illustration of photo and video production capture schedule"
-              >
-                {/* Board Head */}
-                <div className="flex justify-between items-baseline mb-3.5 font-['Josefin_Sans',sans-serif]">
-                  <b className="text-white font-semibold text-sm sm:text-base">
-                    Photo & Video Capture Schedule
-                  </b>
-                  <span className="text-[#5B6B7A] text-xs sm:text-sm">
-                    Multi-Camera & Crew Sync
-                  </span>
-                </div>
-
-                {/* Board Grid */}
-                <div className="grid grid-cols-[70px_repeat(6,1fr)] sm:grid-cols-[96px_repeat(6,1fr)] gap-1 text-[11px]">
-                  <div />
-                  <div className="text-[#5B6B7A] text-center pb-1 font-['Josefin_Sans',sans-serif]">
-                    8a
-                  </div>
-                  <div className="text-[#5B6B7A] text-center pb-1 font-['Josefin_Sans',sans-serif]">
-                    10a
-                  </div>
-                  <div className="text-[#5B6B7A] text-center pb-1 font-['Josefin_Sans',sans-serif]">
-                    12p
-                  </div>
-                  <div className="text-[#5B6B7A] text-center pb-1 font-['Josefin_Sans',sans-serif]">
-                    2p
-                  </div>
-                  <div className="text-[#5B6B7A] text-center pb-1 font-['Josefin_Sans',sans-serif]">
-                    4p
-                  </div>
-                  <div className="text-[#5B6B7A] text-center pb-1 font-['Josefin_Sans',sans-serif]">
-                    6p
-                  </div>
-
-                  {/* Keynote Capture */}
-                  <div className="text-[#C9D3DC] flex items-center font-['Josefin_Sans',sans-serif] text-[11px] sm:text-xs pr-1 truncate">
-                    Keynote Video
-                  </div>
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "0.1s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Audio Line
-                    </span>
-                  </div>
-                  <div
-                    className="h-7 rounded-[3px] bg-[#2CBCED] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "0.2s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-[#0A0F16] font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      3-Cam ISO
-                    </span>
-                  </div>
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "0.3s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Recap B-Roll
-                    </span>
-                  </div>
-                  <div
-                    className="h-7 rounded-[3px] bg-[#2CBCED] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "0.4s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-[#0A0F16] font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Awards Cam
-                    </span>
-                  </div>
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-
-                  {/* Interviews & Testimonials */}
-                  <div className="text-[#C9D3DC] flex items-center font-['Josefin_Sans',sans-serif] text-[11px] sm:text-xs pr-1 truncate">
-                    Interviews
-                  </div>
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "0.5s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Exec Suite
-                    </span>
-                  </div>
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "0.6s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Attendee Story
-                    </span>
-                  </div>
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "0.7s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Sponsor Q&A
-                    </span>
-                  </div>
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-
-                  {/* Conference Photography */}
-                  <div className="text-[#C9D3DC] flex items-center font-['Josefin_Sans',sans-serif] text-[11px] sm:text-xs pr-1 truncate">
-                    Photography
-                  </div>
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "0.8s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Headshots
-                    </span>
-                  </div>
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "0.9s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Stage Shots
-                    </span>
-                  </div>
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "1s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Expo Booths
-                    </span>
-                  </div>
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-
-                  {/* Post-Event Asset Prep */}
-                  <div className="text-[#C9D3DC] flex items-center font-['Josefin_Sans',sans-serif] text-[11px] sm:text-xs pr-1 truncate">
-                    Media Delivery
-                  </div>
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "1.1s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Same-Day Social
-                    </span>
-                  </div>
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-                  <div className="h-7 rounded-[3px] bg-[#182430]" />
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "1.2s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Recap Edit
-                    </span>
-                  </div>
-                  <div
-                    className="h-7 rounded-[3px] bg-[#1A7FA3] relative overflow-hidden animate-cell-in"
-                    style={{ animationDelay: "1.3s" }}
-                  >
-                    <span className="absolute inset-0 flex items-center px-1.5 text-white font-['Josefin_Sans',sans-serif] font-semibold text-[10px] whitespace-nowrap truncate">
-                      Asset Archive
-                    </span>
-                  </div>
-                </div>
-
-                {/* Sweeping Cue Line */}
-                <div
-                  className="absolute top-[58px] bottom-[56px] w-[2px] bg-[#2CBCED] opacity-90 shadow-[0_0_12px_#2CBCED] pointer-events-none animate-cue-sweep"
-                  aria-hidden="true"
-                />
-
-                {/* Board Footer */}
-                <div className="mt-4 pt-3 flex flex-wrap justify-between items-center text-xs text-[#5B6B7A]">
-                  <span className="inline-flex items-center gap-2 text-white font-['Josefin_Sans',sans-serif]">
-                    <span className="w-2 h-2 rounded-full bg-[#2CBCED] animate-pulse-dot" />
-                    Capture Crew Synced to Master Show Flow
-                  </span>
-                  <span>Photos, Keynotes & Recaps Mapped</span>
-                </div>
-              </div>
+            {/* Right Run-of-Show & Media Playback Board Column */}
+            <div className="lg:col-span-7 xl:col-span-7 w-full min-w-0">
+              <MasterPlaybackSchedule />
             </div>
           </div>
         </div>
