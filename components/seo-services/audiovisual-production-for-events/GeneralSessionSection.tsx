@@ -29,32 +29,6 @@ export default function GeneralSessionSection() {
               The main stage sets the standard for your entire conference. It is where you welcome your guests, share your biggest announcements and feature your highest profile speakers. General session production requires a delicate balance of technical precision and creative pacing. Our show callers and producers sit at the tech table, managing every single cue. They call the lighting changes, the video rolls, and the audio cues with perfect timing. We keep every technical discipline under one unified command, so the live show runs with a natural, coordinated flow. Your presenters can walk on stage with total confidence knowing the technology will follow their lead seamlessly.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-[#1E2A36] pt-8">
-              <div className="bg-[#111A24] border border-[#1E2A36] p-5 rounded">
-                <span className="text-[#2CBCED] font-['Josefin_Sans',sans-serif] text-sm font-semibold block mb-1">
-                  Show Callers
-                </span>
-                <span className="text-white text-base font-medium font-['Josefin_Sans',sans-serif]">
-                  Unified Cue Calling
-                </span>
-              </div>
-              <div className="bg-[#111A24] border border-[#1E2A36] p-5 rounded">
-                <span className="text-[#2CBCED] font-['Josefin_Sans',sans-serif] text-sm font-semibold block mb-1">
-                  Main Stage
-                </span>
-                <span className="text-white text-base font-medium font-['Josefin_Sans',sans-serif]">
-                  Pristine Audio & Video
-                </span>
-              </div>
-              <div className="bg-[#111A24] border border-[#1E2A36] p-5 rounded">
-                <span className="text-[#2CBCED] font-['Josefin_Sans',sans-serif] text-sm font-semibold block mb-1">
-                  Execution
-                </span>
-                <span className="text-white text-base font-medium font-['Josefin_Sans',sans-serif]">
-                  Seamless Coordinated Flow
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Right Column with Photo 06 WebP Image Card */}

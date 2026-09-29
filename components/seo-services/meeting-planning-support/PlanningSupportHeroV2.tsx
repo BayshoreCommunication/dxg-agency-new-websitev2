@@ -99,13 +99,6 @@ export default function PlanningSupportHeroV2() {
                 >
                   Explore Planning Logistics
                 </a>
-
-                <a
-                  href="tel:+18552829394"
-                  className="text-[#C9D3DC] hover:text-[#2CBCED] font-semibold text-base px-2 py-2 transition-colors duration-150 font-['Josefin_Sans',sans-serif]"
-                >
-                  Call Direct 855.282.9394
-                </a>
               </div>
             </div>
 

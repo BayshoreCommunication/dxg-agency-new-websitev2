@@ -34,12 +34,6 @@ export default function DXGDifferenceCTASection() {
               Your audiovisual partner should offer more than the right equipment. It requires finding a team that respects your vision and integrates smoothly with your meeting planners. We work alongside your planning team throughout the production. From the initial venue site visit to the final truck loading out at midnight, DXG handles the technical heavy lifting. We coordinate directly with venue managers regarding power drops, rigging points, and loading dock schedules. You can focus your energy entirely on your stakeholders, your sponsors, and your attendees. We handle the rest.
             </p>
 
-            {/* Contact details */}
-            <div className="text-[#5B6B7A] text-sm space-y-1 font-['IBM_Plex_Sans',sans-serif]">
-              <p className="text-white font-semibold font-['Josefin_Sans',sans-serif]">Digital Xperience Group</p>
-              <p>12824 Dupont Circle, Tampa, FL 33626</p>
-              <p>Phone: <a href="tel:+18552829394" className="text-[#2CBCED] hover:underline">855.282.9394</a> | Email: <a href="mailto:info@dxg.agency" className="text-[#2CBCED] hover:underline">info@dxg.agency</a></p>
-            </div>
           </div>
 
           {/* Right Box */}

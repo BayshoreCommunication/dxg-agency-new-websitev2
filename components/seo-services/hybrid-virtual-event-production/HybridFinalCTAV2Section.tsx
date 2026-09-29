@@ -34,12 +34,6 @@ export default function HybridFinalCTAV2Section() {
               Your event has one agenda, even when the audience joins from multiple places. DXG brings live production, streaming, remote presenters, broadcast graphics, virtual platforms and audience engagement into one coordinated production plan.
             </p>
 
-            {/* Contact details */}
-            <div className="text-[#5B6B7A] text-sm space-y-1 font-['IBM_Plex_Sans',sans-serif]">
-              <p className="text-white font-semibold font-['Josefin_Sans',sans-serif]">Digital Xperience Group (DXG)</p>
-              <p>12824 Dupont Circle, Tampa, FL 33626</p>
-              <p>Phone: <a href="tel:+18552829394" className="text-[#2CBCED] hover:underline">855.282.9394</a> | Email: <a href="mailto:info@dxg.agency" className="text-[#2CBCED] hover:underline">info@dxg.agency</a></p>
-            </div>
           </div>
 
           {/* Right Box */}

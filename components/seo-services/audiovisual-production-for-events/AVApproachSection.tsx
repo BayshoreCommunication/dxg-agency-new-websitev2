@@ -38,11 +38,6 @@ export default function AVApproachSection() {
           </div>
         </div>
 
-        <div className="p-7 sm:p-8 bg-white border border-[#C9D3DC] rounded-lg shadow-sm mt-6">
-          <p className="text-base sm:text-lg text-[#0A0F16] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-            Sometimes your agenda requires a direct and transparent executive board meeting setup with pristine sound and a single bright screen. Other times, it demands a massive general session production featuring wide LED video walls, multicamera shoots, live image magnification, theatrical lighting, complex audio arrays, and 20 breakout rooms operating simultaneously. The scale may change. The principle stays the same. The event dictates the technology. True event AV production means adjusting to the demands of your schedule and venue..
-          </p>
-        </div>
       </div>
     </section>
   );

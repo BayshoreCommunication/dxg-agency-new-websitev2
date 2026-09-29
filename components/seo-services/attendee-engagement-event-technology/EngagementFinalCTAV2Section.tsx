@@ -34,12 +34,6 @@ export default function EngagementFinalCTAV2Section() {
               Tell us about your event and we will map where technology earns participation. Our Tampa, Florida team plans polling, apps, signage and networking as one production. From the first check in scan to the closing poll, each interaction has a purpose, an owner and a place in the schedule.
             </p>
 
-            {/* Contact details */}
-            <div className="text-[#5B6B7A] text-sm space-y-1 font-['IBM_Plex_Sans',sans-serif]">
-              <p className="text-white font-semibold font-['Josefin_Sans',sans-serif]">Digital Xperience Group (DXG)</p>
-              <p>12824 Dupont Circle, Tampa, FL 33626</p>
-              <p>Phone: <a href="tel:+18552829394" className="text-[#2CBCED] hover:underline">855.282.9394</a> | Email: <a href="mailto:info@dxg.agency" className="text-[#2CBCED] hover:underline">info@dxg.agency</a></p>
-            </div>
           </div>
 
           {/* Right Box */}

@@ -56,10 +56,6 @@ export default function CreativeFinalCTAV2Section() {
               >
                 Book a Working Session
               </Link>
-              <div className="mt-4 pt-3.5 border-t border-white/10 text-xs sm:text-sm text-[#C9D3DC] font-['IBM_Plex_Sans',sans-serif] space-y-1">
-                <p>Call Direct: <a href="tel:+18552829394" className="text-[#2CBCED] font-semibold hover:underline">855.282.9394</a></p>
-                <p>Email: <a href="mailto:info@dxg.agency" className="text-[#2CBCED] font-semibold hover:underline">info@dxg.agency</a> to start the conversation.</p>
-              </div>
             </div>
           </div>
         </div>

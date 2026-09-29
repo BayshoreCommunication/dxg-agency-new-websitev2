@@ -51,13 +51,6 @@ export default function PlanningFinalCTAV2Section() {
                 Schedule a Strategy Call
               </Link>
 
-              <div className="mt-5 pt-4 border-t border-white/10 text-xs sm:text-sm text-[#C9D3DC] font-['IBM_Plex_Sans',sans-serif] space-y-1">
-                <p className="font-semibold text-white font-['Josefin_Sans',sans-serif]">Digital Xperience Group (DXG)</p>
-                <p>12824 Dupont Circle, Tampa, FL 33626</p>
-                <p>Phone: <a href="tel:+18552829394" className="text-[#2CBCED] font-semibold hover:underline">855.282.9394</a></p>
-                <p>Email: <a href="mailto:info@dxg.agency" className="text-[#2CBCED] font-semibold hover:underline">info@dxg.agency</a></p>
-                <p>Website: <a href="https://www.dxg.agency" target="_blank" rel="noopener noreferrer" className="text-[#2CBCED] font-semibold hover:underline">www.dxg.agency</a></p>
-              </div>
             </div>
           </div>
         </div>
