@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import CreativeHeroV2 from "components/seo-services/event-creative-and-experience-design/CreativeHeroV2";
-import CreativePhotoBandV2 from "components/seo-services/event-creative-and-experience-design/CreativePhotoBandV2";
 import TechnicalPlanningV2Section from "components/seo-services/event-creative-and-experience-design/TechnicalPlanningV2Section";
 import FormatDesignV2Section from "components/seo-services/event-creative-and-experience-design/FormatDesignV2Section";
 import PreVisualizationV2Section from "components/seo-services/event-creative-and-experience-design/PreVisualizationV2Section";
 import DualOpticsV2Section from "components/seo-services/event-creative-and-experience-design/DualOpticsV2Section";
 import CreativeServicesGridV2Section from "components/seo-services/event-creative-and-experience-design/CreativeServicesGridV2Section";
-import AttendeeExperienceV2Section from "components/seo-services/event-creative-and-experience-design/AttendeeExperienceV2Section";
 import CreativeFinalCTAV2Section from "components/seo-services/event-creative-and-experience-design/CreativeFinalCTAV2Section";
 
 export const metadata: Metadata = {
@@ -18,13 +16,10 @@ export const metadata: Metadata = {
 export default function EventCreativeAndExperienceDesignV2Page() {
   return (
     <main className="min-h-screen bg-[#0A0F16] text-[#0A0F16]">
-      {/* 1. Hero Section & 3D Spatial Pre-Vis Board */}
+      {/* 1. Hero Section */}
       <CreativeHeroV2 />
 
-      {/* 2. Full Bleed Spatial Architecture Photo Band */}
-      <CreativePhotoBandV2 />
-
-      {/* 3. Connect Creative Ideas With Technical Planning */}
+      {/* 2. Connect Creative Ideas With Technical Planning */}
       <TechnicalPlanningV2Section />
 
       {/* 4. Design Each Event Format Around Its Purpose */}
@@ -39,10 +34,7 @@ export default function EventCreativeAndExperienceDesignV2Page() {
       {/* 7. Explore Our Creative and Experience Design Services (12 Capabilities Grid) */}
       <CreativeServicesGridV2Section />
 
-      {/* 8. Design the Attendee Experience Across the Venue */}
-      <AttendeeExperienceV2Section />
-
-      {/* 9. Plan Your Event Space From Concept to Production (Final CTA) */}
+      {/* 8. Plan Your Event Space From Concept to Production (Final CTA) */}
       <CreativeFinalCTAV2Section />
     </main>
   );

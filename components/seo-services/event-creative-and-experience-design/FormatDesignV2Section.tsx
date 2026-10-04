@@ -4,10 +4,9 @@ export default function FormatDesignV2Section() {
   const formats = [
     {
       title: "Corporate Events",
-      desc: "Executive meetings, product launches and user conferences are crafted with corporate event design principles that build brand authority, emphasize senior leadership in the spotlight and ensure your audience remains on task with your important strategy.",
       icon: (
         <svg
-          className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px]"
+          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
           viewBox="0 0 24 24"
         >
           <rect x="3" y="4" width="18" height="12" rx="1" />
@@ -17,10 +16,9 @@ export default function FormatDesignV2Section() {
     },
     {
       title: "Association Conferences",
-      desc: "For multi track association events, you'll need flexible conference stage design that can easily transform from early morning keynotes, down to afternoon panels and evening award ceremonies.",
       icon: (
         <svg
-          className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px]"
+          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
           viewBox="0 0 24 24"
         >
           <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6" />
@@ -29,10 +27,9 @@ export default function FormatDesignV2Section() {
     },
     {
       title: "Medical Symposiums",
-      desc: "Optimal presentation environment, optimized screen ratios, shadow-free lighting on the stage for detailed presentations and ergonomic positioning for the speaker and panel members in case of long presentations.",
       icon: (
         <svg
-          className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px]"
+          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
           viewBox="0 0 24 24"
         >
           <path d="M12 4v16M4 12h16" />
@@ -42,10 +39,9 @@ export default function FormatDesignV2Section() {
     },
     {
       title: "Nonprofit Galas",
-      desc: "Dramatic lighting, clear audio and intimate staging are used to engage attendees and advance live fundraising appeals for nonprofits.",
       icon: (
         <svg
-          className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px]"
+          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
           viewBox="0 0 24 24"
         >
           <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" />
@@ -54,10 +50,9 @@ export default function FormatDesignV2Section() {
     },
     {
       title: "Higher Education",
-      desc: "Commencements and academic forums that require extensive large-scale participation, long stage walks and sightlines in large arenas and outdoor fields.",
       icon: (
         <svg
-          className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px]"
+          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
           viewBox="0 0 24 24"
         >
           <path d="M2 9l10-5 10 5-10 5z" />
@@ -81,21 +76,20 @@ export default function FormatDesignV2Section() {
         </div>
 
         {/* Verticals Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[2px] bg-[#1E2A36] border border-[#1E2A36]">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           {formats.map((v, i) => (
             <div
               key={i}
-              className={`bg-[#F3F6F8] hover:bg-white p-7 sm:p-8 transition-colors duration-150 ${
-                i === 4 ? "md:col-span-2 lg:col-span-1" : ""
+              className={`group bg-white border border-[#D5DFE7] hover:border-[#2CBCED] p-6 sm:p-7 rounded-2xl flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_14px_30px_rgba(44,188,237,0.18)] cursor-default min-h-[170px] sm:min-h-[185px] ${
+                i === 4 ? "col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-1" : ""
               }`}
             >
-              {v.icon}
-              <h3 className="text-xl font-semibold mb-2 font-['Josefin_Sans',sans-serif] text-[#0A0F16]">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#2CBCED]/15 to-[#2CBCED]/5 border border-[#2CBCED]/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-[#2CBCED]/50 transition-all duration-300 shrink-0 text-[#2CBCED]">
+                {v.icon}
+              </div>
+              <h3 className="text-[17px] sm:text-[18px] font-semibold font-['Josefin_Sans',sans-serif] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 leading-snug">
                 {v.title}
               </h3>
-              <p className="text-[14.5px] text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                {v.desc}
-              </p>
             </div>
           ))}
         </div>

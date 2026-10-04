@@ -107,12 +107,9 @@ export default function EngagementProcessSection() {
                   {step.num}
                 </div>
 
-                <h3 className="text-lg font-semibold mb-2 text-white font-['Josefin_Sans',sans-serif] group-hover:text-[#2CBCED] transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-white font-['Josefin_Sans',sans-serif] group-hover:text-[#2CBCED] transition-colors duration-200">
                   {step.title}
                 </h3>
-                <p className="text-[14.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif] group-hover:text-white transition-colors duration-200">
-                  {step.desc}
-                </p>
               </li>
             ))}
           </ol>

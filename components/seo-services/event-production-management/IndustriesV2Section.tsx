@@ -4,10 +4,9 @@ export default function IndustriesV2Section() {
   const verticals = [
     {
       title: "Corporate Events",
-      desc: "Our corporate event production management covers sales kickoffs, user conferences, and executive summits. We focus on executive stage presence, strict brand standards, presentation playback, and down to the second timing.",
       icon: (
         <svg
-          className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px]"
+          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
           viewBox="0 0 24 24"
         >
           <rect x="3" y="4" width="18" height="12" rx="1" />
@@ -17,10 +16,9 @@ export default function IndustriesV2Section() {
     },
     {
       title: "Association Conferences",
-      desc: "We deliver association conference production built for scale. Our team manages main stage general sessions alongside concurrent breakout rooms, committee meetings, volunteer schedules, and multi vendor timelines.",
       icon: (
         <svg
-          className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px]"
+          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
           viewBox="0 0 24 24"
         >
           <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6" />
@@ -29,10 +27,9 @@ export default function IndustriesV2Section() {
     },
     {
       title: "Medical Meetings",
-      desc: "Our production workflow accounts for CME (Continuing Medical Education) compliance requirements, mandatory presenter disclosures, approved medical content formats, and precise session timings built directly into production milestones.",
       icon: (
         <svg
-          className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px]"
+          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
           viewBox="0 0 24 24"
         >
           <path d="M12 4v16M4 12h16" />
@@ -42,10 +39,9 @@ export default function IndustriesV2Section() {
     },
     {
       title: "Fundraising Events",
-      desc: "We produce fundraising events and live appeals where thoughtful lighting, crisp audio, smooth video transitions, and precise staging keep the evening moving and create the right setting for giving.",
       icon: (
         <svg
-          className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px]"
+          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
           viewBox="0 0 24 24"
         >
           <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" />
@@ -54,10 +50,9 @@ export default function IndustriesV2Section() {
     },
     {
       title: "Education Programs",
-      desc: "We manage commencements, academic convocations, and educational symposiums operating on fixed dates, serving large audiences across wide physical footprints.",
       icon: (
         <svg
-          className="w-[36px] h-[36px] stroke-[#2CBCED] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round mb-[18px]"
+          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
           viewBox="0 0 24 24"
         >
           <path d="M2 9l10-5 10 5-10 5z" />
@@ -81,21 +76,20 @@ export default function IndustriesV2Section() {
         </div>
 
         {/* Verticals Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[2px] bg-[#1E2A36] border border-[#1E2A36]">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           {verticals.map((v, i) => (
             <div
               key={i}
-              className={`bg-[#F3F6F8] hover:bg-white p-7 sm:p-8 transition-colors duration-150 ${
-                i === 4 ? "md:col-span-2 lg:col-span-1" : ""
+              className={`group bg-white border border-[#D5DFE7] hover:border-[#2CBCED] p-6 sm:p-7 rounded-2xl flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_14px_30px_rgba(44,188,237,0.18)] cursor-default min-h-[170px] sm:min-h-[185px] ${
+                i === 4 ? "col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-1" : ""
               }`}
             >
-              {v.icon}
-              <h3 className="text-xl font-semibold mb-2 font-['Josefin_Sans',sans-serif] text-[#0A0F16]">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#2CBCED]/15 to-[#2CBCED]/5 border border-[#2CBCED]/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-[#2CBCED]/50 transition-all duration-300 shrink-0 text-[#2CBCED]">
+                {v.icon}
+              </div>
+              <h3 className="text-[17px] sm:text-[18px] font-semibold font-['Josefin_Sans',sans-serif] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 leading-snug">
                 {v.title}
               </h3>
-              <p className="text-[14.5px] text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                {v.desc}
-              </p>
             </div>
           ))}
         </div>

@@ -28,12 +28,9 @@ export default function ShowPlanV2Section() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                 Integrated Show Content Planning
               </b>
-              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Behind the scenes during pre-production planning: creative team and technical producers aligning screen dimensions, file specs, and cue sequences directly with the master run-of-show timeline.
-              </p>
             </div>
           </div>
         </div>

@@ -22,62 +22,12 @@ const vipCards = [
   { title: "Security Liaison", desc: "DXG coordinates directly with private security teams and venue management to protect executive movement and privacy." },
 ];
 
-const half = Math.ceil(vipCards.length / 2);
-const row1 = vipCards.slice(0, half);
-const row2 = vipCards.slice(half);
-
-function MarqueeRow({
-  data,
-  reverse = false,
-  keyPrefix,
-}: {
-  data: typeof vipCards;
-  reverse?: boolean;
-  keyPrefix: string;
-}) {
-  const tripled = [...data, ...data, ...data];
-  return (
-    <div className="overflow-hidden w-full">
-      <div
-        className="flex gap-5 w-max"
-        style={{
-          animation: `marqVIP${reverse ? "R" : "F"} 38s linear infinite`,
-        }}
-      >
-        {tripled.map((item, idx) => (
-          <div
-            key={`${keyPrefix}-${idx}`}
-            className="w-[300px] shrink-0 bg-[#111A24] border border-[#1E2A36] border-l-4 border-l-[#2CBCED] hover:border-[#2CBCED] hover:shadow-[0_12px_32px_rgba(44,188,237,0.2)] transition-all duration-300 rounded-xl p-6 cursor-default group"
-          >
-            <h3 className="font-['Josefin_Sans',sans-serif] font-semibold text-[17px] text-white group-hover:text-[#2CBCED] transition-colors duration-200 mb-2.5">
-              {item.title}
-            </h3>
-            <p className="text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              {item.desc}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function VipProtocolLogisticsV2Section() {
   return (
-    <section className="py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white overflow-hidden">
-      <style>{`
-        @keyframes marqVIPF {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-33.333%); }
-        }
-        @keyframes marqVIPR {
-          0%   { transform: translateX(-33.333%); }
-          100% { transform: translateX(0); }
-        }
-      `}</style>
-
-      <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12 mb-[clamp(36px,4vw,56px)]">
-        <div className="max-w-[760px]">
+    <section className="py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white">
+      <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12">
+        {/* Head */}
+        <div className="max-w-[760px] mb-[clamp(36px,4vw,56px)]">
           <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] text-white before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
             Executive & VIP Protocol Logistics
           </h2>
@@ -88,14 +38,27 @@ export default function VipProtocolLogisticsV2Section() {
             DXG handles dedicated VIP protocol logistics to ensure C-suite executives, keynote speakers and special guests experience smooth transfers and quiet, professional hosting.
           </p>
         </div>
-      </div>
 
-      <div className="flex flex-col gap-5 mb-[clamp(36px,4vw,56px)]">
-        <MarqueeRow data={row1} keyPrefix="r1" />
-        <MarqueeRow data={row2} reverse keyPrefix="r2" />
-      </div>
+        {/* Static Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6 mb-10">
+          {vipCards.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-[#111A24] border border-[#1E2A36] hover:border-[#2CBCED] hover:shadow-[0_14px_32px_rgba(44,188,237,0.22)] transition-all duration-300 rounded-2xl p-6 sm:p-7 cursor-default group hover:-translate-y-1.5 flex flex-col justify-start"
+            >
+              <div className="flex items-center gap-2.5 mb-3.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#2CBCED] shrink-0 group-hover:scale-125 transition-transform" />
+                <h3 className="font-['Josefin_Sans',sans-serif] font-semibold text-[18px] sm:text-[19px] text-white group-hover:text-[#2CBCED] transition-colors duration-200 leading-tight">
+                  {item.title}
+                </h3>
+              </div>
+              <p className="text-[14px] sm:text-[14.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
 
-      <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12">
         <p className="text-base sm:text-lg text-white font-medium leading-relaxed font-['IBM_Plex_Sans',sans-serif] max-w-[70ch]">
           Assigned personnel for your highest-profile guests keep internal planners focused on the main floor instead of repeatedly stepping away to manage VIP needs.
         </p>

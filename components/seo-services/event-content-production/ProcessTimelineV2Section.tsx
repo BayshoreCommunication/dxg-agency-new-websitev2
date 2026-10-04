@@ -87,12 +87,9 @@ export default function ProcessTimelineV2Section() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                 1 & 2. Discovery & Planning
               </b>
-              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Evaluating LED aspect ratios, resolution, safe zones, and agenda cues across main stage and breakout displays.
-              </p>
             </div>
           </div>
 
@@ -107,12 +104,9 @@ export default function ProcessTimelineV2Section() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                 3 & 4. Creative & Production
               </b>
-              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Creating motion graphics, walk-in packages, speaker decks, and video content tuned for live execution.
-              </p>
             </div>
           </div>
 
@@ -127,12 +121,9 @@ export default function ProcessTimelineV2Section() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                 5 & 6. Technical QC & Delivery
               </b>
-              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Show-ready assets organized by session, cue, and format for seamless playback operator execution.
-              </p>
             </div>
           </div>
         </div>
@@ -171,12 +162,9 @@ export default function ProcessTimelineV2Section() {
                   {step.num}
                 </div>
 
-                <h3 className="text-lg font-semibold mb-2 text-white font-['Josefin_Sans',sans-serif] group-hover:text-[#2CBCED] transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-white font-['Josefin_Sans',sans-serif] group-hover:text-[#2CBCED] transition-colors duration-200">
                   {step.title}
                 </h3>
-                <p className="text-[14.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif] group-hover:text-white transition-colors duration-200">
-                  {step.desc}
-                </p>
               </li>
             ))}
           </ol>

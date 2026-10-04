@@ -43,12 +43,9 @@ export default function GeneralSessionSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
               <div className="relative z-10">
-                <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                   General Session Stage & Tech Table
                 </b>
-                <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                  Full view of main keynote stage with wide LED wall displaying session graphics, camera crane in position, and show callers coordinating live audio-video cues from FOH.
-                </p>
               </div>
             </div>
           </div>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HybridHeroV2 from "components/seo-services/hybrid-virtual-event-production/HybridHeroV2";
-import HybridPhotoBandV2 from "components/seo-services/hybrid-virtual-event-production/HybridPhotoBandV2";
 import RemoteAudienceSection from "components/seo-services/hybrid-virtual-event-production/RemoteAudienceSection";
 import HybridFormatsSection from "components/seo-services/hybrid-virtual-event-production/HybridFormatsSection";
 import HybridProcessSection from "components/seo-services/hybrid-virtual-event-production/HybridProcessSection";
@@ -17,13 +16,10 @@ export const metadata: Metadata = {
 export default function HybridAndVirtualEventProductionPage() {
   return (
     <main className="min-h-screen bg-[#0A0F16] text-[#0A0F16]">
-      {/* 1. Hero Section & Stream Control Panel */}
+      {/* 1. Hero Section */}
       <HybridHeroV2 />
 
-      {/* 2. Full Bleed Producer Photo Band (PHOTO 01) */}
-      <HybridPhotoBandV2 />
-
-      {/* 3. Make Remote Audience Feel Part Of The Event (PHOTO 02) */}
+      {/* 2. Make Remote Audience Feel Part Of The Event (PHOTO 02) */}
       <RemoteAudienceSection />
 
       {/* 4. Formats & Photo Placeholders (PHOTO 03, PHOTO 04, PHOTO 05) */}

@@ -48,7 +48,7 @@ export default function ProcessTimelineV2Section() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white">
+    <section id="process" className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white scroll-mt-20">
       {/* Background X Motif */}
       <svg
         className="absolute -right-[160px] -top-[120px] w-[620px] h-[620px] opacity-[0.07] pointer-events-none"
@@ -87,14 +87,9 @@ export default function ProcessTimelineV2Section() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                 Site visit
               </b>
-              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Empty ballroom, chairs stacked, the producer with a laser measure
-                or pointing at a rigging point on the ceiling. Wide, slightly low
-                angle, lots of ceiling.
-              </p>
             </div>
           </div>
 
@@ -109,14 +104,9 @@ export default function ProcessTimelineV2Section() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                 Rehearsal
               </b>
-              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                A presenter on stage under half house lights, confidence monitor
-                visible, crew at the tech table in the foreground with the run of
-                show open. Quiet, focused.
-              </p>
             </div>
           </div>
 
@@ -131,14 +121,9 @@ export default function ProcessTimelineV2Section() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                 Show day
               </b>
-              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Full general session from the back of house at the moment a keynote
-                begins: LED wall bright, audience seated, producer&apos;s silhouette at
-                FOH in the bottom corner. High energy.
-              </p>
             </div>
           </div>
         </div>
@@ -177,12 +162,9 @@ export default function ProcessTimelineV2Section() {
                   {step.num}
                 </div>
 
-                <h3 className="text-lg font-semibold mb-2 text-white font-['Josefin_Sans',sans-serif] group-hover:text-[#2CBCED] transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-white font-['Josefin_Sans',sans-serif] group-hover:text-[#2CBCED] transition-colors duration-200">
                   {step.title}
                 </h3>
-                <p className="text-[14.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif] group-hover:text-white transition-colors duration-200">
-                  {step.desc}
-                </p>
               </li>
             ))}
           </ol>

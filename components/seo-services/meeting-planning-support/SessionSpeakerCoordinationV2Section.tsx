@@ -41,12 +41,9 @@ export default function SessionSpeakerCoordinationV2Section() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                 Speaker Ready Room Control
               </b>
-              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Handling presentation collection, font checks, stage timing, and room monitor coordination for smooth speaker transitions.
-              </p>
             </div>
           </div>
         </div>

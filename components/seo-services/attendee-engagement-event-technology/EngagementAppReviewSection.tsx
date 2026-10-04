@@ -36,12 +36,9 @@ export default function EngagementAppReviewSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                 Event Tech Integration Audit
               </b>
-              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Planner reviewing event mobile app agenda sync, Wi-Fi bandwidth requirements, and live polling cue sheets alongside DXG producer.
-              </p>
             </div>
           </div>
         </div>

@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 export default function HybridScopeSection() {
@@ -74,7 +72,7 @@ export default function HybridScopeSection() {
         </div>
 
         {/* Services List Section */}
-        <div className="bg-[#0A0F16] text-white p-8 sm:p-12 rounded-lg mb-16 relative overflow-hidden">
+        <div className="bg-[#0A0F16] text-white p-8 sm:p-12 rounded-lg relative overflow-hidden">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-3 font-['Josefin_Sans',sans-serif] text-white">
             What Hybrid and Virtual Event Production Services We Offer
           </h2>
@@ -91,50 +89,6 @@ export default function HybridScopeSection() {
                 <span>{srv}</span>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Proposal Review Section with Photo 06 WebP Card */}
-        <div id="proposal-review" className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white border border-[#C9D3DC] p-8 sm:p-12 rounded-lg">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-4 font-['Josefin_Sans',sans-serif] text-[#0A0F16]">
-              Already Have an AV or Streaming Proposal?
-            </h2>
-            <p className="text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif] mb-4 text-base">
-              A proposal may cover cameras, streaming, platform fees, labor and technical equipment while leaving production coordination outside the scope.
-            </p>
-            <p className="text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif] mb-6 text-base">
-              DXG can provide a second set of production eyes before you commit. We can review the proposed scope, camera coverage, remote presenter workflow, streaming requirements, graphics, recording, redundancy, technical support and production timing.
-            </p>
-            <p className="text-[#0A0F16] font-medium font-['IBM_Plex_Sans',sans-serif] mb-6">
-              You keep your existing vendor relationship while gaining a production plan built around the full event.
-            </p>
-            <Link
-              href="https://www.dxg.agency/contact-us"
-              className="inline-flex items-center gap-2.5 bg-[#2CBCED] hover:bg-[#4CC9F0] text-[#0A0F16] font-semibold text-base px-6 py-3.5 rounded transition-all duration-200 font-['Josefin_Sans',sans-serif]"
-            >
-              Get a Proposal Review
-            </Link>
-          </div>
-
-          {/* Photo 06 WebP Image Card */}
-          <div className="group relative min-h-[320px] border border-[#1E2A36] text-white flex flex-col justify-end p-6 rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(10,15,22,0.25)]">
-            <Image
-              src="/images/seo-services/hybrid-and-virtual-event-production/streaming-av-proposal-audit-review.webp"
-              alt="Printed hybrid streaming proposal with highlighted camera position notes, bandwidth allocations, and line-item audit notes."
-              title="Streaming & AV Proposal Audit"
-              fill
-              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
-            <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
-                Streaming & AV Proposal Audit
-              </b>
-              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Printed hybrid streaming proposal with highlighted camera position notes, bandwidth allocations, and line-item audit notes.
-              </p>
-            </div>
           </div>
         </div>
       </div>

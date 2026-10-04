@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import EventContentHeroV2 from "components/seo-services/event-content-production/EventContentHeroV2";
-import ContentPhotoBandV2 from "components/seo-services/event-content-production/ContentPhotoBandV2";
 import ContentIndustriesV2Section from "components/seo-services/event-content-production/ContentIndustriesV2Section";
 import ShowPlanV2Section from "components/seo-services/event-content-production/ShowPlanV2Section";
 import ProcessTimelineV2Section from "components/seo-services/event-content-production/ProcessTimelineV2Section";
@@ -19,13 +18,10 @@ export const metadata: Metadata = {
 export default function EventContentProductionV2Page() {
   return (
     <main className="min-h-screen bg-[#0A0F16] text-[#0A0F16]">
-      {/* 1. Hero Section & Content/Playback Schedule Board */}
+      {/* 1. Hero Section */}
       <EventContentHeroV2 />
 
-      {/* 2. Full Bleed Photo Band */}
-      <ContentPhotoBandV2 />
-
-      {/* 3. Industry Verticals Section */}
+      {/* 2. Industry Verticals Section */}
       <ContentIndustriesV2Section />
 
       {/* 4. Show Plan Principles Section */}

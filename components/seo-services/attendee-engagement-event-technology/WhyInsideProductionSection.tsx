@@ -33,60 +33,9 @@ const points = [
   },
 ];
 
-const half = Math.ceil(points.length / 2);
-const row1 = points.slice(0, half);
-const row2 = points.slice(half);
-
-function MarqueeRow({
-  data,
-  reverse = false,
-  keyPrefix,
-}: {
-  data: typeof points;
-  reverse?: boolean;
-  keyPrefix: string;
-}) {
-  const tripled = [...data, ...data, ...data];
-  return (
-    <div className="overflow-hidden w-full">
-      <div
-        className="flex gap-5 w-max"
-        style={{
-          animation: `marqWIP${reverse ? "R" : "F"} 40s linear infinite`,
-        }}
-      >
-        {tripled.map((item, idx) => (
-          <div
-            key={`${keyPrefix}-${idx}`}
-            className="w-[300px] shrink-0 bg-white border border-[#C9D3DC] border-t-4 border-t-[#2CBCED] hover:border-[#2CBCED] hover:shadow-[0_12px_32px_rgba(44,188,237,0.18)] transition-all duration-300 rounded-xl p-6 cursor-default group"
-          >
-            <h3 className="font-['Josefin_Sans',sans-serif] font-semibold text-[17px] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 mb-2.5">
-              {item.title}
-            </h3>
-            <p className="text-[13.5px] text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              {item.desc}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function WhyInsideProductionSection() {
   return (
-    <section className="py-[clamp(64px,8vw,112px)] bg-[#E9EEF2] text-[#0A0F16] overflow-hidden">
-      <style>{`
-        @keyframes marqWIPF {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-33.333%); }
-        }
-        @keyframes marqWIPR {
-          0%   { transform: translateX(-33.333%); }
-          100% { transform: translateX(0); }
-        }
-      `}</style>
-
+    <section className="py-[clamp(64px,8vw,112px)] bg-[#E9EEF2] text-[#0A0F16]">
       <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12">
         {/* Head */}
         <div className="max-w-[760px] mb-11">
@@ -104,33 +53,44 @@ export default function WhyInsideProductionSection() {
             <Image src="/images/seo-services/attendee-engagement-and-event-technology/onscreen-qr-polling-prompt.webp" alt="Keynote speaker pointing to large QR code on stage screen encouraging instant audience participation." title="On-Screen QR & Polling Prompt" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">On-Screen QR & Polling Prompt</b>
-              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">Keynote speaker pointing to large QR code on stage screen encouraging instant audience participation.</p>
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">On-Screen QR & Polling Prompt</b>
             </div>
           </div>
           <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
             <Image src="/images/seo-services/attendee-engagement-and-event-technology/speaker-confidence-monitor-questions.webp" alt="Moderator viewing real-time top voted audience questions on stage confidence monitor screen." title="Speaker Confidence Monitor" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">Speaker Confidence Monitor</b>
-              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">Moderator viewing real-time top voted audience questions on stage confidence monitor screen.</p>
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">Speaker Confidence Monitor</b>
             </div>
           </div>
           <div className="group relative min-h-[260px] border border-[#1E2A36] text-white flex flex-col justify-end p-5 rounded overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2CBCED] hover:shadow-[0_15px_30px_rgba(44,188,237,0.15)]">
             <Image src="/images/seo-services/attendee-engagement-and-event-technology/tech-table-polling-operator.webp" alt="DXG engagement tech operator triggering poll closing cue right on schedule in run of show." title="Tech Table Polling Operator" fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">Tech Table Polling Operator</b>
-              <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">DXG engagement tech operator triggering poll closing cue right on schedule in run of show.</p>
+              <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">Tech Table Polling Operator</b>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Marquee Rows */}
-      <div className="flex flex-col gap-5">
-        <MarqueeRow data={row1} keyPrefix="r1" />
-        <MarqueeRow data={row2} reverse keyPrefix="r2" />
+        {/* Static Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {points.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white border border-[#C9D3DC] hover:border-[#2CBCED] hover:shadow-[0_14px_32px_rgba(44,188,237,0.18)] transition-all duration-300 rounded-2xl p-6 sm:p-7 cursor-default group hover:-translate-y-1.5 flex flex-col justify-start"
+            >
+              <div className="flex items-center gap-2.5 mb-3.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#2CBCED] shrink-0 group-hover:scale-125 transition-transform" />
+                <h3 className="font-['Josefin_Sans',sans-serif] font-semibold text-[18px] sm:text-[19px] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 leading-tight">
+                  {item.title}
+                </h3>
+              </div>
+              <p className="text-[14px] sm:text-[14.5px] text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import MediaHeroV2 from "components/seo-services/event-videography-and-photography/MediaHeroV2";
-import MediaPhotoBandV2 from "components/seo-services/event-videography-and-photography/MediaPhotoBandV2";
 import EventFormatsV2Section from "components/seo-services/event-videography-and-photography/EventFormatsV2Section";
 import PreCapturePlanningV2Section from "components/seo-services/event-videography-and-photography/PreCapturePlanningV2Section";
 import PhotographyCoverageV2Section from "components/seo-services/event-videography-and-photography/PhotographyCoverageV2Section";
@@ -19,13 +18,10 @@ export const metadata: Metadata = {
 export default function EventVideographyAndPhotographyV2Page() {
   return (
     <main className="min-h-screen bg-[#0A0F16] text-[#0A0F16]">
-      {/* 1. Hero Section & Photo/Video Production Capture Schedule Board */}
+      {/* 1. Hero Section */}
       <MediaHeroV2 />
 
-      {/* 2. Full Bleed Photo Band */}
-      <MediaPhotoBandV2 />
-
-      {/* 3. Type of Event We Built Around Your Program (8 Verticals) */}
+      {/* 2. Type of Event We Built Around Your Program (8 Verticals) */}
       <EventFormatsV2Section />
 
       {/* 4. Plan the Content Before the Cameras Arrive */}

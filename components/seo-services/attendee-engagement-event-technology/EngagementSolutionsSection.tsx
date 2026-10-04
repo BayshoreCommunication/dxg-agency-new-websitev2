@@ -20,62 +20,12 @@ const groups = [
   },
 ];
 
-const half = Math.ceil(groups.length / 2);
-const row1 = groups.slice(0, half);
-const row2 = groups.slice(half);
-
-function MarqueeRow({
-  items,
-  reverse = false,
-  keyPrefix,
-}: {
-  items: typeof groups;
-  reverse?: boolean;
-  keyPrefix: string;
-}) {
-  const tripled = [...items, ...items, ...items];
-  return (
-    <div className="overflow-hidden w-full">
-      <div
-        className="flex gap-5 w-max"
-        style={{
-          animation: `marqEng${reverse ? "R" : "F"} 32s linear infinite`,
-        }}
-      >
-        {tripled.map((item, idx) => (
-          <div
-            key={`${keyPrefix}-${idx}`}
-            className="w-[320px] shrink-0 bg-white border border-[#C9D3DC] border-l-4 border-l-[#2CBCED] hover:border-[#2CBCED] hover:shadow-[0_12px_32px_rgba(44,188,237,0.18)] transition-all duration-300 rounded-xl p-6 cursor-default group"
-          >
-            <h3 className="font-['Josefin_Sans',sans-serif] font-semibold text-[17px] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 mb-2.5">
-              {item.title}
-            </h3>
-            <p className="text-[13.5px] text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              {item.desc}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function EngagementSolutionsSection() {
   return (
-    <section className="py-[clamp(64px,8vw,112px)] bg-[#F3F6F8] text-[#0A0F16] overflow-hidden">
-      <style>{`
-        @keyframes marqEngF {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-33.333%); }
-        }
-        @keyframes marqEngR {
-          0%   { transform: translateX(-33.333%); }
-          100% { transform: translateX(0); }
-        }
-      `}</style>
-
-      <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12 mb-[clamp(36px,4vw,56px)]">
-        <div className="max-w-[760px]">
+    <section id="solutions" className="py-[clamp(64px,8vw,112px)] bg-[#F3F6F8] text-[#0A0F16] scroll-mt-20">
+      <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12">
+        {/* Head */}
+        <div className="max-w-[760px] mb-[clamp(36px,4vw,56px)]">
           <h2 className="relative pt-[18px] text-[clamp(30px,3.6vw,44px)] font-semibold leading-[1.1] tracking-tight mb-3.5 font-['Josefin_Sans',sans-serif] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[44px] before:h-[3px] before:bg-[#2CBCED]">
             Event Technology and Engagement Solutions
           </h2>
@@ -83,11 +33,26 @@ export default function EngagementSolutionsSection() {
             Scope follows your format, venue, audience size and program goals. Each tool earns its place by serving one of those goals.
           </p>
         </div>
-      </div>
 
-      <div className="flex flex-col gap-5">
-        <MarqueeRow items={row1} keyPrefix="r1" />
-        <MarqueeRow items={row2} reverse keyPrefix="r2" />
+        {/* Static Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          {groups.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white border border-[#C9D3DC] hover:border-[#2CBCED] hover:shadow-[0_14px_32px_rgba(44,188,237,0.18)] transition-all duration-300 rounded-2xl p-6 sm:p-7 cursor-default group hover:-translate-y-1.5 flex flex-col justify-start"
+            >
+              <div className="flex items-center gap-2.5 mb-3.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#2CBCED] shrink-0 group-hover:scale-125 transition-transform" />
+                <h3 className="font-['Josefin_Sans',sans-serif] font-semibold text-[18px] sm:text-[19px] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 leading-tight">
+                  {item.title}
+                </h3>
+              </div>
+              <p className="text-[14px] sm:text-[14.5px] text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

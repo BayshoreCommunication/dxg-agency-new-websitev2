@@ -28,17 +28,9 @@ export default function InHouseAVV2Section() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                 The DXG Continuity Model
               </b>
-              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Ballroom during load-in. A meeting planner and the DXG producer
-                stand together over a floor plan or tablet in the foreground,
-                engaged and calm. Behind them, a venue in-house crew in their own
-                uniforms flies a screen or sets a stage. The image should say
-                &quot;two teams, one plan&quot; without anyone looking stressed. Daylight or
-                work-light, natural color.
-              </p>
             </div>
           </div>
         </div>

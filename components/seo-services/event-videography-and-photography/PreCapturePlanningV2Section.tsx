@@ -29,60 +29,9 @@ const principles = [
   },
 ];
 
-const half = Math.ceil(principles.length / 2);
-const row1 = principles.slice(0, half);
-const row2 = principles.slice(half);
-
-function MarqueeRow({
-  data,
-  reverse = false,
-  keyPrefix,
-}: {
-  data: typeof principles;
-  reverse?: boolean;
-  keyPrefix: string;
-}) {
-  const tripled = [...data, ...data, ...data];
-  return (
-    <div className="overflow-hidden w-full">
-      <div
-        className="flex gap-5 w-max"
-        style={{
-          animation: `marqPCP${reverse ? "R" : "F"} 36s linear infinite`,
-        }}
-      >
-        {tripled.map((item, idx) => (
-          <div
-            key={`${keyPrefix}-${idx}`}
-            className="w-[300px] shrink-0 bg-white border border-[#C9D3DC] border-t-4 border-t-[#2CBCED] hover:border-[#2CBCED] hover:shadow-[0_12px_32px_rgba(44,188,237,0.18)] transition-all duration-300 rounded-xl p-6 cursor-default group"
-          >
-            <h3 className="font-['Josefin_Sans',sans-serif] font-semibold text-[17px] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 mb-2.5">
-              {item.title}
-            </h3>
-            <p className="text-[13.5px] text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-              {item.desc}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function PreCapturePlanningV2Section() {
   return (
-    <section className="py-[clamp(64px,8vw,112px)] bg-[#E9EEF2] text-[#0A0F16] overflow-hidden">
-      <style>{`
-        @keyframes marqPCPF {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-33.333%); }
-        }
-        @keyframes marqPCPR {
-          0%   { transform: translateX(-33.333%); }
-          100% { transform: translateX(0); }
-        }
-      `}</style>
-
+    <section className="py-[clamp(64px,8vw,112px)] bg-[#E9EEF2] text-[#0A0F16]">
       <div className="max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12">
         {/* Intro Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(28px,4vw,60px)] items-center mb-[clamp(36px,4vw,56px)]">
@@ -104,10 +53,7 @@ export default function PreCapturePlanningV2Section() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
             <div className="relative z-10">
-              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">Strategic Content Planning</b>
-              <p className="text-xs sm:text-[13.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                Aligning marketing objectives, executive priorities, speaker slots, and room logistics before camera operators step onto the floor.
-              </p>
+              <b className="font-['Josefin_Sans',sans-serif] text-lg font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">Strategic Content Planning</b>
             </div>
           </div>
         </div>
@@ -130,12 +76,26 @@ export default function PreCapturePlanningV2Section() {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Marquee */}
-      <div className="flex flex-col gap-5">
-        <MarqueeRow data={row1} keyPrefix="r1" />
-        <MarqueeRow data={row2} reverse keyPrefix="r2" />
+        {/* Static Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {principles.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white border border-[#C9D3DC] hover:border-[#2CBCED] hover:shadow-[0_14px_32px_rgba(44,188,237,0.18)] transition-all duration-300 rounded-2xl p-6 sm:p-7 cursor-default group hover:-translate-y-1.5 flex flex-col justify-start"
+            >
+              <div className="flex items-center gap-2.5 mb-3.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#2CBCED] shrink-0 group-hover:scale-125 transition-transform" />
+                <h3 className="font-['Josefin_Sans',sans-serif] font-semibold text-[18px] sm:text-[19px] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 leading-tight">
+                  {item.title}
+                </h3>
+              </div>
+              <p className="text-[14px] sm:text-[14.5px] text-[#5B6B7A] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

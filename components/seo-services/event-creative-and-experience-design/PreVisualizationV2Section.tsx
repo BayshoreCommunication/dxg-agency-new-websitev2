@@ -67,12 +67,9 @@ export default function PreVisualizationV2Section() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
               <div className="relative z-10">
-                <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                   Accurate 3D Digital Modeling
                 </b>
-                <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                  Evaluating room geometry, stage builds, scenic walls, line of sight, and lighting textures before load-in.
-                </p>
               </div>
             </div>
 

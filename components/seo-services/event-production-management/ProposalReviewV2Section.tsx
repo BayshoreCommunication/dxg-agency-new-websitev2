@@ -83,16 +83,9 @@ export default function ProposalReviewV2Section() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
               <div className="relative z-10">
-                <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                   The second set of eyes
                 </b>
-                <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                  Close, overhead: a printed AV proposal with cyan highlighter
-                  marks and margin notes, a pen, a laptop edge showing a room
-                  diagram. No faces. Tight crop, shallow depth of field. Reads as
-                  &quot;someone who knows what to look for has already been through
-                  this.&quot;
-                </p>
               </div>
             </div>
 

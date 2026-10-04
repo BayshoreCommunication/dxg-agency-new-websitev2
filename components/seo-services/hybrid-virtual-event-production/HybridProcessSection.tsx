@@ -47,7 +47,7 @@ export default function HybridProcessSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white">
+    <section id="process" className="relative overflow-hidden py-[clamp(64px,8vw,112px)] bg-[#0A0F16] text-white scroll-mt-20">
       {/* Background X Motif */}
       <svg
         className="absolute -right-[160px] -top-[120px] w-[620px] h-[620px] opacity-[0.07] pointer-events-none"
@@ -107,12 +107,9 @@ export default function HybridProcessSection() {
                   {step.num}
                 </div>
 
-                <h3 className="text-lg font-semibold mb-2 text-white font-['Josefin_Sans',sans-serif] group-hover:text-[#2CBCED] transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-white font-['Josefin_Sans',sans-serif] group-hover:text-[#2CBCED] transition-colors duration-200">
                   {step.title}
                 </h3>
-                <p className="text-[14.5px] text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif] group-hover:text-white transition-colors duration-200">
-                  {step.desc}
-                </p>
               </li>
             ))}
           </ol>

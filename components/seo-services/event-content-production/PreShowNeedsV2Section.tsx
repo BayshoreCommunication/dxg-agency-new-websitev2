@@ -87,12 +87,9 @@ export default function PreShowNeedsV2Section() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F16]/80 via-[#0A0F16]/15 to-transparent z-[1]" />
               <div className="relative z-10">
-                <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold mb-1 text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
+                <b className="font-['Josefin_Sans',sans-serif] text-base font-semibold text-white block group-hover:text-[#2CBCED] transition-colors duration-200">
                   Pre-Show Technical Audit
                 </b>
-                <p className="text-xs text-[#C9D3DC] leading-relaxed font-['IBM_Plex_Sans',sans-serif]">
-                  Checking file codecs, screen aspect ratios, font embedding, lower third safe zones, and run-of-show cues before loading media onto playback servers.
-                </p>
               </div>
             </div>
 
