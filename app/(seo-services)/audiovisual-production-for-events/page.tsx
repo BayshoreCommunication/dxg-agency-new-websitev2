@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import AVHeroV2 from "components/seo-services/audiovisual-production-for-events/AVHeroV2";
 import AVApproachSection from "components/seo-services/audiovisual-production-for-events/AVApproachSection";
-import AVStandardsSection from "components/seo-services/audiovisual-production-for-events/AVStandardsSection";
 import AVCapabilitiesSection from "components/seo-services/audiovisual-production-for-events/AVCapabilitiesSection";
 import DXGDifferenceCTASection from "components/seo-services/audiovisual-production-for-events/DXGDifferenceCTASection";
 
@@ -20,13 +19,10 @@ export default function AudiovisualProductionForEventsPage() {
       {/* 2. Our Approach Starts with the Program (Photo 02) */}
       <AVApproachSection />
 
-      {/* 4. Operational Standards, Contracts & Rehearsals (Photo 03, Photo 04, Photo 05) */}
-      <AVStandardsSection />
-
-      {/* 5. Audiovisual Production Capabilities */}
+      {/* 3. Audiovisual Production Capabilities */}
       <AVCapabilitiesSection />
 
-      {/* 6. The DXG Difference & Strategy Call CTA (Photo 07) */}
+      {/* 4. The DXG Difference & Strategy Call CTA (Photo 07) */}
       <DXGDifferenceCTASection />
     </main>
   );
