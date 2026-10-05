@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Event Videography & Photography | DXG",
   description:
     "Event videography and photography for conferences, keynotes and testimonials. Create useful content beyond the event. Plan your event coverage.",
+  alternates: {
+    canonical: "/event-videography-photography",
+  },
 };
 
 export default function EventVideographyAndPhotographyV2Page() {

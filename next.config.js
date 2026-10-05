@@ -35,12 +35,42 @@ const nextConfig = {
     return [
       {
         source: '/problems-we-solve/:slug',
-        destination: '/services/:slug',
+        destination: '/:slug',
         permanent: true,
       },
       {
         source: '/problems-we-solve',
         destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/services/:slug',
+        destination: '/:slug',
+        permanent: true,
+      },
+      {
+        source: '/audiovisual-production-for-events',
+        destination: '/audiovisual-production',
+        permanent: true,
+      },
+      {
+        source: '/hybrid-and-virtual-event-production',
+        destination: '/hybrid-virtual-event-production',
+        permanent: true,
+      },
+      {
+        source: '/attendee-engagement-and-event-technology',
+        destination: '/attendee-engagement',
+        permanent: true,
+      },
+      {
+        source: '/event-creative-and-experience-design',
+        destination: '/event-creative-experience-design',
+        permanent: true,
+      },
+      {
+        source: '/event-videography-and-photography',
+        destination: '/event-videography-photography',
         permanent: true,
       },
     ];

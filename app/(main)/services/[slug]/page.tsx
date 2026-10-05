@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Container from "components/shared/Container";
 import PageBanner from "components/shared/PageBanner";
 import { getProblemService, problemServices } from "data/problemServices";
@@ -34,6 +34,9 @@ export function generateMetadata({ params }: ServiceDetailsPageProps) {
   return {
     title: `${service.title} | DXG Digital`,
     description: service.desc,
+    alternates: {
+      canonical: `/${service.slug}`,
+    },
   };
 }
 
@@ -45,6 +48,9 @@ export default function ServiceDetailsPage({
   if (!service) {
     notFound();
   }
+
+  redirect(`/${service.slug}`);
+
 
   return (
     <div>

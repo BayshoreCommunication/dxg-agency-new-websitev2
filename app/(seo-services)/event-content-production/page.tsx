@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Event Content Production & Conference Video | DXG",
   description:
     "Event content production for conferences, videos & motion graphics. Get polished, screen ready content for show day. Explore DXG's services.",
+  alternates: {
+    canonical: "/event-content-production",
+  },
 };
 
 export default function EventContentProductionV2Page() {
