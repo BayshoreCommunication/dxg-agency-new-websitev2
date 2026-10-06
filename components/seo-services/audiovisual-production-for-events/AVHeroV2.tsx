@@ -27,15 +27,18 @@ export default function AVHeroV2() {
           Audiovisual Production for Events
         </h1>
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#2CBCED] mb-6 font-['Josefin_Sans',sans-serif]">
-          AV Should Support the Experience
+          Audiovisual Production Built Around Your Event
         </h2>
 
         {/* Lede text */}
         <p className="text-base sm:text-lg lg:text-[19px] leading-relaxed text-[#C9D3DC] mb-4 font-['IBM_Plex_Sans',sans-serif] max-w-[68ch]">
-          Meeting planners carry tremendous responsibility. You should not have to become an audiovisual engineer just to understand what you are buying. DXG provides professional audiovisual production for corporate, association, medical, nonprofit, and education events nationwide. We explain the technical requirements in plain language so you always know exactly what is happening in the room.
+          DXG brings audio, video, lighting, LED, projection, cameras, staging,
+          playback, recording, and streaming together to make your event look
+          and sound the way it should. We start with your program, your space,
+          and your goals, then design the right system around them.
         </p>
         <p className="text-base sm:text-lg leading-relaxed text-white font-medium mb-8 font-['IBM_Plex_Sans',sans-serif] max-w-[68ch]">
-          When you hire a conference AV company, you deserve absolute clarity. Proposals often arrive packed with model numbers and confusing line items. We strip away the technical terminology. Our team explains how each piece of equipment serves a specific purpose for your attendees and your budget.
+          Designed by Engineers. Built around your program.
         </p>
 
         {/* Action buttons */}

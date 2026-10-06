@@ -3,7 +3,7 @@ import React from "react";
 export default function EngagementScopeV2Section() {
   const phases = [
     {
-      phaseTitle: "Before Vendors Commit",
+      phaseTitle: "Planning and Design",
       items: [
         {
           title: "Production budgeting",
@@ -24,7 +24,7 @@ export default function EngagementScopeV2Section() {
       ],
     },
     {
-      phaseTitle: "Building the Plan",
+      phaseTitle: "Production Planning and Logistics",
       items: [
         {
           title: "Production schedules",
@@ -45,7 +45,7 @@ export default function EngagementScopeV2Section() {
       ],
     },
     {
-      phaseTitle: "Show Week Operations",
+      phaseTitle: "Executing The Plan",
       items: [
         {
           title: "Run of show development",

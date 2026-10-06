@@ -5,61 +5,33 @@ export default function HybridFormatsSection() {
   const formats = [
     {
       title: "Corporate Events",
-      icon: (
-        <svg
-          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
-          viewBox="0 0 24 24"
-        >
-          <rect x="3" y="4" width="18" height="12" rx="1" />
-          <path d="M8 20h8M12 16v4" />
-        </svg>
-      ),
+      image: "/images/seo-services/corporate-event.webp",
+      alt: "DXG hybrid and virtual corporate event broadcast with executive keynote stage and multi-camera feeds",
+      imageTitle: "Hybrid Corporate Event Production",
     },
     {
       title: "Association Conferences",
-      icon: (
-        <svg
-          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
-          viewBox="0 0 24 24"
-        >
-          <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6" />
-        </svg>
-      ),
+      image: "/images/seo-services/association-event.webp",
+      alt: "DXG hybrid association conference production with live panel discussions and virtual attendee streaming",
+      imageTitle: "Hybrid Association Conference Production",
     },
     {
       title: "Medical Events",
-      icon: (
-        <svg
-          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 4v16M4 12h16" />
-          <circle cx="12" cy="12" r="9" />
-        </svg>
-      ),
+      image: "/images/seo-services/medical-meeting.webp",
+      alt: "DXG medical event livestream production with clinical slide transmission and symposium stage",
+      imageTitle: "Hybrid Medical Event Production",
     },
     {
       title: "Nonprofit Events",
-      icon: (
-        <svg
-          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" />
-        </svg>
-      ),
+      image: "/images/seo-services/fundraiser-event.webp",
+      alt: "DXG nonprofit livestream and virtual gala broadcast production",
+      imageTitle: "Hybrid Nonprofit Event Production",
     },
     {
       title: "Education Events",
-      icon: (
-        <svg
-          className="w-7 h-7 stroke-[#2CBCED] fill-none stroke-[1.8] stroke-linecap-round stroke-linejoin-round"
-          viewBox="0 0 24 24"
-        >
-          <path d="M2 9l10-5 10 5-10 5z" />
-          <path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" />
-        </svg>
-      ),
+      image: "/images/seo-services/education-program.webp",
+      alt: "DXG hybrid education symposium and virtual workshop production",
+      imageTitle: "Hybrid Education Program Production",
     },
   ];
 
@@ -135,16 +107,25 @@ export default function HybridFormatsSection() {
           {formats.map((v, i) => (
             <div
               key={i}
-              className={`group bg-white border border-[#D5DFE7] hover:border-[#2CBCED] p-6 sm:p-7 rounded-2xl flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_14px_30px_rgba(44,188,237,0.18)] cursor-default min-h-[170px] sm:min-h-[185px] ${
+              className={`group bg-white border border-[#D5DFE7] hover:border-[#2CBCED] rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_14px_30px_rgba(44,188,237,0.18)] cursor-default ${
                 i === 4 ? "col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-1" : ""
               }`}
             >
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#2CBCED]/15 to-[#2CBCED]/5 border border-[#2CBCED]/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-[#2CBCED]/50 transition-all duration-300 shrink-0 text-[#2CBCED]">
-                {v.icon}
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-[#0A0F16]">
+                <Image
+                  src={v.image}
+                  alt={v.alt}
+                  title={v.imageTitle}
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
+                />
               </div>
-              <h3 className="text-[17px] sm:text-[18px] font-semibold font-['Josefin_Sans',sans-serif] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 leading-snug">
-                {v.title}
-              </h3>
+              <div className="p-4 sm:p-5 flex items-center justify-center text-center grow">
+                <h3 className="text-[16px] sm:text-[17px] font-semibold font-['Josefin_Sans',sans-serif] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 leading-snug">
+                  {v.title}
+                </h3>
+              </div>
             </div>
           ))}
         </div>

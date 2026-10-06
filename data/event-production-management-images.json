@@ -207,6 +207,126 @@
         "description": "Cinematic low-light ballroom shot showing equipment cases staged in doorway prior to show day setup."
       },
       "creativeBrief": "Empty ballroom the night before, one work light on, cases lined up in the doorway. Wide, dark, cinematic. Sits under a navy gradient so text stays readable."
+    },
+    {
+      "id": "vertical_corporate_event",
+      "tag": "VERTICAL 01",
+      "title": "Corporate Events",
+      "alt": "DXG corporate event production management with keynote stage presentation and LED video backdrop",
+      "caption": "Executive keynote presentation and general session production at a premier corporate conference.",
+      "src": "/images/seo-services/corporate-event.webp",
+      "aspectRatio": "4:3",
+      "recommendedWidth": 1448,
+      "recommendedHeight": 1086,
+      "format": "webp",
+      "section": "Industry Verticals Section",
+      "seo": {
+        "keywords": [
+          "corporate event production",
+          "executive conference staging",
+          "corporate keynote AV",
+          "general session production"
+        ],
+        "imageTitle": "DXG Corporate Event Production & Keynote Staging",
+        "description": "Corporate general session keynote presentation featuring dynamic LED stage backdrop, professional lighting, and banquet seating."
+      },
+      "creativeBrief": "Keynote speaker on stage in corporate setting with wide blue curved LED backdrop, professional lighting, and audience seated at round tables."
+    },
+    {
+      "id": "vertical_association_event",
+      "tag": "VERTICAL 02",
+      "title": "Association Conferences",
+      "alt": "DXG association conference production with panel stage seating, lighting, and engaged attendee audience",
+      "caption": "Panel discussion session and stage production for a large-scale association annual conference.",
+      "src": "/images/seo-services/association-event.webp",
+      "aspectRatio": "4:3",
+      "recommendedWidth": 1448,
+      "recommendedHeight": 1086,
+      "format": "webp",
+      "section": "Industry Verticals Section",
+      "seo": {
+        "keywords": [
+          "association conference production",
+          "panel discussion staging",
+          "annual conference AV",
+          "association event management"
+        ],
+        "imageTitle": "DXG Association Conference Staging & Panel Production",
+        "description": "Four-person leadership panel discussion on stage with custom stage lighting, blue backdrop, and conference attendees."
+      },
+      "creativeBrief": "Association conference panel on stage with white armchairs, wide screen background, and attendees seated across conference hall."
+    },
+    {
+      "id": "vertical_medical_meeting",
+      "tag": "VERTICAL 03",
+      "title": "Medical Meetings",
+      "alt": "DXG medical meeting production with anatomy presentation visuals and auditorium seating",
+      "caption": "Medical symposium keynote presentation featuring ultra-high definition medical imaging and data displays.",
+      "src": "/images/seo-services/medical-meeting.webp",
+      "aspectRatio": "4:3",
+      "recommendedWidth": 1448,
+      "recommendedHeight": 1086,
+      "format": "webp",
+      "section": "Industry Verticals Section",
+      "seo": {
+        "keywords": [
+          "medical meeting production",
+          "medical symposium AV",
+          "CME event production",
+          "healthcare conference staging"
+        ],
+        "imageTitle": "DXG Medical Meeting & Clinical Symposium Production",
+        "description": "Clinical keynote presenter delivering lecture with large-scale anatomical LED visual displays to audience of healthcare professionals."
+      },
+      "creativeBrief": "Female medical presenter at podium with high-definition anatomical displays, dual auxiliary screens, and audience of attendees."
+    },
+    {
+      "id": "vertical_education_program",
+      "tag": "VERTICAL 04",
+      "title": "Education Programs",
+      "alt": "DXG education program interactive workshop and classroom presentation production",
+      "caption": "Interactive higher education symposium and training workshop presentation production.",
+      "src": "/images/seo-services/education-program.webp",
+      "aspectRatio": "4:3",
+      "recommendedWidth": 1448,
+      "recommendedHeight": 1086,
+      "format": "webp",
+      "section": "Industry Verticals Section",
+      "seo": {
+        "keywords": [
+          "education event production",
+          "academic symposium AV",
+          "higher education conference staging",
+          "training workshop production"
+        ],
+        "imageTitle": "DXG Education Program & Interactive Symposium Production",
+        "description": "Interactive educational session with presenter addressing audience with active attendee participation and stage visual support."
+      },
+      "creativeBrief": "Female speaker delivering presentation in educational setting with attendee raising hand to ask a question, and blue wave backdrop."
+    },
+    {
+      "id": "vertical_fundraiser_event",
+      "tag": "VERTICAL 05",
+      "title": "Fundraising Events & Galas",
+      "alt": "DXG fundraising gala and charity appeal event production with live auction staging and guest paddle raise",
+      "caption": "Live auction paddle raise and fundraising gala production with stage presentation lighting.",
+      "src": "/images/seo-services/fundraiser-event.webp",
+      "aspectRatio": "4:3",
+      "recommendedWidth": 1448,
+      "recommendedHeight": 1086,
+      "format": "webp",
+      "section": "Industry Verticals Section",
+      "seo": {
+        "keywords": [
+          "fundraising gala production",
+          "charity event AV",
+          "live auction appeal staging",
+          "donor recognition event"
+        ],
+        "imageTitle": "DXG Fundraising Gala & Charity Event Production",
+        "description": "High-energy charity gala live auction with emcee on stage and donors holding bidding paddles at elegant banquet tables."
+      },
+      "creativeBrief": "Auctioneer/emcee on stage in tuxedo at a fundraising gala, donors holding bidding paddles at candlelit banquet tables."
     }
   ]
 }

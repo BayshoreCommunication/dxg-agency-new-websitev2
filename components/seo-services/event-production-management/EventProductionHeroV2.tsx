@@ -27,24 +27,22 @@ export default function EventProductionHeroV2() {
           Event Production Management
         </h1>
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#2CBCED] mb-6 font-['Josefin_Sans',sans-serif]">
-          Coordinated Event Production Services
+          The Same Production Team, Year After Year
         </h2>
 
         {/* Lede text */}
         <p className="text-base sm:text-lg lg:text-[19px] leading-relaxed text-[#C9D3DC] mb-4 font-['IBM_Plex_Sans',sans-serif] max-w-[68ch]">
-          Appealing events require hundreds of decisions made at the
-          appropriate time. Before anyone steps up onto the live stage,
-          there are budgets, vendors, crews, equipment, speaker
-          timelines, staging and live cues to consider. Digital Xperience
-          Group offers corporate, association, medical, nonprofit and
-          education event production management that is independent. As a
-          full service event production company, we understand how every
-          technical detail impacts your broader audience experience.
+          When your event changes venues, preferred or exclusive AV agreements
+          can decide who supplies equipment and operators. They don&apos;t
+          decide who manages your production. DXG keeps your production
+          leadership with your event year over year, sized to your program,
+          while you keep the venue pricing on internet, rigging, and power that
+          often rises when an outside AV company comes in.
         </p>
         <p className="text-base sm:text-lg leading-relaxed text-white font-medium mb-8 font-['IBM_Plex_Sans',sans-serif] max-w-[68ch]">
-          With dedicated production management, we keep your budget
-          controlled, your schedule organized, and every room ready for
-          show day.
+          In years when the venue&apos;s in-house team supplies the gear, your DXG
+          team still runs the planning, coordination, and show-day process.
+          Same people, same production plan, same standards.
         </p>
 
         {/* Action buttons */}
