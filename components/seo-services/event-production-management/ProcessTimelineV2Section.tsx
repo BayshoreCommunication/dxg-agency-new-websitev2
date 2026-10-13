@@ -8,42 +8,36 @@ export default function ProcessTimelineV2Section() {
       ghost: "01",
       title: "Discovery and Scoping",
       desc: "Format, audience, venue, budget, agenda, room count, and production goals. We establish a defined scope before equipment or vendor decisions are made.",
-      live: false,
     },
     {
       num: 2,
       ghost: "02",
       title: "Planning and Vendor Coordination",
       desc: "Working budget, technical scope, room plans, staffing, and one master production timeline that updates as the program changes.",
-      live: false,
     },
     {
       num: 3,
       ghost: "03",
       title: "Technical Preparation",
       desc: "Room specs, run of show, speaker materials, cue sheets, crew schedules, and a technical site visit to confirm venue conditions.",
-      live: false,
     },
     {
       num: 4,
       ghost: "04",
       title: "Rehearsal",
       desc: "Presentations, video, audio, lighting, stage movement, and timing tested in the real room before attendees arrive.",
-      live: false,
     },
     {
       num: 5,
       ghost: "05",
       title: "Show Day Execution",
       desc: "Our producer directs setup, checks, crew, vendors, and live show flow from the front of the house. Your planners stay with attendees and stakeholders.",
-      live: true,
     },
     {
       num: 6,
       ghost: "06",
       title: "Closeout and Debrief",
       desc: "Strike, equipment return, vendor reconciliation, documentation, and a debrief that feeds directly into your next planning cycle.",
-      live: false,
     },
   ];
 
@@ -141,11 +135,7 @@ export default function ProcessTimelineV2Section() {
               >
                 {/* Ghost numeral */}
                 <span
-                  className={`absolute -top-[70px] -left-1 font-['Josefin_Sans',sans-serif] font-bold text-[84px] sm:text-[96px] leading-none pointer-events-none select-none tracking-tighter transition-all duration-300 ${
-                    step.live
-                      ? "text-[#2CBCED] opacity-30"
-                      : "text-white opacity-[0.06] group-hover:text-[#2CBCED] group-hover:opacity-40"
-                  }`}
+                  className="absolute -top-[70px] -left-1 font-['Josefin_Sans',sans-serif] font-bold text-[84px] sm:text-[96px] leading-none pointer-events-none select-none tracking-tighter transition-all duration-300 text-white opacity-[0.06] group-hover:text-[#2CBCED] group-hover:opacity-40"
                   aria-hidden="true"
                 >
                   {step.ghost}
@@ -153,11 +143,7 @@ export default function ProcessTimelineV2Section() {
 
                 {/* Badge Number */}
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center font-['Josefin_Sans',sans-serif] font-bold text-sm relative mb-5 pt-0.5 border transition-all duration-300 group-hover:scale-110 ${
-                    step.live
-                      ? "bg-[#2CBCED] text-[#0A0F16] border-[#2CBCED] shadow-[0_0_15px_rgba(44,188,237,0.5)]"
-                      : "bg-[#111A24] text-white border-[#1E2A36] group-hover:bg-[#2CBCED] group-hover:text-[#0A0F16] group-hover:border-[#2CBCED] group-hover:shadow-[0_0_20px_rgba(44,188,237,0.6)]"
-                  }`}
+                  className="w-8 h-8 rounded-full flex items-center justify-center font-['Josefin_Sans',sans-serif] font-bold text-sm relative mb-5 pt-0.5 border transition-all duration-300 group-hover:scale-110 bg-[#111A24] text-white border-[#1E2A36] group-hover:bg-[#2CBCED] group-hover:text-[#0A0F16] group-hover:border-[#2CBCED] group-hover:shadow-[0_0_20px_rgba(44,188,237,0.6)]"
                 >
                   {step.num}
                 </div>

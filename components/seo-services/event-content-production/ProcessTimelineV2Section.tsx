@@ -8,42 +8,36 @@ export default function ProcessTimelineV2Section() {
       ghost: "01",
       title: "1. Content Discovery",
       desc: "We review the event type, audience, agenda, brand requirements, screen setup, content inventory and delivery dates. You get a clear view of the content needed for the show.",
-      live: false,
     },
     {
       num: 2,
       ghost: "02",
       title: "2. Content Planning",
       desc: "We map each asset to its session, speaker, screen, cue and purpose. The plan helps the team see missing pieces early and keep production moving.",
-      live: false,
     },
     {
       num: 3,
       ghost: "03",
       title: "3. Creative Direction",
       desc: "We define the visual direction for opening videos, motion graphics, presentations, transitions, awards and branded screen moments. Creative choices stay connected to the event experience.",
-      live: false,
     },
     {
       num: 4,
       ghost: "04",
       title: "4. Production and Design",
       desc: "Our team produces and edits the required media, from conference video content and event opening videos to motion graphics for events, walk in graphics, presentation design and digital scenic content.",
-      live: false,
     },
     {
       num: 5,
       ghost: "05",
       title: "5. Review and Technical Preparation",
       desc: "Every finished asset moves through content review and technical preparation. We check messaging, branding, timing, file format, dimensions, resolution and playback requirements.",
-      live: false,
     },
     {
       num: 6,
       ghost: "06",
       title: "6. Show Ready Delivery",
       desc: "Final files arrive organized for the production team. Videos, graphics, presentations, transitions and playback assets follow the approved show plan.",
-      live: true,
     },
   ];
 
@@ -141,11 +135,7 @@ export default function ProcessTimelineV2Section() {
               >
                 {/* Ghost numeral */}
                 <span
-                  className={`absolute -top-[70px] -left-1 font-['Josefin_Sans',sans-serif] font-bold text-[84px] sm:text-[96px] leading-none pointer-events-none select-none tracking-tighter transition-all duration-300 ${
-                    step.live
-                      ? "text-[#2CBCED] opacity-30"
-                      : "text-white opacity-[0.06] group-hover:text-[#2CBCED] group-hover:opacity-40"
-                  }`}
+                  className="absolute -top-[70px] -left-1 font-['Josefin_Sans',sans-serif] font-bold text-[84px] sm:text-[96px] leading-none pointer-events-none select-none tracking-tighter transition-all duration-300 text-white opacity-[0.06] group-hover:text-[#2CBCED] group-hover:opacity-40"
                   aria-hidden="true"
                 >
                   {step.ghost}
@@ -153,11 +143,7 @@ export default function ProcessTimelineV2Section() {
 
                 {/* Badge Number */}
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center font-['Josefin_Sans',sans-serif] font-bold text-sm relative mb-5 pt-0.5 border transition-all duration-300 group-hover:scale-110 ${
-                    step.live
-                      ? "bg-[#2CBCED] text-[#0A0F16] border-[#2CBCED] shadow-[0_0_15px_rgba(44,188,237,0.5)]"
-                      : "bg-[#111A24] text-white border-[#1E2A36] group-hover:bg-[#2CBCED] group-hover:text-[#0A0F16] group-hover:border-[#2CBCED] group-hover:shadow-[0_0_20px_rgba(44,188,237,0.6)]"
-                  }`}
+                  className="w-8 h-8 rounded-full flex items-center justify-center font-['Josefin_Sans',sans-serif] font-bold text-sm relative mb-5 pt-0.5 border transition-all duration-300 group-hover:scale-110 bg-[#111A24] text-white border-[#1E2A36] group-hover:bg-[#2CBCED] group-hover:text-[#0A0F16] group-hover:border-[#2CBCED] group-hover:shadow-[0_0_20px_rgba(44,188,237,0.6)]"
                 >
                   {step.num}
                 </div>

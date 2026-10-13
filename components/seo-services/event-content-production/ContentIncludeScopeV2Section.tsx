@@ -85,8 +85,8 @@ export default function ContentIncludeScopeV2Section() {
           {categories.map((phase, pIdx) => (
             <React.Fragment key={pIdx}>
               {/* Category Banner */}
-              <div className="group bg-[#0A0F16] text-white col-span-1 sm:col-span-2 lg:col-span-4 px-5.5 py-3.5 font-['Josefin_Sans',sans-serif] text-sm font-semibold flex items-center gap-3.5 after:content-[''] after:flex-1 after:h-[1px] after:bg-white/15 transition-colors duration-200">
-                <span className="group-hover:text-[#2CBCED] transition-colors duration-200">
+              <div className="bg-[#0A0F16] col-span-1 sm:col-span-2 lg:col-span-4 px-6 sm:px-8 py-4 font-['Josefin_Sans',sans-serif] text-lg sm:text-xl font-bold flex items-center gap-4 after:content-[''] after:flex-1 after:h-[1px] after:bg-white/15">
+                <span className="text-[#2CBCED] tracking-wide">
                   {phase.phaseTitle}
                 </span>
               </div>

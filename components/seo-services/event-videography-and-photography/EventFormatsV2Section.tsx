@@ -1,5 +1,7 @@
-import Image from "next/image";
+"use client";
+
 import React from "react";
+import VerticalShowcase from "components/seo-services/shared/VerticalShowcase";
 
 export default function EventFormatsV2Section() {
   const verticals = [
@@ -48,33 +50,8 @@ export default function EventFormatsV2Section() {
           </p>
         </div>
 
-        {/* Verticals Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-          {verticals.map((v, i) => (
-            <div
-              key={i}
-              className={`group bg-white border border-[#D5DFE7] hover:border-[#2CBCED] rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_14px_30px_rgba(44,188,237,0.18)] cursor-default ${
-                i === 4 ? "col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-1" : ""
-              }`}
-            >
-              <div className="relative w-full aspect-[4/3] overflow-hidden bg-[#0A0F16]">
-                <Image
-                  src={v.image}
-                  alt={v.alt}
-                  title={v.imageTitle}
-                  fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
-                />
-              </div>
-              <div className="p-4 sm:p-5 flex items-center justify-center text-center grow">
-                <h3 className="text-[16px] sm:text-[17px] font-semibold font-['Josefin_Sans',sans-serif] text-[#0A0F16] group-hover:text-[#2CBCED] transition-colors duration-200 leading-snug">
-                  {v.title}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Interactive Feature Showcase matching the design in the user image */}
+        <VerticalShowcase items={verticals} />
       </div>
     </section>
   );

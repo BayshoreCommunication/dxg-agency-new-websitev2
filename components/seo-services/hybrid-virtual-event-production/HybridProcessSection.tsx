@@ -7,42 +7,36 @@ export default function HybridProcessSection() {
       ghost: "01",
       title: "Discovery and production scoping",
       desc: "We review the event format, audience mix, venue, agenda, session count, presenters, streaming goals, platform requirements and production needs. This creates a clear scope for the rest of the production.",
-      live: false,
     },
     {
       num: 2,
       ghost: "02",
       title: "Technical and platform planning",
       desc: "We define the camera plan, audio workflow, streaming path, remote contribution method, presentation integration, graphics requirements, platform setup and production responsibilities.",
-      live: false,
     },
     {
       num: 3,
       ghost: "03",
       title: "Speaker and content preparation",
       desc: "Remote presenters receive technical guidance before the event. Our team collects presentation files, checks content, confirms speaker requirements and prepares each session for live delivery.",
-      live: false,
     },
     {
       num: 4,
       ghost: "04",
       title: "Technical rehearsal",
       desc: "We test remote connections, microphones, cameras, presentations, playback, graphics, speaker transitions, Q&A, polling and other live elements. Rehearsal gives the production team a shared sequence for show day.",
-      live: false,
     },
     {
       num: 5,
       ghost: "05",
       title: "Live show production",
       desc: "Our producers coordinate the live show across the venue and virtual audience. Cameras, remote presenters, graphics, content, streaming and session cues move together through the run of show.",
-      live: true,
     },
     {
       num: 6,
       ghost: "06",
       title: "Recording and on-demand content",
       desc: "Sessions can be recorded during the live event for later viewing. DXG can support post event content delivery for audiences who need access after the program ends.",
-      live: false,
     },
   ];
 
@@ -86,11 +80,7 @@ export default function HybridProcessSection() {
               >
                 {/* Ghost numeral */}
                 <span
-                  className={`absolute -top-[70px] -left-1 font-['Josefin_Sans',sans-serif] font-bold text-[84px] sm:text-[96px] leading-none pointer-events-none select-none tracking-tighter transition-all duration-300 ${
-                    step.live
-                      ? "text-[#2CBCED] opacity-30"
-                      : "text-white opacity-[0.06] group-hover:text-[#2CBCED] group-hover:opacity-40"
-                  }`}
+                  className="absolute -top-[70px] -left-1 font-['Josefin_Sans',sans-serif] font-bold text-[84px] sm:text-[96px] leading-none pointer-events-none select-none tracking-tighter transition-all duration-300 text-white opacity-[0.06] group-hover:text-[#2CBCED] group-hover:opacity-40"
                   aria-hidden="true"
                 >
                   {step.ghost}
@@ -98,11 +88,7 @@ export default function HybridProcessSection() {
 
                 {/* Badge Number */}
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center font-['Josefin_Sans',sans-serif] font-bold text-sm relative mb-5 pt-0.5 border transition-all duration-300 group-hover:scale-110 ${
-                    step.live
-                      ? "bg-[#2CBCED] text-[#0A0F16] border-[#2CBCED] shadow-[0_0_15px_rgba(44,188,237,0.5)]"
-                      : "bg-[#111A24] text-white border-[#1E2A36] group-hover:bg-[#2CBCED] group-hover:text-[#0A0F16] group-hover:border-[#2CBCED] group-hover:shadow-[0_0_20px_rgba(44,188,237,0.6)]"
-                  }`}
+                  className="w-8 h-8 rounded-full flex items-center justify-center font-['Josefin_Sans',sans-serif] font-bold text-sm relative mb-5 pt-0.5 border transition-all duration-300 group-hover:scale-110 bg-[#111A24] text-white border-[#1E2A36] group-hover:bg-[#2CBCED] group-hover:text-[#0A0F16] group-hover:border-[#2CBCED] group-hover:shadow-[0_0_20px_rgba(44,188,237,0.6)]"
                 >
                   {step.num}
                 </div>
