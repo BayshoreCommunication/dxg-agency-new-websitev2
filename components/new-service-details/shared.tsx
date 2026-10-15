@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Container from "components/shared/Container";
 import { ArrowRight, ChevronRight, type LucideIcon } from "lucide-react";
 
@@ -50,20 +51,34 @@ export const IconGrid = ({ items }: { items: { icon: LucideIcon; label: string }
   </div>
 );
 
-/* Centered closing CTA; gray stands in for the background image */
+/* Centered closing CTA; supports optional background image */
 export const CenteredCTA = ({
   text,
   primaryLabel,
   secondaryLabel = "Review My Existing Proposal",
   eyebrow,
+  bgImage,
 }: {
   text: React.ReactNode;
   primaryLabel: string;
   secondaryLabel?: string;
   eyebrow?: string;
+  bgImage?: string;
 }) => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-[#0a3fd1]/80" />
+  <section className="relative overflow-hidden bg-gray-900 text-white">
+    {bgImage ? (
+      <>
+        <Image
+          src={bgImage}
+          alt="Call to action background"
+          fill
+          className="object-cover object-center pointer-events-none opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#061a4a]/85 via-[#061a4a]/75 to-[#061a4a]/90 pointer-events-none" />
+      </>
+    ) : (
+      <div className="absolute inset-0 bg-[#0a3fd1]/80" />
+    )}
     <Container className="relative py-12 text-center lg:py-14">
       {eyebrow && (
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
@@ -87,27 +102,38 @@ export const CenteredCTA = ({
   </section>
 );
 
-/* Image-topped cards with the icon overlapping the image edge; gray stands in for the image.
+/* Image-topped cards with the icon overlapping the image edge; supports real images or gray placeholder fallback.
    "stacked" puts the title under the icon, "inline" puts it beside the icon. */
 export const CapabilityGrid = ({
   items,
   variant = "stacked",
 }: {
-  items: { icon: LucideIcon; title: string; text: string }[];
+  items: { icon: LucideIcon; title: string; text: string; image?: string }[];
   variant?: "stacked" | "inline";
 }) => (
   <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-    {items.map(({ icon: Icon, title, text }) => (
+    {items.map(({ icon: Icon, title, text, image }) => (
       <article
         key={title}
-        className="flex flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm"
+        className="flex flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm transition hover:shadow-md"
       >
-        <div className="aspect-[16/7] bg-gray-300" aria-hidden="true" />
+        <div className="relative aspect-[16/9] overflow-hidden bg-gray-200" aria-hidden="true">
+          {image ? (
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover object-center transition duration-300 hover:scale-105"
+            />
+          ) : (
+            <div className="h-full w-full bg-gray-300" />
+          )}
+        </div>
         <div
           className={`flex flex-1 px-5 pb-6 ${variant === "inline" ? "gap-3 pt-4" : "flex-col"}`}
         >
           <span
-            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-100 bg-white shadow-md ${
+            className={`relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-100 bg-white shadow-md ${
               variant === "inline" ? "-mt-10" : "-mt-7"
             }`}
           >

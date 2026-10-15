@@ -1,4 +1,5 @@
 import Container from "components/shared/Container";
+import Image from "next/image";
 import { CapabilityGrid, CenteredCTA, Eyebrow, IconGrid, PrimaryButton } from "./shared";
 import {
   ArrowRight,
@@ -38,41 +39,49 @@ const capabilities = [
     icon: Video,
     title: "Livestream Production",
     text: "Professional live streaming for global audiences with reliable, high-quality broadcast production.",
+    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-livestream-production.jpg",
   },
   {
     icon: Monitor,
     title: "Virtual Platform Support",
     text: "Expert support for leading virtual event platforms with seamless integration, configurations and show management.",
+    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-virtual-platform.jpg",
   },
   {
     icon: UserRound,
     title: "Remote Speaker Management",
     text: "Comprehensive support for remote speakers, including technical setup, coaching and live coordination.",
+    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-remote-speaker.jpg",
   },
   {
     icon: Video,
     title: "Recording & Content Capture",
     text: "Multi-camera recording, session capture and content repurposing for on-demand, post-event and internal use.",
+    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-recording-capture.jpg",
   },
   {
     icon: ImageIcon,
     title: "Broadcast Graphics & Playback",
     text: "Custom show graphics, lower thirds, video playback and branded content designed for live and virtual audiences.",
+    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-broadcast-graphics.jpg",
   },
   {
     icon: BarChart3,
     title: "Audience Engagement Tools",
     text: "Live polls, Q&A, chat moderation and interactive experiences that keep both in-room and remote audiences engaged.",
+    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-audience-engagement.jpg",
   },
   {
     icon: Settings,
     title: "Control Room & Technical Direction",
     text: "Experienced technical directors and show callers who manage complex live and virtual productions from our control rooms.",
+    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-control-room.jpg",
   },
   {
     icon: Network,
     title: "Multi-Site Signal Distribution",
     text: "Reliable signal distribution for multi-site events, connecting multiple locations, stages and remote contributors.",
+    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-signal-distribution.jpg",
   },
 ];
 
@@ -131,15 +140,30 @@ const HeroSection = () => (
             </a>
           </div>
         </div>
-        <div className="aspect-[16/9] w-full rounded-lg bg-gray-300" aria-hidden="true" />
+        <div className="relative aspect-[16/9] w-full rounded-lg overflow-hidden bg-gray-900 shadow-xl">
+          <Image
+            src="/images/seo-services/hybrid-and-virtual-event-production/hybrid-hero-showcase.jpg"
+            alt="One Event. Two Audiences. One Coordinated Experience. - DXG Hybrid Event Stage"
+            title="Hybrid & Virtual Event Production"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
       </div>
     </Container>
   </section>
 );
 
 const AudienceSection = () => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a] via-[#0a2a6e]/90 to-[#0a2a6e]/80" />
+  <section className="relative overflow-hidden bg-gray-900 text-white">
+    <Image
+      src="/images/seo-services/hybrid-and-virtual-event-production/hybrid-audience-bg.jpg"
+      alt="Hybrid event audience"
+      fill
+      className="object-cover object-center pointer-events-none opacity-25"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a]/95 via-[#0a2a6e]/90 to-[#0a2a6e]/85" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
@@ -228,6 +252,7 @@ const HybridAndVirtualEventProduction = () => {
       <CenteredCTA
         primaryLabel="Request a Hybrid Proposal"
         text="Whether you're planning a hybrid conference, a virtual event, live streaming experience or an executive broadcast, DXG can help you create a connected experience for every audience."
+        bgImage="/images/seo-services/hybrid-and-virtual-event-production/hybrid-cta-bg.jpg"
       />
     </div>
   );
