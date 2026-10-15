@@ -26,6 +26,7 @@ import {
   Users,
   Wallet,
 } from "lucide-react";
+import Image from "next/image";
 
 /* ---------- DATA ---------- */
 
@@ -37,7 +38,23 @@ const programs = [
   { icon: GraduationCap, label: "Education Programs" },
 ];
 
-const processImages = ["Site Visits", "Technical Rehearsals", "Show Day Execution"];
+const processImages = [
+  {
+    label: "Site Visits",
+    src: "/images/seo-services/event-production-management/technical-site-visit-ballroom.webp",
+    alt: "Technical site visit ballroom - DXG Event Production",
+  },
+  {
+    label: "Technical Rehearsals",
+    src: "/images/seo-services/event-production-management/technical-speaker-rehearsal.webp",
+    alt: "Technical speaker rehearsal - DXG Event Production",
+  },
+  {
+    label: "Show Day Execution",
+    src: "/images/seo-services/event-production-management/live-show-day-keynote-session.webp",
+    alt: "Live show day keynote session - DXG Event Production",
+  },
+];
 
 const stages = [
   {
@@ -231,14 +248,32 @@ const HeroSection = () => (
           </a>
         </div>
       </div>
-      <div className="min-h-[280px] bg-gray-300 sm:min-h-[380px] lg:min-h-[600px]" aria-hidden="true" />
+      <div className="relative min-h-[280px] w-full sm:min-h-[380px] lg:min-h-[600px] border-4 border-white">
+        <Image
+          src="/images/seo-services/event-production-management/EventProductionManagement.png"
+
+          alt="Event Production Management"
+          fill
+          priority
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+          className="object-cover"
+        />
+      </div>
     </div>
   </section>
 );
 
 const ProgramsSection = () => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a] via-[#0a2a6e]/80 to-[#0a2a6e]/30" />
+  <section className="relative overflow-hidden bg-[#061a4a] text-white">
+    <Image
+      src="/images/seo-services/event-production-management/Eventsofeverysize.png"
+      alt="Events of every size. A consistent approach."
+      fill
+      sizes="100vw"
+      className="object-cover object-center"
+      priority
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a]/90 via-[#0a2a6e]/75 to-[#061a4a]/60" />
     <Container className="relative py-16 lg:py-20">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
@@ -256,9 +291,8 @@ const ProgramsSection = () => (
           {programs.map(({ icon: Icon, label }, i) => (
             <div
               key={label}
-              className={`flex flex-col items-center px-3 text-center ${
-                i > 0 ? "lg:border-l lg:border-white/25" : ""
-              }`}
+              className={`flex flex-col items-center px-3 text-center ${i > 0 ? "lg:border-l lg:border-white/25" : ""
+                }`}
             >
               <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/80 bg-[#1458f5]/40">
                 <Icon className="h-7 w-7" />
@@ -285,9 +319,19 @@ const ProcessSection = () => (
           </p>
         </div>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-          {processImages.map((label) => (
-            <div key={label} className="relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-300">
-              <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-3 pb-2 pt-6 text-[11px] font-semibold uppercase tracking-wider text-white">
+          {processImages.map(({ label, src, alt }) => (
+            <div
+              key={label}
+              className="group relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-900"
+            >
+              <Image
+                src={src}
+                alt={alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <span className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-3 pb-2 pt-6 text-[11px] font-semibold uppercase tracking-wider text-white">
                 {label}
               </span>
             </div>
@@ -320,8 +364,16 @@ const ProcessSection = () => (
 );
 
 const IncludeSection = () => (
-  <section className="bg-gradient-to-b from-[#071a45] to-[#0a2560] py-16 text-white lg:py-20">
-    <Container>
+  <section className="relative overflow-hidden bg-[#071a45] py-16 text-white lg:py-20">
+    <Image
+      src="/images/seo-services/event-production-management/complete-approach.png"
+      alt="What Production Management Can Include background"
+      fill
+      sizes="100vw"
+      className="object-cover object-center"
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-[#071a45]/90 via-[#071a45]/90 to-[#0a2560]/92" />
+    <Container className="relative">
       <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
         <div>
           <Eyebrow dark>A complete approach</Eyebrow>
@@ -337,7 +389,7 @@ const IncludeSection = () => (
         {includeColumns.map(({ icon: Icon, title, subtitle, items }) => (
           <div
             key={title}
-            className="flex flex-col rounded-xl border border-white/15 bg-white/[0.04] p-4"
+            className="flex flex-col rounded-xl border border-white/15 bg-white/[0.05] p-4 backdrop-blur-sm"
           >
             <div className="flex items-center gap-4 p-2">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1458f5]">
@@ -352,7 +404,7 @@ const IncludeSection = () => (
               {items.map(({ icon: ItemIcon, title: itemTitle, text }) => (
                 <div
                   key={itemTitle}
-                  className="flex flex-1 items-start gap-3 rounded-lg border border-white/10 bg-white/[0.06] p-3"
+                  className="flex flex-1 items-start gap-3 rounded-lg border border-white/10 bg-white/[0.06] p-3 backdrop-blur-sm"
                 >
                   <ItemIcon className="mt-0.5 h-5 w-5 shrink-0 text-[#5b9bff]" />
                   <div>
@@ -433,8 +485,15 @@ const FAQSection = () => {
 };
 
 const FinalCTASection = () => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a] via-[#0a2a6e]/85 to-[#0a2a6e]/60" />
+  <section className="relative overflow-hidden bg-[#061a4a] text-white">
+    <Image
+      src="/images/seo-services/event-production-management/plan-your-next-event.png"
+      alt="Let's Plan Your Next Event"
+      fill
+      sizes="100vw"
+      className="object-cover object-center"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a]/90 via-[#0a2a6e]/80 to-[#061a4a]/70" />
     <Container className="relative py-14 lg:py-16">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-2xl">
