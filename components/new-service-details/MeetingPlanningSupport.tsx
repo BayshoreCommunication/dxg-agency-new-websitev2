@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "components/shared/Container";
 import {
   CapabilityGrid,
@@ -47,41 +48,49 @@ const capabilities = [
     icon: CalendarDays,
     title: "Pre-Event Planning & Logistics",
     text: "Support with planning timelines, checklists, logistics and pre-event coordination.",
+    image: "/images/seo-services/event-videography-and-photography/event-pre-capture-planning.webp",
   },
   {
     icon: UsersRound,
     title: "Registration & Attendee Management",
     text: "Full registration support, badging, attendee communication and onsite check-in.",
+    image: "/images/seo-services/meeting-planning-support/registration-attendee-management.webp",
   },
   {
     icon: Mic,
     title: "Session & Speaker Coordination",
     text: "Speaker management, session tracking, run-of-show support and on-site liaison services.",
+    image: "/images/seo-services/meeting-planning-support/session-speaker-coordination.webp",
   },
   {
     icon: Users,
     title: "Onsite Meeting Operations",
     text: "Room monitoring, flow management, attendee support and real-time operational coverage.",
+    image: "/images/seo-services/event-production-management/producer-at-front-of-house.webp",
   },
   {
     icon: Star,
     title: "VIP & Guest Services",
     text: "Personalized support for VIPs, executives and special guests throughout your event.",
+    image: "/images/seo-services/corporate-event.webp",
   },
   {
     icon: Handshake,
     title: "Venue & Vendor Coordination",
     text: "Liaison with venues, vendors and suppliers to keep everything aligned and on track.",
+    image: "/images/seo-services/event-production-management/planner-producer-venue-coordination.webp",
   },
   {
     icon: Laptop,
     title: "Event Technology Support",
     text: "Support with A/V, presentation management, speaker readiness and technical coordination.",
+    image: "/images/seo-services/attendee-engagement-and-event-technology/event-mobile-app-digital-signage-integration.webp",
   },
   {
     icon: TriangleAlert,
     title: "Contingency & Issue Response",
     text: "Experienced support to quickly address changes, solve issues and keep your event on schedule.",
+    image: "/images/seo-services/audiovisual-production-for-events/system-redundancy-backup-audio-laptop.webp",
   },
 ];
 
@@ -157,14 +166,31 @@ const HeroSection = () => (
           </a>
         </div>
       </div>
-      <div className="min-h-[280px] bg-gray-800 sm:min-h-[380px] lg:min-h-[560px]" aria-hidden="true" />
+      <div className="group relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] overflow-hidden bg-gray-950">
+        <Image
+          src="/images/seo-services/meeting-planning-support/meeting-planning-support-banner.webp"
+          alt="Support for the Details That Keep Events Running - DXG Meeting Planning Support"
+          title="Meeting Planning Support"
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
     </div>
   </section>
 );
 
 const OperationalSupportSection = () => (
-  <section className="relative overflow-hidden bg-gray-800 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/80" />
+  <section className="relative overflow-hidden bg-black text-white">
+    <Image
+      src="/images/seo-services/event-production-management/technical-site-visit-ballroom.webp"
+      alt="Operational support for meeting planners"
+      fill
+      sizes="100vw"
+      className="pointer-events-none object-cover object-center opacity-25"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/80" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
@@ -200,12 +226,18 @@ const CapabilitiesSection = () => (
 );
 
 const WhyItMattersSection = () => (
-  <section className="bg-[#071826] text-white">
-    <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,4fr)]">
-      <div className="min-h-[220px] bg-gray-800" aria-hidden="true" />
-      {/* Right padding matches Container's edge so content lines up with the header */}
-      <div className="grid items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:py-16 lg:pl-12 lg:pr-[max(2rem,calc((100vw-1620px)/2+2rem))]">
-        <div className="lg:pr-4">
+  <section className="relative overflow-hidden bg-black text-white">
+    <Image
+      src="/images/seo-services/event-production-management/av-proposal-audit-review.webp"
+      alt="Your Team Leads. DXG Extends Your Capacity."
+      fill
+      sizes="100vw"
+      className="pointer-events-none object-cover object-center opacity-25"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/70" />
+    <Container className="relative py-14 lg:py-16">
+      <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+        <div>
           <Eyebrow>Why it matters</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
             Your Team Leads. <span className="text-primary">DXG Extends Your Capacity.</span>
@@ -217,7 +249,7 @@ const WhyItMattersSection = () => (
         </div>
         <IconFeatures items={outcomes} />
       </div>
-    </div>
+    </Container>
   </section>
 );
 
@@ -239,7 +271,16 @@ const ProcessSection = () => (
 const CaseStudySection = () => (
   <section className="bg-black text-white">
     <div className="grid lg:grid-cols-2">
-      <div className="min-h-[280px] bg-gray-800 sm:min-h-[360px] lg:min-h-[460px]" aria-hidden="true" />
+      <div className="group relative min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] overflow-hidden bg-gray-950">
+        <Image
+          src="/images/seo-services/meeting-planning-support/session-speaker-coordination.webp"
+          alt="Meeting Planning Support in Action - Association Conference"
+          title="Meeting Planning Support in Action"
+          fill
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
       <div className="flex flex-col justify-center px-4 py-12 sm:px-6 lg:py-14 lg:pl-12 lg:pr-[max(2rem,calc((100vw-1620px)/2+2rem))]">
         <Eyebrow>Client success story</Eyebrow>
         <h2 className="text-3xl font-bold leading-tight md:text-4xl">
@@ -291,6 +332,7 @@ const MeetingPlanningSupport = () => {
         primaryLabel="Schedule a Planning Call"
         secondaryLabel="Review My Existing Plan"
         text="We help planners lighten the workload and strengthen event execution with experienced support at every stage."
+        bgImage="/images/seo-services/event-production-management/live-show-day-keynote-session.webp"
       />
     </div>
   );

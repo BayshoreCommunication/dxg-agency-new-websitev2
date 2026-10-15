@@ -1,5 +1,6 @@
 import Container from "components/shared/Container";
 import Link from "next/link";
+import Image from "next/image";
 import FAQItem from "./FAQItem";
 import {
   CapabilityGrid,
@@ -37,37 +38,61 @@ const solutions = [
 ];
 
 const capabilities = [
-  { icon: BarChart3, title: "Live Audience Polling", text: "Get real-time insights." },
-  { icon: MessageSquare, title: "Q&A Moderation", text: "Keep the conversation flowing." },
+  {
+    icon: BarChart3,
+    title: "Live Audience Polling",
+    text: "Get real-time insights.",
+    image: "/images/seo-services/attendee-engagement-and-event-technology/cap-1-live-polling.jpg",
+    alt: "Attendee using mobile phone for live event audience polling",
+  },
+  {
+    icon: MessageSquare,
+    title: "Q&A Moderation",
+    text: "Keep the conversation flowing.",
+    image: "/images/seo-services/attendee-engagement-and-event-technology/speaker-confidence-monitor-questions.webp",
+    alt: "Speaker confidence monitor displaying moderated audience Q&A questions",
+  },
   {
     icon: Smartphone,
     title: "Event Apps & Agendas",
     text: "Put key event info in every attendee's hands.",
+    image: "/images/seo-services/attendee-engagement-and-event-technology/event-mobile-app-digital-signage-integration.webp",
+    alt: "Event mobile app and agenda display integration",
   },
   {
     icon: Monitor,
     title: "Digital Signage & Wayfinding",
     text: "Share the right content at the right time.",
+    image: "/images/seo-services/attendee-engagement-and-event-technology/event-tech-integration-audit.webp",
+    alt: "Digital signage displays and event wayfinding screens",
   },
   {
     icon: UsersRound,
     title: "Networking & Matchmaking",
     text: "Help attendees make meaningful connections.",
+    image: "/images/seo-services/corporate-event.webp",
+    alt: "Conference attendees networking and connecting during event",
   },
   {
     icon: Settings,
     title: "Sponsor & Exhibit Engagement",
     text: "Create interactive, memorable brand experiences.",
+    image: "/images/seo-services/association-event.webp",
+    alt: "Trade show sponsor activations and interactive exhibit engagement",
   },
   {
     icon: Trophy,
     title: "Gamification & Interactive Experiences",
     text: "Turn participation into friendly competition.",
+    image: "/images/seo-services/attendee-engagement-and-event-technology/attendees-interacting-with-live-polling.webp",
+    alt: "Event gamification, live leaderboard, and attendee interactive challenges",
   },
   {
     icon: QrCode,
     title: "Check-in, QR & Lead Capture",
     text: "Streamline entry and capture valuable data.",
+    image: "/images/seo-services/attendee-engagement-and-event-technology/onscreen-qr-polling-prompt.webp",
+    alt: "On-screen QR code prompt for rapid attendee check-in and lead retrieval",
   },
 ];
 
@@ -126,14 +151,31 @@ const HeroSection = () => (
           </a>
         </div>
       </div>
-      <div className="min-h-[280px] bg-gray-800 sm:min-h-[380px] lg:min-h-[560px]" aria-hidden="true" />
+      <div className="group relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] overflow-hidden bg-gray-950">
+        <Image
+          src="/images/seo-services/attendee-engagement-and-event-technology/attendee-engagement-hero.jpg"
+          alt="Move Attendees From Watching to Participating - DXG Live Audience Polling"
+          title="Attendee Engagement & Event Technology"
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
     </div>
   </section>
 );
 
 const SolutionsSection = () => (
-  <section className="relative overflow-hidden bg-gray-800 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/80" />
+  <section className="relative overflow-hidden bg-black text-white">
+    <Image
+      src="/images/seo-services/attendee-engagement-and-event-technology/ballroom-preparation-event-tech.webp"
+      alt="Event technology built around participation"
+      fill
+      sizes="100vw"
+      className="pointer-events-none object-cover object-center opacity-25"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/80" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
@@ -161,8 +203,15 @@ const CapabilitiesSection = () => (
 );
 
 const WhyEngagementSection = () => (
-  <section className="relative overflow-hidden bg-gray-800 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/40" />
+  <section className="relative overflow-hidden bg-black text-white">
+    <Image
+      src="/images/seo-services/attendee-engagement-and-event-technology/tech-table-polling-operator.webp"
+      alt="Why engagement works better inside the production plan"
+      fill
+      sizes="100vw"
+      className="pointer-events-none object-cover object-center opacity-30"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/40" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
@@ -202,8 +251,15 @@ const FAQSection = () => (
 );
 
 const FinalCTASection = () => (
-  <section className="relative overflow-hidden bg-gray-800 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/85 to-black/70" />
+  <section className="relative overflow-hidden bg-black text-white">
+    <Image
+      src="/images/seo-services/attendee-engagement-and-event-technology/attendees-interacting-with-live-polling.webp"
+      alt="Audience engaging with live event technology"
+      fill
+      sizes="100vw"
+      className="pointer-events-none object-cover object-center opacity-30"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/70" />
     <Container className="relative py-12 lg:py-14">
       <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
         <div>

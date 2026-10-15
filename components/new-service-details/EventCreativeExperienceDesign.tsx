@@ -1,5 +1,6 @@
 import Container from "components/shared/Container";
 import Link from "next/link";
+import Image from "next/image";
 import {
   CapabilityGrid,
   CenteredCTA,
@@ -43,41 +44,57 @@ const capabilities = [
     icon: Monitor,
     title: "General Session Stage Design",
     text: "Stunning stage designs that bring your content, brand, and audience together.",
+    image: "/images/seo-services/audiovisual-production-for-events/av-hero-keynote-ballroom.webp",
+    alt: "General session stage design with hanging LED screens and lighting",
   },
   {
     icon: Box,
     title: "Scenic Design & Custom Fabrication",
     text: "Custom scenic elements, set pieces, and branded environments built for your event.",
+    image: "/images/seo-services/event-content-production/event-content-creative-production.webp",
+    alt: "Custom scenic design and stage fabrication elements",
   },
   {
     icon: Grid3x3,
     title: "LED Video Environments",
     text: "Immersive LED video walls and scenic configurations that make a visual impact.",
+    image: "/images/seo-services/audiovisual-production-for-events/cap-3-led-people-ideas-impact.webp",
+    alt: "Immersive LED video wall environments and scenic configurations",
   },
   {
     icon: Monitor,
     title: "Registration & Attendee Experience",
     text: "Compelling entrance designs for registrations, environments and unique experiences.",
+    image: "/images/seo-services/meeting-planning-support/registration-attendee-management.webp",
+    alt: "Registration entrance designs and attendee brand touchpoints",
   },
   {
     icon: Lightbulb,
     title: "Lighting Design & Atmosphere",
     text: "Lighting designs that set the mood, enhance content, and transform your environment.",
+    image: "/images/seo-services/audiovisual-production-for-events/cap-4-lighting-beams.webp",
+    alt: "Stage lighting design and atmospheric lighting beams",
   },
   {
     icon: MapIcon,
     title: "CAD Floor Plans & Spatial Planning",
     text: "Detailed floor plans, 3D layouts, and spatial designs for logistics, audience flow and sightlines.",
+    image: "/images/seo-services/event-creative-and-experience-design/technical-creative-planning.webp",
+    alt: "CAD floor plans and 3D spatial layout planning",
   },
   {
     icon: Star,
     title: "Branded Event Environments",
     text: "Integrated branded spaces, lounges, and environments that extend your experience beyond the stage.",
+    image: "/images/seo-services/corporate-event.webp",
+    alt: "Branded corporate event lounge and experiential environments",
   },
   {
     icon: UsersRound,
     title: "Entrance, Registration & Attendee Experience",
     text: "Memorable entrance experiences, registration areas, and wayfinding that set the tone from the start.",
+    image: "/images/seo-services/association-event.webp",
+    alt: "Grand entrance wayfinding and registration experience",
   },
 ];
 
@@ -155,8 +172,17 @@ const caseStats = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="relative overflow-hidden bg-gray-800 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
+  <section className="relative overflow-hidden bg-black text-white">
+    <Image
+      src="/images/seo-services/event-creative-and-experience-design/event-creative-experience-design-banner.webp"
+      alt="Design the Stage and Space Around Your Event - 2025 Annual Leadership Summit"
+      title="Event Creative & Experience Design"
+      fill
+      priority
+      sizes="100vw"
+      className="pointer-events-none object-cover object-center"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/35" />
     <Container className="relative py-16 lg:py-24">
       <div className="max-w-xl">
         <Eyebrow>Event Creative &amp; Experience Design</Eyebrow>
@@ -200,8 +226,15 @@ const CapabilitiesSection = () => (
 );
 
 const ProductionRealitySection = () => (
-  <section className="relative overflow-hidden bg-gray-800 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/80" />
+  <section className="relative overflow-hidden bg-black text-white">
+    <Image
+      src="/images/seo-services/audiovisual-production-for-events/av-production-action-bts.webp"
+      alt="Creative ideas need production reality"
+      fill
+      sizes="100vw"
+      className="pointer-events-none object-cover object-center opacity-25"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/80" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
@@ -225,7 +258,16 @@ const RenderingsSection = () => (
   <section id="renderings" className="scroll-mt-20 bg-black py-14 text-white lg:py-16">
     <Container>
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="aspect-[16/10] w-full rounded-lg bg-gray-800" aria-hidden="true" />
+        <div className="group relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-primary/20 shadow-xl">
+          <Image
+            src="/images/seo-services/event-creative-and-experience-design/pre-visualization-3d-rendering.webp"
+            alt="Preview the Event Before Production Begins - 3D Renderings & Pre-Visualization"
+            title="3D Renderings & Pre-Visualization"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
         <div>
           <Eyebrow>3D renderings &amp; pre-visualization</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
@@ -290,12 +332,20 @@ const CaseStudySection = () => (
   <section className="bg-[#030c14] py-14 text-white lg:py-16">
     <Container>
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-lg bg-gray-800">
-          <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white text-white">
+        <div className="group relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl border border-primary/20 shadow-xl">
+          <Image
+            src="/images/seo-services/event-creative-and-experience-design/dual-optics-stage-design.webp"
+            alt="Creative Design in Action - Client Event Showcase"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/40 transition-colors duration-300 group-hover:bg-black/20" />
+          <span className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/80 bg-black/40 text-white shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
             <Play className="ml-1 h-7 w-7 fill-white" />
           </span>
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-5 pb-4 pt-10 text-white">
-            <p className="text-sm font-semibold uppercase tracking-widest">Client Event Showcase</p>
+          <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/90 via-black/50 to-transparent px-5 pb-4 pt-10 text-white">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Client Event Showcase</p>
             <p className="mt-1 text-xs text-white/90">
               See how DXG turns creative ideas into unforgettable experiences.
             </p>
@@ -352,6 +402,7 @@ const EventCreativeExperienceDesign = () => {
         primaryLabel="Book a Working Session"
         secondaryLabel="Have a New Event Concept"
         text="Share your goals with us and we'll help you explore creative options, visual ideas, and technical options."
+        bgImage="/images/seo-services/audiovisual-production-for-events/av-bottom-cta-blue-crowd.webp"
       />
     </div>
   );

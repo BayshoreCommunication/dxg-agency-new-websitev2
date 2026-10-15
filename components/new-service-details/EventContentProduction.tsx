@@ -1,4 +1,5 @@
 import Container from "components/shared/Container";
+import Image from "next/image";
 import FAQItem from "./FAQItem";
 import {
   CapabilityGrid,
@@ -48,41 +49,57 @@ const capabilities = [
     icon: CirclePlay,
     title: "Opening & Closing Videos",
     text: "High-impact videos that set the tone and leave a lasting impression.",
+    image: "/images/seo-services/audiovisual-production-for-events/cap-2-video-projection-mountain.webp",
+    alt: "Opening and closing video production for keynote sessions",
   },
   {
     icon: BarChart3,
     title: "Motion Graphics Packages",
     text: "Custom motion graphics that bring your brand to life across the event.",
+    image: "/images/seo-services/audiovisual-production-for-events/cap-3-led-people-ideas-impact.webp",
+    alt: "Custom motion graphics package on LED displays",
   },
   {
     icon: FileText,
     title: "Presentation Design",
     text: "Beautiful, on-brand presentations built for large screens and live audiences.",
+    image: "/images/seo-services/event-content-production/event-content-creative-production.webp",
+    alt: "Keynote presentation design for live event audiences",
   },
   {
     icon: Monitor,
     title: "Session & Segment Graphics",
     text: "Title slides, bumpers, countdowns and custom graphics for every part of your agenda.",
+    image: "/images/seo-services/event-content-production/event-content-show-plan-coordination.webp",
+    alt: "Session title slides and countdown bumper graphics",
   },
   {
     icon: Trophy,
     title: "Awards & Recognition Media",
     text: "Custom videos and graphics that celebrate achievements in a big way.",
+    image: "/images/seo-services/event-content-production/event-content-show-delivery.webp",
+    alt: "Awards and recognition event media and celebration visuals",
   },
   {
     icon: UsersRound,
     title: "Sponsor Recognition Content",
     text: "Branded sponsor slides, videos and recognition content that delivers value.",
+    image: "/images/seo-services/association-event.webp",
+    alt: "Sponsor recognition content and brand logo animations",
   },
   {
     icon: CirclePlay,
     title: "Video Editing & Playback Prep",
     text: "Editing, formatting and technical prep for smooth, reliable show playback.",
+    image: "/images/seo-services/audiovisual-production-for-events/cap-7-presentation-playback.webp",
+    alt: "Video editing and show playback timeline preparation",
   },
   {
     icon: Monitor,
     title: "Lower Thirds & Speaker Graphics",
     text: "Custom lower thirds, speaker walk-up graphics and title animations for a professional, polished show.",
+    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-remote-speaker.jpg",
+    alt: "Lower third graphic banner and speaker walk-up visuals",
   },
 ];
 
@@ -159,14 +176,31 @@ const HeroSection = () => (
           </a>
         </div>
       </div>
-      <div className="min-h-[280px] bg-gray-800 sm:min-h-[380px] lg:min-h-[560px]" aria-hidden="true" />
+      <div className="group relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] overflow-hidden rounded-xl border border-primary/20 bg-gray-950 shadow-2xl">
+        <Image
+          src="/images/seo-services/event-content-production/event-content-production-banner.webp"
+          alt="What Happens on Screen Shapes the Event Experience - DXG Event Content Production"
+          title="Event Content Production"
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
     </div>
   </section>
 );
 
 const BuiltAroundSection = () => (
-  <section className="relative overflow-hidden bg-gray-800 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/80" />
+  <section className="relative overflow-hidden bg-black text-white">
+    <Image
+      src="/images/seo-services/event-content-production/event-content-discovery-planning.webp"
+      alt="Built around your event"
+      fill
+      sizes="100vw"
+      className="pointer-events-none object-cover object-center opacity-25"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/80" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
@@ -222,7 +256,16 @@ const ReadinessSection = () => (
   <section className="bg-[#030c14] py-14 text-white lg:py-16">
     <Container>
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="aspect-[16/9] w-full rounded-lg bg-gray-800" aria-hidden="true" />
+        <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-primary/20 shadow-xl">
+          <Image
+            src="/images/seo-services/event-content-production/event-content-preshow-audit-requirements.webp"
+            alt="Pre-Show Content Readiness - Technical Audit"
+            title="Pre-Show Content Readiness"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
         <div>
           <h2 className="text-3xl font-bold md:text-4xl">Pre-Show <span className="text-primary">Content Readiness.</span></h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/75 md:text-base">
@@ -296,6 +339,7 @@ const EventContentProduction = () => {
       <CenteredCTA
         primaryLabel="Start Your Content Plan"
         text="Whether you need a single opening video or a full content package for every screen, DXG can help you plan, create, and deliver show-ready content for your event."
+        bgImage="/images/seo-services/audiovisual-production-for-events/av-bottom-cta-blue-crowd.webp"
       />
     </div>
   );
