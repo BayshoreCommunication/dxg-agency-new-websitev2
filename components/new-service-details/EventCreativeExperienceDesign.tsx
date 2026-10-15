@@ -8,6 +8,7 @@ import {
   IconGrid,
   PrimaryButton,
   StepCards,
+  outlineButton,
 } from "./shared";
 import {
   ArrowRight,
@@ -154,13 +155,13 @@ const caseStats = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#050b24] via-[#050b24]/80 to-transparent" />
+  <section className="relative overflow-hidden bg-gray-800 text-white">
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
     <Container className="relative py-16 lg:py-24">
       <div className="max-w-xl">
-        <Eyebrow dark>Event Creative &amp; Experience Design</Eyebrow>
+        <Eyebrow>Event Creative &amp; Experience Design</Eyebrow>
         <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          Design the Stage and Space Around Your Event.
+          Design the Stage and Space <span className="text-primary">Around Your Event.</span>
         </h1>
         <p className="mt-5 text-base leading-relaxed text-white/85">
           DXG designs stages, scenic environments, branded spaces and attendee experiences that are
@@ -172,7 +173,7 @@ const HeroSection = () => (
           <PrimaryButton href="/contact-us">Book a Working Session</PrimaryButton>
           <a
             href="#renderings"
-            className="inline-flex items-center justify-center rounded-md border border-white px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+            className={outlineButton}
           >
             Explore 3D Renderings
           </a>
@@ -183,13 +184,13 @@ const HeroSection = () => (
 );
 
 const CapabilitiesSection = () => (
-  <section className="bg-white py-14 text-[#0b1530] lg:py-16">
+  <section className="bg-black py-14 text-white lg:py-16">
     <Container>
       <Eyebrow>Creative experiences driven capabilities</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">
-        Complete Creative Support for Event Environments.
+        Complete Creative Support <span className="text-primary">for Event Environments.</span>
       </h2>
-      <p className="mt-3 max-w-4xl text-sm leading-relaxed text-gray-600 md:text-base">
+      <p className="mt-3 max-w-4xl text-sm leading-relaxed text-white/75 md:text-base">
         DXG designs every visual and physical element of your event, from stages and scenic
         environments to branded spaces and attendee experiences.
       </p>
@@ -199,14 +200,14 @@ const CapabilitiesSection = () => (
 );
 
 const ProductionRealitySection = () => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a] via-[#0a2a6e]/90 to-[#0a2a6e]/80" />
+  <section className="relative overflow-hidden bg-gray-800 text-white">
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/80" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <Eyebrow dark>Creative ideas. Real-world execution.</Eyebrow>
+          <Eyebrow>Creative ideas. Real-world execution.</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Creative Ideas Need Production Reality.
+            Creative Ideas Need <span className="text-primary">Production Reality.</span>
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
             DXG brings creative vision and technical expertise together so your event looks
@@ -221,23 +222,23 @@ const ProductionRealitySection = () => (
 );
 
 const RenderingsSection = () => (
-  <section id="renderings" className="scroll-mt-20 bg-white py-14 text-[#0b1530] lg:py-16">
+  <section id="renderings" className="scroll-mt-20 bg-black py-14 text-white lg:py-16">
     <Container>
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="aspect-[16/10] w-full rounded-lg bg-gray-300" aria-hidden="true" />
+        <div className="aspect-[16/10] w-full rounded-lg bg-gray-800" aria-hidden="true" />
         <div>
           <Eyebrow>3D renderings &amp; pre-visualization</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            Preview the Event Before Production Begins.
+            Preview the Event <span className="text-primary">Before Production Begins.</span>
           </h2>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-gray-600 md:text-base">
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/75 md:text-base">
             Our 3D renderings and pre-visualization process helps you see your event environment,
             make informed decisions, and align your team before anything goes into production.
           </p>
           <ul className="mt-6 grid gap-x-6 gap-y-4 sm:grid-cols-2">
             {renderingPoints.map(({ icon: Icon, label }) => (
-              <li key={label} className="flex items-center gap-3 text-sm text-gray-700">
-                <Icon className="h-5 w-5 shrink-0 text-[#1458f5]" />
+              <li key={label} className="flex items-center gap-3 text-sm text-white/80">
+                <Icon className="h-5 w-5 shrink-0 text-primary" />
                 {label}
               </li>
             ))}
@@ -249,13 +250,13 @@ const RenderingsSection = () => (
 );
 
 const RoomAndCameraSection = () => (
-  <section className="bg-gradient-to-r from-[#061a4a] to-[#0a2a6e] text-white">
+  <section className="bg-[#071826] text-white">
     <Container className="py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <Eyebrow dark>A seamless experience for every audience</Eyebrow>
+          <Eyebrow>A seamless experience for every audience</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Design for the Room and the Camera.
+            Design for <span className="text-primary">the Room and the Camera.</span>
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
             DXG designs event environments that work for everyone in the room and everyone
@@ -270,13 +271,13 @@ const RoomAndCameraSection = () => (
 );
 
 const ProcessSection = () => (
-  <section className="bg-white py-14 text-[#0b1530] lg:py-16">
+  <section className="bg-black py-14 text-white lg:py-16">
     <Container>
       <Eyebrow>Our creative design process</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-        From Concept to Show-Ready Design.
+        From Concept to <span className="text-primary">Show-Ready Design.</span>
       </h2>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-gray-600 md:text-base">
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/75 md:text-base">
         A collaborative, transparent process that turns your goals into a fully realized event
         environment.
       </p>
@@ -286,10 +287,10 @@ const ProcessSection = () => (
 );
 
 const CaseStudySection = () => (
-  <section className="bg-[#f4f7fc] py-14 text-[#0b1530] lg:py-16">
+  <section className="bg-[#030c14] py-14 text-white lg:py-16">
     <Container>
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-lg bg-gray-300">
+        <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-lg bg-gray-800">
           <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white text-white">
             <Play className="ml-1 h-7 w-7 fill-white" />
           </span>
@@ -302,8 +303,8 @@ const CaseStudySection = () => (
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold md:text-4xl">Creative Design in Action</h2>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-gray-600 md:text-base">
+          <h2 className="text-3xl font-bold md:text-4xl">Creative Design <span className="text-primary">in Action</span></h2>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/75 md:text-base">
             A multi-day national conference featuring a fully custom stage design, immersive LED
             environments, and branded spaces that brought the client&apos;s vision to life.
           </p>
@@ -311,10 +312,10 @@ const CaseStudySection = () => (
           <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-4">
             {caseStats.map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex items-start gap-3">
-                <Icon className="mt-1 h-6 w-6 shrink-0 text-[#1458f5]" />
+                <Icon className="mt-1 h-6 w-6 shrink-0 text-primary" />
                 <div>
-                  <p className="text-lg font-bold leading-none text-[#1458f5]">{value}</p>
-                  <p className="mt-1 text-xs text-gray-500">{label}</p>
+                  <p className="text-lg font-bold leading-none text-primary">{value}</p>
+                  <p className="mt-1 text-xs text-white/65">{label}</p>
                 </div>
               </div>
             ))}
@@ -322,7 +323,7 @@ const CaseStudySection = () => (
 
           <Link
             href="/experiences-created"
-            className="mt-7 inline-flex items-center gap-2 rounded-md border border-[#1458f5] px-6 py-2.5 text-sm font-medium text-[#1458f5] transition hover:bg-[#1458f5]/5"
+            className="mt-7 inline-flex items-center gap-2 rounded-full border border-primary px-6 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/10"
           >
             View the Full Case Study
             <ArrowRight className="h-4 w-4" />
@@ -338,7 +339,7 @@ const CaseStudySection = () => (
 const EventCreativeExperienceDesign = () => {
   return (
     // pt-20 clears the fixed site header (h-20) so it sits on the layout's dark background
-    <div className="pt-20">
+    <div className="bg-black pt-20">
       <HeroSection />
       <CapabilitiesSection />
       <ProductionRealitySection />

@@ -1,7 +1,6 @@
 import Container from "components/shared/Container";
 import Link from "next/link";
 import FAQItem from "./FAQItem";
-import { Eyebrow, PrimaryButton } from "./shared";
 import {
   ArrowRight,
   BarChart3,
@@ -221,67 +220,88 @@ const faqs = [
   },
 ];
 
+/* ---------- BRAND PIECES (black theme, matches the main site) ---------- */
+
+const Label = ({ children }: { children: React.ReactNode }) => (
+  <div className="mb-3 flex items-center gap-3">
+    <span className="h-[2px] w-7 shrink-0 bg-primary" />
+    <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
+      {children}
+    </span>
+  </div>
+);
+
+const BrandButton = ({ href, children }: { href: string; children: React.ReactNode }) => (
+  <Link
+    href={href}
+    className="btn-slide-primary capsule-button inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
+  >
+    {children}
+    <ArrowRight className="h-4 w-4" />
+  </Link>
+);
+
+const outlineButton =
+  "inline-flex items-center justify-center rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-primary hover:bg-primary/10 hover:text-primary";
+
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-white text-[#0b1530]">
+  <section className="bg-black text-white">
     <div className="grid lg:grid-cols-2">
       {/* Left padding matches Container's edge so text lines up with the header logo */}
       <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
-        <Eyebrow>Event Production Management</Eyebrow>
+        <Label>Event Production Management</Label>
         <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          The Same Production Team, Year After Year.
+          The Same Production Team, <span className="text-primary">Year After Year.</span>
         </h1>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-gray-600">
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
           Venues and AV setups change. But with DXG, you get the same production leadership,
           planning standards, and show-day management across every event, in every city. A
           consistent team that knows your goals, understands your audience, and delivers a
           seamless experience from planning to show day.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <PrimaryButton href="/contact-us">Request an AV Proposal</PrimaryButton>
-          <a
-            href="#production-process"
-            className="inline-flex items-center justify-center rounded-md border border-[#1458f5] px-6 py-3 text-sm font-medium text-[#1458f5] transition hover:bg-[#1458f5]/5"
-          >
+          <BrandButton href="/contact-us">Request an AV Proposal</BrandButton>
+          <a href="#production-process" className={outlineButton}>
             Explore Production Process
           </a>
         </div>
       </div>
-      <div className="relative min-h-[280px] w-full sm:min-h-[380px] lg:min-h-[600px] border-4 border-white">
+      <div className="relative min-h-[280px] w-full sm:min-h-[380px] lg:min-h-[600px]">
         <Image
           src="/images/seo-services/event-production-management/EventProductionManagement.png"
-
           alt="Event Production Management"
           fill
           priority
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+          sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-cover"
         />
+        {/* Soft fade into the black text column */}
+        <div className="absolute inset-y-0 left-0 hidden w-24 bg-gradient-to-r from-black to-transparent lg:block" />
       </div>
     </div>
   </section>
 );
 
 const ProgramsSection = () => (
-  <section className="relative overflow-hidden bg-[#061a4a] text-white">
+  <section className="relative overflow-hidden bg-black text-white">
     <Image
       src="/images/seo-services/event-production-management/Eventsofeverysize.png"
       alt="Events of every size. A consistent approach."
       fill
       sizes="100vw"
       className="object-cover object-center"
-      priority
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a]/90 via-[#0a2a6e]/75 to-[#061a4a]/60" />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/60" />
     <Container className="relative py-16 lg:py-20">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <Eyebrow dark>Events of every size. A consistent approach.</Eyebrow>
+          <Label>Events of every size. A consistent approach.</Label>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Programs Designed Around What You Need.
+            Programs Designed Around <span className="text-primary">What You Need.</span>
           </h2>
-          <p className="mt-5 max-w-md text-base leading-relaxed text-white/85">
+          <p className="mt-5 max-w-md text-base leading-relaxed text-white/80">
             From corporate meetings to association conferences, DXG builds production management
             programs that adapt to your organization, your audience, and your goals—while
             maintaining a consistent, high-touch approach you can count on.
@@ -291,10 +311,11 @@ const ProgramsSection = () => (
           {programs.map(({ icon: Icon, label }, i) => (
             <div
               key={label}
-              className={`flex flex-col items-center px-3 text-center ${i > 0 ? "lg:border-l lg:border-white/25" : ""
-                }`}
+              className={`flex flex-col items-center px-3 text-center ${
+                i > 0 ? "lg:border-l lg:border-primary/20" : ""
+              }`}
             >
-              <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/80 bg-[#1458f5]/40">
+              <span className="flex h-16 w-16 items-center justify-center rounded-full border border-primary/50 bg-[#0b2237] text-primary">
                 <Icon className="h-7 w-7" />
               </span>
               <span className="mt-3 max-w-[120px] text-sm font-semibold leading-tight">{label}</span>
@@ -307,22 +328,24 @@ const ProgramsSection = () => (
 );
 
 const ProcessSection = () => (
-  <section id="production-process" className="scroll-mt-20 bg-white py-16 text-[#0b1530] lg:py-20">
+  <section id="production-process" className="scroll-mt-20 bg-black py-16 text-white lg:py-20">
     <Container>
       <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12">
         <div>
-          <Eyebrow>A clear process from start to finish</Eyebrow>
-          <h2 className="text-3xl font-bold md:text-4xl">How We Manage Your Production.</h2>
-          <p className="mt-3 text-sm text-gray-500">
-            <span className="font-semibold text-[#0b1530]">6 stages.</span> Each one produces the
-            next technical information the next stage needs.
+          <Label>A clear process from start to finish</Label>
+          <h2 className="text-3xl font-bold md:text-4xl">
+            How We Manage <span className="text-primary">Your Production.</span>
+          </h2>
+          <p className="mt-3 text-sm text-white/65">
+            <span className="font-semibold text-white">6 stages.</span> Each one produces the next
+            technical information the next stage needs.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           {processImages.map(({ label, src, alt }) => (
             <div
               key={label}
-              className="group relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-900"
+              className="group relative aspect-[16/10] overflow-hidden rounded-lg border border-primary/20 bg-[#081624]"
             >
               <Image
                 src={src}
@@ -331,7 +354,7 @@ const ProcessSection = () => (
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-3 pb-2 pt-6 text-[11px] font-semibold uppercase tracking-wider text-white">
+              <span className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/85 via-black/40 to-transparent px-3 pb-2 pt-6 text-[11px] font-semibold uppercase tracking-wider text-white">
                 {label}
               </span>
             </div>
@@ -342,19 +365,19 @@ const ProcessSection = () => (
       <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-6 xl:grid-cols-6">
         {stages.map(({ icon: Icon, title, text }, i) => (
           <div key={title} className="relative">
-            <div className="flex h-full flex-col rounded-xl border border-gray-100 bg-gradient-to-b from-white to-[#f2f6ff] p-5 shadow-sm">
+            <div className="flex h-full flex-col rounded-xl border border-primary/20 bg-[#081624] p-5 transition duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_18px_40px_rgba(46,198,245,0.12)]">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1458f5] text-xs font-bold text-white">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-black">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <Icon className="h-6 w-6 text-[#1458f5]" />
+                <Icon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mt-4 min-h-[2.75rem] text-base font-bold leading-snug">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-500">{text}</p>
+              <p className="mt-2 text-sm leading-relaxed text-white/65">{text}</p>
             </div>
             {/* Arrow sits centered in the gap between cards */}
             {i < stages.length - 1 && (
-              <ArrowRight className="absolute -right-[19px] top-1/2 z-10 hidden h-3.5 w-3.5 -translate-y-1/2 text-[#1458f5]/60 xl:block" />
+              <ArrowRight className="absolute -right-[19px] top-1/2 z-10 hidden h-3.5 w-3.5 -translate-y-1/2 text-primary/60 xl:block" />
             )}
           </div>
         ))}
@@ -364,7 +387,7 @@ const ProcessSection = () => (
 );
 
 const IncludeSection = () => (
-  <section className="relative overflow-hidden bg-[#071a45] py-16 text-white lg:py-20">
+  <section className="relative overflow-hidden bg-black py-16 text-white lg:py-20">
     <Image
       src="/images/seo-services/event-production-management/complete-approach.png"
       alt="What Production Management Can Include background"
@@ -372,14 +395,16 @@ const IncludeSection = () => (
       sizes="100vw"
       className="object-cover object-center"
     />
-    <div className="absolute inset-0 bg-gradient-to-b from-[#071a45]/90 via-[#071a45]/90 to-[#0a2560]/92" />
+    <div className="absolute inset-0 bg-black/85" />
     <Container className="relative">
       <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
         <div>
-          <Eyebrow dark>A complete approach</Eyebrow>
-          <h2 className="text-3xl font-bold md:text-4xl">What Production Management Can Include.</h2>
+          <Label>A complete approach</Label>
+          <h2 className="text-3xl font-bold md:text-4xl">
+            What Production Management <span className="text-primary">Can Include.</span>
+          </h2>
         </div>
-        <p className="max-w-xl text-sm leading-relaxed text-white/80 lg:justify-self-end lg:text-base">
+        <p className="max-w-xl text-sm leading-relaxed text-white/75 lg:justify-self-end lg:text-base">
           From initial planning to final applause, DXG manages every technical element so you can
           stay focused on your content, your attendees, and your bigger goals.
         </p>
@@ -389,24 +414,24 @@ const IncludeSection = () => (
         {includeColumns.map(({ icon: Icon, title, subtitle, items }) => (
           <div
             key={title}
-            className="flex flex-col rounded-xl border border-white/15 bg-white/[0.05] p-4 backdrop-blur-sm"
+            className="flex flex-col rounded-xl border border-primary/20 bg-[#071a2c]/90 p-4 backdrop-blur-sm"
           >
             <div className="flex items-center gap-4 p-2">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1458f5]">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-black">
                 <Icon className="h-6 w-6" />
               </span>
               <div>
-                <h3 className="text-lg font-semibold text-[#5b9bff]">{title}</h3>
-                <p className="text-sm text-white/75">{subtitle}</p>
+                <h3 className="text-lg font-semibold text-primary">{title}</h3>
+                <p className="text-sm text-white/70">{subtitle}</p>
               </div>
             </div>
             <div className="mt-3 flex flex-1 flex-col gap-2">
               {items.map(({ icon: ItemIcon, title: itemTitle, text }) => (
                 <div
                   key={itemTitle}
-                  className="flex flex-1 items-start gap-3 rounded-lg border border-white/10 bg-white/[0.06] p-3 backdrop-blur-sm"
+                  className="flex flex-1 items-start gap-3 rounded-lg border border-primary/10 bg-[#0b2237]/70 p-3"
                 >
-                  <ItemIcon className="mt-0.5 h-5 w-5 shrink-0 text-[#5b9bff]" />
+                  <ItemIcon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                   <div>
                     <p className="text-sm font-semibold">{itemTitle}</p>
                     <p className="text-xs leading-relaxed text-white/65">{text}</p>
@@ -422,14 +447,16 @@ const IncludeSection = () => (
 );
 
 const GetStartedSection = () => (
-  <section className="bg-[#f4f7fc] py-14 text-[#0b1530] lg:py-16">
+  <section className="bg-[#030c14] py-14 text-white lg:py-16">
     <Container>
       <div className="grid gap-4 lg:grid-cols-2 lg:items-end">
         <div>
-          <Eyebrow>It starts here</Eyebrow>
-          <h2 className="text-3xl font-bold md:text-4xl">Get Started with These 3 Steps.</h2>
+          <Label>It starts here</Label>
+          <h2 className="text-3xl font-bold md:text-4xl">
+            Get Started with <span className="text-primary">These 3 Steps.</span>
+          </h2>
         </div>
-        <p className="max-w-xl text-sm leading-relaxed text-gray-500 lg:justify-self-end lg:text-base">
+        <p className="max-w-xl text-sm leading-relaxed text-white/65 lg:justify-self-end lg:text-base">
           A simple way to begin, with a process designed to give you clarity quickly and set you
           up for a successful event.
         </p>
@@ -438,20 +465,20 @@ const GetStartedSection = () => (
       <div className="mt-8 grid gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch">
         {startSteps.map(({ icon: Icon, step, title, text }, i) => (
           <div key={title} className="contents">
-            <div className="flex items-center gap-5 rounded-xl bg-white p-5 shadow-sm">
-              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#e8efff]">
-                <Icon className="h-7 w-7 text-[#1458f5]" />
+            <div className="flex items-center gap-5 rounded-xl border border-primary/20 bg-[#081624] p-5">
+              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-primary/50 bg-[#0b2237]">
+                <Icon className="h-7 w-7 text-primary" />
               </span>
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#1458f5]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">
                   {step}
                 </p>
                 <h3 className="mt-1 text-base font-bold">{title}</h3>
-                <p className="mt-1 text-xs leading-relaxed text-gray-500">{text}</p>
+                <p className="mt-1 text-xs leading-relaxed text-white/65">{text}</p>
               </div>
             </div>
             {i < startSteps.length - 1 && (
-              <ArrowRight className="hidden h-5 w-5 self-center text-[#1458f5]/60 lg:block" />
+              <ArrowRight className="hidden h-5 w-5 self-center text-primary/60 lg:block" />
             )}
           </div>
         ))}
@@ -465,16 +492,18 @@ const FAQSection = () => {
   const columns = [faqs.filter((_, i) => i % 2 === 0), faqs.filter((_, i) => i % 2 === 1)];
 
   return (
-    <section className="bg-white py-14 text-[#0b1530] lg:py-16">
+    <section className="bg-black py-14 text-white lg:py-16">
       <Container>
-        <Eyebrow>Common questions</Eyebrow>
-        <h2 className="text-3xl font-bold md:text-4xl">Questions Planners Ask Us.</h2>
+        <Label>Common questions</Label>
+        <h2 className="text-3xl font-bold md:text-4xl">
+          Questions Planners <span className="text-primary">Ask Us.</span>
+        </h2>
 
         <div className="mt-8 grid items-start gap-3 md:grid-cols-2 md:gap-x-8">
           {columns.map((column, c) => (
             <div key={c} className="flex flex-col gap-3">
               {column.map((faq) => (
-                <FAQItem key={faq.q} {...faq} />
+                <FAQItem key={faq.q} {...faq} dark />
               ))}
             </div>
           ))}
@@ -485,7 +514,7 @@ const FAQSection = () => {
 };
 
 const FinalCTASection = () => (
-  <section className="relative overflow-hidden bg-[#061a4a] text-white">
+  <section className="relative overflow-hidden bg-black text-white">
     <Image
       src="/images/seo-services/event-production-management/plan-your-next-event.png"
       alt="Let's Plan Your Next Event"
@@ -493,23 +522,22 @@ const FinalCTASection = () => (
       sizes="100vw"
       className="object-cover object-center"
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a]/90 via-[#0a2a6e]/80 to-[#061a4a]/70" />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/55" />
     <Container className="relative py-14 lg:py-16">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-2xl">
-          <Eyebrow dark>Let&apos;s plan your next event</Eyebrow>
-          <h2 className="text-3xl font-bold md:text-4xl">Let&apos;s Talk About What You&apos;re Planning.</h2>
-          <p className="mt-3 text-sm leading-relaxed text-white/85 md:text-base">
+          <Label>Let&apos;s plan your next event</Label>
+          <h2 className="text-3xl font-bold md:text-4xl">
+            Let&apos;s Talk About <span className="text-primary">What You&apos;re Planning.</span>
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-white/80 md:text-base">
             We&apos;ll help you build a production plan around your priorities, budget, and
             vision—no matter your event size or venue. A consistent team, from start to finish.
           </p>
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:gap-4">
-          <PrimaryButton href="/contact-us">Request an AV Proposal</PrimaryButton>
-          <Link
-            href="/experiences-created"
-            className="inline-flex items-center justify-center rounded-md border border-white px-8 py-3 text-sm font-medium text-white transition hover:bg-white/10"
-          >
+          <BrandButton href="/contact-us">Request an AV Proposal</BrandButton>
+          <Link href="/experiences-created" className={outlineButton}>
             Review Past Events
           </Link>
         </div>
@@ -523,7 +551,7 @@ const FinalCTASection = () => (
 const EventProductionManagement = () => {
   return (
     // pt-20 clears the fixed site header (h-20) so it sits on the layout's dark background
-    <div className="pt-20">
+    <div className="bg-black pt-20">
       <HeroSection />
       <ProgramsSection />
       <ProcessSection />

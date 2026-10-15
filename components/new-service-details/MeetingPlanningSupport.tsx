@@ -7,6 +7,7 @@ import {
   IconGrid,
   PrimaryButton,
   StepCards,
+  outlineButton,
 } from "./shared";
 import {
   Armchair,
@@ -134,14 +135,14 @@ const caseStats = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-white text-[#0b1530]">
+  <section className="bg-black text-white">
     <div className="grid lg:grid-cols-2">
       <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
         <Eyebrow>Meeting Planning Support</Eyebrow>
         <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          Support for the Details That Keep Events Running.
+          Support for the Details <span className="text-primary">That Keep Events Running.</span>
         </h1>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-gray-600">
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
           DXG supports planners before and during the event with registration, logistics, speaker
           coordination, room operations, and attendee support — all while keeping the planner in
           control.
@@ -150,26 +151,26 @@ const HeroSection = () => (
           <PrimaryButton href="/contact-us">Schedule a Planning Call</PrimaryButton>
           <a
             href="#capabilities"
-            className="inline-flex items-center justify-center rounded-md border border-[#1458f5] px-6 py-3 text-sm font-medium text-[#1458f5] transition hover:bg-[#1458f5]/5"
+            className={outlineButton}
           >
             Explore Support Services
           </a>
         </div>
       </div>
-      <div className="min-h-[280px] bg-gray-300 sm:min-h-[380px] lg:min-h-[560px]" aria-hidden="true" />
+      <div className="min-h-[280px] bg-gray-800 sm:min-h-[380px] lg:min-h-[560px]" aria-hidden="true" />
     </div>
   </section>
 );
 
 const OperationalSupportSection = () => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a] via-[#0a2a6e]/90 to-[#0a2a6e]/80" />
+  <section className="relative overflow-hidden bg-gray-800 text-white">
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/80" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <Eyebrow dark>Planning support that delivers</Eyebrow>
+          <Eyebrow>Planning support that delivers</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Operational Support Where You Need It Most.
+            Operational Support <span className="text-primary">Where You Need It Most.</span>
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
             DXG gives planning teams extra hands and experienced support across the event
@@ -183,13 +184,13 @@ const OperationalSupportSection = () => (
 );
 
 const CapabilitiesSection = () => (
-  <section id="capabilities" className="scroll-mt-20 bg-white py-14 text-[#0b1530] lg:py-16">
+  <section id="capabilities" className="scroll-mt-20 bg-black py-14 text-white lg:py-16">
     <Container>
       <Eyebrow>Our capabilities</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">
-        Complete Meeting Planning Support for Live Events.
+        Complete Meeting Planning Support <span className="text-primary">for Live Events.</span>
       </h2>
-      <p className="mt-3 max-w-4xl text-sm leading-relaxed text-gray-600 md:text-base">
+      <p className="mt-3 max-w-4xl text-sm leading-relaxed text-white/75 md:text-base">
         DXG provides practical planning and onsite support across every part of your event —
         without replacing the planner.
       </p>
@@ -199,15 +200,15 @@ const CapabilitiesSection = () => (
 );
 
 const WhyItMattersSection = () => (
-  <section className="bg-gradient-to-r from-[#061a4a] to-[#0a2a6e] text-white">
+  <section className="bg-[#071826] text-white">
     <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,4fr)]">
-      <div className="min-h-[220px] bg-gray-500" aria-hidden="true" />
+      <div className="min-h-[220px] bg-gray-800" aria-hidden="true" />
       {/* Right padding matches Container's edge so content lines up with the header */}
       <div className="grid items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:py-16 lg:pl-12 lg:pr-[max(2rem,calc((100vw-1620px)/2+2rem))]">
         <div className="lg:pr-4">
-          <Eyebrow dark>Why it matters</Eyebrow>
+          <Eyebrow>Why it matters</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            Your Team Leads. DXG Extends Your Capacity.
+            Your Team Leads. <span className="text-primary">DXG Extends Your Capacity.</span>
           </h2>
           <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/85 md:text-base">
             We integrate into your planning team to provide extra support at the right time,
@@ -221,13 +222,13 @@ const WhyItMattersSection = () => (
 );
 
 const ProcessSection = () => (
-  <section className="bg-white py-14 text-[#0b1530] lg:py-16">
+  <section className="bg-black py-14 text-white lg:py-16">
     <Container>
       <Eyebrow>Our process</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-        From Planning Support to Show Day Execution.
+        From Planning Support to <span className="text-primary">Show Day Execution.</span>
       </h2>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-gray-600 md:text-base">
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/75 md:text-base">
         A simple, collaborative process designed to give you the right support at the right time.
       </p>
       <StepCards items={steps} variant="badge" />
@@ -236,15 +237,15 @@ const ProcessSection = () => (
 );
 
 const CaseStudySection = () => (
-  <section className="bg-white text-[#0b1530]">
+  <section className="bg-black text-white">
     <div className="grid lg:grid-cols-2">
-      <div className="min-h-[280px] bg-gray-300 sm:min-h-[360px] lg:min-h-[460px]" aria-hidden="true" />
+      <div className="min-h-[280px] bg-gray-800 sm:min-h-[360px] lg:min-h-[460px]" aria-hidden="true" />
       <div className="flex flex-col justify-center px-4 py-12 sm:px-6 lg:py-14 lg:pl-12 lg:pr-[max(2rem,calc((100vw-1620px)/2+2rem))]">
         <Eyebrow>Client success story</Eyebrow>
         <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-          Meeting Planning Support in Action.
+          Meeting Planning Support <span className="text-primary">in Action.</span>
         </h2>
-        <p className="mt-4 max-w-xl text-sm leading-relaxed text-gray-600 md:text-base">
+        <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/75 md:text-base">
           DXG supported a multi-day association conference across registration, speaker
           management, breakout support, and onsite operations — helping deliver a seamless
           experience for attendees, speakers, and staff.
@@ -254,12 +255,12 @@ const CaseStudySection = () => (
           {caseStats.map(({ icon: Icon, value, label }) => (
             <div
               key={label}
-              className="flex items-start gap-3 rounded-lg border border-gray-100 bg-white p-3 shadow-sm"
+              className="flex items-start gap-3 rounded-lg border border-primary/20 bg-[#081624] p-3 shadow-sm"
             >
-              <Icon className="mt-0.5 h-6 w-6 shrink-0 text-[#1458f5]" />
+              <Icon className="mt-0.5 h-6 w-6 shrink-0 text-primary" />
               <div>
-                <p className="text-lg font-bold leading-none text-[#1458f5]">{value}</p>
-                <p className="mt-1 text-xs text-gray-500">{label}</p>
+                <p className="text-lg font-bold leading-none text-primary">{value}</p>
+                <p className="mt-1 text-xs text-white/65">{label}</p>
               </div>
             </div>
           ))}
@@ -278,7 +279,7 @@ const CaseStudySection = () => (
 const MeetingPlanningSupport = () => {
   return (
     // pt-20 clears the fixed site header (h-20) so it sits on the layout's dark background
-    <div className="pt-20">
+    <div className="bg-black pt-20">
       <HeroSection />
       <OperationalSupportSection />
       <CapabilitiesSection />

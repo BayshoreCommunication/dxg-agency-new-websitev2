@@ -1,7 +1,7 @@
 import Container from "components/shared/Container";
 import Link from "next/link";
 import Image from "next/image";
-import { CenteredCTA, Eyebrow, IconGrid, PrimaryButton } from "./shared";
+import { CenteredCTA, Eyebrow, IconGrid, PrimaryButton, outlineButton } from "./shared";
 import {
   ArrowRight,
   AudioLines,
@@ -115,15 +115,15 @@ const caseStats = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-white text-[#0b1530]">
+  <section className="bg-black text-white">
     <Container className="py-12 lg:py-16">
       <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
         <div>
           <Eyebrow>Audiovisual Production for Events</Eyebrow>
           <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-            Designed by Engineers. Built around your event.
+            Designed by Engineers. <span className="text-primary">Built around your event.</span>
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-gray-600">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
             From the general session stage to every breakout room, DXG designs and delivers
             audiovisual production that brings your event together. One experienced team, clear
             communication, and solutions built around your goals.
@@ -132,13 +132,13 @@ const HeroSection = () => (
             <PrimaryButton href="/contact-us">Request an AV Proposal</PrimaryButton>
             <a
               href="#capabilities"
-              className="inline-flex items-center justify-center rounded-md border border-gray-300 px-6 py-3 text-sm font-medium text-[#0b1530] transition hover:border-[#1458f5] hover:text-[#1458f5]"
+              className={outlineButton}
             >
               Explore Capabilities
             </a>
           </div>
         </div>
-        <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-gray-100 shadow-xl">
+        <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-primary/20 shadow-xl">
           <Image
             src="/images/seo-services/audiovisual-production-for-events/av-hero-keynote-ballroom.webp"
             alt="Audiovisual Production for Events - General Session Keynote Stage"
@@ -154,7 +154,7 @@ const HeroSection = () => (
 );
 
 const GoalsSection = () => (
-  <section className="relative overflow-hidden bg-[#061a4a] text-white">
+  <section className="relative overflow-hidden bg-black text-white">
     <Image
       src="/images/seo-services/audiovisual-production-for-events/audiovisual-engineers-at-tech-table.webp"
       alt="DXG audiovisual engineers at tech table"
@@ -163,13 +163,13 @@ const GoalsSection = () => (
       className="object-cover object-center"
       priority
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a]/95 via-[#061a4a]/90 to-[#0a2a6e]/75" />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/75" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <Eyebrow dark>Our approach starts with your goals</Eyebrow>
+          <Eyebrow>Our approach starts with your goals</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Your Goals Come First. The Technology Follows.
+            Your Goals Come First. <span className="text-primary">The Technology Follows.</span>
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
             Before we recommend equipment, DXG wants to understand the goals of your event, along
@@ -184,13 +184,13 @@ const GoalsSection = () => (
 );
 
 const CapabilitiesSection = () => (
-  <section id="capabilities" className="scroll-mt-20 bg-white py-14 text-[#0b1530] lg:py-16">
+  <section id="capabilities" className="scroll-mt-20 bg-black py-14 text-white lg:py-16">
     <Container>
       <Eyebrow>Audiovisual production capabilities</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">
-        Complete Audio Visual Production for Every Part of Your Event.
+        Complete Audio Visual Production <span className="text-primary">for Every Part of Your Event.</span>
       </h2>
-      <p className="mt-3 max-w-4xl text-sm leading-relaxed text-gray-600 md:text-base">
+      <p className="mt-3 max-w-4xl text-sm leading-relaxed text-white/75 md:text-base">
         DXG can provide and manage every technical element your program needs, from production
         systems to stage design, all delivered with one experienced team.
       </p>
@@ -199,7 +199,7 @@ const CapabilitiesSection = () => (
         {capabilities.map(({ icon: Icon, title, text, image, alt }, i) => (
           <article
             key={title}
-            className="group flex flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm transition hover:shadow-md"
+            className="group flex flex-col overflow-hidden rounded-xl border border-primary/20 bg-[#081624] transition duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_18px_40px_rgba(46,198,245,0.12)]"
           >
             <div className="relative aspect-[16/8] overflow-hidden bg-gray-900">
               <Image
@@ -212,14 +212,14 @@ const CapabilitiesSection = () => (
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
             <div className="flex flex-1 gap-4 p-5">
-              <span className="relative z-10 -mt-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-100 bg-white shadow-md">
-                <Icon className="h-5 w-5 text-[#1458f5]" />
+              <span className="relative z-10 -mt-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/50 bg-[#0b2237] shadow-md">
+                <Icon className="h-5 w-5 text-primary" />
               </span>
               <div>
                 <h3 className="text-base font-bold leading-snug">
                   {i + 1}. {title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-500">{text}</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/65">{text}</p>
               </div>
             </div>
           </article>
@@ -230,7 +230,7 @@ const CapabilitiesSection = () => (
 );
 
 const TechnicalSystemsSection = () => (
-  <section className="relative overflow-hidden bg-[#061a4a] text-white">
+  <section className="relative overflow-hidden bg-black text-white">
     <Image
       src="/images/seo-services/audiovisual-production-for-events/av-technical-systems-server-rack.webp"
       alt="The Technical Systems Behind Every Show"
@@ -238,11 +238,11 @@ const TechnicalSystemsSection = () => (
       sizes="100vw"
       className="object-cover object-right"
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a] via-[#061a4a]/85 to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent" />
     <Container className="relative py-14 lg:py-16">
       <div className="max-w-xl">
         <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-          The Technical Systems Behind Every Show.
+          The Technical Systems <span className="text-primary">Behind Every Show.</span>
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-white/85 md:text-base">
           From power and signal distribution to AV networking and show communications. DXG designs
@@ -254,10 +254,10 @@ const TechnicalSystemsSection = () => (
 );
 
 const ProductionInActionSection = () => (
-  <section className="bg-white py-12 text-[#0b1530] lg:py-16">
+  <section className="bg-black py-12 text-white lg:py-16">
     <Container>
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="group relative flex aspect-[16/9] flex-col items-center justify-center overflow-hidden rounded-xl border border-gray-100 text-center shadow-lg">
+        <div className="group relative flex aspect-[16/9] flex-col items-center justify-center overflow-hidden rounded-xl border border-primary/20 text-center shadow-lg">
           <Image
             src="/images/seo-services/audiovisual-production-for-events/av-production-action-bts.webp"
             alt="DXG Production in Action - BTS Video"
@@ -268,18 +268,18 @@ const ProductionInActionSection = () => (
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold md:text-4xl">Production in Action</h2>
-          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-600">
+          <h2 className="text-3xl font-bold md:text-4xl">Production <span className="text-primary">in Action</span></h2>
+          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/75">
             {caseTabs.map((tab, i) => (
               <span
                 key={tab}
-                className={`border-l-2 pl-3 ${i === 0 ? "border-[#1458f5]" : "border-gray-300"}`}
+                className={`border-l-2 pl-3 ${i === 0 ? "border-primary" : "border-white/30"}`}
               >
                 {tab}
               </span>
             ))}
           </div>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-gray-600 md:text-base">
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/75 md:text-base">
             From keynotes stages to multi-room conferences, DXG builds production systems that
             support the show, the schedule, and the audience experience.
           </p>
@@ -287,10 +287,10 @@ const ProductionInActionSection = () => (
           <div className="mt-6 grid gap-5 sm:grid-cols-3">
             {caseStats.map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex items-start gap-3">
-                <Icon className="mt-1 h-6 w-6 shrink-0 text-[#1458f5]" />
+                <Icon className="mt-1 h-6 w-6 shrink-0 text-primary" />
                 <div>
-                  <p className="text-lg font-bold leading-none text-[#1458f5]">{value}</p>
-                  <p className="mt-1 text-xs text-gray-500">{label}</p>
+                  <p className="text-lg font-bold leading-none text-primary">{value}</p>
+                  <p className="mt-1 text-xs text-white/65">{label}</p>
                 </div>
               </div>
             ))}
@@ -298,7 +298,7 @@ const ProductionInActionSection = () => (
 
           <Link
             href="/experiences-created"
-            className="mt-7 inline-flex items-center gap-2 rounded-md border border-[#1458f5] px-6 py-2.5 text-sm font-medium text-[#1458f5] transition hover:bg-[#1458f5]/5"
+            className="mt-7 inline-flex items-center gap-2 rounded-full border border-primary px-6 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/10"
           >
             View the Full Case Study
             <ArrowRight className="h-4 w-4" />
@@ -310,7 +310,7 @@ const ProductionInActionSection = () => (
 );
 
 const FinalCTASection = () => (
-  <section className="relative overflow-hidden bg-[#061a4a] text-white">
+  <section className="relative overflow-hidden bg-black text-white">
     <Image
       src="/images/seo-services/audiovisual-production-for-events/av-bottom-cta-blue-crowd.webp"
       alt="Let's Talk About What You're Planning"
@@ -318,9 +318,9 @@ const FinalCTASection = () => (
       sizes="100vw"
       className="object-cover object-center"
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a]/90 via-[#0a2a6e]/80 to-[#061a4a]/75" />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/75" />
     <Container className="relative py-14 text-center lg:py-16">
-      <h2 className="text-3xl font-bold md:text-4xl">Let&apos;s Talk About What You&apos;re Planning.</h2>
+      <h2 className="text-3xl font-bold md:text-4xl">Let&apos;s Talk About <span className="text-primary">What You&apos;re Planning.</span></h2>
       <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/90 md:text-base">
         Whether you are preparing a new event, building an RFP, or reviewing an existing proposal,
         DXG can help you understand your options and align production with your event&apos;s goals
@@ -330,7 +330,7 @@ const FinalCTASection = () => (
         <PrimaryButton href="/contact-us">Request an AV Proposal</PrimaryButton>
         <Link
           href="/contact-us"
-          className="inline-flex items-center justify-center rounded-md border border-white/80 bg-white/5 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/15"
+          className={outlineButton}
         >
           Review My Existing Proposal
         </Link>
@@ -344,7 +344,7 @@ const FinalCTASection = () => (
 const AudiovisualProduction = () => {
   return (
     // pt-20 clears the fixed site header (h-20) so it sits on the layout's dark background
-    <div className="pt-20">
+    <div className="bg-black pt-20">
       <HeroSection />
       <GoalsSection />
       <CapabilitiesSection />

@@ -7,6 +7,7 @@ import {
   IconGrid,
   PrimaryButton,
   StepCards,
+  outlineButton,
 } from "./shared";
 import {
   BarChart3,
@@ -135,15 +136,15 @@ const faqs = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-white text-[#0b1530]">
+  <section className="bg-black text-white">
     <div className="grid lg:grid-cols-2">
       {/* Left padding matches Container's edge so text lines up with the header logo */}
       <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
         <Eyebrow>Event Content Production</Eyebrow>
         <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          What Happens on Screen Shapes the Event Experience.
+          What Happens on Screen <span className="text-primary">Shapes the Event Experience.</span>
         </h1>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-gray-600">
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
           DXG creates event content production for conferences, meetings, awards programs, and
           branded experiences, connecting creative work with screens, playback systems, and show
           flow so every visual reinforces your goals in live moment.
@@ -152,26 +153,26 @@ const HeroSection = () => (
           <PrimaryButton href="/contact-us">Start Your Content Plan</PrimaryButton>
           <a
             href="#capabilities"
-            className="inline-flex items-center justify-center rounded-md border border-[#1458f5] px-6 py-3 text-sm font-medium text-[#1458f5] transition hover:bg-[#1458f5]/5"
+            className={outlineButton}
           >
             Explore Content Services
           </a>
         </div>
       </div>
-      <div className="min-h-[280px] bg-gray-300 sm:min-h-[380px] lg:min-h-[560px]" aria-hidden="true" />
+      <div className="min-h-[280px] bg-gray-800 sm:min-h-[380px] lg:min-h-[560px]" aria-hidden="true" />
     </div>
   </section>
 );
 
 const BuiltAroundSection = () => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a] via-[#0a2a6e]/90 to-[#0a2a6e]/80" />
+  <section className="relative overflow-hidden bg-gray-800 text-white">
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/80" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <Eyebrow dark>Built around your event</Eyebrow>
+          <Eyebrow>Built around your event</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Built Around Your Event Rather Than a Content Package.
+            Built Around Your Event <span className="text-primary">Rather Than a Content Package.</span>
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
             Every event needs a different content mix. DXG adapts event content production to your
@@ -185,13 +186,13 @@ const BuiltAroundSection = () => (
 );
 
 const CapabilitiesSection = () => (
-  <section id="capabilities" className="scroll-mt-20 bg-white py-14 text-[#0b1530] lg:py-16">
+  <section id="capabilities" className="scroll-mt-20 bg-black py-14 text-white lg:py-16">
     <Container>
       <Eyebrow>Our event content capabilities</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">
-        Complete Event Content Support for the Live Show.
+        Complete Event Content Support <span className="text-primary">for the Live Show.</span>
       </h2>
-      <p className="mt-3 max-w-4xl text-sm leading-relaxed text-gray-600 md:text-base">
+      <p className="mt-3 max-w-4xl text-sm leading-relaxed text-white/75 md:text-base">
         DXG plans, designs, formats, and prepares content for your screen environments and show
         playback.
       </p>
@@ -201,13 +202,13 @@ const CapabilitiesSection = () => (
 );
 
 const ProcessSection = () => (
-  <section className="bg-white pb-14 text-[#0b1530] lg:pb-16">
+  <section className="bg-black pb-14 text-white lg:pb-16">
     <Container>
       <Eyebrow>How we build event content</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-        From Concept to Show Ready Delivery.
+        From Concept to <span className="text-primary">Show Ready Delivery.</span>
       </h2>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-gray-600 md:text-base">
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/75 md:text-base">
         We combine creative, technical and production expertise to make sure every asset looks
         great, plays back smoothly, and supports your event goals.
       </p>
@@ -218,13 +219,13 @@ const ProcessSection = () => (
 );
 
 const ReadinessSection = () => (
-  <section className="bg-[#f4f7fc] py-14 text-[#0b1530] lg:py-16">
+  <section className="bg-[#030c14] py-14 text-white lg:py-16">
     <Container>
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="aspect-[16/9] w-full rounded-lg bg-gray-300" aria-hidden="true" />
+        <div className="aspect-[16/9] w-full rounded-lg bg-gray-800" aria-hidden="true" />
         <div>
-          <h2 className="text-3xl font-bold md:text-4xl">Pre-Show Content Readiness.</h2>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-gray-600 md:text-base">
+          <h2 className="text-3xl font-bold md:text-4xl">Pre-Show <span className="text-primary">Content Readiness.</span></h2>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/75 md:text-base">
             We help you get event content organized, with technical specs clear, playback cues
             mapped, and show-ready files in place so everything runs smoothly on event day.
           </p>
@@ -232,12 +233,12 @@ const ReadinessSection = () => (
             {readiness.map(({ icon: Icon, title, text }) => (
               <div
                 key={title}
-                className="flex items-center gap-4 rounded-lg border border-gray-100 bg-white p-4 shadow-sm"
+                className="flex items-center gap-4 rounded-lg border border-primary/20 bg-[#081624] p-4 shadow-sm"
               >
-                <Icon className="h-6 w-6 shrink-0 text-[#1458f5]" />
+                <Icon className="h-6 w-6 shrink-0 text-primary" />
                 <div>
                   <p className="text-sm font-semibold">{title}</p>
-                  <p className="text-xs text-gray-500">{text}</p>
+                  <p className="text-xs text-white/65">{text}</p>
                 </div>
               </div>
             ))}
@@ -256,20 +257,20 @@ const FAQSection = () => {
   const columns = [faqs.filter((_, i) => i % 2 === 0), faqs.filter((_, i) => i % 2 === 1)];
 
   return (
-    <section className="bg-white py-14 text-[#0b1530] lg:py-16">
+    <section className="bg-black py-14 text-white lg:py-16">
       <Container>
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,9fr)] lg:gap-10">
           <div>
             <Eyebrow>FAQ</Eyebrow>
             <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-              Questions Planners Ask Us.
+              Questions Planners <span className="text-primary">Ask Us.</span>
             </h2>
           </div>
           <div className="grid items-start gap-3 md:grid-cols-2 md:gap-x-6">
             {columns.map((column, c) => (
               <div key={c} className="flex flex-col gap-3">
                 {column.map((faq) => (
-                  <FAQItem key={faq.q} {...faq} />
+                  <FAQItem key={faq.q} {...faq} dark />
                 ))}
               </div>
             ))}
@@ -285,7 +286,7 @@ const FAQSection = () => {
 const EventContentProduction = () => {
   return (
     // pt-20 clears the fixed site header (h-20) so it sits on the layout's dark background
-    <div className="pt-20">
+    <div className="bg-black pt-20">
       <HeroSection />
       <BuiltAroundSection />
       <CapabilitiesSection />

@@ -1,7 +1,14 @@
 import Container from "components/shared/Container";
 import Link from "next/link";
 import FAQItem from "./FAQItem";
-import { CapabilityGrid, Eyebrow, IconFeatures, IconGrid, PrimaryButton } from "./shared";
+import {
+  CapabilityGrid,
+  Eyebrow,
+  IconFeatures,
+  IconGrid,
+  PrimaryButton,
+  outlineButton,
+} from "./shared";
 import {
   BarChart3,
   Laptop,
@@ -97,15 +104,15 @@ const faqs = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-white text-[#0b1530]">
+  <section className="bg-black text-white">
     <div className="grid lg:grid-cols-2">
       {/* Left padding matches Container's edge so text lines up with the header logo */}
       <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
         <Eyebrow>Event Technology &amp; Attendee Engagement</Eyebrow>
         <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          Move Attendees From Watching to Participating.
+          Move Attendees From Watching <span className="text-primary">to Participating.</span>
         </h1>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-gray-600">
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
           DXG brings event technology to life with interactive tools that engage audiences and
           create more memorable experiences.
         </p>
@@ -113,26 +120,26 @@ const HeroSection = () => (
           <PrimaryButton href="/contact-us">Request an Engagement Proposal</PrimaryButton>
           <a
             href="#capabilities"
-            className="inline-flex items-center justify-center rounded-md border border-[#1458f5] px-6 py-3 text-sm font-medium text-[#1458f5] transition hover:bg-[#1458f5]/5"
+            className={outlineButton}
           >
             Explore Tech Solutions
           </a>
         </div>
       </div>
-      <div className="min-h-[280px] bg-gray-300 sm:min-h-[380px] lg:min-h-[560px]" aria-hidden="true" />
+      <div className="min-h-[280px] bg-gray-800 sm:min-h-[380px] lg:min-h-[560px]" aria-hidden="true" />
     </div>
   </section>
 );
 
 const SolutionsSection = () => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a] via-[#0a2a6e]/90 to-[#0a2a6e]/80" />
+  <section className="relative overflow-hidden bg-gray-800 text-white">
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/80" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <Eyebrow dark>Attendee engagement solutions</Eyebrow>
+          <Eyebrow>Attendee engagement solutions</Eyebrow>
           <h2 className="text-4xl font-bold leading-[1.05] md:text-5xl">
-            Event Technology Built Around Participation.
+            Event Technology <span className="text-primary">Built Around Participation.</span>
           </h2>
         </div>
         <IconGrid items={solutions} />
@@ -142,11 +149,11 @@ const SolutionsSection = () => (
 );
 
 const CapabilitiesSection = () => (
-  <section id="capabilities" className="scroll-mt-20 bg-white py-14 text-[#0b1530] lg:py-16">
+  <section id="capabilities" className="scroll-mt-20 bg-black py-14 text-white lg:py-16">
     <Container>
       <Eyebrow>Our attendee engagement capabilities</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">
-        Complete Event Technology Support for Attendee Engagement.
+        Complete Event Technology Support <span className="text-primary">for Attendee Engagement.</span>
       </h2>
       <CapabilityGrid items={capabilities} />
     </Container>
@@ -154,14 +161,14 @@ const CapabilitiesSection = () => (
 );
 
 const WhyEngagementSection = () => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a] via-[#0a2a6e]/90 to-[#0a2a6e]/40" />
+  <section className="relative overflow-hidden bg-gray-800 text-white">
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/40" />
     <Container className="relative py-14 lg:py-16">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <Eyebrow dark>A more connected event experience</Eyebrow>
+          <Eyebrow>A more connected event experience</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Why Engagement Works Better Inside the Production Plan.
+            Why Engagement Works Better <span className="text-primary">Inside the Production Plan.</span>
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
             When engagement is built into your production plan, everything works together for a
@@ -175,18 +182,18 @@ const WhyEngagementSection = () => (
 );
 
 const FAQSection = () => (
-  <section className="bg-[#f4f7fc] py-14 text-[#0b1530] lg:py-16">
+  <section className="bg-[#030c14] py-14 text-white lg:py-16">
     <Container>
       <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12">
         <div>
           <Eyebrow>FAQ</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Questions Planners Ask Us.
+            Questions Planners <span className="text-primary">Ask Us.</span>
           </h2>
         </div>
         <div className="flex flex-col gap-3">
           {faqs.map((faq) => (
-            <FAQItem key={faq.q} {...faq} />
+            <FAQItem key={faq.q} {...faq} dark />
           ))}
         </div>
       </div>
@@ -195,14 +202,14 @@ const FAQSection = () => (
 );
 
 const FinalCTASection = () => (
-  <section className="relative overflow-hidden bg-gray-500 text-white">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#061a4a]/90 via-[#0a2a6e]/85 to-[#0a2a6e]/70" />
+  <section className="relative overflow-hidden bg-gray-800 text-white">
+    <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/85 to-black/70" />
     <Container className="relative py-12 lg:py-14">
       <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
         <div>
-          <Eyebrow dark>Let&apos;s talk</Eyebrow>
+          <Eyebrow>Let&apos;s talk</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            Turn Your Event Into a More Interactive Experience.
+            Turn Your Event Into <span className="text-primary">a More Interactive Experience.</span>
           </h2>
         </div>
         <div>
@@ -214,7 +221,7 @@ const FinalCTASection = () => (
             <PrimaryButton href="/contact-us">Request an Engagement Proposal</PrimaryButton>
             <Link
               href="/experiences-created"
-              className="inline-flex items-center justify-center rounded-md border border-white px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+              className={outlineButton}
             >
               Browse More Event Tech Plans
             </Link>
@@ -230,7 +237,7 @@ const FinalCTASection = () => (
 const AttendeeEngagement = () => {
   return (
     // pt-20 clears the fixed site header (h-20) so it sits on the layout's dark background
-    <div className="pt-20">
+    <div className="bg-black pt-20">
       <HeroSection />
       <SolutionsSection />
       <CapabilitiesSection />
