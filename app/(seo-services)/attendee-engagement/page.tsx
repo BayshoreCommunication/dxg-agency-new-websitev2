@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import EngagementHeroV2 from "components/seo-services/attendee-engagement-event-technology/EngagementHeroV2";
-import EngagementProgramSection from "components/seo-services/attendee-engagement-event-technology/EngagementProgramSection";
-import WhyInsideProductionSection from "components/seo-services/attendee-engagement-event-technology/WhyInsideProductionSection";
-import EngagementSolutionsSection from "components/seo-services/attendee-engagement-event-technology/EngagementSolutionsSection";
-import EngagementProcessSection from "components/seo-services/attendee-engagement-event-technology/EngagementProcessSection";
-import EngagementFAQV2Section from "components/seo-services/attendee-engagement-event-technology/EngagementFAQV2Section";
-import EngagementFinalCTAV2Section from "components/seo-services/attendee-engagement-event-technology/EngagementFinalCTAV2Section";
+import AttendeeEngagement from "components/new-service-details/AttendeeEngagement";
 
 export const metadata: Metadata = {
   title: "Event Technology & Attendee Engagement | DXG",
@@ -16,29 +10,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AttendeeEngagementAndEventTechnologyPage() {
-  return (
-    <main className="min-h-screen bg-[#0A0F16] text-[#0A0F16]">
-      {/* 1. Hero Section */}
-      <EngagementHeroV2 />
-
-      {/* 2. Event Technology Built Around Your Program (PHOTO 02) */}
-      <EngagementProgramSection />
-
-      {/* 4. Why Event Technology Works Better Inside the Production Plan (PHOTO 03, PHOTO 04, PHOTO 05) */}
-      <WhyInsideProductionSection />
-
-      {/* 5. Event Technology and Engagement Solutions */}
-      <EngagementSolutionsSection />
-
-      {/* 6. How We Plan Attendee Engagement Technology */}
-      <EngagementProcessSection />
-
-      {/* 8. Getting Started Takes Three Steps & FAQ Accordion */}
-      <EngagementFAQV2Section />
-
-      {/* 9. Build Engagement Into The Program Before Show Day (PHOTO 07) */}
-      <EngagementFinalCTAV2Section />
-    </main>
-  );
+export default function AttendeeEngagementPage() {
+  return <AttendeeEngagement />;
 }
