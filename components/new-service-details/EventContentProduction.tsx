@@ -49,14 +49,14 @@ const capabilities = [
     icon: CirclePlay,
     title: "Opening & Closing Videos",
     text: "High-impact videos that set the tone and leave a lasting impression.",
-    image: "/images/seo-services/audiovisual-production-for-events/cap-2-video-projection-mountain.webp",
+    image: "/images/seo-services/audiovisual-production-for-events/cap-2-video-projection-mountain.png",
     alt: "Opening and closing video production for keynote sessions",
   },
   {
     icon: BarChart3,
     title: "Motion Graphics Packages",
     text: "Custom motion graphics that bring your brand to life across the event.",
-    image: "/images/seo-services/audiovisual-production-for-events/cap-3-led-people-ideas-impact.webp",
+    image: "/images/seo-services/audiovisual-production-for-events/cap-3-led-people-ideas-impact.png",
     alt: "Custom motion graphics package on LED displays",
   },
   {
@@ -91,7 +91,7 @@ const capabilities = [
     icon: CirclePlay,
     title: "Video Editing & Playback Prep",
     text: "Editing, formatting and technical prep for smooth, reliable show playback.",
-    image: "/images/seo-services/audiovisual-production-for-events/cap-7-presentation-playback.webp",
+    image: "/images/seo-services/audiovisual-production-for-events/cap-7-presentation-playback.png",
     alt: "Video editing and show playback timeline preparation",
   },
   {
