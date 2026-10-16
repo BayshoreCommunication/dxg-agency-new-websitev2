@@ -51,7 +51,8 @@ const capabilities = [
     icon: Monitor,
     title: "Video & Projection",
     text: "Projection systems, screens, video switching, image processing, and display solutions designed for clarity and impact.",
-    image: "/images/seo-services/audiovisual-production-for-events/Video &. Projection.jpeg",
+    image:
+      "/images/seo-services/audiovisual-production-for-events/Video &. Projection.jpeg",
     alt: "Video and projection systems for corporate event keynote stage",
   },
   {
@@ -66,7 +67,8 @@ const capabilities = [
     icon: Sun,
     title: "Lighting Production",
     text: "Stage lighting, architectural lighting, and creative design environments that transform room and sets the mood.",
-    image: "/images/seo-services/audiovisual-production-for-events/Lighting Production.png",
+    image:
+      "/images/seo-services/audiovisual-production-for-events/Lighting Production.png",
     alt: "Concert and conference stage lighting production with dynamic beams",
   },
   {
@@ -152,7 +154,7 @@ const HeroSection = () => (
         </div>
         <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-primary/20">
           <Image
-            src="/images/problems-we-solve/new-service-image/audiovisual-production-hero.png"
+            src="/images/seo-services/audiovisual-production-for-events/DXG Bitcon 2022 Photo.png"
             alt="Audiovisual Production for Events - General Session Keynote Stage"
             fill
             priority
@@ -223,9 +225,7 @@ const CapabilitiesSection = () => (
               <span className="relative -mt-6 mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-primary/50 bg-[#0b2237] text-primary shadow-md">
                 <Icon className="h-6 w-6" />
               </span>
-              <h3 className="text-lg font-bold leading-snug">
-                {title}
-              </h3>
+              <h3 className="text-lg font-bold leading-snug">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/65">
                 {text}
               </p>
