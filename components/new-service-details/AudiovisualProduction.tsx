@@ -1,7 +1,4 @@
 import Container from "components/shared/Container";
-import Link from "next/link";
-import Image from "next/image";
-import { Eyebrow, IconGrid, PrimaryButton, outlineButton } from "./shared";
 import {
   ArrowRight,
   AudioLines,
@@ -24,6 +21,9 @@ import {
   UsersRound,
   Video,
 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Eyebrow, IconGrid, PrimaryButton, outlineButton } from "./shared";
 
 /* ---------- DATA ---------- */
 
@@ -43,68 +43,79 @@ const capabilities = [
     icon: AudioLines,
     title: "Audio Production",
     text: "Clear, consistent sound design and live mixing for keynotes, panel discussions, and every room in your event.",
-    image: "/images/seo-services/audiovisual-production-for-events/technical-rehearsal-stage-confidence-monitor.webp",
+    image:
+      "/images/seo-services/audiovisual-production-for-events/Audio Production.png",
     alt: "Audio production Allen & Heath digital mixing console and stage sound mixing",
   },
   {
     icon: Monitor,
     title: "Video & Projection",
     text: "Projection systems, screens, video switching, image processing, and display solutions designed for clarity and impact.",
-    image: "/images/problems-we-solve/service-details/General-Session.png",
+    image: "/images/seo-services/audiovisual-production-for-events/Video &. Projection.jpeg",
     alt: "Video and projection systems for corporate event keynote stage",
   },
   {
     icon: Grid3x3,
     title: "LED Video Walls",
     text: "Indoor and outdoor LED displays, custom configurations, and creative screen designs that bring your content to life.",
-    image: "/images/seo-services/event-creative-and-experience-design/dual-optics-stage-design.webp",
+    image:
+      "/images/seo-services/audiovisual-production-for-events/LED Video Walls.jpeg",
     alt: "Curved LED video wall with custom digital stage graphics",
   },
   {
     icon: Sun,
     title: "Lighting Production",
     text: "Stage lighting, architectural lighting, and creative design environments that transform room and sets the mood.",
-    image: "/images/problems-we-solve/service-details/audiovisual-technology.png",
+    image: "/images/seo-services/audiovisual-production-for-events/Lighting Production.png",
     alt: "Concert and conference stage lighting production with dynamic beams",
   },
   {
     icon: Video,
     title: "Cameras & IMAG",
     text: "Multi-camera production, camera systems, live program feeds, PTZ cameras, and live event video feeds.",
-    image: "/images/seo-services/event-production-management/live-show-day-keynote-session.webp",
+    image:
+      "/images/seo-services/audiovisual-production-for-events/Cameras & IMAG.jpeg",
     alt: "Live event cameraman and broadcast camera operation",
   },
   {
     icon: Layers,
-    title: "Staging, Scenic & Rigging",
-    text: "Stages, set drops, scenic elements, truss systems, and rigging solutions to create engaging environments designed to look strong from every angle.",
-    image: "/images/seo-services/audiovisual-production-for-events/empty-ballroom-stage-prep-loadin.webp",
+    title: "Staging Scenic",
+    text: "Stages, set drops, scenic elements, truss systems solutions to create engaging environments designed to look strong from every angle.",
+    image:
+      "/images/seo-services/audiovisual-production-for-events/Staging & Scenic.png",
     alt: "Event staging, scenic structures and overhead truss rigging",
   },
   {
     icon: FileText,
     title: "Presentation Management & Playback",
     text: "PowerPoint support, show control, video playback, rehearsals, confidence monitoring, timing, and file management.",
-    image: "/images/seo-services/meeting-planning-support/session-speaker-coordination.webp",
+    image:
+      "/images/seo-services/audiovisual-production-for-events/Presentation Management.png",
     alt: "Front of house presentation management and show control",
   },
   {
     icon: Radio,
     title: "Recording & Streaming",
     text: "Session recording, multi-track audio, video capture, encoding, and live streaming solutions.",
-    image: "/images/seo-services/hybrid-and-virtual-event-production/hybrid-event-stream-producer-control-console.webp",
+    image:
+      "/images/seo-services/audiovisual-production-for-events/Recording & Streaming.png",
     alt: "Rackmount broadcast video encoders and live streaming units",
   },
   {
     icon: Settings,
     title: "Production Infrastructure",
-    text: "Power distribution, AV networking, fiber and signal distribution, inventory systems, and integrated infrastructure for a reliable, scalable production environment.",
-    image: "/images/seo-services/audiovisual-production-for-events/venue-contract-audit-power-rigging.webp",
+    text: "Power distribution, AV networking, fiber and signal distribution, and integrated infrastructure for a reliable, scalable production environment.",
+    image:
+      "/images/seo-services/audiovisual-production-for-events/Production Infrastructure.png",
     alt: "Backstage electrical power distribution, AV cabling, and power infrastructure",
   },
 ];
 
-const caseTabs = ["General Session", "Multi-Room Conference", "Live Content Management"];
+const caseTabs = [
+  "General Session",
+  "Multi-Room Conference",
+  "Live Content Management",
+];
 
 const caseStats = [
   { icon: Users, value: "1,500", label: "Attendees" },
@@ -121,15 +132,19 @@ const HeroSection = () => (
         <div>
           <Eyebrow>Audiovisual Production for Events</Eyebrow>
           <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-            Designed by Engineers. <span className="text-primary">Built around your event.</span>
+            Designed by Engineers.{" "}
+            <span className="text-primary">Built around your event.</span>
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-            From the general session stage to every breakout room, DXG designs and delivers
-            audiovisual production that brings your event together. One experienced team, clear
-            communication, and solutions built around your goals.
+            From the general session stage to every breakout room, DXG designs
+            and delivers audiovisual production that brings your event together.
+            One experienced team, clear communication, and solutions built
+            around your goals.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <PrimaryButton href="/contact-us">Request an AV Proposal</PrimaryButton>
+            <PrimaryButton href="/contact-us">
+              Request an AV Proposal
+            </PrimaryButton>
             <a href="#capabilities" className={outlineButton}>
               Explore Capabilities
             </a>
@@ -157,12 +172,13 @@ const GoalsSection = () => (
         <div>
           <Eyebrow>Our approach starts with your goals</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Your Goals Come First. <span className="text-primary">The Technology Follows.</span>
+            Your Goals Come First.{" "}
+            <span className="text-primary">The Technology Follows.</span>
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/80">
-            Before we recommend equipment, DXG wants to understand the goals of your event, along
-            with the agenda, presenters, audience, and budget. Those goals shape how the production
-            is designed.
+            Before we recommend equipment, DXG wants to understand the goals of
+            your event, along with the agenda, presenters, audience, and budget.
+            Those goals shape how the production is designed.
           </p>
         </div>
         <IconGrid items={eventTypes} />
@@ -172,7 +188,10 @@ const GoalsSection = () => (
 );
 
 const CapabilitiesSection = () => (
-  <section id="capabilities" className="scroll-mt-20 bg-black py-14 text-white lg:py-16">
+  <section
+    id="capabilities"
+    className="scroll-mt-20 bg-black py-14 text-white lg:py-16"
+  >
     <Container>
       <Eyebrow>Audiovisual production capabilities</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">
@@ -180,12 +199,13 @@ const CapabilitiesSection = () => (
         <span className="text-primary">for Every Part of Your Event.</span>
       </h2>
       <p className="mt-3 max-w-4xl text-sm leading-relaxed text-white/75 md:text-base">
-        DXG can provide and manage every technical element your program needs, from production
-        systems to stage design, all delivered with one experienced team.
+        DXG can provide and manage every technical element your program needs,
+        from production systems to stage design, all delivered with one
+        experienced team.
       </p>
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {capabilities.map(({ icon: Icon, title, text, image, alt }, i) => (
+        {capabilities.map(({ icon: Icon, title, text, image, alt }) => (
           <article
             key={title}
             className="group flex flex-col overflow-hidden rounded-xl border border-primary/20 bg-[#081624] transition duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_18px_40px_rgba(46,198,245,0.12)]"
@@ -204,9 +224,11 @@ const CapabilitiesSection = () => (
                 <Icon className="h-6 w-6" />
               </span>
               <h3 className="text-lg font-bold leading-snug">
-                {i + 1}. {title}
+                {title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/65">{text}</p>
+              <p className="mt-2 text-sm leading-relaxed text-white/65">
+                {text}
+              </p>
             </div>
           </article>
         ))}
@@ -228,11 +250,13 @@ const TechnicalSystemsSection = () => (
     <Container className="relative py-14 lg:py-16">
       <div className="max-w-xl">
         <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-          The Technical Systems <span className="text-primary">Behind Every Show.</span>
+          The Technical Systems{" "}
+          <span className="text-primary">Behind Every Show.</span>
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-white/80 md:text-base">
-          From power and signal distribution to AV networking and show communications. DXG designs
-          the infrastructure that keeps your event running reliably from load-in to load-out.
+          From power and signal distribution to AV networking and show
+          communications. DXG designs the infrastructure that keeps your event
+          running reliably from load-in to load-out.
         </p>
       </div>
     </Container>
@@ -272,7 +296,9 @@ const ProductionInActionSection = () => (
               <span
                 key={tab}
                 className={`border-l-2 pl-3 font-medium ${
-                  i === 0 ? "border-primary text-white" : "border-white/30 text-white/60"
+                  i === 0
+                    ? "border-primary text-white"
+                    : "border-white/30 text-white/60"
                 }`}
               >
                 {tab}
@@ -280,8 +306,9 @@ const ProductionInActionSection = () => (
             ))}
           </div>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/75 md:text-base">
-            From keynotes stages to multi-room conferences, DXG builds production systems that
-            support the show, the schedule, and the audience experience.
+            From keynotes stages to multi-room conferences, DXG builds
+            production systems that support the show, the schedule, and the
+            audience experience.
           </p>
 
           <div className="mt-6 grid gap-5 sm:grid-cols-3">
@@ -289,8 +316,12 @@ const ProductionInActionSection = () => (
               <div key={label} className="flex items-start gap-3">
                 <Icon className="mt-0.5 h-6 w-6 shrink-0 text-primary" />
                 <div>
-                  <p className="text-xl font-bold leading-none text-primary">{value}</p>
-                  <p className="mt-1 text-xs font-medium text-white/65">{label}</p>
+                  <p className="text-xl font-bold leading-none text-primary">
+                    {value}
+                  </p>
+                  <p className="mt-1 text-xs font-medium text-white/65">
+                    {label}
+                  </p>
                 </div>
               </div>
             ))}
@@ -312,7 +343,7 @@ const ProductionInActionSection = () => (
 const FinalCTASection = () => (
   <section className="relative overflow-hidden bg-black text-white">
     <Image
-      src="/images/seo-services/event-production-management/live-show-day-keynote-session.webp"
+      src="/images/seo-services/event-production-management/plan-your-next-event-two.jpeg"
       alt="Let's Talk About What You're Planning"
       fill
       sizes="100vw"
@@ -321,18 +352,19 @@ const FinalCTASection = () => (
     <div className="absolute inset-0 bg-black/80" />
     <Container className="relative py-14 text-center lg:py-16">
       <h2 className="text-3xl font-bold md:text-4xl">
-        Let&apos;s Talk About <span className="text-primary">What You&apos;re Planning.</span>
+        Let&apos;s Talk About{" "}
+        <span className="text-primary">What You&apos;re Planning.</span>
       </h2>
       <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/80 md:text-base">
-        Whether you are preparing a new event, building an RFP, or reviewing an existing proposal,
-        DXG can help you understand your options and align production with your event&apos;s goals
-        and budget.
+        Whether you are preparing a new event, building an RFP, or reviewing an
+        existing proposal, DXG can help you understand your options and align
+        production with your event&apos;s goals and budget.
       </p>
       <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
         <PrimaryButton href="/contact-us">Request an AV Proposal</PrimaryButton>
-        <Link href="/contact-us" className={outlineButton}>
+        {/* <Link href="/contact-us" className={outlineButton}>
           Review My Existing Proposal
-        </Link>
+        </Link> */}
       </div>
     </Container>
   </section>
@@ -348,7 +380,8 @@ const AudiovisualProduction = () => {
       <GoalsSection />
       <CapabilitiesSection />
       <TechnicalSystemsSection />
-      <ProductionInActionSection />
+      {/* Temporarily hidden */}
+      {/* <ProductionInActionSection /> */}
       <FinalCTASection />
     </div>
   );
