@@ -1,7 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
 import Container from "components/shared/Container";
 import { ArrowRight, ChevronRight, type LucideIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 /* Shared pieces for the service detail pages, styled in the main site's
    black theme with the brand `primary` color. */
@@ -15,7 +15,13 @@ export const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-export const PrimaryButton = ({ href, children }: { href: string; children: React.ReactNode }) => (
+export const PrimaryButton = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => (
   <Link
     href={href}
     className="btn-slide-primary capsule-button inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
@@ -29,7 +35,11 @@ export const outlineButton =
   "inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-primary hover:bg-primary/10 hover:text-primary";
 
 /* 4-column icon grid with divider lines, used on image/dark sections */
-export const IconGrid = ({ items }: { items: { icon: LucideIcon; label: string }[] }) => (
+export const IconGrid = ({
+  items,
+}: {
+  items: { icon: LucideIcon; label: string }[];
+}) => (
   <div className="grid grid-cols-2 sm:grid-cols-4 lg:border-l lg:border-primary/20 lg:pl-6">
     {items.map(({ icon: Icon, label }, i) => (
       <div
@@ -41,7 +51,9 @@ export const IconGrid = ({ items }: { items: { icon: LucideIcon; label: string }
         <span className="flex h-14 w-14 items-center justify-center rounded-full border border-primary/50 bg-[#0b2237] text-primary">
           <Icon className="h-6 w-6" />
         </span>
-        <span className="mt-3 max-w-[120px] text-sm font-semibold leading-tight">{label}</span>
+        <span className="mt-3 max-w-[120px] text-sm font-semibold leading-tight">
+          {label}
+        </span>
       </div>
     ))}
   </div>
@@ -51,7 +63,7 @@ export const IconGrid = ({ items }: { items: { icon: LucideIcon; label: string }
 export const CenteredCTA = ({
   text,
   primaryLabel,
-  secondaryLabel = "Review My Existing Proposal",
+  secondaryLabel = "",
   eyebrow,
   bgImage,
 }: {
@@ -83,16 +95,19 @@ export const CenteredCTA = ({
         </p>
       )}
       <h2 className="text-3xl font-bold md:text-4xl">
-        Let&apos;s Talk About <span className="text-primary">What You&apos;re Planning.</span>
+        Let&apos;s Talk About{" "}
+        <span className="text-primary">What You&apos;re Planning.</span>
       </h2>
       <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/80 md:text-base">
         {text}
       </p>
       <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
         <PrimaryButton href="/contact-us">{primaryLabel}</PrimaryButton>
-        <Link href="/contact-us" className={outlineButton}>
-          {secondaryLabel}
-        </Link>
+        {secondaryLabel && (
+          <Link href="/contact-us" className={outlineButton}>
+            {secondaryLabel}
+          </Link>
+        )}
       </div>
     </Container>
   </section>
@@ -113,7 +128,10 @@ export const CapabilityGrid = ({
         key={title}
         className="group flex flex-col overflow-hidden rounded-xl border border-primary/20 bg-[#081624] transition duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_18px_40px_rgba(46,198,245,0.12)]"
       >
-        <div className="relative aspect-[16/9] overflow-hidden bg-gray-800" aria-hidden="true">
+        <div
+          className="relative aspect-[16/9] overflow-hidden bg-gray-800"
+          aria-hidden="true"
+        >
           {image && (
             <Image
               src={image}
@@ -157,7 +175,11 @@ export const IconFeatures = ({
           <Icon className="h-7 w-7" />
         </span>
         <h3 className="mt-4 text-lg font-bold leading-tight">{title}</h3>
-        {text && <p className="mt-2 max-w-[150px] text-sm leading-snug text-white/70">{text}</p>}
+        {text && (
+          <p className="mt-2 max-w-[150px] text-sm leading-snug text-white/70">
+            {text}
+          </p>
+        )}
       </div>
     ))}
   </div>

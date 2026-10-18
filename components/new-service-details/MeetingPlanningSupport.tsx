@@ -1,15 +1,4 @@
-import Image from "next/image";
 import Container from "components/shared/Container";
-import {
-  CapabilityGrid,
-  CenteredCTA,
-  Eyebrow,
-  IconFeatures,
-  IconGrid,
-  PrimaryButton,
-  StepCards,
-  outlineButton,
-} from "./shared";
 import {
   Armchair,
   BarChart3,
@@ -29,6 +18,17 @@ import {
   UsersRound,
   Zap,
 } from "lucide-react";
+import Image from "next/image";
+import {
+  CapabilityGrid,
+  CenteredCTA,
+  Eyebrow,
+  IconFeatures,
+  IconGrid,
+  PrimaryButton,
+  StepCards,
+  outlineButton,
+} from "./shared";
 
 /* ---------- DATA ---------- */
 
@@ -48,25 +48,29 @@ const capabilities = [
     icon: CalendarDays,
     title: "Pre-Event Planning & Logistics",
     text: "Support with planning timelines, checklists, logistics and pre-event coordination.",
-    image: "/images/seo-services/event-videography-and-photography/event-pre-capture-planning.webp",
+    image:
+      "/images/seo-services/meeting-planning-support/Pre-Event Planning.png",
   },
   {
     icon: UsersRound,
     title: "Registration & Attendee Management",
     text: "Full registration support, badging, attendee communication and onsite check-in.",
-    image: "/images/seo-services/meeting-planning-support/registration-attendee-management.webp",
+    image:
+      "/images/seo-services/meeting-planning-support/Registration Check-in.png",
   },
   {
     icon: Mic,
     title: "Session & Speaker Coordination",
     text: "Speaker management, session tracking, run-of-show support and on-site liaison services.",
-    image: "/images/seo-services/meeting-planning-support/session-speaker-coordination.webp",
+    image:
+      "/images/seo-services/meeting-planning-support/session-speaker-coordination.webp",
   },
   {
     icon: Users,
     title: "Onsite Meeting Operations",
     text: "Room monitoring, flow management, attendee support and real-time operational coverage.",
-    image: "/images/seo-services/event-production-management/producer-at-front-of-house.webp",
+    image:
+      "/images/seo-services/event-production-management/producer-at-front-of-house.webp",
   },
   {
     icon: Star,
@@ -78,19 +82,22 @@ const capabilities = [
     icon: Handshake,
     title: "Venue & Vendor Coordination",
     text: "Liaison with venues, vendors and suppliers to keep everything aligned and on track.",
-    image: "/images/seo-services/event-production-management/planner-producer-venue-coordination.webp",
+    image:
+      "/images/seo-services/event-production-management/planner-producer-venue-coordination.webp",
   },
   {
     icon: Laptop,
     title: "Event Technology Support",
     text: "Support with A/V, presentation management, speaker readiness and technical coordination.",
-    image: "/images/seo-services/attendee-engagement-and-event-technology/event-mobile-app-digital-signage-integration.webp",
+    image:
+      "/images/seo-services/attendee-engagement-and-event-technology/event-mobile-app-digital-signage-integration.webp",
   },
   {
     icon: TriangleAlert,
     title: "Contingency & Issue Response",
     text: "Experienced support to quickly address changes, solve issues and keep your event on schedule.",
-    image: "/images/seo-services/audiovisual-production-for-events/system-redundancy-backup-audio-laptop.webp",
+    image:
+      "/images/seo-services/audiovisual-production-for-events/system-redundancy-backup-audio-laptop.webp",
   },
 ];
 
@@ -149,19 +156,19 @@ const HeroSection = () => (
       <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
         <Eyebrow>Meeting Planning Support</Eyebrow>
         <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          Support for the Details <span className="text-primary">That Keep Events Running.</span>
+          Support for the Details{" "}
+          <span className="text-primary">That Keep Events Running.</span>
         </h1>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-          DXG supports planners before and during the event with registration, logistics, speaker
-          coordination, room operations, and attendee support — all while keeping the planner in
-          control.
+          DXG supports planners before and during the event with registration,
+          logistics, speaker coordination, room operations, and attendee support
+          — all while keeping the planner in control.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <PrimaryButton href="/contact-us">Schedule a Planning Call</PrimaryButton>
-          <a
-            href="#capabilities"
-            className={outlineButton}
-          >
+          <PrimaryButton href="/contact-us">
+            Schedule a Planning Call
+          </PrimaryButton>
+          <a href="#capabilities" className={outlineButton}>
             Explore Support Services
           </a>
         </div>
@@ -196,11 +203,13 @@ const OperationalSupportSection = () => (
         <div>
           <Eyebrow>Planning support that delivers</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Operational Support <span className="text-primary">Where You Need It Most.</span>
+            Operational Support{" "}
+            <span className="text-primary">Where You Need It Most.</span>
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
-            DXG gives planning teams extra hands and experienced support across the event
-            lifecycle so you can focus on the big picture while we handle the operational details.
+            DXG gives planning teams extra hands and experienced support across
+            the event lifecycle so you can focus on the big picture while we
+            handle the operational details.
           </p>
         </div>
         <IconGrid items={supportAreas} />
@@ -210,15 +219,19 @@ const OperationalSupportSection = () => (
 );
 
 const CapabilitiesSection = () => (
-  <section id="capabilities" className="scroll-mt-20 bg-black py-14 text-white lg:py-16">
+  <section
+    id="capabilities"
+    className="scroll-mt-20 bg-black py-14 text-white lg:py-16"
+  >
     <Container>
       <Eyebrow>Our capabilities</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">
-        Complete Meeting Planning Support <span className="text-primary">for Live Events.</span>
+        Complete Meeting Planning Support{" "}
+        <span className="text-primary">for Live Events.</span>
       </h2>
       <p className="mt-3 max-w-4xl text-sm leading-relaxed text-white/75 md:text-base">
-        DXG provides practical planning and onsite support across every part of your event —
-        without replacing the planner.
+        DXG provides practical planning and onsite support across every part of
+        your event — without replacing the planner.
       </p>
       <CapabilityGrid items={capabilities} />
     </Container>
@@ -240,11 +253,13 @@ const WhyItMattersSection = () => (
         <div>
           <Eyebrow>Why it matters</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            Your Team Leads. <span className="text-primary">DXG Extends Your Capacity.</span>
+            Your Team Leads.{" "}
+            <span className="text-primary">DXG Extends Your Capacity.</span>
           </h2>
           <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/85 md:text-base">
-            We integrate into your planning team to provide extra support at the right time,
-            helping solve operational details before they become planner distractions.
+            We integrate into your planning team to provide extra support at the
+            right time, helping solve operational details before they become
+            planner distractions.
           </p>
         </div>
         <IconFeatures items={outcomes} />
@@ -258,10 +273,12 @@ const ProcessSection = () => (
     <Container>
       <Eyebrow>Our process</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-        From Planning Support to <span className="text-primary">Show Day Execution.</span>
+        From Planning Support to{" "}
+        <span className="text-primary">Show Day Execution.</span>
       </h2>
       <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/75 md:text-base">
-        A simple, collaborative process designed to give you the right support at the right time.
+        A simple, collaborative process designed to give you the right support
+        at the right time.
       </p>
       <StepCards items={steps} variant="badge" />
     </Container>
@@ -284,12 +301,13 @@ const CaseStudySection = () => (
       <div className="flex flex-col justify-center px-4 py-12 sm:px-6 lg:py-14 lg:pl-12 lg:pr-[max(2rem,calc((100vw-1620px)/2+2rem))]">
         <Eyebrow>Client success story</Eyebrow>
         <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-          Meeting Planning Support <span className="text-primary">in Action.</span>
+          Meeting Planning Support{" "}
+          <span className="text-primary">in Action.</span>
         </h2>
         <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/75 md:text-base">
-          DXG supported a multi-day association conference across registration, speaker
-          management, breakout support, and onsite operations — helping deliver a seamless
-          experience for attendees, speakers, and staff.
+          DXG supported a multi-day association conference across registration,
+          speaker management, breakout support, and onsite operations — helping
+          deliver a seamless experience for attendees, speakers, and staff.
         </p>
 
         <div className="mt-6 grid grid-cols-2 gap-3 xl:grid-cols-4">
@@ -300,7 +318,9 @@ const CaseStudySection = () => (
             >
               <Icon className="mt-0.5 h-6 w-6 shrink-0 text-primary" />
               <div>
-                <p className="text-lg font-bold leading-none text-primary">{value}</p>
+                <p className="text-lg font-bold leading-none text-primary">
+                  {value}
+                </p>
                 <p className="mt-1 text-xs text-white/65">{label}</p>
               </div>
             </div>
@@ -308,7 +328,9 @@ const CaseStudySection = () => (
         </div>
 
         <div className="mt-7">
-          <PrimaryButton href="/experiences-created">View the Full Case Study</PrimaryButton>
+          <PrimaryButton href="/experiences-created">
+            View the Full Case Study
+          </PrimaryButton>
         </div>
       </div>
     </div>
@@ -325,14 +347,14 @@ const MeetingPlanningSupport = () => {
       <OperationalSupportSection />
       <CapabilitiesSection />
       <WhyItMattersSection />
-      <ProcessSection />
-      <CaseStudySection />
+      {/* Temporarily hidden */}
+      {/* <ProcessSection /> */}
+      {/* <CaseStudySection /> */}
       <CenteredCTA
         eyebrow="Let's plan together"
         primaryLabel="Schedule a Planning Call"
-        secondaryLabel="Review My Existing Plan"
         text="We help planners lighten the workload and strengthen event execution with experienced support at every stage."
-        bgImage="/images/seo-services/event-production-management/live-show-day-keynote-session.webp"
+        bgImage="/images/seo-services/meeting-planning-support/GMA June 2024.jpeg"
       />
     </div>
   );

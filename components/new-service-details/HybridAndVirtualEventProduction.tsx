@@ -1,13 +1,4 @@
 import Container from "components/shared/Container";
-import Image from "next/image";
-import {
-  CapabilityGrid,
-  CenteredCTA,
-  Eyebrow,
-  IconGrid,
-  PrimaryButton,
-  outlineButton,
-} from "./shared";
 import {
   ArrowRight,
   BarChart3,
@@ -27,6 +18,15 @@ import {
   UsersRound,
   Video,
 } from "lucide-react";
+import Image from "next/image";
+import {
+  CapabilityGrid,
+  CenteredCTA,
+  Eyebrow,
+  IconGrid,
+  PrimaryButton,
+  outlineButton,
+} from "./shared";
 
 /* ---------- DATA ---------- */
 
@@ -46,49 +46,57 @@ const capabilities = [
     icon: Video,
     title: "Livestream Production",
     text: "Professional live streaming for global audiences with reliable, high-quality broadcast production.",
-    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-livestream-production.jpg",
+    image:
+      "/images/seo-services/hybrid-and-virtual-event-production/Live Stream Image.png",
   },
   {
     icon: Monitor,
     title: "Virtual Platform Support",
     text: "Expert support for leading virtual event platforms with seamless integration, configurations and show management.",
-    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-virtual-platform.jpg",
+    image:
+      "/images/seo-services/hybrid-and-virtual-event-production/cap-virtual-platform.jpg",
   },
   {
     icon: UserRound,
     title: "Remote Speaker Management",
     text: "Comprehensive support for remote speakers, including technical setup, coaching and live coordination.",
-    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-remote-speaker.jpg",
+    image:
+      "/images/seo-services/hybrid-and-virtual-event-production/Remote Speaker Management.png",
   },
   {
     icon: Video,
     title: "Recording & Content Capture",
     text: "Multi-camera recording, session capture and content repurposing for on-demand, post-event and internal use.",
-    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-recording-capture.jpg",
+    image:
+      "/images/seo-services/hybrid-and-virtual-event-production/cap-recording-capture.jpg",
   },
   {
     icon: ImageIcon,
     title: "Broadcast Graphics & Playback",
     text: "Custom show graphics, lower thirds, video playback and branded content designed for live and virtual audiences.",
-    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-broadcast-graphics.jpg",
+    image:
+      "/images/seo-services/hybrid-and-virtual-event-production/Broadcast Graphics.png",
   },
   {
     icon: BarChart3,
     title: "Audience Engagement Tools",
     text: "Live polls, Q&A, chat moderation and interactive experiences that keep both in-room and remote audiences engaged.",
-    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-audience-engagement.jpg",
+    image:
+      "/images/seo-services/hybrid-and-virtual-event-production/cap-audience-engagement.jpg",
   },
   {
     icon: Settings,
     title: "Control Room & Technical Direction",
     text: "Experienced technical directors and show callers who manage complex live and virtual productions from our control rooms.",
-    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-control-room.jpg",
+    image:
+      "/images/seo-services/hybrid-and-virtual-event-production/Control Room TD.png",
   },
   {
     icon: Network,
     title: "Multi-Site Signal Distribution",
     text: "Reliable signal distribution for multi-site events, connecting multiple locations, stages and remote contributors.",
-    image: "/images/seo-services/hybrid-and-virtual-event-production/cap-signal-distribution.jpg",
+    image:
+      "/images/seo-services/hybrid-and-virtual-event-production/cap-signal-distribution.jpg",
   },
 ];
 
@@ -129,27 +137,28 @@ const HeroSection = () => (
         <div>
           <Eyebrow>Hybrid &amp; Virtual Event Production</Eyebrow>
           <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-            One Event. Two Audiences. <span className="text-primary">One Coordinated Experience.</span>
+            One Event. Two Audiences.{" "}
+            <span className="text-primary">One Coordinated Experience.</span>
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-            DXG designs and manages hybrid and virtual event production for in-room attendees,
-            remote audiences, presenters, and content teams. We bring together people, technology
-            and creative production to deliver a single, seamless experience—no matter where your
-            audience is.
+            DXG designs and manages hybrid and virtual event production for
+            in-room attendees, remote audiences, presenters, and content teams.
+            We bring together people, technology and creative production to
+            deliver a single, seamless experience—no matter where your audience
+            is.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <PrimaryButton href="/contact-us">Request a Hybrid Proposal</PrimaryButton>
-            <a
-              href="#capabilities"
-              className={outlineButton}
-            >
+            <PrimaryButton href="/contact-us">
+              Request a Hybrid Proposal
+            </PrimaryButton>
+            <a href="#capabilities" className={outlineButton}>
               Explore Hybrid Capabilities
             </a>
           </div>
         </div>
         <div className="relative aspect-[16/9] w-full rounded-lg overflow-hidden bg-gray-900 shadow-xl">
           <Image
-            src="/images/seo-services/hybrid-and-virtual-event-production/hybrid-hero-showcase.jpg"
+            src="/images/seo-services/hybrid-and-virtual-event-production/Streaming Event Look.png"
             alt="One Event. Two Audiences. One Coordinated Experience. - DXG Hybrid Event Stage"
             title="Hybrid & Virtual Event Production"
             fill
@@ -176,12 +185,14 @@ const AudienceSection = () => (
         <div>
           <Eyebrow>A more connected event experience</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Your Audience Isn&apos;t <span className="text-primary">Just in the Room.</span>
+            Your Audience Isn&apos;t{" "}
+            <span className="text-primary">Just in the Room.</span>
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
-            Hybrid events require a strategic approach that considers the in-person audience, the
-            remote audience, the presenters, and the technical systems connecting them. DXG helps
-            you design, produce and manage every element so everyone feels included, engaged, and
+            Hybrid events require a strategic approach that considers the
+            in-person audience, the remote audience, the presenters, and the
+            technical systems connecting them. DXG helps you design, produce and
+            manage every element so everyone feels included, engaged, and
             connected.
           </p>
         </div>
@@ -192,15 +203,20 @@ const AudienceSection = () => (
 );
 
 const CapabilitiesSection = () => (
-  <section id="capabilities" className="scroll-mt-20 bg-black py-14 text-white lg:py-16">
+  <section
+    id="capabilities"
+    className="scroll-mt-20 bg-black py-14 text-white lg:py-16"
+  >
     <Container>
       <Eyebrow>Hybrid &amp; virtual capabilities</Eyebrow>
       <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">
-        Complete Production Support <span className="text-primary">for Hybrid and Virtual Events.</span>
+        Complete Production Support{" "}
+        <span className="text-primary">for Hybrid and Virtual Events.</span>
       </h2>
       <p className="mt-3 max-w-4xl text-sm leading-relaxed text-white/75 md:text-base">
-        From strategic planning to live execution, DXG provides end-to-end hybrid and virtual
-        event production with the right people, technology and creative support.
+        From strategic planning to live execution, DXG provides end-to-end
+        hybrid and virtual event production with the right people, technology
+        and creative support.
       </p>
 
       <CapabilityGrid items={capabilities} />
@@ -214,11 +230,14 @@ const ProcessSection = () => (
       <div className="grid gap-4 lg:grid-cols-2 lg:items-end">
         <div>
           <Eyebrow>How we work together</Eyebrow>
-          <h2 className="text-3xl font-bold md:text-4xl">How We Manage <span className="text-primary">Hybrid Production.</span></h2>
+          <h2 className="text-3xl font-bold md:text-4xl">
+            How We Manage{" "}
+            <span className="text-primary">Hybrid Production.</span>
+          </h2>
         </div>
         <p className="max-w-md text-sm leading-relaxed text-white/65 lg:justify-self-end lg:text-base">
-          A proven process designed to give you confidence at every stage, from initial planning
-          to the final broadcast.
+          A proven process designed to give you confidence at every stage, from
+          initial planning to the final broadcast.
         </p>
       </div>
 
@@ -233,7 +252,9 @@ const ProcessSection = () => (
                 <Icon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mt-4 text-base font-bold leading-snug">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/65">{text}</p>
+              <p className="mt-2 text-sm leading-relaxed text-white/65">
+                {text}
+              </p>
             </div>
             {/* Arrow sits centered in the gap between cards */}
             {i < steps.length - 1 && (
@@ -259,7 +280,7 @@ const HybridAndVirtualEventProduction = () => {
       <CenteredCTA
         primaryLabel="Request a Hybrid Proposal"
         text="Whether you're planning a hybrid conference, a virtual event, live streaming experience or an executive broadcast, DXG can help you create a connected experience for every audience."
-        bgImage="/images/seo-services/hybrid-and-virtual-event-production/hybrid-cta-bg.jpg"
+        bgImage="/images/seo-services/hybrid-and-virtual-event-production/GMA June 2024.jpeg"
       />
     </div>
   );

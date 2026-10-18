@@ -44,7 +44,7 @@ const capabilities = [
     icon: Monitor,
     title: "General Session Stage Design",
     text: "Stunning stage designs that bring your content, brand, and audience together.",
-    image: "/images/seo-services/audiovisual-production-for-events/av-hero-keynote-ballroom.webp",
+    image: "/images/seo-services/audiovisual-production-for-events/av-hero-keynote-ballroom-1.png",
     alt: "General session stage design with hanging LED screens and lighting",
   },
   {
@@ -58,7 +58,7 @@ const capabilities = [
     icon: Grid3x3,
     title: "LED Video Environments",
     text: "Immersive LED video walls and scenic configurations that make a visual impact.",
-    image: "/images/seo-services/audiovisual-production-for-events/cap-3-led-people-ideas-impact.webp",
+    image: "/images/seo-services/audiovisual-production-for-events/cap-3-led-people-ideas-impact.png",
     alt: "Immersive LED video wall environments and scenic configurations",
   },
   {
@@ -72,7 +72,7 @@ const capabilities = [
     icon: Lightbulb,
     title: "Lighting Design & Atmosphere",
     text: "Lighting designs that set the mood, enhance content, and transform your environment.",
-    image: "/images/seo-services/audiovisual-production-for-events/cap-4-lighting-beams.webp",
+    image: "/images/seo-services/audiovisual-production-for-events/cap-4-lighting-beams.png",
     alt: "Stage lighting design and atmospheric lighting beams",
   },
   {

@@ -1,6 +1,4 @@
 import Container from "components/shared/Container";
-import Link from "next/link";
-import FAQItem from "./FAQItem";
 import {
   ArrowRight,
   BarChart3,
@@ -26,6 +24,8 @@ import {
   Wallet,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import FAQItem from "./FAQItem";
 
 /* ---------- DATA ---------- */
 
@@ -50,7 +50,7 @@ const processImages = [
   },
   {
     label: "Show Day Execution",
-    src: "/images/seo-services/event-production-management/live-show-day-keynote-session.webp",
+    src: "/images/seo-services/event-production-management/live-show-day-keynote-session.png",
     alt: "Live show day keynote session - DXG Event Production",
   },
 ];
@@ -231,7 +231,13 @@ const Label = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-const BrandButton = ({ href, children }: { href: string; children: React.ReactNode }) => (
+const BrandButton = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => (
   <Link
     href={href}
     className="btn-slide-primary capsule-button inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
@@ -253,13 +259,15 @@ const HeroSection = () => (
       <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
         <Label>Event Production Management</Label>
         <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          The Same Production Team, <span className="text-primary">Year After Year.</span>
+          The Same Production Team,{" "}
+          <span className="text-primary">Year After Year.</span>
         </h1>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-          Venues and AV setups change. But with DXG, you get the same production leadership,
-          planning standards, and show-day management across every event, in every city. A
-          consistent team that knows your goals, understands your audience, and delivers a
-          seamless experience from planning to show day.
+          Venues and AV setups change. But with DXG, you get the same production
+          leadership, planning standards, and show-day management across every
+          event, in every city. A consistent team that knows your goals,
+          understands your audience, and delivers a seamless experience from
+          planning to show day.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <BrandButton href="/contact-us">Request an AV Proposal</BrandButton>
@@ -299,12 +307,14 @@ const ProgramsSection = () => (
         <div>
           <Label>Events of every size. A consistent approach.</Label>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Programs Designed Around <span className="text-primary">What You Need.</span>
+            Programs Designed Around{" "}
+            <span className="text-primary">What You Need.</span>
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-white/80">
-            From corporate meetings to association conferences, DXG builds production management
-            programs that adapt to your organization, your audience, and your goals—while
-            maintaining a consistent, high-touch approach you can count on.
+            From corporate meetings to association conferences, DXG builds
+            production management programs that adapt to your organization, your
+            audience, and your goals—while maintaining a consistent, high-touch
+            approach you can count on.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 lg:self-end">
@@ -318,7 +328,9 @@ const ProgramsSection = () => (
               <span className="flex h-16 w-16 items-center justify-center rounded-full border border-primary/50 bg-[#0b2237] text-primary">
                 <Icon className="h-7 w-7" />
               </span>
-              <span className="mt-3 max-w-[120px] text-sm font-semibold leading-tight">{label}</span>
+              <span className="mt-3 max-w-[120px] text-sm font-semibold leading-tight">
+                {label}
+              </span>
             </div>
           ))}
         </div>
@@ -328,7 +340,10 @@ const ProgramsSection = () => (
 );
 
 const ProcessSection = () => (
-  <section id="production-process" className="scroll-mt-20 bg-black py-16 text-white lg:py-20">
+  <section
+    id="production-process"
+    className="scroll-mt-20 bg-black py-16 text-white lg:py-20"
+  >
     <Container>
       <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12">
         <div>
@@ -337,8 +352,8 @@ const ProcessSection = () => (
             How We Manage <span className="text-primary">Your Production.</span>
           </h2>
           <p className="mt-3 text-sm text-white/65">
-            <span className="font-semibold text-white">6 stages.</span> Each one produces the next
-            technical information the next stage needs.
+            <span className="font-semibold text-white">6 stages.</span> Each one
+            produces the next technical information the next stage needs.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -372,8 +387,12 @@ const ProcessSection = () => (
                 </span>
                 <Icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mt-4 min-h-[2.75rem] text-base font-bold leading-snug">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/65">{text}</p>
+              <h3 className="mt-4 min-h-[2.75rem] text-base font-bold leading-snug">
+                {title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/65">
+                {text}
+              </p>
             </div>
             {/* Arrow sits centered in the gap between cards */}
             {i < stages.length - 1 && (
@@ -401,12 +420,14 @@ const IncludeSection = () => (
         <div>
           <Label>A complete approach</Label>
           <h2 className="text-3xl font-bold md:text-4xl">
-            What Production Management <span className="text-primary">Can Include.</span>
+            What Production Management{" "}
+            <span className="text-primary">Can Include.</span>
           </h2>
         </div>
         <p className="max-w-xl text-sm leading-relaxed text-white/75 lg:justify-self-end lg:text-base">
-          From initial planning to final applause, DXG manages every technical element so you can
-          stay focused on your content, your attendees, and your bigger goals.
+          From initial planning to final applause, DXG manages every technical
+          element so you can stay focused on your content, your attendees, and
+          your bigger goals.
         </p>
       </div>
 
@@ -434,7 +455,9 @@ const IncludeSection = () => (
                   <ItemIcon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                   <div>
                     <p className="text-sm font-semibold">{itemTitle}</p>
-                    <p className="text-xs leading-relaxed text-white/65">{text}</p>
+                    <p className="text-xs leading-relaxed text-white/65">
+                      {text}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -453,12 +476,13 @@ const GetStartedSection = () => (
         <div>
           <Label>It starts here</Label>
           <h2 className="text-3xl font-bold md:text-4xl">
-            Get Started with <span className="text-primary">These 3 Steps.</span>
+            Get Started with{" "}
+            <span className="text-primary">These 3 Steps.</span>
           </h2>
         </div>
         <p className="max-w-xl text-sm leading-relaxed text-white/65 lg:justify-self-end lg:text-base">
-          A simple way to begin, with a process designed to give you clarity quickly and set you
-          up for a successful event.
+          A simple way to begin, with a process designed to give you clarity
+          quickly and set you up for a successful event.
         </p>
       </div>
 
@@ -474,7 +498,9 @@ const GetStartedSection = () => (
                   {step}
                 </p>
                 <h3 className="mt-1 text-base font-bold">{title}</h3>
-                <p className="mt-1 text-xs leading-relaxed text-white/65">{text}</p>
+                <p className="mt-1 text-xs leading-relaxed text-white/65">
+                  {text}
+                </p>
               </div>
             </div>
             {i < startSteps.length - 1 && (
@@ -489,7 +515,10 @@ const GetStartedSection = () => (
 
 const FAQSection = () => {
   // Two independent columns so opening one item doesn't stretch its neighbour
-  const columns = [faqs.filter((_, i) => i % 2 === 0), faqs.filter((_, i) => i % 2 === 1)];
+  const columns = [
+    faqs.filter((_, i) => i % 2 === 0),
+    faqs.filter((_, i) => i % 2 === 1),
+  ];
 
   return (
     <section className="bg-black py-14 text-white lg:py-16">
@@ -516,7 +545,7 @@ const FAQSection = () => {
 const FinalCTASection = () => (
   <section className="relative overflow-hidden bg-black text-white">
     <Image
-      src="/images/seo-services/event-production-management/plan-your-next-event.png"
+      src="/images/seo-services/event-production-management/plan-your-next-event-two.jpeg"
       alt="Let's Plan Your Next Event"
       fill
       sizes="100vw"
@@ -528,18 +557,20 @@ const FinalCTASection = () => (
         <div className="max-w-2xl">
           <Label>Let&apos;s plan your next event</Label>
           <h2 className="text-3xl font-bold md:text-4xl">
-            Let&apos;s Talk About <span className="text-primary">What You&apos;re Planning.</span>
+            Let&apos;s Talk About{" "}
+            <span className="text-primary">What You&apos;re Planning.</span>
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-white/80 md:text-base">
-            We&apos;ll help you build a production plan around your priorities, budget, and
-            vision—no matter your event size or venue. A consistent team, from start to finish.
+            We&apos;ll help you build a production plan around your priorities,
+            budget, and vision—no matter your event size or venue. A consistent
+            team, from start to finish.
           </p>
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:gap-4">
           <BrandButton href="/contact-us">Request an AV Proposal</BrandButton>
-          <Link href="/experiences-created" className={outlineButton}>
+          {/* <Link href="/experiences-created" className={outlineButton}>
             Review Past Events
-          </Link>
+          </Link> */}
         </div>
       </div>
     </Container>
