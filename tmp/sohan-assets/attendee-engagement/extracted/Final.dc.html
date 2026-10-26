@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DXG Attendee Engagement, Final</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#000000}
+a{color:#2EC7F5}a:hover{color:#8FE3FB}
+.wrap{max-width:1320px;margin:0 auto;padding-left:32px;padding-right:32px;box-sizing:border-box}
+.band{padding-block:112px}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#2EC7F5;margin:0 0 18px}
+.eyebrow:before{content:"";width:32px;height:2px;background:#2EC7F5}
+.center{text-align:center}
+.center .eyebrow{justify-content:center}
+h1,h2,h3{text-wrap:balance;margin:0;color:#FFFFFF}
+h2{font-size:clamp(30px,3.2vw,42px);line-height:1.14;letter-spacing:-.01em}
+.c{color:#2EC7F5}
+.sub{font-size:18px;line-height:1.65;color:rgba(255,255,255,.72);max-width:50ch;margin:20px 0 0}
+.center .sub{margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;box-sizing:border-box;font-family:inherit;cursor:pointer}
+.btn-p{background:#2EC7F5;color:#030F12;border:0}.btn-p:hover{background:#8FE3FB;color:#030F12}
+.btn-s{border:1px solid rgba(255,255,255,.28);color:#FFFFFF;background:rgba(255,255,255,.04)}.btn-s:hover{border-color:#2EC7F5;color:#2EC7F5}
+.photo{position:relative;background:radial-gradient(80% 120% at 85% 40%,rgba(46,199,245,.10),rgba(46,199,245,0) 60%),linear-gradient(90deg,#000000 30%,#06131F 100%)}
+.photo .bgl{position:absolute;right:16px;bottom:12px;font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.35)}
+.split{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:center}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.tile{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px 18px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.tile .num{width:38px;height:38px;border-radius:50%;border:1.5px solid #2EC7F5;color:#2EC7F5;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;margin-bottom:4px}
+.tile .k{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.tile h3{font-size:16px;line-height:1.3}
+.tile p{margin:0;font-size:13px;line-height:1.45;color:rgba(255,255,255,.58)}
+.tile.hi{border-color:#2EC7F5;background:rgba(46,199,245,.08)}
+.tile.loop{border-style:dashed;border-color:rgba(46,199,245,.45);background:transparent}
+.flag{align-self:flex-start;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:#2EC7F5;color:#030F12}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.tabs button{min-height:46px;padding:0 22px;border-radius:999px;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;border:1px solid}
+.panel{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:center;margin-top:28px;padding:52px 56px;background:#06131F;border:1px solid rgba(255,255,255,.08);border-radius:20px}
+.lbl{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#2EC7F5;margin:0}
+.quote{margin:14px 0 0;font-size:clamp(22px,2.1vw,27px);line-height:1.35;font-style:italic;color:#FFFFFF}
+.panel h3{font-size:clamp(22px,2.1vw,27px);line-height:1.25}
+.panel p.t{margin:14px 0 0;font-size:17px;line-height:1.65;color:rgba(255,255,255,.74)}
+.for{margin:22px 0 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:15px;color:rgba(255,255,255,.66)}
+.for b{color:#2EC7F5;font-weight:600}
+.methods{display:flex;flex-wrap:wrap;align-items:center;gap:8px 8px;margin-top:22px}
+.methods .ml{font-size:13px;font-weight:600;color:rgba(255,255,255,.55);margin-right:6px}
+.chip{font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.75)}
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin-top:40px}
+.tiers>div{border-top:2px solid rgba(255,255,255,.14);padding-top:24px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.tiers>div.hl{border-top-color:#2EC7F5}
+.tiers h3{font-size:22px;line-height:1.25}
+.tiers p.t{margin:0;font-size:16px;line-height:1.6;color:rgba(255,255,255,.72)}
+.best{margin:6px 0 0;font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.6)}
+.best b{color:#FFFFFF;font-weight:600}
+.tag{align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(46,199,245,.12);color:#2EC7F5}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.stage{text-align:center;min-width:0;padding:0 8px}
+.ic{width:60px;height:60px;border-radius:50%;border:1.5px solid rgba(46,199,245,.7);background:rgba(46,199,245,.06);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#2EC7F5}
+.stage .lbl{margin-bottom:6px}
+.stage h3{font-size:20px;line-height:1.25}
+.stage p{margin:10px 0 0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.66)}
+.out{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:12px}
+.out li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;font-size:16px;line-height:1.5;color:rgba(255,255,255,.74);padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}
+.out li b{color:#FFFFFF;font-weight:600}
+.report{background:#06131F;border:1px solid rgba(46,199,245,.25);border-radius:18px;padding:32px;min-width:0}
+.ev{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.08);font-size:15px;color:rgba(255,255,255,.82)}
+.ev span:last-child{font-size:13px;color:#2EC7F5;white-space:nowrap;font-variant-numeric:tabular-nums}
+details{border-top:1px solid rgba(255,255,255,.12);padding:20px 4px}
+details:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+summary{cursor:pointer;font-size:17px;font-weight:600;color:#FFFFFF;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:#2EC7F5;font-size:24px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{margin:12px 0 0;font-size:16px;line-height:1.65;color:rgba(255,255,255,.74);max-width:68ch}
+.nav a{color:rgba(255,255,255,.88);text-decoration:none;font-size:14px;font-weight:600}
+.nav a:hover,.nav a.on{color:#2EC7F5}
+.nl input[type=email]{flex:1 1 260px;min-width:0;min-height:48px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:#FFFFFF;font-family:inherit;font-size:15px}
+a:focus-visible,summary:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #2EC7F5;outline-offset:3px}
+@media (max-width:1100px){.nav{display:none!important}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.split{gap:56px}}
+@media (max-width:900px){.band{padding-block:80px}.split,.panel,.hero{grid-template-columns:minmax(0,1fr)!important}.panel{padding:32px;gap:32px}.tiers,.stages{grid-template-columns:minmax(0,1fr)}.tiers{gap:36px}.stages{gap:40px}.flip>:first-child{order:2}.heroimg{min-height:320px!important}}
+@media (max-width:520px){.tiles{grid-template-columns:minmax(0,1fr)}.out li{grid-template-columns:minmax(0,1fr);gap:4px}.wrap{padding-left:20px;padding-right:20px}}
+</style>
+</helmet>
+
+<div style="font-family:'Josefin Sans',Arial,sans-serif;color:#FFFFFF;background:#000000;min-width:0">
+
+<!-- HEADER (live site nav) -->
+<header style="background:#000000;border-bottom:1px solid rgba(255,255,255,.08)">
+<div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:80px">
+<a href="https://www.dxg.agency/" style="text-decoration:none;display:flex;flex-direction:column;line-height:1">
+<span style="font-size:30px;font-weight:700;letter-spacing:.04em;color:#2EC7F5">DXG</span>
+<span style="font-size:10px;letter-spacing:.32em;color:#2EC7F5">DIGITAL XPERIENCE GROUP</span>
+</a>
+<nav class="nav" style="display:flex;gap:24px;flex-wrap:wrap" aria-label="Main">
+<a href="https://www.dxg.agency/">Home</a><a href="https://www.dxg.agency/services">Problems We Solve</a><a href="https://www.dxg.agency/experiences-created">Experiences We've Created</a><a href="https://www.dxg.agency/why-dxg">The DXG Difference</a><a href="#">Planner Insight Blog</a><a href="https://www.dxg.agency/contact-us">Contact Us</a>
+</nav>
+<a class="btn btn-p" href="https://www.dxg.agency/contact-us" style="min-height:44px">Request for Proposal</a>
+</div>
+</header>
+
+<!-- 1. HERO · live: text left, photo right half -->
+<section class="hero" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:#000000">
+<div style="min-width:0;display:flex;align-items:center;justify-content:flex-end">
+<div style="max-width:640px;width:100%;box-sizing:border-box;padding-block:104px;padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:56px">
+<p class="eyebrow">Event Technology &amp; Attendee Engagement</p>
+<h1 style="font-size:clamp(38px,4.2vw,56px);line-height:1.08;letter-spacing:-.02em">Great production sets the stage. <span class="c">Purposeful design gets people to take part.</span></h1>
+<p class="sub">Engagement is what people are invited, motivated, and enabled to do. We design it around your objectives and your participants.</p>
+<div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:36px">
+<a class="btn btn-p" href="https://www.dxg.agency/contact-us">Request an Engagement Proposal <span aria-hidden="true">→</span></a>
+<a class="btn btn-s" href="#how">See How We Design</a>
+</div>
+</div>
+</div>
+<div class="heroimg" style="min-height:600px;background:linear-gradient(160deg,#12324F,#06131F);display:flex;align-items:flex-end;padding:18px;box-sizing:border-box">
+<span style="font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.5)">IMAGE · new photo: small groups working a challenge together (replaces attendee-engagement-hero.jpg)</span>
+</div>
+</section>
+
+<!-- 2. SOLUTIONS SLOT → How we design · live: heading left, tile grid right, dimmed photo behind -->
+<section id="how" class="band photo">
+<div class="wrap split">
+<div style="min-width:0">
+<p class="eyebrow">How we design</p>
+<h2>Engagement designed for <span class="c">the event you're running.</span></h2>
+
+</div>
+<div class="tiles" aria-label="Four event situations"><div class="tile"><span class="num">01</span><h3>Conference or Breakout Session</h3><p>From content delivery to collaborative discovery.</p></div><div class="tile"><span class="num">02</span><h3>Trade Show</h3><p>From collecting contacts to creating purposeful connections.</p></div><div class="tile"><span class="num">03</span><h3>Virtual or Hybrid Event</h3><p>From parallel attendance to shared participation.</p></div><div class="tile"><span class="num">04</span><h3>Keynote or General Session</h3><p>From a presentation to an engagement journey.</p></div></div>
+</div>
+<span class="bgl">BG IMAGE · ballroom-preparation-event-tech.webp, dimmed</span>
+</section>
+
+<!-- 3. CAPABILITIES SLOT (#capabilities) · tabs replace the 8-image grid; tiers follow -->
+<section id="capabilities" class="band" style="background:#000000">
+<div class="wrap">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 48px">
+<div style="flex:1 1 560px;min-width:0"><p class="eyebrow">Our attendee engagement capabilities</p><h2>Technology can start it, <span class="c" id="k839x">but people make it meaningful.</span></h2></div>
+
+</div>
+
+
+
+
+<div class="panel">
+<div style="min-width:0"><p class="lbl">What planners tell us</p><p class="quote">“We need our breakouts to get people involved, not just listening to another presentation.”</p></div>
+<div style="min-width:0"><h3>Give people something to solve, discuss, and decide together.</h3><p class="t">Participants receive prompts, clues, or choices, via their phones, and work face-to-face in groups to compare perspectives and reach a shared response. The digital layer guides the experience and captures outcomes, but the real value comes from the conversation in the room.</p></div>
+</div>
+
+
+
+
+<div style="margin-top:88px;padding-top:56px;border-top:1px solid rgba(255,255,255,.1)">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 48px">
+<h3 style="flex:1 1 520px;min-width:0;font-size:clamp(24px,2.4vw,32px);line-height:1.2">Three ways to bring it to your event.</h3>
+
+</div>
+<div class="tiers">
+<div><p class="lbl" style="margin-top:6px">Ready-to-run templates</p><h3>Tested formats, ready to go.</h3><p class="t">Icebreakers, networking, collaboration, and more, simple enough for your own team to run without DXG on site.</p><p class="best"><b>Best for:</b> short timelines, tight budgets, self-led sessions.</p></div>
+<div><p class="lbl" style="margin-top:6px">Customized templates</p><h3>A proven structure, built around your content.</h3><p class="t">We swap in your scenarios, data, speakers' questions, and sponsors. The tested structure stays.</p><p class="best"><b>Best for:</b> specific learning, sponsor, or member goals.</p></div>
+<div class="hl"><p class="lbl" style="margin-top:6px">Bespoke design</p><h3>An original experience, designed from scratch.</h3><p class="t">Built from your outcome through all seven decisions, prototyped with real people, and produced with your show.</p><p class="best"><b>Best for:</b> flagship sessions and goals no template fits.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 4. WHY SLOT → the journey · live: heading left, icon columns right, dimmed photo behind -->
+<section class="band photo">
+<div class="wrap split">
+<div style="min-width:0">
+<p class="eyebrow">A more connected event experience</p>
+<h2>Before, during, and after your event. </h2>
+<p class="sub">Connecting all three stages creates a continuous engagement journey. But each stage stands on its own, with opportunities to engage participants meaningfully before, during, or after your event</p>
+</div>
+<div class="stages">
+<div class="stage"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></div><p class="lbl">Pre-event</p><h3>Prepare and motivate</h3><p>Spark curiosity, learn participants' needs, and start connections before arrival.</p></div>
+<div class="stage"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"></circle><circle cx="17" cy="9.5" r="2.6"></circle><path d="M3 20c.6-3.4 3-5.4 6-5.4s5.4 2 6 5.4M15.5 15.2c2.6-.3 4.6 1.4 5.2 4.3"></path></svg></div><p class="lbl">During</p><h3>Connect and participate</h3><p>Investigate, solve problems, and make decisions together, in the room and online.</p></div>
+<div class="stage"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l6-6 4 4 6-7"></path><path d="M14 8h6v6"></path></svg></div><p class="lbl">Post-event</p><h3>Reinforce and act</h3><p>Apply the ideas, keep relationships going, and capture follow-through.</p></div>
+</div>
+</div>
+<span class="bgl">BG IMAGE · tech-table-polling-operator.webp, dimmed</span>
+</section>
+
+<!-- 4b. EVIDENCE · added section (deviation from live flow) -->
+<section class="band" style="background:#000000">
+<div class="wrap split flip" style="grid-template-columns:minmax(0,1fr) minmax(0,1fr)">
+<div class="report">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><p style="margin:0;font-size:18px;font-weight:700">Engagement Evidence Report</p><span class="tag" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7)">Sample layout</span></div>
+<p style="margin:6px 0 22px;font-size:13px;color:rgba(255,255,255,.55)">Illustrative only. Not client data.</p>
+<p class="lbl" style="color:rgba(255,255,255,.5);margin-bottom:6px">Outcome agreed in planning</p>
+<p style="margin:0 0 18px;font-size:16px;color:#FFFFFF">[ What should be different for participants ]</p>
+<div class="ev"><span>Groups that reached a shared decision</span><span>[ # of # ]</span></div>
+<div class="ev"><span>New connections participants reported</span><span>[ # ]</span></div>
+<div class="ev"><span>Participants who stated a next step</span><span>[ % ]</span></div>
+<div class="ev"><span>Follow-through at 30 days</span><span>[ % ]</span></div>
+<div class="ev" style="border-bottom:1px solid rgba(255,255,255,.08)"><span>Facilitator observations</span><span>[ notes ]</span></div>
+<p style="margin:16px 0 0;font-size:13px;color:rgba(255,255,255,.55)">Supporting activity data: participation, responses, completions</p>
+</div>
+<div style="min-width:0">
+<p class="eyebrow">What you walk away with</p>
+<h2>Evidence that something changed. <span class="c">Not just that people clicked.</span></h2>
+<p class="sub">We agree on what success means before the event, then report against it. One report for your board, your committee, and your sponsors.</p>
+<ul class="out">
+<li><b>Connection</b><span>New and stronger relationships</span></li>
+<li><b>Understanding</b><span>What people can explain or apply</span></li>
+<li><b>Collaboration</b><span>Conclusions groups reached together</span></li>
+<li><b>Experience</b><span>Relevance and value people found</span></li>
+<li><b>Action</b><span>Decisions made and follow-through</span></li>
+</ul>
+<p style="margin:22px 0 0;font-size:14px;color:rgba(255,255,255,.58)">We won't claim an activity changed behavior unless the evidence shows it.</p>
+</div>
+</div>
+</section>
+
+<!-- 5. FAQ · live: navy band, heading left, accordion right -->
+<section class="band" style="background:#030C14">
+<div class="wrap split" style="grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);align-items:start">
+<div style="min-width:0"><p class="eyebrow">FAQ</p><h2>Questions <span class="c">planners ask us.</span></h2></div>
+<div style="min-width:0">
+<details><summary>Is this gamification?</summary><p>Sometimes a game is the right tool, but it's one option among many. We choose the format after we know what should change and why people will want to take part.</p></details>
+<details><summary>Does every session need to be interactive?</summary><p>No. Listening and reflecting are often the right choice. We design interaction where it serves the outcome: one session, one stage, or the whole journey.</p></details>
+<details><summary>Do we have to use a specific platform, or an app at all?</summary><p>No. We work with the tools you already license or recommend options that fit. When an analog approach does the job better, we'll tell you.</p></details>
+<details><summary>Can we customize the tools to match our event brand?</summary><p>Yes. Templates, screens, apps, and signage carry your colors, logos, and sponsor placements.</p></details>
+<details><summary>How do you make engagement accessible?</summary><p>Accessibility is part of the design from the start. We plan more than one way to understand, take part, and progress, so people with different abilities, devices, languages, and comfort levels reach the same outcome.</p></details>
+<details><summary>Can you guarantee results?</summary><p>We guarantee a clear definition of success before the event and honest evidence afterward. We won't promise behavior change we can't demonstrate.</p></details>
+<details><summary>Do you work with hybrid and virtual events?</summary><p>Yes. Remote and onsite participants may take part differently, but they contribute to the same outcomes, run from the same production table.</p></details>
+<details><summary>Can you run voting for delegates and elections?</summary><p>Yes. Digital voting for resolutions and elections, with results on screen as soon as voting closes and an alternative path for delegates who can't use the default method.</p></details>
+<details><summary>How do your platforms keep data secure?</summary><p>We use established platforms, collect only the data your goals require, and agree with you on how it is handled and shared before the event.</p></details>
+</div>
+</div>
+</section>
+
+<!-- 6. CTA · live: dimmed photo, text left, buttons right -->
+<section class="photo" style="border-top:1px solid rgba(46,199,245,.25);border-bottom:1px solid rgba(46,199,245,.25)">
+<div class="wrap" style="padding-block:88px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:28px 56px">
+<div style="flex:1 1 560px;min-width:0">
+<p class="eyebrow">Let's talk</p>
+<h2>Tell us what should change. <span class="c">We'll design backward from there.</span></h2>
+<p class="sub">A 30-minute working session on your objectives, your participants, and the realities of your event. No pressure. No pitch deck.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:14px">
+<a class="btn btn-p" href="https://www.dxg.agency/contact-us">Request an Engagement Proposal <span aria-hidden="true">→</span></a>
+<a class="btn btn-s" href="https://www.dxg.agency/contact-us">Schedule a Strategy Call</a>
+</div>
+</div>
+<span class="bgl">BG IMAGE · attendees-interacting-with-live-polling.webp, dimmed</span>
+</section>
+
+<!-- 7. NEWSLETTER (live, unchanged) -->
+<section style="background:#000000">
+<div class="wrap nl" style="padding-block:64px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px 56px">
+<div style="flex:1 1 420px;min-width:0"><h3 style="font-size:26px">Join Our Newsletter</h3><p style="margin:10px 0 0;font-size:16px;line-height:1.6;color:rgba(255,255,255,.66)">Practical insights for meeting planners: tips, trends, and strategies you can actually use.</p></div>
+<div style="flex:1 1 460px;min-width:0">
+<div style="display:flex;flex-wrap:wrap;gap:12px"><label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email address</label><input id="nl-email" type="email" placeholder="Your email address"><button type="button" class="btn btn-p">Subscribe</button></div>
+<div style="display:flex;align-items:center;gap:10px;margin-top:12px;font-size:13px;color:rgba(255,255,255,.6)"><input id="nl-terms" type="checkbox"><label for="nl-terms">I'm accepting the <a href="https://www.dxg.agency/terms-of-use">Terms &amp; Conditions.</a></label></div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER (abbreviated; keep live site footer) -->
+<footer style="background:#000000;border-top:1px solid rgba(255,255,255,.08)">
+<div class="wrap" style="padding-block:44px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;font-size:14px;color:rgba(255,255,255,.7)">
+<div><span style="font-size:24px;font-weight:700;color:#2EC7F5">DXG</span><p style="margin:10px 0 0;line-height:1.6">12824 Dupont Circle, Tampa, FL 33626<br>855.282.9394 · Info@dxg.agency</p></div>
+<p style="margin:0;align-self:flex-end">Existing site footer, service links, and legal links stay as they are.</p>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6200}}'>
+class Component extends DCLogic {
+renderVals() {
+const a = (this.state && this.state.tab) || 0;
+const v = {};
+[0, 1, 2, 3].forEach((i) => {
+const on = a === i;
+v['pick' + i] = () => this.setState({ tab: i });
+v['sel' + i] = on;
+v['t' + i + 'bg'] = on ? '#2EC7F5' : 'transparent';
+v['t' + i + 'fg'] = on ? '#030F12' : '#FFFFFF';
+v['t' + i + 'bd'] = on ? '#2EC7F5' : 'rgba(255,255,255,.28)';
+});
+return v;
+}
+}
+</script>
+</body>
+</html>
