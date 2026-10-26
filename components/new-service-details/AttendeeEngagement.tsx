@@ -263,7 +263,7 @@ const JourneySection = () => (
         <div>
           <Eyebrow>A more connected event experience</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Before, during, <span className="text-primary">and after your event.</span>
+            Before, during, and after your event.
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
             Connecting all three stages creates a continuous engagement journey. But each stage
@@ -359,7 +359,7 @@ const FAQSection = () => (
         <div>
           <Eyebrow>FAQ</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Questions Planners <span className="text-primary">Ask Us.</span>
+            Questions <span className="text-primary">planners ask us.</span>
           </h2>
         </div>
         <div className="flex flex-col gap-3">

@@ -341,7 +341,6 @@ const EventVideographyPhotography = () => {
       <CenteredCTA
         eyebrow="Let's Create Something Lasting"
         primaryLabel="Build Your Capture Plan"
-        secondaryLabel="Review My Existing Scope"
         text="Whether you need a full event content plan or want to enhance your existing scope, DXG can help you capture the moments that matter."
         bgImage="/images/seo-services/event-videography-and-photography/cta-bg.jpg"
       />
