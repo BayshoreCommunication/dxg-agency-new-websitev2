@@ -8,12 +8,26 @@ import Reveal from "components/shared/Reveal";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "The DXG Difference | Event Production That Stands Out",
   description:
     "Discover the DXG difference in event production, audiovisual design, and live experiences. We create impactful, seamless events that engage audiences.",
   alternates: {
-    canonical: "/difference",
+    canonical: "https://www.dxg.agency/difference",
+  },
+  openGraph: {
+    title: "The DXG Difference | Event Production That Stands Out",
+    description:
+      "Discover the DXG difference in event production, audiovisual design, and live experiences. We create impactful, seamless events that engage audiences.",
+    url: "https://www.dxg.agency/difference",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The DXG Difference | Event Production That Stands Out",
+    description:
+      "Discover the DXG difference in event production, audiovisual design, and live experiences. We create impactful, seamless events that engage audiences.",
   },
 };
 const page = () => {

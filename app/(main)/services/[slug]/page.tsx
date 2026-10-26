@@ -26,7 +26,17 @@ export function generateMetadata({ params }: ServiceDetailsPageProps) {
     title: `${service.title} | DXG Digital`,
     description: service.desc,
     alternates: {
-      canonical: `/${service.slug}`,
+      canonical: `https://www.dxg.agency/${service.slug}`,
+    },
+    openGraph: {
+      title: `${service.title} | DXG Digital`,
+      description: service.desc,
+      url: `https://www.dxg.agency/${service.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} | DXG Digital`,
+      description: service.desc,
     },
   };
 }

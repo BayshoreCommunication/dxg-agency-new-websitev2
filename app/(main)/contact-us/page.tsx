@@ -9,12 +9,26 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Contact DXG Agency | Event Production Experts Team",
   description:
     "Get in touch with DXG Agency for event production, audiovisual solutions, and live experiences. Let’s plan impactful events that engage your audience.",
   alternates: {
-    canonical: "/contact-us",
+    canonical: "https://www.dxg.agency/contact-us",
+  },
+  openGraph: {
+    title: "Contact DXG Agency | Event Production Experts Team",
+    description:
+      "Get in touch with DXG Agency for event production, audiovisual solutions, and live experiences. Let’s plan impactful events that engage your audience.",
+    url: "https://www.dxg.agency/contact-us",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact DXG Agency | Event Production Experts Team",
+    description:
+      "Get in touch with DXG Agency for event production, audiovisual solutions, and live experiences. Let’s plan impactful events that engage your audience.",
   },
 };
 const page = () => {

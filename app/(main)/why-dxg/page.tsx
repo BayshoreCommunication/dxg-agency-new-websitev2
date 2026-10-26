@@ -3,12 +3,26 @@ import WhyPlannersChooseDXGSection from "components/home/WhyPlannersChooseDXGSec
 import PageBanner from "components/shared/PageBanner";
 import React from "react";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "The DXG Difference | Event Production That Stands Out",
   description:
     "Discover the DXG difference in event production, audiovisual design, and live experiences. We create impactful, seamless events that engage audiences.",
   alternates: {
-    canonical: "/difference",
+    canonical: "https://www.dxg.agency/why-dxg",
+  },
+  openGraph: {
+    title: "The DXG Difference | Event Production That Stands Out",
+    description:
+      "Discover the DXG difference in event production, audiovisual design, and live experiences. We create impactful, seamless events that engage audiences.",
+    url: "https://www.dxg.agency/why-dxg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The DXG Difference | Event Production That Stands Out",
+    description:
+      "Discover the DXG difference in event production, audiovisual design, and live experiences. We create impactful, seamless events that engage audiences.",
   },
 };
 const page = () => {

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Meet Digital Xperience Group at BizBash Innovation Forum and Connect Marketplace. Discover producer-led event production, RFPilot innovation, AV proposal reviews, and smarter planning support.",
   alternates: {
-    canonical: "/bizbashconnect26",
+    canonical: "https://www.dxg.agency/bizbashconnect26",
   },
   openGraph: {
     title: "A Smarter Approach to Event AV | Meet DXG and RFPilot",
     description:
       "Meet Digital Xperience Group at BizBash Innovation Forum and Connect Marketplace in Tampa. Producer-led event production plus RFPilot innovation.",
-    url: "/bizbashconnect26",
+    url: "https://www.dxg.agency/bizbashconnect26",
     type: "website",
   },
   twitter: {

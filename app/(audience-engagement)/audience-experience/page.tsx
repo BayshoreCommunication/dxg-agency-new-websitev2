@@ -1,4 +1,26 @@
+import type { Metadata } from "next";
 import AudianceExpe from "components/audience-engagement/AudianceExpe";
+
+export const metadata: Metadata = {
+  title: "Audience Experience | Digital Xperience Group",
+  description:
+    "An interactive audience experience field guide from Digital Xperience Group.",
+  alternates: {
+    canonical: "https://www.dxg.agency/audience-experience",
+  },
+  openGraph: {
+    title: "Audience Experience | Digital Xperience Group",
+    description:
+      "An interactive audience experience field guide from Digital Xperience Group.",
+    url: "https://www.dxg.agency/audience-experience",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Audience Experience | Digital Xperience Group",
+    description:
+      "An interactive audience experience field guide from Digital Xperience Group.",
+  },
+};
 
 const AudienceExperiencePage = () => {
   return (
