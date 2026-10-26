@@ -324,7 +324,7 @@ const EventContentProduction = () => {
       <CenteredCTA
         primaryLabel="Start Your Content Plan"
         text="Whether you need a single opening video or a full content package for every screen, DXG can help you plan, create, and deliver show-ready content for your event."
-        bgImage="/images/seo-services/audiovisual-production-for-events/av-bottom-cta-blue-crowd.webp"
+        bgImage="/images/seo-services/event-production-management/plan-your-next-event-two.jpeg"
       />
     </div>
   );
