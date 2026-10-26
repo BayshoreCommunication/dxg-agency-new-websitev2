@@ -180,8 +180,8 @@ const HeroSection = () => (
       </div>
       <div className="group relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] overflow-hidden bg-gray-950">
         <Image
-          src="/images/seo-services/meeting-planning-support/meeting-planning-support-banner.webp"
-          alt="Support for the Details That Keep Events Running - DXG Meeting Planning Support"
+          src="/images/seo-services/event-production-management/EventProductionManagement.png"
+          alt="Meeting Planning Support - DXG general session ballroom with branded LED screens"
           title="Meeting Planning Support"
           fill
           priority

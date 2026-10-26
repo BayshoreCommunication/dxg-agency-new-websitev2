@@ -146,11 +146,10 @@ const HeroSection = () => (
           </a>
         </div>
       </div>
-      {/* TODO: swap for the new photo of small groups working a challenge together */}
       <div className="group relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] overflow-hidden bg-gray-950">
         <Image
-          src="/images/seo-services/education-program.webp"
-          alt="Conference attendees taking part in an interactive breakout session"
+          src="/images/seo-services/event-production-management/EventProductionManagement.png"
+          alt="Event Technology & Attendee Engagement - DXG general session ballroom with branded LED screens"
           title="Attendee Engagement & Event Technology"
           fill
           priority

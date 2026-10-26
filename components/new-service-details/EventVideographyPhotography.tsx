@@ -191,8 +191,8 @@ const HeroSection = () => (
         </div>
         <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-primary/20 shadow-2xl">
           <Image
-            src="/images/seo-services/event-videography-and-photography/hero-videography-photography.jpg"
-            alt="DXG Event Videography & Photography Keynote Stage Production"
+            src="/images/seo-services/event-production-management/EventProductionManagement.png"
+            alt="Event Videography & Photography - DXG general session ballroom with branded LED screens"
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 55vw"

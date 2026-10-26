@@ -164,8 +164,8 @@ const steps = [
 const HeroSection = () => (
   <section className="relative overflow-hidden bg-black text-white">
     <Image
-      src="/images/seo-services/event-creative-and-experience-design/event-creative-experience-design-banner.webp"
-      alt="Design the Stage and Space Around Your Event - 2025 Annual Leadership Summit"
+      src="/images/seo-services/event-production-management/EventProductionManagement.png"
+      alt="Event Creative & Experience Design - DXG general session ballroom with branded LED screens"
       title="Event Creative & Experience Design"
       fill
       priority

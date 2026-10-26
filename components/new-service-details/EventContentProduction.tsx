@@ -178,8 +178,8 @@ const HeroSection = () => (
       </div>
       <div className="group relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] overflow-hidden rounded-xl border border-primary/20 bg-gray-950 shadow-2xl">
         <Image
-          src="/images/seo-services/event-content-production/event-content-production-banner.webp"
-          alt="What Happens on Screen Shapes the Event Experience - DXG Event Content Production"
+          src="/images/seo-services/event-production-management/EventProductionManagement.png"
+          alt="Event Content Production - DXG general session ballroom with branded LED screens"
           title="Event Content Production"
           fill
           priority

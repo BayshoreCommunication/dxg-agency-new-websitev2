@@ -158,8 +158,8 @@ const HeroSection = () => (
         </div>
         <div className="relative aspect-[16/9] w-full rounded-lg overflow-hidden bg-gray-900 shadow-xl">
           <Image
-            src="/images/seo-services/hybrid-and-virtual-event-production/Streaming Event Look.png"
-            alt="One Event. Two Audiences. One Coordinated Experience. - DXG Hybrid Event Stage"
+            src="/images/seo-services/event-production-management/EventProductionManagement.png"
+            alt="Hybrid & Virtual Event Production - DXG general session ballroom with branded LED screens"
             title="Hybrid & Virtual Event Production"
             fill
             className="object-cover object-center"
