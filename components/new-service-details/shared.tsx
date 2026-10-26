@@ -1,5 +1,5 @@
 import Container from "components/shared/Container";
-import { ArrowRight, ChevronRight, type LucideIcon } from "lucide-react";
+import { ArrowRight, ChevronRight, CircleCheck, type LucideIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -160,6 +160,76 @@ export const CapabilityGrid = ({
       </article>
     ))}
   </div>
+);
+
+/* 2x2 photo grid on the left, grouped service lists on the right.
+   Group items without their own icon get a check mark. */
+export const QuadCapabilities = ({
+  id,
+  eyebrow,
+  title,
+  text,
+  images,
+  groups,
+}: {
+  id?: string;
+  eyebrow: string;
+  title: React.ReactNode;
+  text: string;
+  images: { src: string; alt: string }[];
+  groups: {
+    icon: LucideIcon;
+    title: string;
+    items: { label: string; icon?: LucideIcon }[];
+  }[];
+}) => (
+  <section id={id} className="scroll-mt-20 bg-black py-14 text-white lg:py-16">
+    <Container>
+      <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-14">
+        <div className="grid grid-cols-2 gap-3">
+          {images.map(({ src, alt }) => (
+            <div
+              key={src}
+              className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-primary/20 bg-gray-900"
+            >
+              <Image
+                src={src}
+                alt={alt}
+                fill
+                sizes="(max-width: 1024px) 50vw, 25vw"
+                className="object-cover object-center transition duration-500 group-hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+        <div>
+          <Eyebrow>{eyebrow}</Eyebrow>
+          <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">{title}</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/75 md:text-base">
+            {text}
+          </p>
+          <div className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+            {groups.map(({ icon: GroupIcon, title: groupTitle, items }) => (
+              <div key={groupTitle}>
+                <h3 className="flex items-center gap-3 text-lg font-bold leading-snug text-primary">
+                  <GroupIcon className="h-6 w-6 shrink-0" />
+                  {groupTitle}
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {items.map(({ label, icon: ItemIcon = CircleCheck }) => (
+                    <li key={label} className="flex items-center gap-3 text-sm text-white/80">
+                      <ItemIcon className="h-4 w-4 shrink-0 text-primary" />
+                      {label}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
 );
 
 /* Row of circled icons with a title and short text, used on image/dark sections */

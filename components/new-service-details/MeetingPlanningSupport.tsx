@@ -7,25 +7,22 @@ import {
   ClipboardList,
   DoorOpen,
   Handshake,
-  Laptop,
   Mic,
   Monitor,
   Search,
   Settings,
-  Star,
-  TriangleAlert,
   Users,
   UsersRound,
   Zap,
 } from "lucide-react";
 import Image from "next/image";
 import {
-  CapabilityGrid,
   CenteredCTA,
   Eyebrow,
   IconFeatures,
   IconGrid,
   PrimaryButton,
+  QuadCapabilities,
   StepCards,
   outlineButton,
 } from "./shared";
@@ -43,61 +40,69 @@ const supportAreas = [
   { icon: Settings, label: "Onsite Issue Resolution" },
 ];
 
-const capabilities = [
+const supportImages = [
+  {
+    src: "/images/seo-services/meeting-planning-support/Pre-Event Planning.png",
+    alt: "Planner reviewing event timelines and pre-event checklists",
+  },
+  {
+    src: "/images/seo-services/meeting-planning-support/Registration Check-in.png",
+    alt: "Attendees checking in at the event registration desk",
+  },
+  {
+    src: "/images/seo-services/meeting-planning-support/session-speaker-coordination.webp",
+    alt: "Speaker ready room with session and run-of-show coordination",
+  },
+  {
+    src: "/images/seo-services/event-production-management/producer-at-front-of-house.webp",
+    alt: "Onsite team reviewing floor plans during event operations",
+  },
+];
+
+const supportGroups = [
   {
     icon: CalendarDays,
     title: "Pre-Event Planning & Logistics",
-    text: "Support with planning timelines, checklists, logistics and pre-event coordination.",
-    image:
-      "/images/seo-services/meeting-planning-support/Pre-Event Planning.png",
+    items: [
+      { label: "Event timeline & critical path" },
+      { label: "Venue & vendor coordination" },
+      { label: "Staffing recommendations" },
+      { label: "Room layouts & signage" },
+      { label: "Speaker logistics & travel support" },
+    ],
   },
   {
     icon: UsersRound,
     title: "Registration & Attendee Management",
-    text: "Full registration support, badging, attendee communication and onsite check-in.",
-    image:
-      "/images/seo-services/meeting-planning-support/Registration Check-in.png",
+    items: [
+      { label: "Registration setup & management" },
+      { label: "Onsite badge printing & kiosks" },
+      { label: "VIP check-in & attendee support" },
+      { label: "Lead management" },
+      { label: "Troubleshooting & real-time support" },
+    ],
+  },
+  {
+    icon: Settings,
+    title: "Onsite Event Operations",
+    items: [
+      { label: "Room monitoring & resets" },
+      { label: "Vendor coordination" },
+      { label: "Catering timing & communication" },
+      { label: "VIP assistance" },
+      { label: "Floor logistics & issue resolution" },
+    ],
   },
   {
     icon: Mic,
-    title: "Session & Speaker Coordination",
-    text: "Speaker management, session tracking, run-of-show support and on-site liaison services.",
-    image:
-      "/images/seo-services/meeting-planning-support/session-speaker-coordination.webp",
-  },
-  {
-    icon: Users,
-    title: "Onsite Meeting Operations",
-    text: "Room monitoring, flow management, attendee support and real-time operational coverage.",
-    image:
-      "/images/seo-services/event-production-management/producer-at-front-of-house.webp",
-  },
-  {
-    icon: Star,
-    title: "VIP & Guest Services",
-    text: "Personalized support for VIPs, executives and special guests throughout your event.",
-    image: "/images/seo-services/corporate-event.webp",
-  },
-  {
-    icon: Handshake,
-    title: "Venue & Vendor Coordination",
-    text: "Liaison with venues, vendors and suppliers to keep everything aligned and on track.",
-    image:
-      "/images/seo-services/event-production-management/planner-producer-venue-coordination.webp",
-  },
-  {
-    icon: Laptop,
-    title: "Event Technology Support",
-    text: "Support with A/V, presentation management, speaker readiness and technical coordination.",
-    image:
-      "/images/seo-services/attendee-engagement-and-event-technology/event-mobile-app-digital-signage-integration.webp",
-  },
-  {
-    icon: TriangleAlert,
-    title: "Contingency & Issue Response",
-    text: "Experienced support to quickly address changes, solve issues and keep your event on schedule.",
-    image:
-      "/images/seo-services/audiovisual-production-for-events/system-redundancy-backup-audio-laptop.webp",
+    title: "Speaker & Session Management",
+    items: [
+      { label: "Speaker coordination" },
+      { label: "Presentation collection & backup" },
+      { label: "Session timing & room assignments" },
+      { label: "Smooth transitions between sessions" },
+      { label: "CE tracking support" },
+    ],
   },
 ];
 
@@ -219,23 +224,19 @@ const OperationalSupportSection = () => (
 );
 
 const CapabilitiesSection = () => (
-  <section
+  <QuadCapabilities
     id="capabilities"
-    className="scroll-mt-20 bg-black py-14 text-white lg:py-16"
-  >
-    <Container>
-      <Eyebrow>Our capabilities</Eyebrow>
-      <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">
-        Complete Meeting Planning Support{" "}
-        <span className="text-primary">for Live Events.</span>
-      </h2>
-      <p className="mt-3 max-w-4xl text-sm leading-relaxed text-white/75 md:text-base">
-        DXG provides practical planning and onsite support across every part of
-        your event — without replacing the planner.
-      </p>
-      <CapabilityGrid items={capabilities} />
-    </Container>
-  </section>
+    eyebrow="Our capabilities"
+    title={
+      <>
+        Meeting Support Where{" "}
+        <span className="text-primary">Your Team Needs It Most.</span>
+      </>
+    }
+    text="DXG adds experienced event professionals to your team, providing hands-on support across key planning and onsite areas — without replacing the planner."
+    images={supportImages}
+    groups={supportGroups}
+  />
 );
 
 const WhyItMattersSection = () => (

@@ -133,7 +133,7 @@ const readiness = [
 
 const faqs = [
   {
-    q: "Can you create content for LED walls and projection screens?",
+    q: "Can you create content for custom-size LED Walls and wide-screen projection?",
     a: "Yes. We design and format content to the exact resolution and aspect ratio of every screen in your event, including LED walls, projection, and confidence monitors.",
   },
   {
@@ -145,8 +145,8 @@ const faqs = [
     a: "Yes. We collect, review, and format speaker presentations and videos so they play back cleanly and match the look of your event.",
   },
   {
-    q: "Do you coordinate asset content with the A/V team?",
-    a: "We do. We align screen specs, file formats, and playback cues with the AV team so everything is ready before show day.",
+    q: "Do you coordinate asset content with our marketing team or agency?",
+    a: "We do. We align screen specs, file formats, and playback details with your marketing team or agency so that everything is designed and organized for smooth use on the show site.",
   },
 ];
 
@@ -258,8 +258,8 @@ const ReadinessSection = () => (
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
         <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-primary/20 shadow-xl">
           <Image
-            src="/images/seo-services/event-content-production/event-content-preshow-audit-requirements.webp"
-            alt="Pre-Show Content Readiness - Technical Audit"
+            src="/images/seo-services/event-content-production/pre-show-content-readiness.webp"
+            alt="Pre-Show Content Readiness - Content readiness review of screen assets, cues, and versions"
             title="Pre-Show Content Readiness"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"

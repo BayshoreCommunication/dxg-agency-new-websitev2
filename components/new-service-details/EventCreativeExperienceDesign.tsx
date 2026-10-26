@@ -1,5 +1,4 @@
 import Container from "components/shared/Container";
-import Link from "next/link";
 import Image from "next/image";
 import {
   CapabilityGrid,
@@ -12,7 +11,6 @@ import {
   outlineButton,
 } from "./shared";
 import {
-  ArrowRight,
   Box,
   Building2,
   Camera,
@@ -25,7 +23,6 @@ import {
   Map as MapIcon,
   Monitor,
   MonitorCheck,
-  Play,
   Search,
   Settings,
   Star,
@@ -44,56 +41,56 @@ const capabilities = [
     icon: Monitor,
     title: "General Session Stage Design",
     text: "Stunning stage designs that bring your content, brand, and audience together.",
-    image: "/images/seo-services/audiovisual-production-for-events/av-hero-keynote-ballroom-1.png",
+    image: "/images/seo-services/event-creative-and-experience-design/cap-general-session-stage.webp",
     alt: "General session stage design with hanging LED screens and lighting",
   },
   {
     icon: Box,
     title: "Scenic Design & Custom Fabrication",
     text: "Custom scenic elements, set pieces, and branded environments built for your event.",
-    image: "/images/seo-services/event-content-production/event-content-creative-production.webp",
+    image: "/images/seo-services/event-creative-and-experience-design/cap-scenic-led-environment.webp",
     alt: "Custom scenic design and stage fabrication elements",
   },
   {
     icon: Grid3x3,
     title: "LED Video Environments",
     text: "Immersive LED video walls and scenic configurations that make a visual impact.",
-    image: "/images/seo-services/audiovisual-production-for-events/cap-3-led-people-ideas-impact.png",
+    image: "/images/seo-services/event-creative-and-experience-design/cap-scenic-led-environment.webp",
     alt: "Immersive LED video wall environments and scenic configurations",
   },
   {
     icon: Monitor,
     title: "Registration & Attendee Experience",
     text: "Compelling entrance designs for registrations, environments and unique experiences.",
-    image: "/images/seo-services/meeting-planning-support/registration-attendee-management.webp",
+    image: "/images/seo-services/event-creative-and-experience-design/cap-custom-registration.webp",
     alt: "Registration entrance designs and attendee brand touchpoints",
   },
   {
     icon: Lightbulb,
     title: "Lighting Design & Atmosphere",
     text: "Lighting designs that set the mood, enhance content, and transform your environment.",
-    image: "/images/seo-services/audiovisual-production-for-events/cap-4-lighting-beams.png",
+    image: "/images/seo-services/event-creative-and-experience-design/cap-lighting-design.webp",
     alt: "Stage lighting design and atmospheric lighting beams",
   },
   {
     icon: MapIcon,
     title: "CAD Floor Plans & Spatial Planning",
     text: "Detailed floor plans, 3D layouts, and spatial designs for logistics, audience flow and sightlines.",
-    image: "/images/seo-services/event-creative-and-experience-design/technical-creative-planning.webp",
+    image: "/images/seo-services/event-creative-and-experience-design/cap-cad-floor-plan.webp",
     alt: "CAD floor plans and 3D spatial layout planning",
   },
   {
     icon: Star,
     title: "Branded Event Environments",
     text: "Integrated branded spaces, lounges, and environments that extend your experience beyond the stage.",
-    image: "/images/seo-services/corporate-event.webp",
+    image: "/images/seo-services/event-creative-and-experience-design/cap-branded-environment.webp",
     alt: "Branded corporate event lounge and experiential environments",
   },
   {
     icon: UsersRound,
     title: "Entrance, Registration & Attendee Experience",
     text: "Memorable entrance experiences, registration areas, and wayfinding that set the tone from the start.",
-    image: "/images/seo-services/association-event.webp",
+    image: "/images/seo-services/event-creative-and-experience-design/cap-led-entrance.webp",
     alt: "Grand entrance wayfinding and registration experience",
   },
 ];
@@ -160,13 +157,6 @@ const steps = [
     title: "Final Design Package",
     text: "Deliver approved designs, specs, and assets for production.",
   },
-];
-
-const caseStats = [
-  { icon: Users, value: "1,500", label: "Attendees" },
-  { icon: Monitor, value: "5", label: "General Sessions" },
-  { icon: Grid3x3, value: "12", label: "Breakout Rooms" },
-  { icon: UsersRound, value: "One", label: "Dedicated Design & Production Team" },
 ];
 
 /* ---------- SECTIONS ---------- */
@@ -328,62 +318,6 @@ const ProcessSection = () => (
   </section>
 );
 
-const CaseStudySection = () => (
-  <section className="bg-[#030c14] py-14 text-white lg:py-16">
-    <Container>
-      <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="group relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl border border-primary/20 shadow-xl">
-          <Image
-            src="/images/seo-services/event-creative-and-experience-design/dual-optics-stage-design.webp"
-            alt="Creative Design in Action - Client Event Showcase"
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-black/40 transition-colors duration-300 group-hover:bg-black/20" />
-          <span className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/80 bg-black/40 text-white shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-            <Play className="ml-1 h-7 w-7 fill-white" />
-          </span>
-          <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/90 via-black/50 to-transparent px-5 pb-4 pt-10 text-white">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Client Event Showcase</p>
-            <p className="mt-1 text-xs text-white/90">
-              See how DXG turns creative ideas into unforgettable experiences.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <h2 className="text-3xl font-bold md:text-4xl">Creative Design <span className="text-primary">in Action</span></h2>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/75 md:text-base">
-            A multi-day national conference featuring a fully custom stage design, immersive LED
-            environments, and branded spaces that brought the client&apos;s vision to life.
-          </p>
-
-          <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-4">
-            {caseStats.map(({ icon: Icon, value, label }) => (
-              <div key={label} className="flex items-start gap-3">
-                <Icon className="mt-1 h-6 w-6 shrink-0 text-primary" />
-                <div>
-                  <p className="text-lg font-bold leading-none text-primary">{value}</p>
-                  <p className="mt-1 text-xs text-white/65">{label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <Link
-            href="/experiences-created"
-            className="mt-7 inline-flex items-center gap-2 rounded-full border border-primary px-6 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/10"
-          >
-            View the Full Case Study
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </div>
-    </Container>
-  </section>
-);
-
 /* ---------- PAGE ---------- */
 
 const EventCreativeExperienceDesign = () => {
@@ -396,7 +330,6 @@ const EventCreativeExperienceDesign = () => {
       <RenderingsSection />
       <RoomAndCameraSection />
       <ProcessSection />
-      <CaseStudySection />
       <CenteredCTA
         eyebrow="Let's create something extraordinary."
         primaryLabel="Book a Working Session"

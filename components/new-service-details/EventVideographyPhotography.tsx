@@ -1,26 +1,22 @@
 import Container from "components/shared/Container";
 import Image from "next/image";
-import Link from "next/link";
 import {
-  CapabilityGrid,
   CenteredCTA,
   Eyebrow,
   IconGrid,
   PrimaryButton,
+  QuadCapabilities,
   StepCards,
   outlineButton,
 } from "./shared";
 import {
-  ArrowRight,
   Building2,
   CalendarCheck,
-  CalendarDays,
   Camera,
   FileText,
   GraduationCap,
   Handshake,
   Heart,
-  Layers,
   LayoutGrid,
   MapPin,
   MessageSquare,
@@ -52,62 +48,45 @@ const eventTypes = [
   { icon: LayoutGrid, label: "Multi-Room Conferences" },
 ];
 
-const capabilities = [
+const captureImages = [
   {
-    icon: Video,
-    title: "Keynote & Session Coverage",
-    text: "Multi-camera video and photography for keynotes, general sessions, and breakout tracks.",
-    image:
-      "/images/seo-services/event-videography-and-photography/cap-keynote-coverage.jpg",
+    src: "/images/seo-services/event-videography-and-photography/cap-event-photography.jpg",
+    alt: "Event photographer capturing a keynote session from the audience",
   },
   {
-    icon: Play,
-    title: "Event Recap Videos",
-    text: "Engaging recap videos that capture the energy, highlights, and key moments of your event.",
-    image:
-      "/images/seo-services/event-videography-and-photography/cap-event-recap.jpg",
+    src: "/images/seo-services/event-videography-and-photography/cap-keynote-coverage.jpg",
+    alt: "Keynote speaker on stage during a full general session",
   },
   {
-    icon: UserRound,
-    title: "Speaker & Executive Interviews",
-    text: "On-camera interviews with speakers, executives, and attendees to extend your story.",
-    image:
-      "/images/seo-services/event-videography-and-photography/cap-speaker-interviews.jpg",
+    src: "/images/seo-services/event-videography-and-photography/cap-event-recap.jpg",
+    alt: "Video editor preparing event recap footage at a production desk",
   },
+  {
+    src: "/images/seo-services/event-videography-and-photography/cap-social-clips.jpg",
+    alt: "Attendees capturing a live session on their phones",
+  },
+];
+
+const captureGroups = [
   {
     icon: Camera,
-    title: "Event Photography Coverage",
-    text: "High-quality photography of speakers, attendees, candid moments, and branded environments.",
-    image:
-      "/images/seo-services/event-videography-and-photography/cap-event-photography.jpg",
+    title: "Event Photography",
+    items: [
+      { icon: Camera, label: "Stage & Session Coverage" },
+      { icon: UserRound, label: "Executive & Speaker Portraits" },
+      { icon: Users, label: "Networking & Candid Moments" },
+      { icon: Star, label: "Brand, Sponsor & Event Details" },
+    ],
   },
   {
-    icon: MessageSquare,
-    title: "Testimonials & Storytelling",
-    text: "Authentic attendee, customer, and partner stories that showcase the impact of your event.",
-    image:
-      "/images/seo-services/event-videography-and-photography/cap-testimonials.jpg",
-  },
-  {
-    icon: Share2,
-    title: "Social Clips & Highlights",
-    text: "Short-form videos and photo content optimized for social media during and after the event.",
-    image:
-      "/images/seo-services/event-videography-and-photography/cap-social-clips.jpg",
-  },
-  {
-    icon: Star,
-    title: "Sponsor & Brand Content",
-    text: "Custom content for sponsors, exhibit activations, and branded environments.",
-    image:
-      "/images/seo-services/event-videography-and-photography/cap-sponsor-brand.jpg",
-  },
-  {
-    icon: LayoutGrid,
-    title: "Multi-Room Coverage",
-    text: "Coordinated video and photography across multiple rooms, stages, and simultaneous sessions.",
-    image:
-      "/images/seo-services/event-videography-and-photography/cap-multi-room.jpg",
+    icon: Video,
+    title: "Event Videography",
+    items: [
+      { icon: Video, label: "Keynote & Session Recording" },
+      { icon: MessageSquare, label: "Interviews & Testimonials" },
+      { icon: Play, label: "Event Recaps & Highlight Films" },
+      { icon: Share2, label: "Social & Promotional Content" },
+    ],
   },
 ];
 
@@ -178,13 +157,6 @@ const processSteps = [
     title: "Final Delivery",
     text: "Deliver optimized videos, photos, and social content on time.",
   },
-];
-
-const caseStats = [
-  { icon: Users, value: "1,500", label: "Attendees" },
-  { icon: CalendarDays, value: "3-Day", label: "Event" },
-  { icon: Layers, value: "14", label: "Breakout Rooms" },
-  { icon: UsersRound, value: "One", label: "Coordinated Capture Team" },
 ];
 
 /* ---------- SECTIONS ---------- */
@@ -258,23 +230,19 @@ const EventTypesSection = () => (
 
 /* 3. Our Capabilities */
 const CapabilitiesSection = () => (
-  <section
+  <QuadCapabilities
     id="capabilities"
-    className="scroll-mt-20 bg-black py-14 text-white lg:py-16"
-  >
-    <Container>
-      <Eyebrow>Our Capabilities</Eyebrow>
-      <h2 className="text-3xl font-bold leading-tight md:text-4xl xl:text-[42px]">
-        Complete Photo &amp; Video Support{" "}
-        <span className="text-primary">for Live Events.</span>
-      </h2>
-      <p className="mt-3 max-w-4xl text-sm leading-relaxed text-white/75 md:text-base">
-        From keynote coverage to social clips, DXG delivers a full range of
-        photo and video services with one experienced team.
-      </p>
-      <CapabilityGrid items={capabilities} variant="stacked" />
-    </Container>
-  </section>
+    eyebrow="Our Capabilities"
+    title={
+      <>
+        A Capture Team That Knows{" "}
+        <span className="text-primary">What Matters — And When.</span>
+      </>
+    }
+    text="DXG brings production awareness to every event, so your photo and video team knows the story, the flow, and the moments that will have the biggest impact."
+    images={captureImages}
+    groups={captureGroups}
+  />
 );
 
 /* 4. Strategy First */
@@ -363,65 +331,6 @@ const ProcessSection = () => (
   </section>
 );
 
-/* 6. Client Event Case Study */
-const CaseStudySection = () => (
-  <section className="bg-black py-14 text-white lg:py-16">
-    <Container>
-      <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="group relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl border border-primary/20 shadow-xl">
-          <Image
-            src="/images/seo-services/event-videography-and-photography/case-study-action.jpg"
-            alt="Videography & Photography in Action - DXG Client Event Case Study"
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-black/35 transition-colors duration-300 group-hover:bg-black/20" />
-          <span className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/80 bg-black/40 text-white shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-            <Play className="ml-1 h-7 w-7 fill-white" />
-          </span>
-        </div>
-
-        <div>
-          <Eyebrow>Client Event Case Study</Eyebrow>
-          <h2 className="text-3xl font-bold md:text-4xl">
-            Videography &amp; Photography{" "}
-            <span className="text-primary">in Action.</span>
-          </h2>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/75 md:text-base">
-            See how DXG captured a multi-day conference with keynotes, breakout
-            sessions, speaker interviews, sponsor content, and a daily recap
-            video — delivering a complete content library that extended the
-            event&apos;s reach long after it ended.
-          </p>
-
-          <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-4">
-            {caseStats.map(({ icon: Icon, value, label }) => (
-              <div key={label} className="flex items-start gap-3">
-                <Icon className="mt-1 h-6 w-6 shrink-0 text-primary" />
-                <div>
-                  <p className="text-xl font-bold leading-none text-primary">
-                    {value}
-                  </p>
-                  <p className="mt-1 text-xs text-white/65">{label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <Link
-            href="/experiences-created"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-semibold text-black transition hover:bg-primary/90"
-          >
-            View the Full Case Study
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </div>
-    </Container>
-  </section>
-);
-
 /* ---------- MAIN COMPONENT ---------- */
 
 const EventVideographyPhotography = () => {
@@ -443,10 +352,7 @@ const EventVideographyPhotography = () => {
       {/* 5. Our Process */}
       <ProcessSection />
 
-      {/* 6. Case Study */}
-      <CaseStudySection />
-
-      {/* 7. Bottom CTA */}
+      {/* 6. Bottom CTA */}
       <CenteredCTA
         eyebrow="Let's Create Something Lasting"
         primaryLabel="Build Your Capture Plan"

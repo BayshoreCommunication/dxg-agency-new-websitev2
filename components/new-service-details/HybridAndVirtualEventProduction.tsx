@@ -47,7 +47,7 @@ const capabilities = [
     title: "Livestream Production",
     text: "Professional live streaming for global audiences with reliable, high-quality broadcast production.",
     image:
-      "/images/seo-services/hybrid-and-virtual-event-production/Live Stream Image.png",
+      "/images/seo-services/hybrid-and-virtual-event-production/cap-livestream-speaker-focus.webp",
   },
   {
     icon: Monitor,
