@@ -6,6 +6,7 @@ import {
   IconGrid,
   PrimaryButton,
   QuadCapabilities,
+  ServiceHero,
   StepCards,
   outlineButton,
 } from "./shared";
@@ -163,45 +164,29 @@ const processSteps = [
 
 /* 1. Hero Section */
 const HeroSection = () => (
-  <section className="bg-black text-white">
-    <Container className="py-12 lg:py-16">
-      <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
-        <div>
-          <Eyebrow>Event Videography &amp; Photography</Eyebrow>
-          <h1 className="text-4xl font-bold leading-[1.08] tracking-tight md:text-5xl xl:text-[54px]">
-            Capture the Event.
-            <br />
-            Create Content That
-            <br />
-            <span className="text-primary">Keeps Working.</span>
-          </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-            DXG plans and captures event videography and photography for
-            keynotes, sessions, interviews, testimonials, recap videos, social
-            content, and photography that stays useful long after the event ends.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <PrimaryButton href="/contact-us">
-              Build Your Capture Plan
-            </PrimaryButton>
-            <a href="#capabilities" className={outlineButton}>
-              Explore Content Coverage
-            </a>
-          </div>
-        </div>
-        <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-primary/20 shadow-2xl">
-          <Image
-            src="/images/seo-services/event-production-management/EventProductionManagement.png"
-            alt="Event Videography & Photography - DXG general session ballroom with branded LED screens"
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 55vw"
-            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
-      </div>
-    </Container>
-  </section>
+  <ServiceHero alt="Event Videography & Photography - DXG general session ballroom with branded LED screens">
+    <Eyebrow>Event Videography &amp; Photography</Eyebrow>
+    <h1 className="text-4xl font-bold leading-[1.08] tracking-tight md:text-5xl xl:text-[54px]">
+      Capture the Event.
+      <br />
+      Create Content That
+      <br />
+      <span className="text-primary">Keeps Working.</span>
+    </h1>
+    <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
+      DXG plans and captures event videography and photography for
+      keynotes, sessions, interviews, testimonials, recap videos, social
+      content, and photography that stays useful long after the event ends.
+    </p>
+    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+      <PrimaryButton href="/contact-us">
+        Build Your Capture Plan
+      </PrimaryButton>
+      <a href="#capabilities" className={outlineButton}>
+        Explore Content Coverage
+      </a>
+    </div>
+  </ServiceHero>
 );
 
 /* 2. Event Types We Support */

@@ -2,7 +2,12 @@ import Container from "components/shared/Container";
 import Link from "next/link";
 import Image from "next/image";
 import FAQItem from "./FAQItem";
-import { Eyebrow, PrimaryButton, outlineButton } from "./shared";
+import {
+  Eyebrow,
+  PrimaryButton,
+  ServiceHero,
+  outlineButton,
+} from "./shared";
 import { CalendarDays, TrendingUp, UsersRound } from "lucide-react";
 
 /* ---------- DATA ---------- */
@@ -126,39 +131,23 @@ const faqs = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-black text-white">
-    <div className="grid lg:grid-cols-2">
-      {/* Left padding matches Container's edge so text lines up with the header logo */}
-      <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
-        <Eyebrow>Event Technology &amp; Attendee Engagement</Eyebrow>
-        <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          Great production sets the stage.{" "}
-          <span className="text-primary">Purposeful design gets people to take part.</span>
-        </h1>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-          Engagement is what people are invited, motivated, and enabled to do. We design it around
-          your objectives and your participants.
-        </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <PrimaryButton href="/contact-us">Request an Engagement Proposal</PrimaryButton>
-          <a href="#how" className={outlineButton}>
-            See How We Design
-          </a>
-        </div>
-      </div>
-      <div className="group relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] overflow-hidden bg-gray-950">
-        <Image
-          src="/images/seo-services/event-production-management/EventProductionManagement.png"
-          alt="Event Technology & Attendee Engagement - DXG general session ballroom with branded LED screens"
-          title="Attendee Engagement & Event Technology"
-          fill
-          priority
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
+  <ServiceHero alt="Event Technology & Attendee Engagement - DXG general session ballroom with branded LED screens">
+    <Eyebrow>Event Technology &amp; Attendee Engagement</Eyebrow>
+    <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
+      Great production sets the stage.{" "}
+      <span className="text-primary">Purposeful design gets people to take part.</span>
+    </h1>
+    <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
+      Engagement is what people are invited, motivated, and enabled to do. We design it around
+      your objectives and your participants.
+    </p>
+    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+      <PrimaryButton href="/contact-us">Request an Engagement Proposal</PrimaryButton>
+      <a href="#how" className={outlineButton}>
+        See How We Design
+      </a>
     </div>
-  </section>
+  </ServiceHero>
 );
 
 const HowWeDesignSection = () => (

@@ -7,6 +7,7 @@ import {
   Eyebrow,
   IconGrid,
   PrimaryButton,
+  ServiceHero,
   StepCards,
   outlineButton,
 } from "./shared";
@@ -153,42 +154,26 @@ const faqs = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-black text-white">
-    <div className="grid lg:grid-cols-2">
-      {/* Left padding matches Container's edge so text lines up with the header logo */}
-      <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
-        <Eyebrow>Event Content Production</Eyebrow>
-        <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          What Happens on Screen <span className="text-primary">Shapes the Event Experience.</span>
-        </h1>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-          DXG creates event content production for conferences, meetings, awards programs, and
-          branded experiences, connecting creative work with screens, playback systems, and show
-          flow so every visual reinforces your goals in live moment.
-        </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <PrimaryButton href="/contact-us">Start Your Content Plan</PrimaryButton>
-          <a
-            href="#capabilities"
-            className={outlineButton}
-          >
-            Explore Content Services
-          </a>
-        </div>
-      </div>
-      <div className="group relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] overflow-hidden rounded-xl border border-primary/20 bg-gray-950 shadow-2xl">
-        <Image
-          src="/images/seo-services/event-production-management/EventProductionManagement.png"
-          alt="Event Content Production - DXG general session ballroom with branded LED screens"
-          title="Event Content Production"
-          fill
-          priority
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
+  <ServiceHero alt="Event Content Production - DXG general session ballroom with branded LED screens">
+    <Eyebrow>Event Content Production</Eyebrow>
+    <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
+      What Happens on Screen <span className="text-primary">Shapes the Event Experience.</span>
+    </h1>
+    <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
+      DXG creates event content production for conferences, meetings, awards programs, and
+      branded experiences, connecting creative work with screens, playback systems, and show
+      flow so every visual reinforces your goals in live moment.
+    </p>
+    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+      <PrimaryButton href="/contact-us">Start Your Content Plan</PrimaryButton>
+      <a
+        href="#capabilities"
+        className={outlineButton}
+      >
+        Explore Content Services
+      </a>
     </div>
-  </section>
+  </ServiceHero>
 );
 
 const BuiltAroundSection = () => (

@@ -23,6 +23,7 @@ import {
   IconGrid,
   PrimaryButton,
   QuadCapabilities,
+  ServiceHero,
   StepCards,
   outlineButton,
 } from "./shared";
@@ -156,41 +157,26 @@ const caseStats = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-black text-white">
-    <div className="grid lg:grid-cols-2">
-      <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
-        <Eyebrow>Meeting Planning Support</Eyebrow>
-        <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          Support for the Details{" "}
-          <span className="text-primary">That Keep Events Running.</span>
-        </h1>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-          DXG supports planners before and during the event with registration,
-          logistics, speaker coordination, room operations, and attendee support
-          — all while keeping the planner in control.
-        </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <PrimaryButton href="/contact-us">
-            Schedule a Planning Call
-          </PrimaryButton>
-          <a href="#capabilities" className={outlineButton}>
-            Explore Support Services
-          </a>
-        </div>
-      </div>
-      <div className="group relative min-h-[320px] sm:min-h-[420px] lg:min-h-[560px] overflow-hidden bg-gray-950">
-        <Image
-          src="/images/seo-services/event-production-management/EventProductionManagement.png"
-          alt="Meeting Planning Support - DXG general session ballroom with branded LED screens"
-          title="Meeting Planning Support"
-          fill
-          priority
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
+  <ServiceHero alt="Meeting Planning Support - DXG general session ballroom with branded LED screens">
+    <Eyebrow>Meeting Planning Support</Eyebrow>
+    <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
+      Support for the Details{" "}
+      <span className="text-primary">That Keep Events Running.</span>
+    </h1>
+    <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
+      DXG supports planners before and during the event with registration,
+      logistics, speaker coordination, room operations, and attendee support
+      — all while keeping the planner in control.
+    </p>
+    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+      <PrimaryButton href="/contact-us">
+        Schedule a Planning Call
+      </PrimaryButton>
+      <a href="#capabilities" className={outlineButton}>
+        Explore Support Services
+      </a>
     </div>
-  </section>
+  </ServiceHero>
 );
 
 const OperationalSupportSection = () => (

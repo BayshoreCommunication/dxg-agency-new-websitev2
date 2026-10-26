@@ -23,7 +23,13 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Eyebrow, IconGrid, PrimaryButton, outlineButton } from "./shared";
+import {
+  Eyebrow,
+  IconGrid,
+  PrimaryButton,
+  ServiceHero,
+  outlineButton,
+} from "./shared";
 
 /* ---------- DATA ---------- */
 
@@ -128,43 +134,27 @@ const caseStats = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-black text-white">
-    <Container className="py-12 lg:py-16">
-      <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
-        <div>
-          <Eyebrow>Audiovisual Production for Events</Eyebrow>
-          <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-            Designed by Engineers.{" "}
-            <span className="text-primary">Built around your event.</span>
-          </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-            From the general session stage to every breakout room, DXG designs
-            and delivers audiovisual production that brings your event together.
-            One experienced team, clear communication, and solutions built
-            around your goals.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <PrimaryButton href="/contact-us">
-              Request an AV Proposal
-            </PrimaryButton>
-            <a href="#capabilities" className={outlineButton}>
-              Explore Capabilities
-            </a>
-          </div>
-        </div>
-        <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-primary/20">
-          <Image
-            src="/images/seo-services/event-production-management/EventProductionManagement.png"
-            alt="Audiovisual Production for Events - DXG general session ballroom with branded LED screens"
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
-      </div>
-    </Container>
-  </section>
+  <ServiceHero alt="Audiovisual Production for Events - DXG general session ballroom with branded LED screens">
+    <Eyebrow>Audiovisual Production for Events</Eyebrow>
+    <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
+      Designed by Engineers.{" "}
+      <span className="text-primary">Built around your event.</span>
+    </h1>
+    <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
+      From the general session stage to every breakout room, DXG designs
+      and delivers audiovisual production that brings your event together.
+      One experienced team, clear communication, and solutions built
+      around your goals.
+    </p>
+    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+      <PrimaryButton href="/contact-us">
+        Request an AV Proposal
+      </PrimaryButton>
+      <a href="#capabilities" className={outlineButton}>
+        Explore Capabilities
+      </a>
+    </div>
+  </ServiceHero>
 );
 
 const GoalsSection = () => (

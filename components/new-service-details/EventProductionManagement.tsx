@@ -26,6 +26,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import FAQItem from "./FAQItem";
+import { Eyebrow, PrimaryButton, ServiceHero } from "./shared";
 
 /* ---------- DATA ---------- */
 
@@ -222,74 +223,32 @@ const faqs = [
 
 /* ---------- BRAND PIECES (black theme, matches the main site) ---------- */
 
-const Label = ({ children }: { children: React.ReactNode }) => (
-  <div className="mb-3 flex items-center gap-3">
-    <span className="h-[2px] w-7 shrink-0 bg-primary" />
-    <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
-      {children}
-    </span>
-  </div>
-);
-
-const BrandButton = ({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) => (
-  <Link
-    href={href}
-    className="btn-slide-primary capsule-button inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
-  >
-    {children}
-    <ArrowRight className="h-4 w-4" />
-  </Link>
-);
-
 const outlineButton =
   "inline-flex items-center justify-center rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-primary hover:bg-primary/10 hover:text-primary";
 
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-black text-white">
-    <div className="grid lg:grid-cols-2">
-      {/* Left padding matches Container's edge so text lines up with the header logo */}
-      <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
-        <Label>Event Production Management</Label>
-        <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          The Same Production Team,{" "}
-          <span className="text-primary">Year After Year.</span>
-        </h1>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-          Venues and AV setups change. But with DXG, you get the same production
-          leadership, planning standards, and show-day management across every
-          event, in every city. A consistent team that knows your goals,
-          understands your audience, and delivers a seamless experience from
-          planning to show day.
-        </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <BrandButton href="/contact-us">Request an AV Proposal</BrandButton>
-          <a href="#production-process" className={outlineButton}>
-            Explore Production Process
-          </a>
-        </div>
-      </div>
-      <div className="relative min-h-[280px] w-full sm:min-h-[380px] lg:min-h-[600px]">
-        <Image
-          src="/images/seo-services/event-production-management/EventProductionManagement.png"
-          alt="Event Production Management"
-          fill
-          priority
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover"
-        />
-        {/* Soft fade into the black text column */}
-        <div className="absolute inset-y-0 left-0 hidden w-24 bg-gradient-to-r from-black to-transparent lg:block" />
-      </div>
+  <ServiceHero alt="Event Production Management - DXG general session ballroom with branded LED screens">
+    <Eyebrow>Event Production Management</Eyebrow>
+    <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
+      The Same Production Team,{" "}
+      <span className="text-primary">Year After Year.</span>
+    </h1>
+    <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
+      Venues and AV setups change. But with DXG, you get the same production
+      leadership, planning standards, and show-day management across every
+      event, in every city. A consistent team that knows your goals,
+      understands your audience, and delivers a seamless experience from
+      planning to show day.
+    </p>
+    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+      <PrimaryButton href="/contact-us">Request an AV Proposal</PrimaryButton>
+      <a href="#production-process" className={outlineButton}>
+        Explore Production Process
+      </a>
     </div>
-  </section>
+  </ServiceHero>
 );
 
 const ProgramsSection = () => (
@@ -305,7 +264,7 @@ const ProgramsSection = () => (
     <Container className="relative py-16 lg:py-20">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <Label>Events of every size. A consistent approach.</Label>
+          <Eyebrow>Events of every size. A consistent approach.</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
             Programs Designed Around{" "}
             <span className="text-primary">What You Need.</span>
@@ -347,7 +306,7 @@ const ProcessSection = () => (
     <Container>
       <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12">
         <div>
-          <Label>A clear process from start to finish</Label>
+          <Eyebrow>A clear process from start to finish</Eyebrow>
           <h2 className="text-3xl font-bold md:text-4xl">
             How We Manage <span className="text-primary">Your Production.</span>
           </h2>
@@ -418,7 +377,7 @@ const IncludeSection = () => (
     <Container className="relative">
       <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
         <div>
-          <Label>A complete approach</Label>
+          <Eyebrow>A complete approach</Eyebrow>
           <h2 className="text-3xl font-bold md:text-4xl">
             What Production Management{" "}
             <span className="text-primary">Can Include.</span>
@@ -474,7 +433,7 @@ const GetStartedSection = () => (
     <Container>
       <div className="grid gap-4 lg:grid-cols-2 lg:items-end">
         <div>
-          <Label>It starts here</Label>
+          <Eyebrow>It starts here</Eyebrow>
           <h2 className="text-3xl font-bold md:text-4xl">
             Get Started with{" "}
             <span className="text-primary">These 3 Steps.</span>
@@ -523,7 +482,7 @@ const FAQSection = () => {
   return (
     <section className="bg-black py-14 text-white lg:py-16">
       <Container>
-        <Label>Common questions</Label>
+        <Eyebrow>Common questions</Eyebrow>
         <h2 className="text-3xl font-bold md:text-4xl">
           Questions Planners <span className="text-primary">Ask Us.</span>
         </h2>
@@ -555,7 +514,7 @@ const FinalCTASection = () => (
     <Container className="relative py-14 lg:py-16">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-2xl">
-          <Label>Let&apos;s plan your next event</Label>
+          <Eyebrow>Let&apos;s plan your next event</Eyebrow>
           <h2 className="text-3xl font-bold md:text-4xl">
             Let&apos;s Talk About{" "}
             <span className="text-primary">What You&apos;re Planning.</span>
@@ -567,7 +526,7 @@ const FinalCTASection = () => (
           </p>
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:gap-4">
-          <BrandButton href="/contact-us">Request an AV Proposal</BrandButton>
+          <PrimaryButton href="/contact-us">Request an AV Proposal</PrimaryButton>
           {/* <Link href="/experiences-created" className={outlineButton}>
             Review Past Events
           </Link> */}

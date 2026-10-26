@@ -7,6 +7,7 @@ import {
   IconFeatures,
   IconGrid,
   PrimaryButton,
+  ServiceHero,
   StepCards,
   outlineButton,
 } from "./shared";
@@ -162,41 +163,27 @@ const steps = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="relative overflow-hidden bg-black text-white">
-    <Image
-      src="/images/seo-services/event-production-management/EventProductionManagement.png"
-      alt="Event Creative & Experience Design - DXG general session ballroom with branded LED screens"
-      title="Event Creative & Experience Design"
-      fill
-      priority
-      sizes="100vw"
-      className="pointer-events-none object-cover object-center"
-    />
-    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/35" />
-    <Container className="relative py-16 lg:py-24">
-      <div className="max-w-xl">
-        <Eyebrow>Event Creative &amp; Experience Design</Eyebrow>
-        <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-          Design the Stage and Space <span className="text-primary">Around Your Event.</span>
-        </h1>
-        <p className="mt-5 text-base leading-relaxed text-white/85">
-          DXG designs stages, scenic environments, branded spaces and attendee experiences that are
-          both visually powerful and technically reliable. From initial concept to final
-          production, we create environments that bring your brand, message, and audience
-          together.
-        </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <PrimaryButton href="/contact-us">Book a Working Session</PrimaryButton>
-          <a
-            href="#renderings"
-            className={outlineButton}
-          >
-            Explore 3D Renderings
-          </a>
-        </div>
-      </div>
-    </Container>
-  </section>
+  <ServiceHero alt="Event Creative & Experience Design - DXG general session ballroom with branded LED screens">
+    <Eyebrow>Event Creative &amp; Experience Design</Eyebrow>
+    <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
+      Design the Stage and Space <span className="text-primary">Around Your Event.</span>
+    </h1>
+    <p className="mt-5 text-base leading-relaxed text-white/85">
+      DXG designs stages, scenic environments, branded spaces and attendee experiences that are
+      both visually powerful and technically reliable. From initial concept to final
+      production, we create environments that bring your brand, message, and audience
+      together.
+    </p>
+    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+      <PrimaryButton href="/contact-us">Book a Working Session</PrimaryButton>
+      <a
+        href="#renderings"
+        className={outlineButton}
+      >
+        Explore 3D Renderings
+      </a>
+    </div>
+  </ServiceHero>
 );
 
 const CapabilitiesSection = () => (

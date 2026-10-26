@@ -25,6 +25,7 @@ import {
   Eyebrow,
   IconGrid,
   PrimaryButton,
+  ServiceHero,
   outlineButton,
 } from "./shared";
 
@@ -131,44 +132,28 @@ const steps = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <section className="bg-black text-white">
-    <Container className="py-12 lg:py-16">
-      <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
-        <div>
-          <Eyebrow>Hybrid &amp; Virtual Event Production</Eyebrow>
-          <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
-            One Event. Two Audiences.{" "}
-            <span className="text-primary">One Coordinated Experience.</span>
-          </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
-            DXG designs and manages hybrid and virtual event production for
-            in-room attendees, remote audiences, presenters, and content teams.
-            We bring together people, technology and creative production to
-            deliver a single, seamless experience—no matter where your audience
-            is.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <PrimaryButton href="/contact-us">
-              Request a Hybrid Proposal
-            </PrimaryButton>
-            <a href="#capabilities" className={outlineButton}>
-              Explore Hybrid Capabilities
-            </a>
-          </div>
-        </div>
-        <div className="relative aspect-[16/9] w-full rounded-lg overflow-hidden bg-gray-900 shadow-xl">
-          <Image
-            src="/images/seo-services/event-production-management/EventProductionManagement.png"
-            alt="Hybrid & Virtual Event Production - DXG general session ballroom with branded LED screens"
-            title="Hybrid & Virtual Event Production"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-        </div>
-      </div>
-    </Container>
-  </section>
+  <ServiceHero alt="Hybrid & Virtual Event Production - DXG general session ballroom with branded LED screens">
+    <Eyebrow>Hybrid &amp; Virtual Event Production</Eyebrow>
+    <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
+      One Event. Two Audiences.{" "}
+      <span className="text-primary">One Coordinated Experience.</span>
+    </h1>
+    <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75">
+      DXG designs and manages hybrid and virtual event production for
+      in-room attendees, remote audiences, presenters, and content teams.
+      We bring together people, technology and creative production to
+      deliver a single, seamless experience—no matter where your audience
+      is.
+    </p>
+    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+      <PrimaryButton href="/contact-us">
+        Request a Hybrid Proposal
+      </PrimaryButton>
+      <a href="#capabilities" className={outlineButton}>
+        Explore Hybrid Capabilities
+      </a>
+    </div>
+  </ServiceHero>
 );
 
 const AudienceSection = () => (

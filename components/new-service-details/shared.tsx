@@ -34,6 +34,39 @@ export const PrimaryButton = ({
 export const outlineButton =
   "inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-primary hover:bg-primary/10 hover:text-primary";
 
+/* Hero shared by every service page: text on the left, full-height photo on the right
+   that fades softly into the black text column. */
+export const ServiceHero = ({
+  alt,
+  image = "/images/seo-services/event-production-management/EventProductionManagement.png",
+  children,
+}: {
+  alt: string;
+  image?: string;
+  children: React.ReactNode;
+}) => (
+  <section className="bg-black text-white">
+    <div className="grid lg:grid-cols-2">
+      {/* Left padding matches Container's edge so text lines up with the header logo */}
+      <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
+        {children}
+      </div>
+      <div className="relative min-h-[280px] w-full sm:min-h-[380px] lg:min-h-[600px]">
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover"
+        />
+        {/* Soft fade into the black text column */}
+        <div className="absolute inset-y-0 left-0 hidden w-24 bg-gradient-to-r from-black to-transparent lg:block" />
+      </div>
+    </div>
+  </section>
+);
+
 /* 4-column icon grid with divider lines, used on image/dark sections */
 export const IconGrid = ({
   items,
