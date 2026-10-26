@@ -6,7 +6,19 @@ export const metadata: Metadata = {
   description:
     "Hybrid & virtual event production for live and remote audiences. Keep every speaker, stream and session connected with one production team. Call us 855 282 9394",
   alternates: {
-    canonical: "/hybrid-virtual-event-production",
+    canonical: "https://www.dxg.agency/hybrid-virtual-event-production",
+  },
+  openGraph: {
+    title: "Hybrid & Virtual Event Production | DXG",
+    description:
+      "Hybrid & virtual event production for live and remote audiences. Keep every speaker, stream and session connected with one production team. Call us 855 282 9394",
+    url: "https://www.dxg.agency/hybrid-virtual-event-production",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hybrid & Virtual Event Production | DXG",
+    description:
+      "Hybrid & virtual event production for live and remote audiences. Keep every speaker, stream and session connected with one production team. Call us 855 282 9394",
   },
 };
 

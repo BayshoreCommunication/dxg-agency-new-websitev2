@@ -5,14 +5,28 @@ import LetsTalkSection from "components/shared/LetsTalkSection";
 import BlogGrid from "components/blogs/BlogGrid";
 import BlogGridSkeleton from "components/blogs/BlogGridSkeleton";
 
+import type { Metadata } from "next";
+
 export const dynamic = "force-dynamic";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "DXG Blogs | Event Production Insights & Creative Ideas",
   description:
     "Explore DXG Agency blogs on event production, audiovisual design, and live experiences. Get insights, ideas, and trends to elevate your events.",
   alternates: {
-    canonical: "/blogs",
+    canonical: "https://www.dxg.agency/blogs",
+  },
+  openGraph: {
+    title: "DXG Blogs | Event Production Insights & Creative Ideas",
+    description:
+      "Explore DXG Agency blogs on event production, audiovisual design, and live experiences. Get insights, ideas, and trends to elevate your events.",
+    url: "https://www.dxg.agency/blogs",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DXG Blogs | Event Production Insights & Creative Ideas",
+    description:
+      "Explore DXG Agency blogs on event production, audiovisual design, and live experiences. Get insights, ideas, and trends to elevate your events.",
   },
 };
 

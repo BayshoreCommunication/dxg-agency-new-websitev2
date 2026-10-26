@@ -5,6 +5,21 @@ export const metadata: Metadata = {
   title: "Audience Engagement | Digital Xperience Group",
   description:
     "An interactive audience engagement field guide from Digital Xperience Group.",
+  alternates: {
+    canonical: "https://www.dxg.agency/audience-engagement",
+  },
+  openGraph: {
+    title: "Audience Engagement | Digital Xperience Group",
+    description:
+      "An interactive audience engagement field guide from Digital Xperience Group.",
+    url: "https://www.dxg.agency/audience-engagement",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Audience Engagement | Digital Xperience Group",
+    description:
+      "An interactive audience engagement field guide from Digital Xperience Group.",
+  },
 };
 
 const AudienceEngagementPage = () => (

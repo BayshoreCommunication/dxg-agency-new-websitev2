@@ -11,12 +11,26 @@ import SmarterApproachSection from "components/home/SmarterApproachSection";
 import TrustedBrandsSection from "components/shared/TrustedBrandsSection";
 import WhyPlannersChooseDXGSection from "components/home/WhyPlannersChooseDXGSection";
 
-export const metadata = {
-  title: "Digital Xperience Group",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Event Production & AV Services | DXG Agency",
   description:
-    "Digital Xperience Group (DXG): audiovisual production agency for meeting planners who want more control, clarity, and confidence — across conferences, events, and hybrid experiences",
+    "Plan successful conferences and live events with DXG Agency. Get expert AV production, hybrid event solutions, and seamless event management.",
   alternates: {
-    canonical: "/",
+    canonical: "https://www.dxg.agency/",
+  },
+  openGraph: {
+    title: "Event Production & AV Services | DXG Agency",
+    description:
+      "Plan successful conferences and live events with DXG Agency. Get expert AV production, hybrid event solutions, and seamless event management.",
+    url: "https://www.dxg.agency/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Event Production & AV Services | DXG Agency",
+    description:
+      "Plan successful conferences and live events with DXG Agency. Get expert AV production, hybrid event solutions, and seamless event management.",
   },
 };
 export default function Home() {

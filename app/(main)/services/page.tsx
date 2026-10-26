@@ -3,14 +3,27 @@ import ServicesGridSection from "components/problems-we-solve/ServicesGridSectio
 import LetsTalkSection from "components/shared/LetsTalkSection";
 import PageBanner from "components/shared/PageBanner";
 import TrustedBrandsSection from "components/shared/TrustedBrandsSection";
+import type { Metadata } from "next";
 import React from "react";
 
-export const metadata = {
-  title: "Problems We Solve | DXG Agency SEO Web Solutions Services",
+export const metadata: Metadata = {
+  title: "Event Production Services | AV Solutions | DXG Agency",
   description:
-    "Explore DXG Agency's problems we solve across SEO, web development, and digital marketing to grow traffic, leads, and revenue for your business growth.",
+    "Explore DXG Agency’s event production services, including AV production, hybrid events, attendee engagement, and creative solutions for seamless events.",
   alternates: {
-    canonical: "/services",
+    canonical: "https://www.dxg.agency/services",
+  },
+  openGraph: {
+    title: "Event Production Services | AV Solutions | DXG Agency",
+    description:
+      "Explore DXG Agency’s event production services, including AV production, hybrid events, attendee engagement, and creative solutions for seamless events.",
+    url: "https://www.dxg.agency/services",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Event Production Services | AV Solutions | DXG Agency",
+    description:
+      "Explore DXG Agency’s event production services, including AV production, hybrid events, attendee engagement, and creative solutions for seamless events.",
   },
 };
 const page = () => {

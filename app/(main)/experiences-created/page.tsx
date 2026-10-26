@@ -2,12 +2,26 @@ import ExperiencesCreatedCardSection from "components/experiences-created/Experi
 import PageBanner from "components/shared/PageBanner";
 import React from "react";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Experiences Created | DXG Agency Event & Digital Work",
   description:
     "Explore DXG Agency’s experiences created through innovative event production, audiovisual design, and digital solutions that deliver impactful results.",
   alternates: {
-    canonical: "/experiences-created",
+    canonical: "https://www.dxg.agency/experiences-created",
+  },
+  openGraph: {
+    title: "Experiences Created | DXG Agency Event & Digital Work",
+    description:
+      "Explore DXG Agency’s experiences created through innovative event production, audiovisual design, and digital solutions that deliver impactful results.",
+    url: "https://www.dxg.agency/experiences-created",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Experiences Created | DXG Agency Event & Digital Work",
+    description:
+      "Explore DXG Agency’s experiences created through innovative event production, audiovisual design, and digital solutions that deliver impactful results.",
   },
 };
 const page = () => {

@@ -28,6 +28,19 @@ export function generateMetadata({ params }: CaseStudyDetailsPageProps) {
   return {
     title: `${study.title} ${study.highlight} | DXG Digital`,
     description: study.subtitle,
+    alternates: {
+      canonical: `https://www.dxg.agency/experiences-created/${study.slug}`,
+    },
+    openGraph: {
+      title: `${study.title} ${study.highlight} | DXG Digital`,
+      description: study.subtitle,
+      url: `https://www.dxg.agency/experiences-created/${study.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${study.title} ${study.highlight} | DXG Digital`,
+      description: study.subtitle,
+    },
   };
 }
 
