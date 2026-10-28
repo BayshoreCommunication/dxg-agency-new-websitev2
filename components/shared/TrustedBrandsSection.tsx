@@ -22,10 +22,10 @@ const brands = [
     name: "Phocuswright",
     image: "/images/home/brands/brand-5.png",
   },
-  {
-    name: "Forte",
-    image: "/images/home/brands/brand-6.png",
-  },
+  // {
+  //   name: "Forte",
+  //   image: "/images/home/brands/brand-6.png",
+  // },
   {
     name: "Orlando Aviation Authority",
     image: "/images/home/brands/brand-7.png",
