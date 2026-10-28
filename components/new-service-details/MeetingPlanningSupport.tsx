@@ -157,7 +157,10 @@ const caseStats = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <ServiceHero alt="Meeting Planning Support - DXG general session ballroom with branded LED screens">
+  <ServiceHero
+    image="/images/seo-services/Meeting Planning Support.png"
+    alt="Meeting Planning Support - DXG general session ballroom with branded LED screens"
+  >
     <Eyebrow>Meeting Planning Support</Eyebrow>
     <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
       Support for the Details{" "}

@@ -163,7 +163,10 @@ const steps = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <ServiceHero alt="Event Creative & Experience Design - DXG general session ballroom with branded LED screens">
+  <ServiceHero
+    image="/images/seo-services/Event Experience Design.png"
+    alt="Event Creative & Experience Design - DXG general session ballroom with branded LED screens"
+  >
     <Eyebrow>Event Creative &amp; Experience Design</Eyebrow>
     <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
       Design the Stage and Space <span className="text-primary">Around Your Event.</span>

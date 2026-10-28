@@ -164,7 +164,10 @@ const processSteps = [
 
 /* 1. Hero Section */
 const HeroSection = () => (
-  <ServiceHero alt="Event Videography & Photography - DXG general session ballroom with branded LED screens">
+  <ServiceHero
+    image="/images/seo-services/Event Photography & Videography.png"
+    alt="Event Videography & Photography - DXG general session ballroom with branded LED screens"
+  >
     <Eyebrow>Event Videography &amp; Photography</Eyebrow>
     <h1 className="text-4xl font-bold leading-[1.08] tracking-tight md:text-5xl xl:text-[54px]">
       Capture the Event.

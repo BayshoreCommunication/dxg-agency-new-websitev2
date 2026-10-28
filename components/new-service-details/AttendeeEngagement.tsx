@@ -131,7 +131,7 @@ const faqs = [
 
 const HeroSection = () => (
   <ServiceHero
-    image="/images/seo-services/new_hero_service.png"
+    image="/images/seo-services/Attendee Engagement.png"
     alt="Event Technology & Attendee Engagement - DXG general session ballroom with branded LED screens"
   >
     <Eyebrow>Event Technology &amp; Attendee Engagement</Eyebrow>

@@ -154,7 +154,10 @@ const faqs = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <ServiceHero alt="Event Content Production - DXG general session ballroom with branded LED screens">
+  <ServiceHero
+    image="/images/seo-services/Event Content Production.png"
+    alt="Event Content Production - DXG general session ballroom with branded LED screens"
+  >
     <Eyebrow>Event Content Production</Eyebrow>
     <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
       What Happens on Screen <span className="text-primary">Shapes the Event Experience.</span>

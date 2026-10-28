@@ -229,7 +229,10 @@ const outlineButton =
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <ServiceHero alt="Event Production Management - DXG general session ballroom with branded LED screens">
+  <ServiceHero
+    image="/images/seo-services/Event Production Management.png"
+    alt="Event Production Management - DXG general session ballroom with branded LED screens"
+  >
     <Eyebrow>Event Production Management</Eyebrow>
     <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
       The Same Production Team,{" "}

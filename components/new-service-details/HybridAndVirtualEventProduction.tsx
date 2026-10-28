@@ -132,7 +132,10 @@ const steps = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <ServiceHero alt="Hybrid & Virtual Event Production - DXG general session ballroom with branded LED screens">
+  <ServiceHero
+    image="/images/seo-services/Hybrid & Virtual Event.png"
+    alt="Hybrid & Virtual Event Production - DXG general session ballroom with branded LED screens"
+  >
     <Eyebrow>Hybrid &amp; Virtual Event Production</Eyebrow>
     <h1 className="text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
       One Event. Two Audiences.{" "}
