@@ -130,7 +130,10 @@ const faqs = [
 /* ---------- SECTIONS ---------- */
 
 const HeroSection = () => (
-  <ServiceHero alt="Event Technology & Attendee Engagement - DXG general session ballroom with branded LED screens">
+  <ServiceHero
+    image="/images/seo-services/new_hero_service.png"
+    alt="Event Technology & Attendee Engagement - DXG general session ballroom with branded LED screens"
+  >
     <Eyebrow>Event Technology &amp; Attendee Engagement</Eyebrow>
     <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl xl:text-[56px]">
       Great production sets the stage.{" "}

@@ -38,7 +38,7 @@ export const outlineButton =
    matching the home page hero style, keeping text crisp and clear. */
 export const ServiceHero = ({
   alt,
-  image = "/images/seo-services/new_hero_service.png",
+  image = "/images/seo-services/event-production-management/EventProductionManagement.png",
   children,
 }: {
   alt: string;
