@@ -34,36 +34,41 @@ export const PrimaryButton = ({
 export const outlineButton =
   "inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-primary hover:bg-primary/10 hover:text-primary";
 
-/* Hero shared by every service page: text on the left, full-height photo on the right
-   that fades softly into the black text column. */
+/* Hero shared by every service page: full-width background photo with dark overlay
+   matching the home page hero style, keeping text crisp and clear. */
 export const ServiceHero = ({
   alt,
-  image = "/images/seo-services/event-production-management/EventProductionManagement.png",
+  image = "/images/seo-services/new_hero_service.png",
   children,
 }: {
   alt: string;
   image?: string;
   children: React.ReactNode;
 }) => (
-  <section className="bg-black text-white">
-    <div className="grid lg:grid-cols-2">
-      {/* Left padding matches Container's edge so text lines up with the header logo */}
-      <div className="flex flex-col justify-center px-4 py-14 sm:px-6 lg:py-20 lg:pl-[max(2rem,calc((100vw-1620px)/2+2rem))] lg:pr-12 xl:pr-16">
+  <section className="relative flex min-h-[560px] items-center overflow-hidden bg-black py-20 text-white sm:py-24 lg:min-h-[620px] lg:py-28">
+    {/* Full background image */}
+    <div className="absolute inset-0">
+      <Image
+        src={image}
+        alt={alt}
+        fill
+        priority
+        sizes="100vw"
+        className="pointer-events-none object-cover object-center"
+      />
+    </div>
+
+    {/* Transparent dark overlay: balanced so the image is clearly visible while keeping text crisp */}
+    <div className="pointer-events-none absolute inset-0 bg-black/45" />
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#030c14]/90 via-transparent to-black/20" />
+
+    {/* Content: items-center with equal top & bottom gap */}
+    <Container className="relative z-10 w-full">
+      <div className="flex max-w-3xl flex-col justify-center">
         {children}
       </div>
-      <div className="relative min-h-[280px] w-full sm:min-h-[380px] lg:min-h-[600px]">
-        <Image
-          src={image}
-          alt={alt}
-          fill
-          priority
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover"
-        />
-        {/* Soft fade into the black text column */}
-        <div className="absolute inset-y-0 left-0 hidden w-24 bg-gradient-to-r from-black to-transparent lg:block" />
-      </div>
-    </div>
+    </Container>
   </section>
 );
 
