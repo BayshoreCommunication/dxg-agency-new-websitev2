@@ -320,9 +320,8 @@ const EventCreativeExperienceDesign = () => {
       <CenteredCTA
         eyebrow="Let's create something extraordinary."
         primaryLabel="Book a Working Session"
-        secondaryLabel="Have a New Event Concept"
         text="Share your goals with us and we'll help you explore creative options, visual ideas, and technical options."
-        bgImage="/images/seo-services/audiovisual-production-for-events/av-bottom-cta-blue-crowd.webp"
+        bgImage="/images/seo-services/event-production-management/plan-your-next-event-two.jpeg"
       />
     </div>
   );

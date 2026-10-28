@@ -1,5 +1,4 @@
 import Container from "components/shared/Container";
-import Link from "next/link";
 import Image from "next/image";
 import FAQItem from "./FAQItem";
 import {
@@ -263,7 +262,7 @@ const JourneySection = () => (
         <div>
           <Eyebrow>A more connected event experience</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Before, during, <span className="text-primary">and after your event.</span>
+            Before, during, and after your event.
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/85">
             Connecting all three stages creates a continuous engagement journey. But each stage
@@ -359,7 +358,7 @@ const FAQSection = () => (
         <div>
           <Eyebrow>FAQ</Eyebrow>
           <h2 className="text-3xl font-bold leading-tight md:text-[42px]">
-            Questions Planners <span className="text-primary">Ask Us.</span>
+            Questions <span className="text-primary">planners ask us.</span>
           </h2>
         </div>
         <div className="flex flex-col gap-3">
@@ -375,13 +374,13 @@ const FAQSection = () => (
 const FinalCTASection = () => (
   <section className="relative overflow-hidden border-y border-primary/25 bg-black text-white">
     <Image
-      src="/images/seo-services/attendee-engagement-and-event-technology/attendees-interacting-with-live-polling.webp"
-      alt="Audience engaging with live event technology"
+      src="/images/seo-services/event-production-management/plan-your-next-event-two.jpeg"
+      alt="Let's talk about your event"
       fill
       sizes="100vw"
-      className="pointer-events-none object-cover object-center opacity-30"
+      className="pointer-events-none object-cover object-center"
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/70" />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/55" />
     <Container className="relative py-12 lg:py-16">
       <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-12">
         <div>
@@ -397,9 +396,6 @@ const FinalCTASection = () => (
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 lg:justify-end">
           <PrimaryButton href="/contact-us">Request an Engagement Proposal</PrimaryButton>
-          <Link href="/contact-us" className={outlineButton}>
-            Schedule a Strategy Call
-          </Link>
         </div>
       </div>
     </Container>
