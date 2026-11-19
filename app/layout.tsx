@@ -11,8 +11,7 @@ const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
 });
 
-const siteUrl = "https://www.dxg.agency";
-
+import { siteUrl } from "../lib/site";
 /* ---------------- METADATA ---------------- */
 
 export const metadata: Metadata = {
