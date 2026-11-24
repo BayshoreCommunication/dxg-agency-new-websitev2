@@ -4,7 +4,8 @@ import type { MetadataRoute } from "next";
 
 import { siteUrl } from "../lib/site";
 import { problemServices } from "../data/problemServices";
-import { caseStudies } from "../data/caseStudies";
+// Experiences Created pages temporarily off; uncomment to restore.
+// import { caseStudies } from "../data/caseStudies";
 import { blogs as localBlogs } from "../data/blogs";
 import GetAllBlogPost from "../lib/GetAllBlogPost";
 
@@ -34,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "",
     "/services",
     "/blogs",
-    "/experiences-created",
+    // "/experiences-created",
     "/difference",
     "/why-dxg",
     "/our-process",
@@ -71,12 +72,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  const caseStudyUrls: MetadataRoute.Sitemap = caseStudies.map((c) => ({
-    url: `${siteUrl}/experiences-created/${c.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.6,
-  }));
+  // const caseStudyUrls: MetadataRoute.Sitemap = caseStudies.map((c) => ({
+  //   url: `${siteUrl}/experiences-created/${c.slug}`,
+  //   lastModified: now,
+  //   changeFrequency: "monthly",
+  //   priority: 0.6,
+  // }));
 
   const blogUrls: MetadataRoute.Sitemap = blogEntries.map((b) => {
     const date = b.lastModified ? new Date(b.lastModified) : now;
@@ -88,5 +89,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     };
   });
 
-  return [...staticUrls, ...serviceUrls, ...caseStudyUrls, ...blogUrls];
+  return [...staticUrls, ...serviceUrls, /* ...caseStudyUrls, */ ...blogUrls];
 }

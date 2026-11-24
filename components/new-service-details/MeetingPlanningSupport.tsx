@@ -317,11 +317,12 @@ const CaseStudySection = () => (
           ))}
         </div>
 
+        {/* Temporarily hidden; uncomment to restore.
         <div className="mt-7">
           <PrimaryButton href="/experiences-created">
             View the Full Case Study
           </PrimaryButton>
-        </div>
+        </div> */}
       </div>
     </div>
   </section>

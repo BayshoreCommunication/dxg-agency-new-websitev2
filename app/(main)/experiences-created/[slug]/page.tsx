@@ -4,6 +4,9 @@ import PageBanner from "components/shared/PageBanner";
 import { caseStudies, getCaseStudy } from "data/caseStudies";
 import LetsTalkSection from "components/shared/LetsTalkSection";
 
+// Case study detail pages temporarily turned off (return 404). Set to true to restore.
+const EXPERIENCES_CREATED_ENABLED = false;
+
 type CaseStudyDetailsPageProps = {
   params: {
     slug: string;
@@ -49,7 +52,7 @@ export default function CaseStudyDetailsPage({
 }: CaseStudyDetailsPageProps) {
   const study = getCaseStudy(params.slug);
 
-  if (!study) {
+  if (!EXPERIENCES_CREATED_ENABLED || !study) {
     notFound();
   }
 
