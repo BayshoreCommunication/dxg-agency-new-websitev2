@@ -838,7 +838,6 @@ export default function BizBashMain() {
                 </p>
               )}
 
-              {/* Temporarily hidden; uncomment to restore.
               <p className="mt-4 text-sm text-white/70">
                 In the meantime, feel free to{" "}
                 <a
@@ -850,7 +849,7 @@ export default function BizBashMain() {
                   see what DXG produces
                 </a>
                 .
-              </p> */}
+              </p>
 
               <button
                 onClick={() => setSubmitted(false)}
@@ -907,7 +906,6 @@ export default function BizBashMain() {
                 The team behind your event has been producing conferences,
                 general sessions, and multi-room programs together since 2006.
               </Reveal>
-              {/* Temporarily hidden; uncomment to restore.
               <a
                 href="/experiences-created"
                 target="_blank"
@@ -915,7 +913,7 @@ export default function BizBashMain() {
                 className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary underline"
               >
                 See the work: Experiences We&apos;ve Created
-              </a> */}
+              </a>
             </div>
             <Reveal kind="list" className="grid gap-3">
               {CREDIBILITY_POINTS.map((point) => (

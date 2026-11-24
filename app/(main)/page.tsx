@@ -1,8 +1,7 @@
 import AceFounderSection from "components/home/AceFounderSection";
 import ChallengesHeroSection from "components/home/ChallengesHeroSection";
 import CompanyOverviewSection from "components/home/CompanyOverviewSection";
-// Case study section temporarily hidden; uncomment to restore.
-// import DifferentCard from "components/home/DifferentCard";
+import DifferentCard from "components/home/DifferentCard";
 import HeroSection from "components/home/HeroSection";
 import HowWeWorkSection from "components/home/HowWeWorkSection";
 import LetsTalkSection from "components/shared/LetsTalkSection";
@@ -47,7 +46,7 @@ export default function Home() {
       <WhyPlannersChooseDXGSection />
       <HowWeWorkSection />
       <LetsTalkSection />
-      {/* <DifferentCard /> */}
+      <DifferentCard />
       <TrustedBrandsSection />
     </div>
   );

@@ -20,8 +20,7 @@ const whyDXG = [
   { label: "How We Work", href: "/our-process" },
   { label: "Problems We Solve", href: "/services" },
   { label: "The DXG Difference", href: "/why-dxg" },
-  // Temporarily hidden; uncomment to restore.
-  // { label: "Experiences We've Created", href: "/experiences-created" },
+  { label: "Experiences We've Created", href: "/experiences-created" },
 ];
 
 const legal = [

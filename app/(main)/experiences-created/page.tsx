@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import ExperiencesCreatedCardSection from "components/experiences-created/ExperiencesCreatedCardSection";
 import PageBanner from "components/shared/PageBanner";
 import React from "react";
@@ -25,14 +24,7 @@ export const metadata: Metadata = {
       "Explore DXG Agency’s experiences created through innovative event production, audiovisual design, and digital solutions that deliver impactful results.",
   },
 };
-// Page temporarily turned off (returns 404). Set to true to restore.
-const EXPERIENCES_CREATED_ENABLED = false;
-
 const page = () => {
-  if (!EXPERIENCES_CREATED_ENABLED) {
-    notFound();
-  }
-
   return (
     <div>
       <PageBanner

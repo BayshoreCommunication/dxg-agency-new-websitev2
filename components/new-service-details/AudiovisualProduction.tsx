@@ -320,14 +320,13 @@ const ProductionInActionSection = () => (
             ))}
           </div>
 
-          {/* Temporarily hidden; uncomment to restore.
           <Link
             href="/experiences-created"
             className="mt-7 inline-flex items-center gap-2 rounded-full border border-primary px-6 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/10"
           >
             View the Full Case Study
             <ArrowRight className="h-4 w-4" />
-          </Link> */}
+          </Link>
         </div>
       </div>
     </Container>

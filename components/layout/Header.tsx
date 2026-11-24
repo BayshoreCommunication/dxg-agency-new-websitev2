@@ -21,12 +21,11 @@ const navItems = [
     target: "problems-we-solve",
     path: "/services",
   },
-  // Temporarily hidden; uncomment to restore.
-  // {
-  //   label: "Experiences We've Created",
-  //   target: "experiences-created",
-  //   path: "/experiences-created",
-  // },
+  {
+    label: "Experiences We've Created",
+    target: "experiences-created",
+    path: "/experiences-created",
+  },
   { label: "The DXG Difference", target: "difference", path: "/difference" },
   { label: "Planner Insight Blog", target: "blog", path: "/blogs" },
   { label: "Contact Us", target: "contact", path: "/contact-us" },
