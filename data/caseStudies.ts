@@ -91,72 +91,8 @@ export const caseStudies: CaseStudy[] = [
 
   {
     id: 2,
-    slug: "corporate-event-orlando",
-    study: "Case Study #2",
-    title: "Corporate",
-    highlight: "Event",
-    subtitle: "Corporate Sales Conference | 850 Attendees | Orlando, FL",
-    quote:
-      "DXG Stage design that held the room's attention. Everything ran smoothly, and the final product exceeded expectations.",
-    quoteAuthor: "-Sr Marketing Event Manager",
-    image: "/images/home/case-study/case-study-2.png",
-    background: "#151515",
-
-    stats: [
-      {
-        icon: "/images/home/case-study/location.png",
-        label: "Location",
-        value: "Orlando, FL",
-      },
-      {
-        icon: "/images/home/case-study/duration.png",
-        label: "Duration",
-        value: "5 Days",
-      },
-      {
-        icon: "/images/home/case-study/general-session.png",
-        label: "(2) Large",
-        value: "General Session & 12+ Breakouts",
-      },
-      {
-        icon: "/images/home/case-study/hybrid.png",
-        label: "Hybrid",
-        value: "Content Capture + Post-Event Media",
-      },
-    ],
-
-    sections: [
-      {
-        icon: "/images/home/case-study/challenge.png",
-        title: "The",
-        highlight: "Challenge",
-        content:
-          "The client needed to deliver a high-impact general session experience while ensuring general session stayed on schedule, start to finish.",
-      },
-      {
-        icon: "/images/home/case-study/approach.png",
-        title: "The",
-        highlight: "Approach",
-        content:
-          "DXG designed a production-driven environment focused on clarity, flow, and audience engagement.",
-      },
-      {
-        icon: "/images/home/case-study/result.png",
-        title: "The",
-        highlight: "Result",
-        list: [
-          "Elevated stage experience",
-          "Seamless execution",
-          "Reusable video and photo assets delivered post-event",
-        ],
-      },
-    ],
-  },
-
-  {
-    id: 3,
     slug: "association-event-savannah",
-    study: "Case Study #3",
+    study: "Case Study #2",
     title: "Association",
     highlight: "Event",
     subtitle:
@@ -219,9 +155,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 4,
+    id: 3,
     slug: "corporate-event-las-vegas-arrival",
-    study: "Case Study #4",
+    study: "Case Study #3",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session / 8 Breakout Rooms | 700 Attendees | Las Vegas, NV",
@@ -275,9 +211,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 5,
+    id: 4,
     slug: "corporate-event-tampa-wellcare",
-    study: "Case Study #5",
+    study: "Case Study #4",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session | 500 Attendees | Tampa, FL",
@@ -331,9 +267,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 6,
+    id: 5,
     slug: "nonprofit-event-charlotte-lumina",
-    study: "Case Study #6",
+    study: "Case Study #5",
     title: "Non-Profit",
     highlight: "Event",
     subtitle: "General Session | 300 Attendees | Charlotte, NC",
@@ -387,9 +323,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 7,
+    id: 6,
     slug: "corporate-event-orlando-avi-spl",
-    study: "Case Study #7",
+    study: "Case Study #6",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session / 10 Breakout Rooms | 700 Attendees | Orlando, FL",
@@ -443,9 +379,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 8,
+    id: 7,
     slug: "corporate-event-tampa-outdoor",
-    study: "Case Study #8",
+    study: "Case Study #7",
     title: "Corporate",
     highlight: "Event",
     subtitle: "Outdoor Concert | 600 Attendees | Tampa, FL",
@@ -499,9 +435,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 9,
+    id: 8,
     slug: "nonprofit-event-sarasota-ringling",
-    study: "Case Study #9",
+    study: "Case Study #8",
     title: "Non-Profit",
     highlight: "Event",
     subtitle: "General Session | 400 Attendees | Sarasota, FL",
@@ -555,9 +491,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 10,
+    id: 9,
     slug: "corporate-event-oxon-hill",
-    study: "Case Study #10",
+    study: "Case Study #9",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session | 700 Attendees | Oxon Hill, MD",
@@ -611,9 +547,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 11,
+    id: 10,
     slug: "corporate-event-orlando-innovate",
-    study: "Case Study #11",
+    study: "Case Study #10",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session | 500 Attendees | Orlando, FL",
@@ -667,9 +603,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 12,
+    id: 11,
     slug: "corporate-event-grapevine-texas",
-    study: "Case Study #12",
+    study: "Case Study #11",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session / 8 Breakout Rooms | 450 Attendees | Grapevine, TX",
@@ -723,9 +659,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 13,
+    id: 12,
     slug: "corporate-event-orlando-bank-of-america",
-    study: "Case Study #13",
+    study: "Case Study #12",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session / 12 Breakout Rooms | 1,000 Attendees | Orlando, FL",
@@ -779,9 +715,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 14,
+    id: 13,
     slug: "corporate-event-washington-dc",
-    study: "Case Study #14",
+    study: "Case Study #13",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session / 12 Breakout Rooms | 1,200 Attendees | Washington, DC",
@@ -835,9 +771,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 15,
+    id: 14,
     slug: "corporate-event-phoenix-arizona",
-    study: "Case Study #15",
+    study: "Case Study #14",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session / 12 Breakout Rooms | 1,500 Attendees | Phoenix, AZ",
@@ -891,9 +827,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 16,
+    id: 15,
     slug: "corporate-event-las-vegas-conference",
-    study: "Case Study #16",
+    study: "Case Study #15",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session / 8 Breakout Rooms | 900 Attendees | Las Vegas, NV",
@@ -947,9 +883,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 17,
+    id: 16,
     slug: "corporate-event-chicago",
-    study: "Case Study #17",
+    study: "Case Study #16",
     title: "Corporate",
     highlight: "Event",
     subtitle: "General Session / 6 Breakout Rooms | 750 Attendees | Chicago, IL",
@@ -1003,9 +939,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 18,
+    id: 17,
     slug: "association-event-little-rock",
-    study: "Case Study #18",
+    study: "Case Study #17",
     title: "Association",
     highlight: "Event",
     subtitle: "General Session / 5 Breakout Rooms | 700 Attendees | Little Rock, AR",
@@ -1059,9 +995,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 19,
+    id: 18,
     slug: "association-event-phoenix-tech",
-    study: "Case Study #19",
+    study: "Case Study #18",
     title: "Association",
     highlight: "Event",
     subtitle: "General Session / 40 Breakout Rooms | 4,000 Attendees | Phoenix, AZ",
@@ -1115,9 +1051,9 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    id: 20,
+    id: 19,
     slug: "association-event-atlanta-nasp",
-    study: "Case Study #20",
+    study: "Case Study #19",
     title: "Association",
     highlight: "Event",
     subtitle: "General Session / 4 Breakout Rooms | 500 Attendees | Atlanta, GA",
